@@ -1,0 +1,78 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "plugin:prettier/recommended",
+    "plugin:flowtype/recommended",
+    "plugin:react/recommended"
+  ],
+  "env": {
+    "browser": true,
+    "node": true,
+    "jest": true,
+    "es6": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true,
+      "modules": true,
+      "experimentalObjectRestSpread": true
+    }
+  },
+  "plugins": ["flowtype", "prettier", "react"],
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true,
+        "trailingComma": "es5",
+        "jsxBracketSameLine": true,
+        "parser": "flow"
+      }
+    ],
+    "no-console": 1,
+    "max-len": [
+      "error",
+      {
+        "code": 80,
+        "ignoreUrls": true
+      }
+    ],
+    "no-unexpected-multiline": "error",
+
+    "flowtype/define-flow-type": 1,
+    "flowtype/no-primitive-constructor-types": 2,
+    "flowtype/require-parameter-type": [
+      2,
+      {
+        "excludeArrowFunctions": "expressionsOnly"
+      }
+    ],
+    "flowtype/require-variable-type": [
+      2,
+      {
+        "excludeVariableTypes": {
+          "let": true,
+          "const": true
+        }
+      }
+    ],
+    "flowtype/space-after-type-colon": [
+      2,
+      "always",
+      {
+        "allowLineBreak": true
+      }
+    ],
+    "react/button-has-type": [
+      "error",
+      {
+        "button": true,
+        "submit": true,
+        "reset": true
+      }
+    ],
+    "react/destructuring-assignment": ["error", "always"]
+  }
+}
