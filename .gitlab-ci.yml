@@ -2,9 +2,16 @@ image: node:9
 
 stages:
   - npm
+  - build
 
 npm_nstall:
   stage: npm
-  script: 
+  script:
     # Install Dependecys
     - npm install
+
+build_gatsby:
+  stage: build
+  script:
+    # build gatsby
+    - npm build

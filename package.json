@@ -6,8 +6,7 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --write '**/*.js'",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "format": "prettier --write '**/*.js'"
   },
   "repository": {
     "type": "git",
@@ -20,11 +19,15 @@
   },
   "homepage": "https://gitlab.com/codea_/blog-codea#README",
   "dependencies": {
+    "@material-ui/core": "^1.4.2",
     "gatsby": "next",
     "gatsby-plugin-react-helmet": "next",
+    "jss": "^9.8.7",
+    "prop-types": "^15.6.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^5.2.0",
+    "react-jss": "^8.6.1"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
