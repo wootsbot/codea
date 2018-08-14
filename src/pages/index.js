@@ -7,7 +7,7 @@ import Layout from 'pages/Layout'
 
 const IndexPage = () => (
   <Layout
-    title="Codea.com.mx"
+    title="Codea"
     meta={{
       description: 'codea un blog de un buem programador',
       keywords: 'javascript, blog',
