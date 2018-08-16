@@ -1,0 +1,30 @@
+$break-points: (
+  xs: (
+    size: 'xs',
+    min-width: 0,
+    max-width: 767px,
+    gutter: 1.2rem,
+    margin: 3.6rem,
+  ),
+  sm: (
+    size: 'sm',
+    min-width: 768px,
+    max-width: 921px,
+    gutter: 2.4rem,
+    margin: 3.6rem,
+  ),
+  md: (
+    size: 'md',
+    min-width: 922px,
+    max-width: 1199px,
+    gutter: 3rem,
+    margin: 3.6rem,
+  ),
+  lg: (
+    size: 'lg',
+    max-width: 4000px,
+    min-width: 1200px,
+    gutter: 3.6rem,
+    margin: 3.6rem,
+  ),
+);

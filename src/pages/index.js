@@ -12,9 +12,81 @@ const IndexPage = () => (
       description: 'codea un blog de un buem programador',
       keywords: 'javascript, blog',
     }}>
-    <Button variant="contained" color="primary">
+    <Button variant="contained" color="secondary">
       Default
     </Button>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis recusandae
+    perferendis nostrum possimus earum asperiores quo ipsa, saepe, nihil
+    officiis error mollitia reiciendis sit deleniti provident id hic totam iste.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis recusandae
+    perferendis nostrum possimus earum asperiores quo ipsa, saepe, nihil
+    officiis error mollitia reiciendis sit deleniti provident id hic totam iste.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis recusandae
+    perferendis nostrum possimus earum asperiores quo ipsa, saepe, nihil
+    officiis error mollitia reiciendis sit deleniti provident id hic totam iste.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis recusandae
+    perferendis nostrum possimus earum asperiores quo ipsa, saepe, nihil
+    officiis error mollitia reiciendis sit deleniti provident id hic totam iste.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis recusandae
+    perferendis nostrum possimus earum asperiores quo ipsa, saepe, nihil
+    officiis error mollitia reiciendis sit deleniti provident id hic totam iste.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis recusandae
+    perferendis nostrum possimus earum asperiores quo ipsa, saepe, nihil
+    officiis error mollitia reiciendis sit deleniti provident id hic totam iste.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis recusandae
+    perferendis nostrum possimus earum asperiores quo ipsa, saepe, nihil
+    officiis error mollitia reiciendis sit deleniti provident id hic totam iste.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis recusandae
+    perferendis nostrum possimus earum asperiores quo ipsa, saepe, nihil
+    officiis error mollitia reiciendis sit deleniti provident id hic totam iste.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis recusandae
+    perferendis nostrum possimus earum asperiores quo ipsa, saepe, nihil
+    officiis error mollitia reiciendis sit deleniti provident id hic totam iste.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis recusandae
+    perferendis nostrum possimus earum asperiores quo ipsa, saepe, nihil
+    officiis error mollitia reiciendis sit deleniti provident id hic totam iste.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis recusandae
+    perferendis nostrum possimus earum asperiores quo ipsa, saepe, nihil
+    officiis error mollitia reiciendis sit deleniti provident id hic totam iste.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis recusandae
+    perferendis nostrum possimus earum asperiores quo ipsa, saepe, nihil
+    officiis error mollitia reiciendis sit deleniti provident id hic totam iste.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis recusandae
+    perferendis nostrum possimus earum asperiores quo ipsa, saepe, nihil
+    officiis error mollitia reiciendis sit deleniti provident id hic totam iste.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis recusandae
+    perferendis nostrum possimus earum asperiores quo ipsa, saepe, nihil
+    officiis error mollitia reiciendis sit deleniti provident id hic totam iste.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis recusandae
+    perferendis nostrum possimus earum asperiores quo ipsa, saepe, nihil
+    officiis error mollitia reiciendis sit deleniti provident id hic totam iste.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis recusandae
+    perferendis nostrum possimus earum asperiores quo ipsa, saepe, nihil
+    officiis error mollitia reiciendis sit deleniti provident id hic totam iste.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis recusandae
+    perferendis nostrum possimus earum asperiores quo ipsa, saepe, nihil
+    officiis error mollitia reiciendis sit deleniti provident id hic totam iste.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis recusandae
+    perferendis nostrum possimus earum asperiores quo ipsa, saepe, nihil
+    officiis error mollitia reiciendis sit deleniti provident id hic totam iste.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis recusandae
+    perferendis nostrum possimus earum asperiores quo ipsa, saepe, nihil
+    officiis error mollitia reiciendis sit deleniti provident id hic totam iste.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis recusandae
+    perferendis nostrum possimus earum asperiores quo ipsa, saepe, nihil
+    officiis error mollitia reiciendis sit deleniti provident id hic totam iste.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis recusandae
+    perferendis nostrum possimus earum asperiores quo ipsa, saepe, nihil
+    officiis error mollitia reiciendis sit deleniti provident id hic totam iste.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis recusandae
+    perferendis nostrum possimus earum asperiores quo ipsa, saepe, nihil
+    officiis error mollitia reiciendis sit deleniti provident id hic totam iste.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis recusandae
+    perferendis nostrum possimus earum asperiores quo ipsa, saepe, nihil
+    officiis error mollitia reiciendis sit deleniti provident id hic totam iste.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis recusandae
+    perferendis nostrum possimus earum asperiores quo ipsa, saepe, nihil
+    officiis error mollitia reiciendis sit deleniti provident id hic totam iste.
   </Layout>
 )
 

@@ -5,7 +5,11 @@ import { StaticQuery, graphql } from 'gatsby'
 
 import withRoot from 'utils/withRoot'
 
-import './layout.css'
+import NavBar from 'components/NavBar'
+import SideBar from 'components/SideBar'
+
+import Main from './main'
+import './layout.module.scss'
 
 class Layout extends React.PureComponent {
   static propTypes = {
@@ -26,13 +30,13 @@ class Layout extends React.PureComponent {
             { name: 'keywords', content: meta.keywords },
           ]}
         />
-        {children}
+        <NavBar />
+        <Main>{children}</Main>
+        <SideBar />
       </>
     )
   }
 }
-
-export default withRoot(Layout)
 
 Layout.defaultProps = {
   meta: {
@@ -40,3 +44,5 @@ Layout.defaultProps = {
     keywords: 'Programación, codea',
   },
 }
+
+export default withRoot(Layout)

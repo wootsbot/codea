@@ -1,17 +1,14 @@
-import purple from '@material-ui/core/colors/purple'
-import green from '@material-ui/core/colors/green'
-
-export const palette = {
+export const themeUi = {
   palette: {
     primary: {
-      light: purple[300],
-      main: green[500],
-      dark: purple[700],
+      light: '#ffffff',
+      main: '#e0e0e0',
+      dark: '#aeaeae',
     },
     secondary: {
-      light: green[300],
-      main: green[500],
-      dark: green[700],
+      light: '#ffff56',
+      main: '#ffea00',
+      dark: '#c7b800',
     },
   },
 }

@@ -1,5 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+
+import { themeUi } from 'utils/themeColor'
 import favicon from '../src/static/img/favicon.png'
 
 export default class HTML extends React.Component {
@@ -22,6 +24,16 @@ export default class HTML extends React.Component {
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
           />
+          <meta name="theme-color" content={themeUi.palette.secondary.main} />
+          <meta
+            name="msapplication-navbutton-color"
+            content={themeUi.palette.secondary.main}
+          />
+          <meta
+            name="apple-mobile-web-app-status-bar-style"
+            content={themeUi.palette.secondary.main}
+          />
+
           <link rel="shortcut icon" type="image/png" href={favicon} />
           {headComponents}
         </head>

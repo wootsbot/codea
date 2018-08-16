@@ -6,9 +6,9 @@ import {
   createGenerateClassName,
 } from '@material-ui/core/styles'
 
-import { palette } from './themeColor'
+import { themeUi } from './themeColor'
 
-const theme = createMuiTheme(palette)
+const theme = createMuiTheme(themeUi)
 
 function createPageContext() {
   return {

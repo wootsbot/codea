@@ -4,5 +4,5 @@ module.exports = {
     siteUrl: `https://www.codea.com.mx`,
     description: `Codea un sitio de blog para JavaScript`,
   },
-  plugins: ['gatsby-plugin-react-helmet'],
+  plugins: [`gatsby-plugin-react-helmet`, `gatsby-plugin-sass`],
 }
