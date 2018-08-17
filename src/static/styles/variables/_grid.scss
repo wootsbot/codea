@@ -3,28 +3,34 @@ $break-points: (
     size: 'xs',
     min-width: 0,
     max-width: 767px,
-    gutter: 1.2rem,
     margin: 3.6rem,
+    padding: 12px 12px,
+    padding-main: 0,
   ),
   sm: (
     size: 'sm',
     min-width: 768px,
     max-width: 921px,
-    gutter: 2.4rem,
     margin: 3.6rem,
+    padding: 24px 24px,
+    padding-main: 0 24px,
   ),
   md: (
     size: 'md',
     min-width: 922px,
     max-width: 1199px,
-    gutter: 3rem,
     margin: 3.6rem,
+    padding: 48px 48px,
+    padding-main: 0 100px,
   ),
   lg: (
     size: 'lg',
     max-width: 4000px,
     min-width: 1200px,
-    gutter: 3.6rem,
     margin: 3.6rem,
+    padding: 96px 96px,
+    padding-main: 0 350px,
   ),
 );
+
+$sm-padding: 24px 24px;

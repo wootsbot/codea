@@ -53,3 +53,8 @@
     @content;
   }
 }
+
+@mixin padding-main($size) {
+  $break-point: map-get($break-points, $size);
+  padding: map-get($break-point, padding-main);
+}
