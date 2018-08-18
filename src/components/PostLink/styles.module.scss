@@ -1,0 +1,66 @@
+@import 'static/styles/theme';
+
+.root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 36px;
+  margin-bottom: 16px;
+}
+
+.title {
+  color: $primary-text-color;
+  font-family: $font-title;
+
+  > a {
+    transition: color 0.5s linear;
+    color: $primary-text-color;
+  }
+
+  & :hover {
+    transition: 0.5s ease;
+    color: $secondary-dark-color;
+  }
+}
+
+.summary {
+  font-family: $font-text-lg;
+  color: $primary-dark-color;
+  font-size: 18px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.avatar {
+  width: 55px;
+  height: 55px;
+}
+
+.information {
+  display: flex;
+  flex-direction: column;
+  margin-left: 16px;
+  font-family: $font-text-md;
+}
+
+.user {
+  font-family: $font-text-xs;
+  color: $secondary-dark-color;
+  margin-left: 10px;
+  transition: color 0.5s linear;
+
+  &:hover {
+    color: $secondary-main-color;
+    transition: 0.5s ease;
+  }
+}
+
+.date {
+  color: $primary-dark-color;
+}

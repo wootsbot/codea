@@ -6,6 +6,7 @@ $break-points: (
     margin: 3.6rem,
     padding: 12px 12px,
     padding-main: 0,
+    margin-bottom-main: 0,
   ),
   sm: (
     size: 'sm',
@@ -14,6 +15,7 @@ $break-points: (
     margin: 3.6rem,
     padding: 24px 24px,
     padding-main: 0 24px,
+    margin-bottom-main: 24px,
   ),
   md: (
     size: 'md',
@@ -22,6 +24,7 @@ $break-points: (
     margin: 3.6rem,
     padding: 48px 48px,
     padding-main: 0 100px,
+    margin-bottom-main: 24px,
   ),
   lg: (
     size: 'lg',
@@ -30,6 +33,7 @@ $break-points: (
     margin: 3.6rem,
     padding: 96px 96px,
     padding-main: 0 350px,
+    margin-bottom-main: 24px,
   ),
 );
 

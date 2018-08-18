@@ -35,6 +35,10 @@ export default class HTML extends React.Component {
           />
 
           <link rel="shortcut icon" type="image/png" href={favicon} />
+          <link
+            href="https://fonts.googleapis.com/css?family=Karla|Lato|Roboto"
+            rel="stylesheet"
+          />
           {headComponents}
         </head>
         <body {...bodyAttributes}>

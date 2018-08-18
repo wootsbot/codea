@@ -4,11 +4,16 @@
   &-default {
     @include padding-main(xs);
     margin-top: 120px;
+
+    @include breakpoint-sm-down() {
+      margin-top: 90px;
+    }
   }
 
   &-small {
     @include padding-main(sm);
     margin-top: 120px;
+    margin-bottom: 120px;
   }
 
   &-medium {

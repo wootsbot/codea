@@ -58,3 +58,8 @@
   $break-point: map-get($break-points, $size);
   padding: map-get($break-point, padding-main);
 }
+
+@mixin merging-bottom($size) {
+  $break-point: map-get($break-points, $size);
+  margin-bottom: map-get($break-point, margin-bottom-main);
+}

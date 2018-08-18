@@ -7,7 +7,6 @@ import withRoot from 'utils/withRoot'
 import NavBar from 'components/NavBar'
 import SideBar from 'components/SideBar'
 
-import Main from './main'
 import styles from './layout.module.scss'
 import './main.scss'
 

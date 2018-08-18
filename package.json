@@ -24,6 +24,8 @@
     "classnames": "^2.2.6",
     "gatsby": "next",
     "gatsby-plugin-react-helmet": "next",
+    "gatsby-source-filesystem": "^1.5.39",
+    "gatsby-transformer-remark": "^1.7.44",
     "jss": "^9.8.7",
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
