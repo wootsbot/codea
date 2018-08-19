@@ -18,7 +18,7 @@ const PostLink = ({ post }) => (
     <div className={styles.footer}>
       <Avatar alt="name author" src={avatar} className={styles.avatar} />
       <div className={styles.information}>
-        <span>
+        <span className={styles.author}>
           Jorge Luis Calleja
           <a href="" className={styles.user}>
             (@Woostbot)

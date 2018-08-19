@@ -8,3 +8,14 @@ body {
 a {
   text-decoration: none;
 }
+
+p {
+  font-family: $font-text-lg;
+  font-size: $font-size-regular;
+  line-height: 1.58;
+  letter-spacing: -0.003em;
+
+  @include breakpoint-sm-down() {
+    font-size: $font-size-lg;
+  }
+}

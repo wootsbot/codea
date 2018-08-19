@@ -19,7 +19,7 @@
   },
   "homepage": "https://gitlab.com/codea_/blog-codea#README",
   "dependencies": {
-    "@material-ui/core": "^1.4.2",
+    "@material-ui/core": "^1.5.0",
     "@material-ui/icons": "^2.0.2",
     "classnames": "^2.2.6",
     "gatsby": "next",
@@ -56,7 +56,6 @@
     "eslint-plugin-react": "^7.10.0",
     "flow-bin": "^0.77.0",
     "flow-typed": "^2.5.1",
-    "gatsby-plugin-sass": "^1.0.26",
     "node-sass": "^4.9.3",
     "prettier": "^1.14.0",
     "sass-loader": "^7.1.0",

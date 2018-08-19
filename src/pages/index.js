@@ -1,9 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 
 import Grid from '@material-ui/core/Grid'
-import Button from '@material-ui/core/Button'
 
 import PostLink from 'components/PostLink'
 import Layout from 'pages/Layout'

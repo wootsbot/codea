@@ -11,6 +11,11 @@
 .title {
   color: $primary-text-color;
   font-family: $font-title;
+  font-size: $font-size-sub-title;
+
+  @include breakpoint-sm-down() {
+    font-size: $font-size-xlg;
+  }
 
   > a {
     transition: color 0.5s linear;
@@ -29,6 +34,10 @@
   font-size: 18px;
   font-weight: normal;
   margin: 0;
+
+  @include breakpoint-sm-down() {
+    font-size: $font-size-regular;
+  }
 }
 
 .footer {
@@ -49,11 +58,24 @@
   font-family: $font-text-md;
 }
 
+.author {
+  font-size: $font-size-regular;
+
+  @include breakpoint-sm-down() {
+    font-size: $font-size-md;
+  }
+}
+
 .user {
   font-family: $font-text-xs;
   color: $secondary-dark-color;
+  font-size: $font-size-regular;
   margin-left: 10px;
   transition: color 0.5s linear;
+
+  @include breakpoint-sm-down() {
+    font-size: $font-size-md;
+  }
 
   &:hover {
     color: $secondary-main-color;
@@ -63,4 +85,10 @@
 
 .date {
   color: $primary-dark-color;
+
+  font-size: $font-size-regular;
+
+  @include breakpoint-sm-down() {
+    font-size: $font-size-md;
+  }
 }

@@ -1,7 +1,3 @@
-import LocalOfferTwoTone from '@material-ui/icons/localOfferTwoTone'
-import ThumbUpAltTwoTone from '@material-ui/icons/thumbUpAltTwoTone'
-import SubtitlesTwoTone from '@material-ui/icons/subtitlesTwoTone'
-
 const POSTS = 'posts-/'
 const COLLABORATORS = 'collaborators-/collaborators'
 const CONTRIBUTE = 'contribute-/contribute'
@@ -14,7 +10,6 @@ export const getPaths = [
     key: 'posts-/',
     label: 'Posts',
     href: '/',
-    icon: LocalOfferTwoTone,
     active: true,
   },
   {

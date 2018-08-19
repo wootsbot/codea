@@ -13,17 +13,21 @@ import logo from 'static/img/logo.svg'
 import NavItem from './NavItem'
 import styles from './NavBar.module.scss'
 
-const stylesUi = {
+const stylesUi = theme => ({
   root: {
     maxHeight: '64px',
+    minHeight: '64px',
     padding: '0 24px',
     flexDirection: 'row',
     alignItems: 'center',
   },
   colorPrimary: {
     backgroundColor: '#fff',
+    [theme.breakpoints.down('sm')]: {
+      backgroundColor: theme.palette.secondary.main,
+    },
   },
-}
+})
 
 class NavBar extends React.PureComponent {
   static propTypes = {

@@ -1,12 +1,12 @@
 //@flow
 
 import React from 'react'
-import SubtitlesTwoTone from '@material-ui/icons/subtitlesTwoTone'
-import CodeTwoTone from '@material-ui/icons/codeTwoTone'
-import ThumbUpAltTwoTone from '@material-ui/icons/thumbUpAltTwoTone'
-import LaptopTwoTone from '@material-ui/icons/laptopTwoTone'
+
+import SubtitlesTwoTone from '@material-ui/icons/SubtitlesTwoTone'
+import CodeTwoToneIcon from '@material-ui/icons/CodeTwoTone'
+import LaptopTwoTone from '@material-ui/icons/LaptopTwoTone'
 // eslint-disable-next-line max-len
-import SupervisorAccountTwoTone from '@material-ui/icons/supervisorAccountTwoTone'
+import SupervisorAccountTwoTone from '@material-ui/icons/SupervisorAccountTwoTone'
 
 import { getPaths, pathsKey } from 'utils/paths'
 
@@ -16,7 +16,7 @@ import styles from './SideBar.module.scss'
 const iconsOfPath = {
   [pathsKey.POSTS]: <SubtitlesTwoTone />,
   [pathsKey.COLLABORATORS]: <SupervisorAccountTwoTone />,
-  [pathsKey.CONTRIBUTE]: <CodeTwoTone />,
+  [pathsKey.CONTRIBUTE]: <CodeTwoToneIcon />,
   [pathsKey.TUTORIALS]: <LaptopTwoTone />,
 }
 
