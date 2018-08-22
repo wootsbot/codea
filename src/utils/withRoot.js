@@ -1,15 +1,15 @@
 // @flow
-import * as React from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import { MuiThemeProvider } from '@material-ui/core/styles'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import getPageContext from './getPageContext'
 
-function withRoot(Component: Node) {
+function withRoot(Component) {
   class WithRoot extends React.Component {
     pagePropsContext = null
 
-    constructor(props: {}) {
+    constructor(props) {
       super(props)
 
       const { pageContext } = this.props

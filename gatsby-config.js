@@ -14,5 +14,11 @@ module.exports = {
         name: 'markdown-pages',
       },
     },
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        includePaths: ['node_modules', 'src'],
+      },
+    },
   ],
 }

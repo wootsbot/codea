@@ -19,13 +19,14 @@
   },
   "homepage": "https://gitlab.com/codea_/blog-codea#README",
   "dependencies": {
-    "@material-ui/core": "^1.5.0",
-    "@material-ui/icons": "^2.0.2",
+    "@material-ui/core": "^1.5.1",
+    "@material-ui/icons": "^2.0.3",
     "classnames": "^2.2.6",
-    "gatsby": "next",
-    "gatsby-plugin-react-helmet": "next",
-    "gatsby-source-filesystem": "^1.5.39",
-    "gatsby-transformer-remark": "^1.7.44",
+    "gatsby": "^2.0.0-beta.111",
+    "gatsby-plugin-react-helmet": "^3.0.0-rc.0",
+    "gatsby-plugin-sass": "^2.0.0-rc.0",
+    "gatsby-source-filesystem": "^2.0.1-rc.0",
+    "gatsby-transformer-remark": "^2.1.1-rc.0",
     "jss": "^9.8.7",
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
@@ -57,8 +58,6 @@
     "flow-bin": "^0.77.0",
     "flow-typed": "^2.5.1",
     "node-sass": "^4.9.3",
-    "prettier": "^1.14.0",
-    "sass-loader": "^7.1.0",
-    "style-loader": "^0.22.1"
+    "prettier": "^1.14.0"
   }
 }

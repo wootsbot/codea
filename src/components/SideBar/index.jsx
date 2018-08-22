@@ -1,5 +1,3 @@
-//@flow
-
 import React from 'react'
 
 import SubtitlesTwoTone from '@material-ui/icons/SubtitlesTwoTone'
@@ -25,7 +23,7 @@ class SideBar extends React.PureComponent {
     return (
       <div className={styles.root}>
         <ul className={styles.navItemContainer}>
-          {getPaths.map((path: {}) => {
+          {getPaths.map(path => {
             if (path.active) {
               return (
                 <NavItem

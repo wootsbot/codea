@@ -1,10 +1,6 @@
 {
   "parser": "babel-eslint",
-  "extends": [
-    "plugin:prettier/recommended",
-    "plugin:flowtype/recommended",
-    "plugin:react/recommended"
-  ],
+  "extends": ["plugin:prettier/recommended", "plugin:react/recommended"],
   "env": {
     "browser": true,
     "node": true,
@@ -20,9 +16,8 @@
       "experimentalObjectRestSpread": true
     }
   },
-  "plugins": ["flowtype", "prettier", "react"],
+  "plugins": ["prettier", "react"],
   "rules": {
-    "flowtype/no-types-missing-file-annotation": 0,
     "prettier/prettier": [
       "error",
       {
@@ -41,31 +36,6 @@
       }
     ],
     "no-unexpected-multiline": "error",
-
-    "flowtype/define-flow-type": 1,
-    "flowtype/no-primitive-constructor-types": 2,
-    "flowtype/require-parameter-type": [
-      2,
-      {
-        "excludeArrowFunctions": "expressionsOnly"
-      }
-    ],
-    "flowtype/require-variable-type": [
-      2,
-      {
-        "excludeVariableTypes": {
-          "let": true,
-          "const": true
-        }
-      }
-    ],
-    "flowtype/space-after-type-colon": [
-      2,
-      "always",
-      {
-        "allowLineBreak": true
-      }
-    ],
     "react/button-has-type": [
       "error",
       {

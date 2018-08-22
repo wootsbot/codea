@@ -1,4 +1,3 @@
-//@flow
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
@@ -49,7 +48,7 @@ class NavBar extends React.PureComponent {
         </span>
 
         <ul className={styles.navItemContainer}>
-          {getPaths.map((path: {}) => {
+          {getPaths.map(path => {
             if (path.active) {
               return (
                 <NavItem key={path.href} href={path.href}>

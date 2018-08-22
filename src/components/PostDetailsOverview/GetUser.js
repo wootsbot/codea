@@ -3,14 +3,7 @@ import PropTypes from 'prop-types'
 
 import styles from './styles.module.scss'
 
-type ArgumentsType = {
-  firsName?: string,
-  user?: string,
-  date: string,
-  biography?: string,
-}
-
-function GetUser({ firsName, user, date, biography }: ArgumentsType) {
+function GetUser({ firsName, user, date, biography }) {
   return (
     <div className={styles.information}>
       <span className={styles.author}>
@@ -28,6 +21,13 @@ function GetUser({ firsName, user, date, biography }: ArgumentsType) {
       <span className={styles.date}>{date}</span>
     </div>
   )
+}
+
+GetUser.propTypes = {
+  firsName: PropTypes.string,
+  user: PropTypes.string,
+  date: PropTypes.string,
+  biography: PropTypes.string,
 }
 
 export default GetUser
