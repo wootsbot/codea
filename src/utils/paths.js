@@ -31,3 +31,7 @@ export const getPaths = [
     active: true,
   },
 ]
+
+export function getPathsActives(getPaths) {
+  return getPaths.filter(path => path.active)
+}
