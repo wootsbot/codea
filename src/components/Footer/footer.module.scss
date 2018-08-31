@@ -1,0 +1,81 @@
+@import 'static/styles/theme';
+
+.footer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 0;
+  bottom: 0;
+  margin-top: 60px;
+  padding-top: 50px;
+  padding-bottom: 80px;
+  padding-left: 24px;
+  padding-right: 24px;
+  background-color: $secondary-main-color;
+}
+
+.footer-title {
+  font-family: $font-title;
+  font-size: $font-size-lg;
+  margin-bottom: 16px;
+}
+
+.logo-large {
+  width: 80px;
+  margin-top: -95px;
+  position: absolute;
+
+  @include breakpoint-sm-down() {
+    width: 70px;
+    margin-top: -90px;
+  }
+}
+
+.footer-links-root {
+  display: flex;
+  flex-direction: row;
+}
+
+.footer-links-container {
+  display: flex;
+  flex-direction: column;
+  margin: 24px;
+}
+
+.footer-links-title {
+  font-family: $font-title;
+  font-size: $font-size-lg;
+  margin-bottom: 16px;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+
+  &-item {
+    margin-top: 8px;
+  }
+}
+
+.footer-down {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: $secondary-dark-color;
+  padding: 12px;
+  font-family: $font-text-md;
+
+  @include breakpoint-sm-down() {
+    margin-bottom: 60px;
+  }
+}
+
+.logo {
+  width: 30px;
+  margin: 0 3px;
+}
+
+.chip {
+  background-color: $primary-light-color !important;
+}

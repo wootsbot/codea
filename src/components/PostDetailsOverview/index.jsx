@@ -5,6 +5,7 @@ import Avatar from '@material-ui/core/Avatar'
 import Typography from '@material-ui/core/Typography'
 
 import avatar from 'static/img/logo.svg'
+import avatarImage from 'static/img/codea.png'
 
 import GetUser from './GetUser'
 import styles from './styles.module.scss'
@@ -21,7 +22,11 @@ class PostDetailsOverview extends React.PureComponent {
     return (
       <div className={styles.root}>
         <div className={styles.header}>
-          <Avatar alt="name author" src={avatar} className={styles.avatar} />
+          <Avatar
+            alt="name author"
+            src={avatarImage}
+            className={styles.avatar}
+          />
           <GetUser date={date} />
         </div>
 

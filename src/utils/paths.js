@@ -1,31 +1,31 @@
 const POSTS = 'posts-/'
-const COLLABORATORS = 'collaborators-/collaborators'
+const NEWS = 'news-/-news'
 const CONTRIBUTE = 'contribute-/contribute'
 const TUTORIALS = 'tutorials-/tutorials'
 
-export const pathsKey = { POSTS, COLLABORATORS, CONTRIBUTE, TUTORIALS }
+export const pathsKey = { POSTS, NEWS, CONTRIBUTE, TUTORIALS }
 
 export const getPaths = [
   {
-    key: 'posts-/',
-    label: 'Posts',
+    key: POSTS,
+    label: 'Blog',
     href: '/',
     active: true,
   },
   {
-    key: 'collaborators-/collaborators',
-    label: 'Colaboradores',
-    href: '/collaborators',
+    key: NEWS,
+    label: 'noticias',
+    href: '/noticias',
     active: true,
   },
   {
-    key: 'contribute-/contribute',
+    key: CONTRIBUTE,
     label: 'Contribuir',
     href: '/contribute',
     active: true,
   },
   {
-    key: 'tutorials-/tutorials',
+    key: TUTORIALS,
     label: 'Cursos',
     href: '/tutorials',
     active: true,

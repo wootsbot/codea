@@ -1,7 +1,9 @@
 @import 'static/styles/theme';
 
+html,
 body {
   margin: 0;
+  padding: 0;
   background-color: $background-default-color !important;
 }
 

@@ -3,8 +3,7 @@ import React from 'react'
 import SubtitlesTwoTone from '@material-ui/icons/SubtitlesTwoTone'
 import CodeTwoToneIcon from '@material-ui/icons/CodeTwoTone'
 import LaptopTwoTone from '@material-ui/icons/LaptopTwoTone'
-// eslint-disable-next-line max-len
-import SupervisorAccountTwoTone from '@material-ui/icons/SupervisorAccountTwoTone'
+import FiberNewTwoTone from '@material-ui/icons/FiberNewTwoTone'
 
 import { getPaths, pathsKey } from 'utils/paths'
 
@@ -13,7 +12,7 @@ import styles from './SideBar.module.scss'
 
 const iconsOfPath = {
   [pathsKey.POSTS]: <SubtitlesTwoTone />,
-  [pathsKey.COLLABORATORS]: <SupervisorAccountTwoTone />,
+  [pathsKey.NEWS]: <FiberNewTwoTone />,
   [pathsKey.CONTRIBUTE]: <CodeTwoToneIcon />,
   [pathsKey.TUTORIALS]: <LaptopTwoTone />,
 }

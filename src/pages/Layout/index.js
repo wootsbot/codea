@@ -6,6 +6,7 @@ import classNames from 'classnames'
 import withRoot from 'utils/withRoot'
 import NavBar from 'components/NavBar'
 import SideBar from 'components/SideBar'
+import Footer from 'components/Footer'
 
 import styles from './layout.module.scss'
 import './main.scss'
@@ -51,6 +52,7 @@ class Layout extends React.PureComponent {
         />
         <NavBar />
         <main className={classMain}>{children}</main>
+        <Footer />
         <SideBar />
       </>
     )
