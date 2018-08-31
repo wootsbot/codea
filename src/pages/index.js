@@ -1,11 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 
-import Grid from '@material-ui/core/Grid'
-
-import PostLink from 'components/PostLink'
-import Layout from 'pages/Layout'
+import Layout from 'components/Layout'
+import PostLinkList from 'components/PostLinkList'
 
 class IndexPage extends React.Component {
   static propTypes = {
@@ -18,18 +16,13 @@ class IndexPage extends React.Component {
 
     return (
       <Layout
+        sizePadding="sm"
         title="Codea"
         meta={{
           description: 'codea un blog de un buem programador',
           keywords: 'javascript, blog',
         }}>
-        <Grid container alignItems="center" direction="column" justify="center">
-          {Posts.map(post => (
-            <Grid key={post.node.id} item lg={7} sm={12} xs={12}>
-              <PostLink post={post.node} />
-            </Grid>
-          ))}
-        </Grid>
+        <PostLinkList posts={Posts} />
       </Layout>
     )
   }
@@ -43,7 +36,7 @@ export const pageQuery = graphql`
       edges {
         node {
           id
-          excerpt(pruneLength: 250)
+          excerpt(pruneLength: 200)
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             path

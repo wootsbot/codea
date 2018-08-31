@@ -3,7 +3,6 @@
 .nav-item-container {
   display: flex;
   align-items: center;
-  flex: 1;
 
   @include breakpoint-sm-down() {
     display: none;
@@ -57,12 +56,11 @@
   position: relative;
   display: flex;
   align-items: center;
-  margin-right: 64px;
 }
 
 .logo-image {
   height: 50px;
-  margin-right: 16px;
+  margin-right: 4px;
   @include breakpoint-sm-down() {
     height: 45px;
   }

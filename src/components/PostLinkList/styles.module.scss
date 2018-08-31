@@ -1,0 +1,9 @@
+@import 'static/styles/theme';
+
+.root-item {
+  margin: 0 8px !important;
+
+  @include breakpoint-sm-down() {
+    margin: 0 !important;
+  }
+}

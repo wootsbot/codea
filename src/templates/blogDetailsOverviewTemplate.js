@@ -3,7 +3,7 @@ import Grid from '@material-ui/core/Grid'
 
 import { graphql } from 'gatsby'
 
-import Layout from 'pages/Layout'
+import Layout from 'components/Layout'
 import PostDetailsOverview from 'components/PostDetailsOverview'
 
 export default function Template({ data }) {
