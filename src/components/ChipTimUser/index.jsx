@@ -31,15 +31,16 @@ class ChipTimUser extends React.PureComponent {
     classes: PropTypes.object,
     avatar: PropTypes.string,
     label: PropTypes.string,
+    clickable: PropTypes.bool,
     to: PropTypes.string,
   }
 
   render() {
-    const { classes, avatar, label, to } = this.props
+    const { classes, avatar, label, clickable, to } = this.props
     return (
-      <Link to={to}>
+      <Link to={to ? to : '/'}>
         <Chip
-          clickable
+          clickable={clickable || to}
           classes={{ root: classes.root, clickable: classes.clickable }}
           avatar={<Avatar alt={label} src={avatar} />}
           label={label}
