@@ -19,8 +19,8 @@
 .header {
   display: flex;
   align-items: center;
+  margin-left: 0;
   margin-top: 20px;
-  border-left: $secondary-dark-color solid 3px;
   border-radius: 1px;
   margin-bottom: 40px;
 }
@@ -28,7 +28,6 @@
 .avatar {
   width: 60px !important;
   height: 60px !important;
-  margin-left: 12px;
 
   @include breakpoint-sm-down() {
     width: 50px !important;

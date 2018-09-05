@@ -61,6 +61,8 @@
 .logo-image {
   height: 50px;
   margin-right: 4px;
+  width: auto;
+
   @include breakpoint-sm-down() {
     height: 45px;
   }

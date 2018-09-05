@@ -15,7 +15,7 @@ export default function Template({ data }) {
       title={frontmatter.title}
       meta={{ description: excerpt, keywords: 'javascript, blog' }}>
       <Grid container alignItems="center" direction="column" justify="center">
-        <Grid item lg={7} sm={12} xs={12}>
+        <Grid item xl={5} lg={6} sm={12} xs={12}>
           <PostDetailsOverview
             title={frontmatter.title}
             date={frontmatter.date}
