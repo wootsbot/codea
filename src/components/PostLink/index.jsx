@@ -10,7 +10,7 @@ import avatarImage from 'static/img/codea.png'
 import styles from './styles.module.scss'
 
 const PostLink = ({ post }) => (
-  <Paper elevation={1} className={styles.root} component="article">
+  <Paper elevation={0} className={styles.root} component="article">
     <h2 className={styles.title}>
       <Link to={post.frontmatter.path}>{post.frontmatter.title}</Link>
     </h2>

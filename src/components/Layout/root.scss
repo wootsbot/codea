@@ -4,7 +4,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background-color: #fff !important;
+  background-color: #f7f7f7 !important;
 }
 
 a {
@@ -61,6 +61,7 @@ img {
   float: left; /* 1 */
   min-width: 100%; /* 2 */
   max-height: 85vh;
+  border-radius: 5px;
 }
 
 h2 {

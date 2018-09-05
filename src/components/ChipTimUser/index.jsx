@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 
 import { Link } from 'gatsby'
 
-import Avatar from '@material-ui/core/Avatar'
 import { withStyles } from '@material-ui/core/styles'
+import Avatar from '@material-ui/core/Avatar'
 import Chip from '@material-ui/core/Chip'
 
 import avatarImage from 'static/img/codea.png'

@@ -7,7 +7,7 @@ import Typography from '@material-ui/core/Typography'
 import avatar from 'static/img/logo.svg'
 import avatarImage from 'static/img/codea.png'
 
-import GetUser from './GetUser'
+import HeaderDetail from './HeaderDetail'
 import styles from './styles.module.scss'
 
 class PostDetailsOverview extends React.PureComponent {
@@ -21,17 +21,11 @@ class PostDetailsOverview extends React.PureComponent {
     const { title, date, html } = this.props
     return (
       <div className={styles.root}>
-        <div className={styles.header}>
-          <Avatar
-            alt="name author"
-            src={avatarImage}
-            className={styles.avatar}
-          />
-          <GetUser date={date} />
-        </div>
-
-        <h1>{title}</h1>
-
+        <HeaderDetail
+          title={title}
+          date={date}
+          extract={'Developer frontend/Javascript'}
+        />
         <div dangerouslySetInnerHTML={html} />
       </div>
     )
