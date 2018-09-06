@@ -16,18 +16,22 @@ class PostLinkList extends React.PureComponent {
     const { posts } = this.props
 
     return (
-      <Grid container direction="row" justify="center">
-        {posts.map(post => (
-          <Grid
-            key={post.node.id}
-            item
-            md={3}
-            sm={12}
-            xs={12}
-            className={styles.rootItem}>
-            <PostLink post={post.node} />
-          </Grid>
-        ))}
+      <Grid container justify="center">
+        <Grid
+          item
+          container
+          direction="row"
+          xl={9}
+          lg={9}
+          md={12}
+          sm={12}
+          xs={12}>
+          {posts.map(post => (
+            <Grid key={post.node.id} item>
+              <PostLink post={post.node} />
+            </Grid>
+          ))}
+        </Grid>
       </Grid>
     )
   }

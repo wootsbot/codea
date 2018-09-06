@@ -1,0 +1,25 @@
+@import 'static/styles/theme';
+
+.root {
+  padding: 8px 33px;
+  border-radius: 5px;
+  background-color: #fff;
+  margin: 0 15px 15px 0;
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.1),
+    0px 1px 4px 0px rgba(0, 0, 0, 0.1), 0px 1px 0px 0px rgba(0, 0, 0, 0.1);
+  transition: background-color 1.5s ease-out;
+
+  &:hover {
+    cursor: pointer;
+    background: #dadada;
+  }
+}
+
+.button {
+  background-color: $secondary-main-color;
+
+  &:hover {
+    cursor: pointer;
+    background: $secondary-dark-color;
+  }
+}

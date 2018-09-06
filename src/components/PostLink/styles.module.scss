@@ -5,10 +5,16 @@
   flex-direction: column;
   justify-content: center;
   padding: 24px;
+  margin-left: 8px;
+  margin-right: 8px;
   margin-bottom: 40px;
+  width: 300px;
 
   @include breakpoint-sm-down() {
-    border-radius: 0 !important;
+    width: auto;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 20px;
   }
 }
 
