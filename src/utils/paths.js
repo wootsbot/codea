@@ -9,7 +9,7 @@ export const getPaths = [
   {
     key: POSTS,
     label: 'Blog',
-    href: '/',
+    href: '/blog',
     active: true,
   },
   {

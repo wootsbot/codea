@@ -1,4 +1,5 @@
 const path = require('path')
+const createPaginatedPages = require('gatsby-paginate')
 
 exports.onCreateWebpackConfig = ({
   stage,
@@ -24,16 +25,26 @@ exports.createPages = ({ actions, graphql }) => {
     `src/templates/blogDetailsOverviewTemplate.js`
   )
 
+  const PaginatedPageTemplate = path.resolve(`src/templates/page.js`)
+
   return graphql(`
     {
-      allMarkdownRemark(
+      posts: allMarkdownRemark(
         sort: { order: DESC, fields: [frontmatter___date] }
-        limit: 100
       ) {
         edges {
           node {
+            id
+            excerpt(pruneLength: 200)
             frontmatter {
+              date(formatString: "MMMM DD, YYYY")
               path
+              title
+              author {
+                id
+                bio
+                twitter
+              }
             }
           }
         }
@@ -44,11 +55,22 @@ exports.createPages = ({ actions, graphql }) => {
       return Promise.reject(result.errors)
     }
 
-    result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    createPaginatedPages({
+      edges: result.data.posts.edges,
+      createPage: createPage,
+      pageTemplate: PaginatedPageTemplate,
+      pageLength: 10,
+      pathPrefix: '/blog',
+      buildPath: (index, pathPrefix) =>
+        index > 1 ? `${pathPrefix}/${index}` : `/${pathPrefix}`,
+      context: {},
+    })
+
+    result.data.posts.edges.forEach(({ node }) => {
       createPage({
         path: node.frontmatter.path,
         component: blogPostTemplate,
-        context: {}, // additional data can be passed via context
+        context: {},
       })
     })
   })
