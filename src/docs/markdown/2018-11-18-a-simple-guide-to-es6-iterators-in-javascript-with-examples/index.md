@@ -16,10 +16,7 @@ Any word wrapped with two tildes (like ~~this~~) will appear crossed out.+.
 
 If you want to embed images, this is how you do it:
 
-![Image of Yaktocat](https://cdn-images-1.medium.com/max/800/0*gtN8lOemEF_7I5bb.png)
-![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
-![Image of Yaktocat](https://about.gitlab.com/images/home/gitlab-gke-integration-image@2x.png)
-![Image of Yaktocat](https://cdn-images-1.medium.com/max/800/1*IZcJKz3761vChU1VFHfzkw.jpeg)
+![Image of Yaktocat](https://cdn-images-1.medium.com/max/1380/1*hrrakxVFbJDP0jKrC5D_VA.png)
 
 Sometimes you want numbered lists:
 
@@ -54,7 +51,7 @@ We are going to conceptually understand what iterators are and where to use them
 
 At some point, you will want to get back all the individual values in the array for printing them on the screen, manipulating them, or for performing some action on them. If I ask you how would you do that? You’ll say — it’s easy. I’ll just loop over them using for, while, for-of or one of these looping methods.Example implementations would be —
 
-```js
+```js{numberLines: true}
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
@@ -129,7 +126,7 @@ export default withRoot(Layout)
 
 ## todo super
 
-```js
+```js{1-3,12}{numberLines: true}
 import i18n from 'i18next';
 import XHR from 'i18next-xhr-backend';
 import LanguageDetector from 'i18next-browser-languagedetector';

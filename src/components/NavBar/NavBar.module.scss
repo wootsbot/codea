@@ -19,13 +19,14 @@
 
     > .item-link {
       transition: 0.5s ease;
-      color: #333;
+      color: $color-green-1;
+      text-decoration: none;
     }
   }
 
   &-active {
-    border-bottom: 2px solid $secondary-main-color;
-    color: #333 !important;
+    border-bottom: 2.5px solid $color-white;
+    color: $color-green-1 !important;
     font-weight: 600 !important;
   }
 }
@@ -33,17 +34,13 @@
 .item-link {
   height: 64px;
   text-decoration: none;
-  color: rgba(0, 0, 0, 0.54);
+  color: $color-white;
   font-size: $font-size-md;
   font-family: $font-title;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   font-weight: 400;
   padding: 24px 24px;
-}
-
-.button-user {
-  color: #333;
 }
 
 // styles avatar
@@ -72,6 +69,10 @@
   font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
   font-size: $font-size-xlg;
   font-weight: 800;
-  color: #333;
+  color: $color-white;
   letter-spacing: 0.5px;
+
+  &:hover {
+    text-decoration: none;
+  }
 }

@@ -24,19 +24,19 @@ export default class HTML extends React.Component {
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
           />
-          <meta name="theme-color" content={themeUi.palette.secondary.main} />
+          <meta name="theme-color" content={themeUi.palette.primary.main} />
           <meta
             name="msapplication-navbutton-color"
-            content={themeUi.palette.secondary.main}
+            content={themeUi.palette.primary.main}
           />
           <meta
             name="apple-mobile-web-app-status-bar-style"
-            content={themeUi.palette.secondary.main}
+            content={themeUi.palette.primary.main}
           />
 
           <link rel="shortcut icon" type="image/png" href={favicon} />
           <link
-            href="https://fonts.googleapis.com/css?family=Karla|Lato|Roboto"
+            href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Karla|Lato|Roboto"
             rel="stylesheet"
           />
           {headComponents}

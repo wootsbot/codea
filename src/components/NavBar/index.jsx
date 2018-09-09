@@ -20,9 +20,9 @@ const stylesUi = theme => ({
     alignItems: 'center',
   },
   colorPrimary: {
-    backgroundColor: '#fff',
+    backgroundColor: theme.palette.primary.main,
     [theme.breakpoints.down('sm')]: {
-      backgroundColor: theme.palette.secondary.main,
+      backgroundColor: theme.palette.primary.main,
     },
   },
 })

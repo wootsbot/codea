@@ -19,7 +19,6 @@
 }
 
 .title {
-  color: $primary-text-color;
   font-family: $font-title;
   font-size: $font-size-sub-title;
 
@@ -29,12 +28,13 @@
 
   > a {
     transition: color 0.5s linear;
-    color: $primary-text-color;
+    color: $primary-main-color;
   }
 
   & :hover {
     transition: 0.5s ease;
-    color: $secondary-dark-color;
+    color: $primary-light-color;
+    text-decoration: underline;
   }
 }
 
@@ -78,7 +78,7 @@
 
 .user {
   font-family: $font-text-xs;
-  color: $secondary-dark-color;
+  color: $color-link;
   font-size: $font-size-regular;
   margin-left: 10px;
   transition: color 0.5s linear;
@@ -88,14 +88,14 @@
   }
 
   &:hover {
-    color: $secondary-main-color;
     transition: 0.5s ease;
+    text-decoration: underline;
   }
 }
 
 .date {
   color: $primary-dark-color;
-
+  font-weight: bold;
   font-size: $font-size-regular;
 
   @include breakpoint-sm-down() {

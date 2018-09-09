@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { Link } from 'gatsby'
+import { navigate } from 'gatsby'
 
 import { withStyles } from '@material-ui/core/styles'
 import Avatar from '@material-ui/core/Avatar'
@@ -11,7 +11,7 @@ import avatarImage from 'static/img/codea.png'
 
 const styles = theme => ({
   root: {
-    backgroundColor: theme.palette.primary.light,
+    backgroundColor: '#fff',
   },
   clickable: {
     WebkitTapHighlightColor: 'transparent', // Remove grey highlight
@@ -38,16 +38,19 @@ class ChipTimUser extends React.PureComponent {
   render() {
     const { classes, avatar, label, clickable, to } = this.props
     return (
-      <Link to={to ? to : '/'}>
-        <Chip
-          clickable={clickable || to}
-          classes={{ root: classes.root, clickable: classes.clickable }}
-          avatar={<Avatar alt={label} src={avatar} />}
-          label={label}
-        />
-      </Link>
+      <Chip
+        onClick={() => navigate(to)}
+        clickable={clickable || Boolean(to)}
+        classes={{ root: classes.root, clickable: classes.clickable }}
+        avatar={<Avatar alt={label} src={avatar} />}
+        label={label}
+      />
     )
   }
+}
+
+ChipTimUser.defaultProps = {
+  clickable: false,
 }
 
 export default withStyles(styles)(ChipTimUser)

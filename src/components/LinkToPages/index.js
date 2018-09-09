@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import { Link } from 'gatsby'
 
-import styles from './styles.module.scss'
+import styles from './LinkToPages.module.scss'
 
 function LinkToPages({ to, children }) {
   return (

@@ -18,7 +18,7 @@
   align-items: center;
   justify-content: space-around;
   height: 60px;
-  background-color: $primary-light-color;
+  background-color: $color-white;
   margin: 0;
   padding: 0;
 }
@@ -29,12 +29,13 @@
   &:hover {
     > .item-link {
       transition: 0.5s ease;
-      color: #333;
+      color: $color-green-1;
+      text-decoration: none;
     }
   }
 
   &-active {
-    color: #333 !important;
+    color: $color-green-1 !important;
     font-weight: 600 !important;
   }
 }
@@ -47,7 +48,7 @@
   list-style: none;
   height: 60px;
   text-decoration: none;
-  color: rgba(0, 0, 0, 0.54);
+  color: $primary-dark-color;
   font-size: 10px;
   font-family: $font-text-md;
   text-transform: uppercase;

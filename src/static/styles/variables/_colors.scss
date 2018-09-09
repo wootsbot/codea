@@ -1,14 +1,22 @@
 // Primaries
-$primary-light-color: #ffffff;
-$primary-main-color: #e0e0e0;
-$primary-dark-color: #aeaeae;
+$primary-light-color: #343233;
+$primary-main-color: #584b4f;
+$primary-dark-color: #2c2a2b;
 
 // Secondaries
-$secondary-light-color: #ffff56;
-$secondary-main-color: #ffea00;
-$secondary-dark-color: #c7b800;
+$secondary-light-color: #fad367;
+$secondary-main-color: #ffd152;
+$secondary-dark-color: #ffc31f;
 
-$primary-text-color: #000000;
+$primary-text-color: #ffffff;
 
 $background-default-color: #f5f5f6;
-$background-pre-color: #fff;
+$background-pre-color: #343233;
+
+// other color
+$color-white: #ffffff;
+$color-green-1: #3b9b6d;
+$color-coffee-1: #efdab9;
+$color-link: $color-green-1;
+$color-disable: #fbfbfb;
+$background-secondary: #efeae1;

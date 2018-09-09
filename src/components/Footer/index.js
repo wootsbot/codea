@@ -21,7 +21,9 @@ function Footer() {
         <img src={logo} alt="Logo Codea" className={styles.logoLarge} />
 
         <Grid container direction="column" justify="center" alignItems="center">
-          <h3 className={styles.footerTitle}>Creative Tim</h3>
+          <h3 className={styles.footerTitle}>
+            {'<>'} El Equipo de Desarrolladores
+          </h3>
 
           <Grid
             item

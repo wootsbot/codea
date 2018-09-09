@@ -11,13 +11,16 @@
   padding-bottom: 80px;
   padding-left: 24px;
   padding-right: 24px;
-  background-color: $secondary-main-color;
+  background-color: $primary-dark-color;
 }
 
 .footer-title {
-  font-family: $font-title;
-  font-size: $font-size-lg;
-  margin-bottom: 16px;
+  color: $color-coffee-1;
+  font-weight: 200;
+  font-family: $font-code;
+  font-size: $font-size-sub-title;
+  margin-bottom: 24px;
+  text-align: center;
 }
 
 .logo-large {
@@ -43,9 +46,12 @@
 }
 
 .footer-links-title {
-  font-family: $font-title;
-  font-size: $font-size-lg;
-  margin-bottom: 16px;
+  color: $color-coffee-1;
+  font-family: $font-code;
+  font-size: $font-size-sub-title;
+  font-weight: 200;
+  margin-top: 50px;
+  margin-bottom: 36px;
 }
 
 .footer-links {
@@ -62,9 +68,9 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  background-color: $secondary-dark-color;
+  background-color: $background-secondary;
   padding: 12px;
-  font-family: $font-text-md;
+  font-family: $font-code;
 
   @include breakpoint-sm-down() {
     margin-bottom: 60px;
