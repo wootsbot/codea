@@ -22,10 +22,12 @@ exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
 
   const blogPostTemplate = path.resolve(
-    `src/templates/blogDetailsOverviewTemplate.js`
+    `src/templates/BlogDetailsOverviewTemplate/index.js`
   )
 
-  const PaginatedPageTemplate = path.resolve(`src/templates/page.js`)
+  const PaginatedPageTemplate = path.resolve(
+    `src/templates/PostPaginationList/index.js`
+  )
 
   return graphql(`
     {
@@ -40,6 +42,7 @@ exports.createPages = ({ actions, graphql }) => {
               date(formatString: "MMMM DD, YYYY")
               path
               title
+              tags
               author {
                 id
                 bio
@@ -67,10 +70,19 @@ exports.createPages = ({ actions, graphql }) => {
     })
 
     result.data.posts.edges.forEach(({ node }) => {
+      let tag = 'Default'
+
+      if (node.frontmatter.tags && node.frontmatter.tags.length) {
+        tag = node.frontmatter.tags[0]
+      }
+
       createPage({
         path: node.frontmatter.path,
         component: blogPostTemplate,
-        context: {},
+        context: {
+          tag,
+          limitFilterTags: 4,
+        },
       })
     })
   })

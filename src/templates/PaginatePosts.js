@@ -8,7 +8,7 @@ import PostLinkList from 'components/PostLinkList'
 import TagLinkList from 'components/TagLinkList'
 import PaginationToPosts from 'components/PaginationToPosts'
 
-class Page extends React.PureComponent {
+class PaginatePosts extends React.PureComponent {
   static propTypes = {
     pageContext: PropTypes.shape({
       group: PropTypes.array,
@@ -33,7 +33,7 @@ class Page extends React.PureComponent {
     return (
       <Layout
         sizePadding="sm"
-        title="Codea"
+        title="Lista de Articulos"
         meta={{ description: 'Lista de Pots', keywords: 'javascript, blog' }}>
         <Grid container justify="center">
           <Grid
@@ -69,4 +69,4 @@ class Page extends React.PureComponent {
   }
 }
 
-export default Page
+export default PaginatePosts

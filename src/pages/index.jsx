@@ -2,8 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
-import Grid from '@material-ui/core/Grid'
-
 import Layout from 'components/Layout'
 import PostLinkList from 'components/PostLinkList'
 
