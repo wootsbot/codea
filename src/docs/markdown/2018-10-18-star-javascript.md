@@ -2,7 +2,7 @@
 path: '/blog/javascript'
 date: '2017-04-07'
 title: 'REACT JS EN ESPAÑOL – TUTORIAL BÁSICO Y PRIMEROS PASOS'
-tags: ['ReactJS', 'Web']
+tags: ['ReactJS', 'Web', 'SublimeText', 'Code']
 ---
 
 ¿QUE ES REACT JS?

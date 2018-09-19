@@ -5,6 +5,8 @@ import Grid from '@material-ui/core/Grid'
 
 import { graphql } from 'gatsby'
 
+import { getPostsFilterTags } from 'utils/posts'
+
 import Layout from 'components/Layout'
 import PostDetailsOverview from 'components/PostDetailsOverview'
 import PostLink from 'components/PostLink'
@@ -15,19 +17,16 @@ function BlogDetailsOverviewTemplate({ data }) {
   const { markdownRemark } = data
   const { frontmatter, html, excerpt } = markdownRemark
 
-  console.log(data.filterPostTags.edges)
-
-  const FilterPostsTags =
-    data.filterPostTags &&
-    data.filterPostTags.edges.filter(
-      edge => edge.node.frontmatter.path != frontmatter.path
-    )
-
   return (
     <Layout
       title={frontmatter.title}
       meta={{ description: excerpt, keywords: 'javascript, blog' }}>
-      <Grid container alignItems="center" direction="column" justify="center">
+      <Grid
+        className={styles.detailContainer}
+        container
+        alignItems="center"
+        direction="column"
+        justify="center">
         <Grid item xl={5} lg={6} sm={12} xs={12}>
           <PostDetailsOverview
             title={frontmatter.title}
@@ -36,14 +35,14 @@ function BlogDetailsOverviewTemplate({ data }) {
           />
         </Grid>
       </Grid>
-
-      {FilterPostsTags && (
+      {data.filterPostTags && (
         <Grid
           className={styles.suggestions}
           container
           direction="column"
           alignItems="center">
           <Grid
+            className={styles.suggestionsItems}
             item
             xl={8}
             lg={8}
@@ -53,18 +52,20 @@ function BlogDetailsOverviewTemplate({ data }) {
             container
             justify="center"
             direction="row">
-            {FilterPostsTags.map(post => (
-              <Grid
-                key={post.node.id}
-                item
-                xl={3}
-                lg={4}
-                md={4}
-                sm={12}
-                xs={12}>
-                <PostLink post={post.node} />
-              </Grid>
-            ))}
+            {getPostsFilterTags(data.filterPostTags, frontmatter.path).map(
+              post => (
+                <Grid
+                  key={post.node.id}
+                  item
+                  xl={3}
+                  lg={4}
+                  md={4}
+                  sm={12}
+                  xs={12}>
+                  <PostLink post={post.node} />
+                </Grid>
+              )
+            )}
           </Grid>
         </Grid>
       )}
@@ -91,7 +92,7 @@ export const pageQuery = graphql`
     filterPostTags: allMarkdownRemark(
       filter: { frontmatter: { tags: { eq: $tag } } }
       limit: $limitFilterTags
-      sort: { order: DESC, fields: [frontmatter___date] }
+      sort: { fields: [frontmatter___date] }
     ) {
       edges {
         node {

@@ -1,7 +1,15 @@
 @import 'static/styles/theme';
 
+.detail-container {
+  margin-bottom: 70px;
+}
+
 .suggestions {
   margin-top: 50px;
   background-color: $background-secondary;
   padding: 36px 0;
+}
+
+.suggestions-items {
+  margin-bottom: 24px !important;
 }

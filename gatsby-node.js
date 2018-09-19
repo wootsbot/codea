@@ -1,4 +1,5 @@
 const path = require('path')
+const _ = require('lodash')
 const createPaginatedPages = require('gatsby-paginate')
 
 exports.onCreateWebpackConfig = ({
@@ -24,16 +25,14 @@ exports.createPages = ({ actions, graphql }) => {
   const blogPostTemplate = path.resolve(
     `src/templates/BlogDetailsOverviewTemplate/index.js`
   )
-
+  const tagTemplate = path.resolve('src/templates/ArchiveTags/index.js')
   const PaginatedPageTemplate = path.resolve(
     `src/templates/PostPaginationList/index.js`
   )
 
   return graphql(`
     {
-      posts: allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___date] }
-      ) {
+      posts: allMarkdownRemark(sort: { fields: [frontmatter___date] }) {
         edges {
           node {
             id
@@ -52,25 +51,38 @@ exports.createPages = ({ actions, graphql }) => {
           }
         }
       }
+      tags: allTagsYaml {
+        edges {
+          node {
+            id
+            description
+          }
+        }
+      }
     }
   `).then(result => {
     if (result.errors) {
       return Promise.reject(result.errors)
     }
 
+    const postsList = result.data.posts.edges.reverse()
+    const tagsList = result.data.tags.edges
+
     createPaginatedPages({
-      edges: result.data.posts.edges,
+      edges: postsList,
       createPage: createPage,
       pageTemplate: PaginatedPageTemplate,
       pageLength: 10,
       pathPrefix: '/blog',
       buildPath: (index, pathPrefix) =>
         index > 1 ? `${pathPrefix}/${index}` : `/${pathPrefix}`,
-      context: {},
+      context: {
+        tags: tagsList,
+      },
     })
 
-    result.data.posts.edges.forEach(({ node }) => {
-      let tag = 'Default'
+    postsList.forEach(({ node }) => {
+      let tag = ''
 
       if (node.frontmatter.tags && node.frontmatter.tags.length) {
         tag = node.frontmatter.tags[0]
@@ -82,6 +94,17 @@ exports.createPages = ({ actions, graphql }) => {
         context: {
           tag,
           limitFilterTags: 4,
+        },
+      })
+    })
+
+    // Make tag pages
+    tagsList.forEach(tag => {
+      createPage({
+        path: `/archive-tags/${_.kebabCase(tag.node.id)}/`,
+        component: tagTemplate,
+        context: {
+          tag: tag.node.id,
         },
       })
     })

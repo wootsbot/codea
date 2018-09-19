@@ -12,7 +12,17 @@
   list-style: none;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  align-items: center;
   padding: 0;
   margin: 0;
+}
+
+.tags-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  @include breakpoint-sm-down() {
+    display: none;
+  }
 }

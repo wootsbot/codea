@@ -22,11 +22,20 @@ class PaginatePosts extends React.PureComponent {
 
   render() {
     const { pageContext } = this.props
-    const { group, index, first, last, pageCount, pathPrefix } = pageContext
+    const {
+      group,
+      index,
+      first,
+      last,
+      pageCount,
+      pathPrefix,
+      additionalContext,
+    } = pageContext
 
     const previousUrl =
       index - 1 == 1 ? pathPrefix : `${pathPrefix}/${(index - 1).toString()}`
     const nextUrl = `${pathPrefix}/${(index + 1).toString()}`
+    const listTags = additionalContext.tags
 
     const Posts = group.filter(edge => !!edge.node.frontmatter.date)
 
@@ -45,7 +54,7 @@ class PaginatePosts extends React.PureComponent {
             md={12}
             sm={12}
             xs={12}>
-            <TagLinkList />
+            <TagLinkList tags={listTags} />
           </Grid>
         </Grid>
 

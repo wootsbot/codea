@@ -1,8 +1,42 @@
+@import 'static/styles/theme';
+
 .root {
   height: 100vh;
   background-color: #343233;
   position: relative;
-  height: 100vh;
   background-size: cover;
   background-position: center center;
+}
+
+.messages-and-actions {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 150px;
+
+  @include breakpoint-sm-down() {
+    margin-bottom: 100px;
+    padding: 24px;
+    width: auto;
+  }
+}
+
+.strong-text {
+  color: $secondary-main-color;
+}
+
+.message {
+  font: {
+    size: $font-size-sub-title;
+    family: $font-text-md;
+  }
+  color: $color-coffee-1;
+
+  @include breakpoint-sm-down() {
+    font-size: $font-size-lg;
+  }
 }

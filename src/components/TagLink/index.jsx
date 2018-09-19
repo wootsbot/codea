@@ -1,6 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+
+import Link from 'gatsby-link'
 import classNames from 'classnames'
+
+import Button from '@material-ui/core/Button'
 
 import styles from './TagLink.module.scss'
 import './root.scss'
@@ -8,17 +12,22 @@ import './root.scss'
 class TagLink extends React.PureComponent {
   static propTypes = {
     children: PropTypes.node,
-    button: PropTypes.bool,
+    to: PropTypes.string,
   }
+
   render() {
-    const { children, button } = this.props
-    const second = children[1]
+    const { children, to } = this.props
     const classNameCustom = classNames(styles.root, {
-      [styles.button]: button,
-      [`tag-${second}`]: true,
+      [`tag-${children}`]: true,
     })
 
-    return <li className={classNameCustom}>{children}</li>
+    return (
+      <li>
+        <Link className={classNameCustom} to={to}>
+          {children}
+        </Link>
+      </li>
+    )
   }
 }
 

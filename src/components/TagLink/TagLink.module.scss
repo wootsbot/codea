@@ -12,17 +12,7 @@
 
   &:hover {
     cursor: pointer;
+    text-decoration: none;
     background: #dadada;
-  }
-}
-
-.button {
-  background-color: $secondary-main-color;
-  color: $primary-light-color;
-  font-weight: 500;
-
-  &:hover {
-    cursor: pointer;
-    background: $secondary-dark-color;
   }
 }
