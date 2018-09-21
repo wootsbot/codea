@@ -42,7 +42,7 @@ class Layout extends React.PureComponent {
     })
 
     return (
-      <>
+      <React.Fragment>
         <Helmet
           title={title && title}
           meta={[
@@ -54,7 +54,7 @@ class Layout extends React.PureComponent {
         <main className={classMain}>{children}</main>
         <Footer />
         <SideBar />
-      </>
+      </React.Fragment>
     )
   }
 }
