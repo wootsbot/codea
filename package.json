@@ -19,7 +19,7 @@
   },
   "homepage": "https://gitlab.com/codea_/blog-codea#README",
   "dependencies": {
-    "@material-ui/core": "^3.1.0",
+    "@material-ui/core": "^3.1.1",
     "@material-ui/icons": "^3.0.1",
     "classnames": "^2.2.6",
     "gatsby": "^2.0.7",
