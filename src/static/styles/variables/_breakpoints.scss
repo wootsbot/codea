@@ -1,4 +1,4 @@
-@import './_grid';
+@import './grid';
 
 @mixin breakpoint-375-up {
   @media (min-width: 376px) {

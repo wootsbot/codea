@@ -9,7 +9,7 @@ import { getPostsFilterTags } from 'utils/posts'
 
 import Layout from 'components/Layout'
 import PostDetailsOverview from 'components/PostDetailsOverview'
-import PostLink from 'components/PostLink'
+import SuggestionLink from 'components/SuggestionLink'
 
 import styles from './blogDetailsOverviewTemplate.module.scss'
 
@@ -31,44 +31,24 @@ function BlogDetailsOverviewTemplate({ data }) {
           <PostDetailsOverview
             title={frontmatter.title}
             date={frontmatter.date}
+            author={frontmatter.author}
             html={{ __html: html }}
           />
         </Grid>
       </Grid>
-      {data.filterPostTags && (
-        <Grid
-          className={styles.suggestions}
-          container
-          direction="column"
-          alignItems="center">
-          <Grid
-            className={styles.suggestionsItems}
-            item
-            xl={8}
-            lg={8}
-            md={12}
-            sm={12}
-            xs={12}
-            container
-            justify="center"
-            direction="row">
-            {getPostsFilterTags(data.filterPostTags, frontmatter.path).map(
-              post => (
-                <Grid
-                  key={post.node.id}
-                  item
-                  xl={3}
-                  lg={4}
-                  md={4}
-                  sm={12}
-                  xs={12}>
-                  <PostLink post={post.node} />
-                </Grid>
-              )
-            )}
-          </Grid>
-        </Grid>
-      )}
+
+      <Grid
+        className={styles.detailContainer}
+        container
+        alignItems="center"
+        direction="column"
+        justify="center">
+        {getPostsFilterTags(data.filterPostTags, frontmatter.path).map(post => (
+          <SuggestionLink key={post.node.id} to={post.node.frontmatter.path}>
+            {post.node.frontmatter.title}
+          </SuggestionLink>
+        ))}
+      </Grid>
     </Layout>
   )
 }
@@ -86,6 +66,13 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         path
         title
+        author {
+          id
+          avatar
+          bio
+          firstName
+          lastName
+        }
       }
     }
 

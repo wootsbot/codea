@@ -5,6 +5,10 @@ import { MuiThemeProvider } from '@material-ui/core/styles'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import getPageContext from './getPageContext'
 
+// styles code and styles global
+import 'static/styles/codea-syntax.scss'
+import 'static/styles/global-styles.scss'
+
 function withRoot(Component) {
   class WithRoot extends React.Component {
     pagePropsContext = null

@@ -11,7 +11,7 @@ import avatarImage from 'static/img/codea.png'
 
 const styles = theme => ({
   root: {
-    backgroundColor: '#fff',
+    backgroundColor: theme.palette.secondary.light,
   },
   clickable: {
     WebkitTapHighlightColor: 'transparent', // Remove grey highlight

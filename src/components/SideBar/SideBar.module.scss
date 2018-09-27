@@ -29,13 +29,13 @@
   &:hover {
     > .item-link {
       transition: 0.5s ease;
-      color: $color-green-1;
+      color: $color-yellow-1;
       text-decoration: none;
     }
   }
 
   &-active {
-    color: $color-green-1 !important;
+    color: $color-yellow-1 !important;
     font-weight: 600 !important;
   }
 }
@@ -48,7 +48,7 @@
   list-style: none;
   height: 60px;
   text-decoration: none;
-  color: $primary-dark-color;
+  color: $primary-light-color;
   font-size: 10px;
   font-family: $font-text-md;
   text-transform: uppercase;

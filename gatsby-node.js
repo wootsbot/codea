@@ -44,8 +44,7 @@ exports.createPages = ({ actions, graphql }) => {
               tags
               author {
                 id
-                bio
-                twitter
+                avatar
               }
             }
           }

@@ -9,31 +9,40 @@ import { Link } from 'gatsby'
 import avatarImage from 'static/img/codea.png'
 import styles from './styles.module.scss'
 
-const PostLink = ({ post }) => (
-  <Paper elevation={0} className={styles.root} component="article">
-    <h2 className={styles.title}>
-      <Link to={post.frontmatter.path}>{post.frontmatter.title}</Link>
-    </h2>
+class PostLink extends React.PureComponent {
+  static propTypes = {
+    post: PropTypes.object,
+  }
 
-    <p className={styles.summary}>{post.excerpt}</p>
+  render() {
+    const { post } = this.props
 
-    <div className={styles.footer}>
-      <Avatar alt="name author" src={avatarImage} className={styles.avatar} />
-      <div className={styles.information}>
-        <span className={styles.author}>
-          Jorge Luis Calleja
-          <a href="" className={styles.user}>
-            (@Woostbot)
-          </a>
-        </span>
-        <span className={styles.date}>{post.frontmatter.date}</span>
-      </div>
-    </div>
-  </Paper>
-)
+    return (
+      <Paper elevation={0} className={styles.root} component="article">
+        <h2 className={styles.title}>
+          <Link to={post.frontmatter.path}>{post.frontmatter.title}</Link>
+        </h2>
 
-PostLink.propTypes = {
-  post: PropTypes.object,
+        <p className={styles.summary}>{post.excerpt}</p>
+
+        <div className={styles.footer}>
+          <img
+            alt="avatar author"
+            src={avatarImage}
+            className={styles.avatar}
+          />
+
+          <div className={styles.information}>
+            <a href="" className={styles.user}>
+              {`(@${post.frontmatter.author.id})`}
+            </a>
+
+            <span className={styles.date}>{post.frontmatter.date}</span>
+          </div>
+        </div>
+      </Paper>
+    )
+  }
 }
 
 export default PostLink

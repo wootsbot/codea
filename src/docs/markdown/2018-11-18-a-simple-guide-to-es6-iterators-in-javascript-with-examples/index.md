@@ -2,7 +2,7 @@
 path: '/blog/2018-11-18-a-simple-guide-to-es6-iterators-in-javascript-with-examples'
 date: '2018-08-12'
 title: 'A Simple Guide to ES6 Iterators in JavaScript with Examples'
-author: 'woostbot'
+author: woostbot
 tags: ['ReactJS', 'Web', 'Docker', 'Angular', 'JavaScript']
 ---
 

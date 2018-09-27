@@ -1,29 +1,17 @@
 .tag {
   &-ReactJS {
-    &:hover {
-      cursor: pointer;
-      background-color: #79b6f2;
-    }
+    background-color: #d3e3ff;
   }
 
   &-Angular {
-    &:hover {
-      background-color: #b00020;
-      cursor: pointer;
-    }
+    background-color: #ef9a9a;
   }
 
   &-Python {
-    &:hover {
-      background-color: #ffd343;
-      cursor: pointer;
-    }
+    background-color: #fff59d;
   }
 
   &-VueJS {
-    &:hover {
-      background-color: #4fc08d;
-      cursor: pointer;
-    }
+    background-color: #b6ecd7;
   }
 }

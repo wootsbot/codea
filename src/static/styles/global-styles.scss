@@ -1,0 +1,98 @@
+@import 'static/styles/theme';
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7 !important;
+}
+
+a {
+  text-decoration: none;
+  color: $color-link;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+p {
+  color: $primary-main-color;
+  font-family: $font-text-lg;
+  font-size: $font-size-regular;
+  line-height: 1.58;
+  letter-spacing: -0.003em;
+
+  @include breakpoint-sm-down() {
+    font-size: $font-size-lg;
+  }
+}
+
+ol {
+  line-height: 1.5;
+  font-family: $font-text-md;
+  color: $primary-main-color;
+  font-weight: 500;
+}
+
+ul {
+  line-height: 1.5;
+  font-family: $font-text-md;
+  color: $primary-main-color;
+  font-weight: 500;
+}
+
+img {
+  width: 100%;
+}
+
+h2 {
+  color: $primary-main-color;
+  font-size: $font-size-sub-title;
+  font-family: $font-title;
+}
+
+h3,
+h4,
+h5 {
+  color: $primary-main-color;
+  font-size: $font-size-xlg;
+  font-family: $font-title;
+}
+
+blockquote {
+  border-left: 4px solid $secondary-main-color;
+  padding: 0 15px;
+  margin: 0;
+
+  & > p {
+    color: $primary-dark-color !important;
+    font-family: $font-text-lg !important;
+  }
+}
+
+// styles table global
+
+table {
+  width: 100%;
+  max-width: 100%;
+
+  & thead {
+    text-align: left;
+    font-family: $font-title;
+    font-size: $font-size-regular;
+  }
+
+  & th {
+    color: $primary-dark-color;
+    padding: 10px 10px;
+    border-bottom: 2px solid $primary-dark-color;
+  }
+
+  & td {
+    color: $primary-main-color;
+    padding: 10px 10px;
+    font-family: $font-text-md;
+    font-size: $font-size-md;
+  }
+}

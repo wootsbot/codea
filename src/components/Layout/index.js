@@ -9,7 +9,6 @@ import SideBar from 'components/SideBar'
 import Footer from 'components/Footer'
 
 import styles from './layout.module.scss'
-import './root.scss'
 
 const sizes = {
   DEFAULT: 'default',

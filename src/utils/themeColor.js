@@ -1,6 +1,6 @@
 export const themeUi = {
   palette: {
-    primary: { light: '#343233', main: '#584b4f', dark: '#2c2a2b' },
-    secondary: { light: '#fad367', main: '#ffd152', dark: '#ffc31f' },
+    primary: { light: '#626262', main: '#383838', dark: '#121212' },
+    secondary: { light: '#fff59d', main: '#ffeb3b', dark: '#fed539' },
   },
 }

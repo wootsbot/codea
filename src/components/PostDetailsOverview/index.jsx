@@ -15,17 +15,14 @@ class PostDetailsOverview extends React.PureComponent {
     title: PropTypes.string,
     date: PropTypes.string.isRequired,
     html: PropTypes.object,
+    author: PropTypes.object,
   }
 
   render() {
-    const { title, date, html } = this.props
+    const { title, date, author, html } = this.props
     return (
       <div className={styles.root}>
-        <HeaderDetail
-          title={title}
-          date={date}
-          extract={'Developer frontend/Javascript'}
-        />
+        <HeaderDetail title={title} date={date} author={author} />
         <div dangerouslySetInnerHTML={html} />
       </div>
     )

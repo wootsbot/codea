@@ -54,11 +54,12 @@ class TagLinkList extends React.PureComponent {
           </div>
 
           <Button
+            variant="outlined"
             color="primary"
             aria-owns={open ? 'fade-menu' : null}
             aria-haspopup="true"
             onClick={this.handleClick}>
-            Lista de Tagas
+            Lista de etiquetas
           </Button>
 
           <Menu
@@ -67,6 +68,10 @@ class TagLinkList extends React.PureComponent {
             open={open}
             onClose={this.handleClose}
             TransitionComponent={Fade}>
+            <MenuItem selected onClick={() => this.handleNavigate('/tgas')}>
+              Etiquetas
+            </MenuItem>
+
             {tags.map(item => (
               <MenuItem
                 key={item.node.id}

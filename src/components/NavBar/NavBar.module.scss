@@ -1,5 +1,7 @@
 @import 'static/styles/theme';
 
+$transition: 0.2s ease;
+
 .nav-item-container {
   display: flex;
   align-items: center;
@@ -18,23 +20,25 @@
     cursor: pointer;
 
     > .item-link {
-      transition: 0.5s ease;
-      color: $color-green-1;
+      transition: $transition;
+      border-bottom: 2.5px solid $primary-main-color;
+      font-weight: 700 !important;
       text-decoration: none;
     }
   }
 
   &-active {
-    border-bottom: 2.5px solid $color-white;
-    color: $color-green-1 !important;
-    font-weight: 600 !important;
+    border-bottom: 2.5px solid $primary-main-color;
+    color: $primary-main-color !important;
+    font-weight: 700 !important;
+    padding: 10px 0;
   }
 }
 
 .item-link {
   height: 64px;
   text-decoration: none;
-  color: $color-white;
+  color: $primary-main-color;
   font-size: $font-size-md;
   font-family: $font-title;
   text-transform: uppercase;
@@ -69,7 +73,7 @@
   font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
   font-size: $font-size-xlg;
   font-weight: 800;
-  color: $color-white;
+  color: $secondary-text-color;
   letter-spacing: 0.5px;
 
   &:hover {

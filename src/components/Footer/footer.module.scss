@@ -1,86 +1,66 @@
 @import 'static/styles/theme';
 
+.root {
+  padding: 0 24px;
+  bottom: 0;
+}
+
 .footer {
   display: flex;
   align-items: center;
-  flex-direction: column;
-  border: 0;
-  bottom: 0;
-  padding-top: 50px;
-  padding-bottom: 80px;
-  padding-left: 24px;
-  padding-right: 24px;
-  background-color: $primary-dark-color;
-}
-
-.footer-title {
-  color: $color-coffee-1;
-  font-weight: 200;
-  font-family: $font-code;
-  font-size: $font-size-sub-title;
-  margin-bottom: 24px;
-  text-align: center;
-}
-
-.logo-large {
-  width: 80px;
-  margin-top: -95px;
-  position: absolute;
-
-  @include breakpoint-sm-down() {
-    width: 70px;
-    margin-top: -90px;
-  }
-}
-
-.footer-links-root {
-  display: flex;
-  flex-direction: row;
-}
-
-.footer-links-container {
-  display: flex;
-  flex-direction: column;
-  margin: 24px;
-}
-
-.footer-links-title {
-  color: $color-coffee-1;
-  font-family: $font-code;
-  font-size: $font-size-sub-title;
-  font-weight: 200;
-  margin-top: 50px;
-  margin-bottom: 36px;
-}
-
-.footer-links {
-  display: flex;
-  flex-direction: column;
-
-  &-item {
-    margin-top: 8px;
-  }
-}
-
-.footer-down {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   width: 100%;
-  background-color: $background-secondary;
   padding: 12px;
   font-family: $font-code;
+  border-top: solid 3px #000;
 
   @include breakpoint-sm-down() {
+    flex-direction: column;
     margin-bottom: 60px;
   }
+}
+
+.codea {
+  display: flex;
+  align-items: center;
+}
+
+.codea-social {
+  display: flex;
+  align-items: center;
+
+  @include breakpoint-sm-down() {
+    flex-direction: column;
+  }
+}
+
+.social {
+  display: flex;
+  align-items: center;
+
+  @include breakpoint-sm-down() {
+    margin: 20px 0;
+  }
+}
+
+.code {
+  width: 20px;
+  margin-right: 10px;
+}
+
+.heart {
+  width: 20px;
+  margin: 0 10px;
+}
+
+.red-social {
+  width: 20px;
+  display: flex;
+  align-items: center;
+  margin: 0 10px;
 }
 
 .logo {
   width: 30px;
   margin: 0 3px;
-}
-
-.chip {
-  background-color: $primary-light-color !important;
 }
