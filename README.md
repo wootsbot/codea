@@ -1,36 +1,35 @@
 # Codea blog
 
-Este es el código fuente de codea blog. La idea detrás de esta iniciativa es
-exponer una amplia variedad de artículos principalmente en el mundo de Javascript.
+This is the codea blog source code. The idea behind this initiative is to expose
+a wide variety of articles mainly in the Javascript world. 
 
-Read this in [English](README.en.md)
+Leélo también en [español](README.es.md)
 
-## Manos a la obra
+## Getting started
 
-Asegúrese de tener una versión reciente de [nodejs](https://nodejs.org) y la
-herramienta de administración de dependencias [yarn](https://yarnpkg.com).
+Make sure you have a recent version of [nodejs](https://nodejs.org), and the
+[yarn](https://yarnpkg.com) dependency management tool.
 
 ```sh
 $ npm install --global yarn
 ```
 
-Enseguida procedemos a instalar las dependencias del proyecto.
+Once these requirements are met, let's proceed and install the project dependencies.
 
 ```sh
-$ cd blog-codea/
+$ cd codea-blog
 $ yarn install
 ```
 
-Y finalmente, ejecutemos el servidor en modo desarrollo:
+And finally, let's execute the development server:
 
 ```sh
 $ ./node_modules/.bin/gatsby develop
 ```
 
-Ahora puede ver el blog en el navegador http://localhost:8000
+You can now view blog in the browser http://localhost:8000
 
-Vea GraphiQL, un IDE en el navegador, para explorar los datos y el esquema del
-blog http://localhost:8000/___graphql
+View GraphiQL, an in-browser IDE, to explore the blog's schema http://localhost:8000/___graphql
 
 
-Siéntase libre de dejar cualquier comentario y/o sugerencia.
+Feel free to leave any comment and/or suggestion.
