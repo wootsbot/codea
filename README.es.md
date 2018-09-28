@@ -26,6 +26,11 @@ Y finalmente, ejecutemos el servidor en modo desarrollo:
 ```sh
 $ ./node_modules/.bin/gatsby develop
 ```
+o
+
+```sh
+$ yarn develop
+```
 
 Ahora puede ver el blog en el navegador http://localhost:8000
 

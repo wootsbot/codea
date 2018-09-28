@@ -1,4 +1,4 @@
-# Codea blog
+# Codea
 
 This is the codea blog source code. The idea behind this initiative is to expose
 a wide variety of articles mainly in the Javascript world. 
@@ -25,6 +25,11 @@ And finally, let's execute the development server:
 
 ```sh
 $ ./node_modules/.bin/gatsby develop
+```
+or
+
+```sh
+$ yarn develop
 ```
 
 You can now view blog in the browser http://localhost:8000
