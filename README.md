@@ -1,26 +1,36 @@
-# gatsby-starter-default
-The default Gatsby starter.
+# Codea blog
 
-For an overview of the project structure please refer to the [Gatsby documentation - Building with Components](https://www.gatsbyjs.org/docs/building-with-components/).
+Este es el código fuente de codea blog. La idea detrás de esta iniciativa es
+exponer una amplia variedad de artículos principalmente en el mundo de Javascript.
 
-## Install
+Read this in [English](README.en.md)
 
-Make sure that you have the Gatsby CLI program installed:
+## Manos a la obra
+
+Asegúrese de tener una versión reciente de [nodejs](https://nodejs.org) y la
+herramienta de administración de dependencias [yarn](https://yarnpkg.com).
+
 ```sh
-npm install --global gatsby-cli
+$ npm install --global yarn
 ```
 
-And run from your CLI:
+Enseguida procedemos a instalar las dependencias del proyecto.
+
 ```sh
-gatsby new gatsby-example-site
+$ cd blog-codea/
+$ yarn install
 ```
 
-Then you can run it by:
+Y finalmente, ejecutemos el servidor en modo desarrollo:
+
 ```sh
-cd gatsby-example-site
-gatsby develop
+$ ./node_modules/.bin/gatsby develop
 ```
 
-## Deploy
+Ahora puede ver el blog en el navegador http://localhost:8000
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+Vea GraphiQL, un IDE en el navegador, para explorar los datos y el esquema del
+blog http://localhost:8000/___graphql
+
+
+Siéntase libre de dejar cualquier comentario y/o sugerencia.
