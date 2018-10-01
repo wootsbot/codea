@@ -20,7 +20,7 @@
 }
 
 .pagination-pages {
-  font-family: $font-text-md;
+  font-family: $font-light-family;
 
   @include breakpoint-sm-down() {
     display: none;
