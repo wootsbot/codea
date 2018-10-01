@@ -7,7 +7,6 @@ import classNames from 'classnames'
 import Button from '@material-ui/core/Button'
 
 import styles from './TagLink.module.scss'
-import './root.scss'
 
 class TagLink extends React.PureComponent {
   static propTypes = {
@@ -17,7 +16,7 @@ class TagLink extends React.PureComponent {
 
   render() {
     const { children, to } = this.props
-    const classNameCustom = classNames(styles.root, {
+    const classNameCustom = classNames(styles.tag, {
       [`tag-${children}`]: true,
     })
 

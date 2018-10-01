@@ -1,4 +1,4 @@
-# Codea blog
+# Codea
 
 Este es el código fuente de codea blog. La idea detrás de esta iniciativa es
 exponer una amplia variedad de artículos principalmente en el mundo de Javascript.
@@ -26,6 +26,7 @@ Y finalmente, ejecutemos el servidor en modo desarrollo:
 ```sh
 $ ./node_modules/.bin/gatsby develop
 ```
+
 o
 
 ```sh
@@ -36,6 +37,5 @@ Ahora puede ver el blog en el navegador http://localhost:8000
 
 Vea GraphiQL, un IDE en el navegador, para explorar los datos y el esquema del
 blog http://localhost:8000/___graphql
-
 
 Siéntase libre de dejar cualquier comentario y/o sugerencia.
