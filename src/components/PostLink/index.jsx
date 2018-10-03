@@ -5,6 +5,7 @@ import Paper from '@material-ui/core/Paper'
 import Avatar from '@material-ui/core/Avatar'
 
 import { Link } from 'gatsby'
+import Img from 'gatsby-image'
 
 import avatarImage from 'static/img/codea.png'
 import styles from './styles.module.scss'
@@ -16,29 +17,26 @@ class PostLink extends React.PureComponent {
 
   render() {
     const { post } = this.props
-    const { avatar } = post.frontmatter.author
+    const { frontmatter } = post
+    const avatar = frontmatter.author.avatar.childImageSharp.fixed
 
     return (
       <Paper elevation={0} className={styles.root} component="article">
         <h2 className={styles.title}>
-          <Link to={post.frontmatter.path}>{post.frontmatter.title}</Link>
+          <Link to={frontmatter.path}>{frontmatter.title}</Link>
         </h2>
 
         <p className={styles.summary}>{post.excerpt}</p>
 
         <div className={styles.footer}>
-          <img
-            alt="avatar author"
-            src={avatar.childImageSharp.fixed.src}
-            className={styles.avatar}
-          />
+          <Img alt="avatar author" fixed={avatar} className={styles.avatar} />
 
           <div className={styles.information}>
             <a href="" className={styles.user}>
-              {`(@${post.frontmatter.author.id})`}
+              {`(@${frontmatter.author.id})`}
             </a>
 
-            <span className={styles.date}>{post.frontmatter.date}</span>
+            <span className={styles.date}>{frontmatter.date}</span>
           </div>
         </div>
       </Paper>

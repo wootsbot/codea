@@ -23,6 +23,13 @@ module.exports = {
               showLineNumbers: true,
             },
           },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 786,
+              backgroundColor: `#f7f7f7`,
+            },
+          },
         ],
       },
     },

@@ -17,6 +17,8 @@ Any word wrapped with two tildes (like ~~this~~) will appear crossed out.+.
 
 If you want to embed images, this is how you do it:
 
+![codea](codea.png)
+
 ![Image of Yaktocat](https://cdn-images-1.medium.com/max/1380/1*hrrakxVFbJDP0jKrC5D_VA.png)
 
 Sometimes you want numbered lists:
