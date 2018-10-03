@@ -68,10 +68,16 @@ export const pageQuery = graphql`
         title
         author {
           id
-          avatar
           bio
           firstName
           lastName
+          avatar {
+            childImageSharp {
+              fixed(width: 50, height: 50) {
+                src
+              }
+            }
+          }
         }
       }
     }

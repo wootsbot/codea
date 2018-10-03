@@ -16,6 +16,7 @@ class PostLink extends React.PureComponent {
 
   render() {
     const { post } = this.props
+    const { avatar } = post.frontmatter.author
 
     return (
       <Paper elevation={0} className={styles.root} component="article">
@@ -28,7 +29,7 @@ class PostLink extends React.PureComponent {
         <div className={styles.footer}>
           <img
             alt="avatar author"
-            src={avatarImage}
+            src={avatar.childImageSharp.fixed.src}
             className={styles.avatar}
           />
 
