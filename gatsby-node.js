@@ -44,7 +44,13 @@ exports.createPages = ({ actions, graphql }) => {
               tags
               author {
                 id
-                avatar
+                avatar {
+                  childImageSharp {
+                    fixed(width: 50, height: 50) {
+                      src
+                    }
+                  }
+                }
               }
             }
           }

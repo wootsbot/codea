@@ -17,8 +17,10 @@ class HeaderDetail extends React.PureComponent {
     author: PropTypes.object,
     classes: PropTypes.object,
   }
+
   render() {
     const { title, date, author, classes } = this.props
+
     return (
       <div className={styles.header}>
         <h1 className={styles.headerTitle}>{title}</h1>
@@ -26,7 +28,7 @@ class HeaderDetail extends React.PureComponent {
         <div className={styles.headerUserInfo}>
           <ChipTimUser
             to={`/authors/${author.id}`}
-            avatar={avatarImage}
+            avatar={author.avatar.childImageSharp.fixed.src}
             label={`${author.firstName} ${author.lastName}`}
           />
 

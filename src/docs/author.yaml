@@ -1,0 +1,29 @@
+- id: woostbot
+  firstName: Jorge Luis
+  lastName: Calleja
+  bio: Founder @ Codea. Developer Frontend/JavaScript
+  avatar: avatars/codea.png
+  twitter: https://twitter.com/wootsbot
+  github: https://github.com/wootsbot
+  gitLab: https://gitlab.com/wootsbot
+  codeRole: Founder
+
+- id: slackmart
+  firstName: Martín
+  lastName: Rodríguez
+  bio: Backend Developer
+  avatar: avatars/martin-rodriguez.jpg
+  twitter: https://twitter.com/slackmart
+  github: https://github.com/slackmart
+  gitLab: https://gitlab.com/slackmart
+  codeRole: Contributor
+
+- id: Maturano
+  firstName: Alberto
+  lastName: Maturano
+  bio: FullStack Developer
+  avatar: avatars/alberto-maturano.png
+  twitter: https://twitter.com/maturanomx
+  github: https://github.com/maturanomx
+  gitLab: https://gitlab.com/maturanomx
+  codeRole: Contributor
