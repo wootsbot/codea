@@ -46,8 +46,12 @@ exports.createPages = ({ actions, graphql }) => {
                 id
                 avatar {
                   childImageSharp {
-                    fixed(width: 50, height: 50) {
+                    fixed(width: 40, height: 40) {
+                      tracedSVG
+                      width
+                      height
                       src
+                      srcSet
                     }
                   }
                 }
