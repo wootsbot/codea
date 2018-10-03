@@ -2,12 +2,14 @@ module.exports = {
   siteMetadata: {
     title: `Codea`,
     siteUrl: `https://www.codea.com.mx`,
-    description: `Codea un sitio de blog para JavaScript`,
+    description: `Codea un sitio para JavaScript`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-yaml`,
     `gatsby-plugin-catch-links`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -34,7 +36,7 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/docs/markdown`,
+        path: `${__dirname}/src/docs/`,
         name: 'markdown-pages',
       },
     },
