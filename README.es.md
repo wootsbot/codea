@@ -1,7 +1,40 @@
-# Codea
+<p align="center">
+  <a href="https://codea.com.mx">
+    <img alt="Gatsby" src="src/static/img/favicon.png" width="80" />
+  </a>
+</p>
+<h1 align="center">
+  Codea v1
+</h1>
 
-Este es el código fuente de codea blog. La idea detrás de esta iniciativa es
-exponer una amplia variedad de artículos principalmente en el mundo de Javascript.
+<p align="center">
+  <strong>Este es el código fuente de codea</strong><br>
+  La idea detrás de esta iniciativa es exponer una amplia variedad de artículos principalmente en el mundo de Javascript.
+</p>
+
+<p align="center">
+  <a href="https://gitlab.com/codea_/codea">
+    <img src="https://img.shields.io/badge/codea-v1.0.0-blue.svg?longCache=true&style=flat-square" alt="Codea Version" />
+  </a>
+  <a href="LICENSE">
+    <img src="https://img.shields.io/badge/license-MIT-lightgrey.svg?longCache=true&style=flat-square" alt="Codea is released under the MIT license." />
+  </a>
+  <a href="https://gitlab.com/codea_/codea/-/jobs">
+    <img src="https://gitlab.com/codea_/codea/badges/develop/build.svg" alt="Codea build" />
+  </a>
+  <a href="https://gitlab.com/codea_/codea/merge_requests">
+    <img src="https://img.shields.io/badge/prs-welcome-blue.svg?longCache=true&style=flat-square" alt="PRs welcome!" />
+  </a>
+  <a href="(https://nodejs.org">
+    <img src="https://img.shields.io/badge/node-%3E%3D9.x-brightgreen.svg?longCache=true&style=flat-square" alt="nodejs" />
+  </a>
+  <a href="https://yarnpkg.com/en/docs/install">
+    <img src="https://img.shields.io/badge/yarn-%3E%3D%201.10.x-blue.svg?longCache=true&style=flat-square" alt="yarn install" />
+  </a>
+  <a href="https://docs.npmjs.com/getting-started/installing-node">
+    <img src="https://img.shields.io/badge/npm-%3E%3D%206.x-red.svg?longCache=true&style=flat-square" alt="npm install" />
+  </a>
+</p>
 
 Read this in [English](README.md)
 
