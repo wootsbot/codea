@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Codea`,
     siteUrl: `https://www.codea.com.mx`,
-    description: `Codea un sitio para JavaScript`,
+    description: `Codea un sitio para el mundo de javaScript`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -10,6 +10,7 @@ module.exports = {
     `gatsby-plugin-catch-links`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -30,6 +31,8 @@ module.exports = {
               backgroundColor: `#f7f7f7`,
             },
           },
+          `gatsby-remark-copy-linked-files`,
+          `gatsby-remark-smartypants`,
         ],
       },
     },
@@ -58,6 +61,18 @@ module.exports = {
       resolve: `gatsby-plugin-sass`,
       options: {
         includePaths: ['node_modules', 'src'],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Codea`,
+        short_name: `Codea`,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        theme_color: `#404040`,
+        display: `minimal-ui`,
+        icon: `src/static/img/codea.png`,
       },
     },
   ],
