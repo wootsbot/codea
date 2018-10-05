@@ -22,11 +22,13 @@ exports.onCreateWebpackConfig = ({
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
 
-  const blogPostTemplate = path.resolve(
+  const tagsTemplate = path.resolve(`src/templates/ArchiveTags/index.js`)
+
+  const articleTemplate = path.resolve(
     `src/templates/BlogDetailsOverviewTemplate/index.js`
   )
-  const tagTemplate = path.resolve('src/templates/ArchiveTags/index.js')
-  const PaginatedPageTemplate = path.resolve(
+
+  const listArticlesTemplate = path.resolve(
     `src/templates/PostPaginationList/index.js`
   )
 
@@ -74,32 +76,29 @@ exports.createPages = ({ actions, graphql }) => {
       return Promise.reject(result.errors)
     }
 
-    const postsList = result.data.posts.edges.reverse()
-    const tagsList = result.data.tags.edges
+    const listArticles = result.data.posts.edges.reverse()
+    const listTags = result.data.tags.edges
 
     createPaginatedPages({
-      edges: postsList,
+      edges: listArticles,
       createPage: createPage,
-      pageTemplate: PaginatedPageTemplate,
+      pageTemplate: listArticlesTemplate,
       pageLength: 10,
-      pathPrefix: '/blog',
+      pathPrefix: '/articles',
       buildPath: (index, pathPrefix) =>
         index > 1 ? `${pathPrefix}/${index}` : `/${pathPrefix}`,
       context: {
-        tags: tagsList,
+        tags: listTags,
       },
     })
 
-    postsList.forEach(({ node }) => {
-      let tag = ''
-
-      if (node.frontmatter.tags && node.frontmatter.tags.length) {
-        tag = node.frontmatter.tags[0]
-      }
+    // Make pages detail article
+    listArticles.forEach(({ node }) => {
+      let tag = node.frontmatter.tags[0]
 
       createPage({
         path: node.frontmatter.path,
-        component: blogPostTemplate,
+        component: articleTemplate,
         context: {
           tag,
           limitFilterTags: 4,
@@ -108,10 +107,10 @@ exports.createPages = ({ actions, graphql }) => {
     })
 
     // Make tag pages
-    tagsList.forEach(tag => {
+    listTags.forEach(tag => {
       createPage({
         path: `/archive-tags/${_.kebabCase(tag.node.id)}/`,
-        component: tagTemplate,
+        component: tagsTemplate,
         context: {
           tag: tag.node.id,
         },
