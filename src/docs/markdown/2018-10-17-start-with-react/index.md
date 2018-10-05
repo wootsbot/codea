@@ -1,5 +1,5 @@
 ---
-path: '/blog/start-with-react'
+path: '/articles/start-with-react'
 date: '2018-08-07'
 title: 'Microsoft compra GitHub, ¿por qué?'
 tags: ['ReactJS', 'Web', 'JavaScript', 'codea', '2019']

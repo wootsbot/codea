@@ -24,7 +24,7 @@ const ArchiveTags = ({ pageContext, data }) => {
       <Grid container justify="center" className={styles.tags}>
         <Grid item container xl={8} lg={8} md={12} sm={12} xs={12}>
           <div className={styles.tagContainer}>
-            <h2 className={styles.title}>List de articulos</h2>
+            <h2 className={styles.title}>Lista de articulos de:</h2>
 
             <div className={styles.tagsArticles}>
               <h3 className={styles.subTitle}>{tag}</h3>

@@ -1,12 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import Chip from '@material-ui/core/Chip'
-import Avatar from '@material-ui/core/Avatar'
-
 import ChipTimUser from 'components/ChipTimUser'
-
-import avatarImage from 'static/img/codea.png'
 
 import styles from './styles.module.scss'
 
@@ -19,7 +14,8 @@ class HeaderDetail extends React.PureComponent {
   }
 
   render() {
-    const { title, date, author, classes } = this.props
+    const { title, date, author } = this.props
+    const avatar = author.avatar.childImageSharp.fixed.src
 
     return (
       <div className={styles.header}>
@@ -28,7 +24,7 @@ class HeaderDetail extends React.PureComponent {
         <div className={styles.headerUserInfo}>
           <ChipTimUser
             to={`/authors/${author.id}`}
-            avatar={author.avatar.childImageSharp.fixed.src}
+            avatar={avatar}
             label={`${author.firstName} ${author.lastName}`}
           />
 

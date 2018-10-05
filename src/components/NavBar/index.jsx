@@ -18,9 +18,10 @@ const stylesUi = theme => ({
     padding: '0 24px',
     flexDirection: 'row',
     alignItems: 'center',
+    justifyContent: 'space-around',
   },
   colorPrimary: {
-    backgroundColor: '#fff',
+    backgroundColor: theme.palette.primary.main,
     [theme.breakpoints.down('sm')]: {
       backgroundColor: theme.palette.primary.main,
     },

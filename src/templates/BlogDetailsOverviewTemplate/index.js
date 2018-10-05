@@ -2,11 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import Grid from '@material-ui/core/Grid'
-
 import { graphql } from 'gatsby'
 
 import { getPostsFilterTags } from 'utils/posts'
-
 import Layout from 'components/Layout'
 import PostDetailsOverview from 'components/PostDetailsOverview'
 import SuggestionLink from 'components/SuggestionLink'
@@ -73,8 +71,8 @@ export const pageQuery = graphql`
           lastName
           avatar {
             childImageSharp {
-              fixed(width: 50, height: 50) {
-                src
+              fixed(width: 32, height: 32) {
+                ...GatsbyImageSharpFixed
               }
             }
           }
