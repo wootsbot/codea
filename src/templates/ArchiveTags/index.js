@@ -5,43 +5,71 @@ import { graphql } from 'gatsby'
 import Link from 'gatsby-link'
 
 import Grid from '@material-ui/core/Grid'
+import Paper from '@material-ui/core/Paper'
+import Chip from '@material-ui/core/Chip'
+import LinkTwoTone from '@material-ui/icons/LinkTwoTone'
 
 import Layout from 'components/Layout'
 
 import styles from './archiveTags.module.scss'
 
 const ArchiveTags = ({ pageContext, data }) => {
-  const { tag } = pageContext
+  const { tag, tagContend } = pageContext
   const { edges, totalCount } = data.allMarkdownRemark
-  const tagHeader = `${totalCount}  ${
-    totalCount === 1 ? '' : 's'
-  } tagged with "${tag}"`
 
   return (
     <Layout
       title="Archive | codea Tags"
       meta={{ description: 'Tags', keywords: 'javascript, blog' }}>
-      <Grid container justify="center" className={styles.tags}>
-        <Grid item container xl={8} lg={8} md={12} sm={12} xs={12}>
-          <div className={styles.tagContainer}>
-            <h2 className={styles.title}>Lista de articulos de:</h2>
+      <Grid container justify="center">
+        <Grid container item md={6} justify="center">
+          <Grid item md={12}>
+            <Paper elevation={1} className={styles.containerTag}>
+              <div className={styles.tagHeader}>
+                <div className={styles.tagHeaderTitleContainer}>
+                  <h1 className={styles.tagHeaderTitle}>{tag}</h1>
+                  {tagContend.web && (
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title={tag}
+                      href={tagContend.web}>
+                      <LinkTwoTone className={styles.tagHeaderLink} />
+                    </a>
+                  )}
+                </div>
 
-            <div className={styles.tagsArticles}>
-              <h3 className={styles.subTitle}>{tag}</h3>
+                <p className={styles.tagHeaderSummary}>
+                  {tagContend.description}
+                </p>
+              </div>
 
-              <ul className={styles.tagListPost}>
-                {edges.map(({ node }) => {
-                  const { path, title, date } = node.frontmatter
-                  return (
-                    <li key={path}>
-                      <time>{date}</time>
-                      <Link to={path}>{title}</Link>
-                    </li>
-                  )
-                })}
-              </ul>
-            </div>
-          </div>
+              <div className={styles.tagSubHeading}>
+                <h2 className={styles.tagSubHeadingTitle}>
+                  Todos los articulos de {tag}
+                </h2>
+                <Chip
+                  color="secondary"
+                  variant="outlined"
+                  label={`Total de articulos ${totalCount}`}
+                />
+              </div>
+
+              <div>
+                <ul className={styles.tagsList}>
+                  {edges.map(({ node }) => {
+                    const { path, title, date } = node.frontmatter
+                    return (
+                      <li key={path} className={styles.tagsListItem}>
+                        <Link to={path}>{title}</Link>
+                        <time className={styles.tagsListTime}>{date}</time>
+                      </li>
+                    )
+                  })}
+                </ul>
+              </div>
+            </Paper>
+          </Grid>
         </Grid>
       </Grid>
     </Layout>

@@ -67,6 +67,7 @@ exports.createPages = ({ actions, graphql }) => {
           node {
             id
             description
+            web
           }
         }
       }
@@ -113,6 +114,7 @@ exports.createPages = ({ actions, graphql }) => {
         component: tagsTemplate,
         context: {
           tag: tag.node.id,
+          tagContend: tag.node,
         },
       })
     })

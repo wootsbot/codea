@@ -34,45 +34,36 @@ class PaginatePosts extends React.PureComponent {
 
     const previousUrl =
       index - 1 == 1 ? pathPrefix : `${pathPrefix}/${(index - 1).toString()}`
+
     const nextUrl = `${pathPrefix}/${(index + 1).toString()}`
     const listTags = additionalContext.tags
 
     const Posts = group.filter(edge => !!edge.node.frontmatter.date)
 
+    const Pagination = (
+      <PaginationToPosts
+        last={last}
+        first={first}
+        baseUrl={pathPrefix}
+        pageCount={pageCount}
+        pageIndex={index}
+        previousUrl={previousUrl}
+        nextUrl={nextUrl}
+      />
+    )
+
     return (
       <Layout
-        sizePadding="sm"
         title="Lista de Articulos"
-        meta={{ description: 'Lista de Pots', keywords: 'javascript, blog' }}>
-        <Grid container justify="center">
-          <Grid
-            item
-            container
-            direction="row"
-            xl={9}
-            lg={9}
-            md={12}
-            sm={12}
-            xs={12}>
-            <TagLinkList tags={listTags} />
-          </Grid>
-        </Grid>
-
-        <PostLinkList posts={Posts} />
-
-        <Grid container justify="center">
-          <Grid item xl={9} lg={9} md={12} sm={12} xs={12}>
-            <PaginationToPosts
-              last={last}
-              first={first}
-              baseUrl={pathPrefix}
-              pageCount={pageCount}
-              pageIndex={index}
-              previousUrl={previousUrl}
-              nextUrl={nextUrl}
-            />
-          </Grid>
-        </Grid>
+        meta={{
+          description: 'Lista de articulos',
+          keywords: 'javascript, blog',
+        }}>
+        <PostLinkList
+          posts={Posts}
+          listTags={listTags}
+          pagination={Pagination}
+        />
       </Layout>
     )
   }

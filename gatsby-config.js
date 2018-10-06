@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Codea`,
     siteUrl: `https://www.codea.com.mx`,
-    description: `Codea un sitio para el mundo de javaScript`,
+    description: `Un sitio de código abierto, siéntete libre de aportar con codea.`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -39,7 +39,7 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/static/img/`,
+        path: `${__dirname}/src/static/`,
         name: 'img',
       },
     },

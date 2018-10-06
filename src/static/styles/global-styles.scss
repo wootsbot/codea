@@ -4,7 +4,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background-color: #f7f7f7 !important;
+  background-color: $azure-color !important;
 }
 
 a {
@@ -94,24 +94,5 @@ table {
     padding: 10px 10px;
     font-family: $font-light-family;
     font-size: $font-text-small-size;
-  }
-}
-
-// styles of tags
-.tag {
-  &-ReactJS {
-    background-color: #d3e3ff !important;
-  }
-
-  &-Angular {
-    background-color: #ef9a9a !important;
-  }
-
-  &-Python {
-    background-color: #fff59d !important;
-  }
-
-  &-VueJS {
-    background-color: #b6ecd7 !important;
   }
 }
