@@ -1,0 +1,75 @@
+@import 'static/styles/theme';
+
+.section-home {
+  background-size: cover;
+  background-position: center center;
+  padding: 48px;
+  margin-top: -56px;
+  margin-bottom: 60px;
+  height: 414px;
+  display: flex;
+  align-items: center;
+
+  @include breakpoint-sm-down() {
+    padding: 24px;
+    height: auto;
+    flex-direction: column;
+  }
+}
+
+.section-home-text {
+  width: 65%;
+
+  @include breakpoint-sm-down() {
+    width: 100%;
+    padding: 0 12px;
+    margin-bottom: 64px;
+  }
+}
+
+.section-home-text-title {
+  font-family: $font-code-family;
+  color: $secondary-main-color;
+  font-size: 46px;
+  margin: 0;
+
+  @include breakpoint-sm-down() {
+    text-align: center;
+    font-size: $font-heading-size;
+    margin-bottom: 24px;
+  }
+}
+
+.section-home-text-message {
+  font-family: $font-medium-family;
+  font-size: $font-subheading-size;
+  color: $humming-bird-color;
+  font-weight: 300;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+
+  @include breakpoint-sm-down() {
+    text-align: center;
+    font-size: $font-text-medium-size;
+  }
+}
+
+.section-home-code {
+  width: 35%;
+  display: flex;
+  justify-content: flex-end;
+
+  @include breakpoint-sm-down() {
+    width: 100%;
+    padding: 0 12px;
+    justify-content: center;
+  }
+}
+
+.term-container {
+  width: 75%;
+
+  @include breakpoint-sm-down() {
+    width: 100%;
+  }
+}

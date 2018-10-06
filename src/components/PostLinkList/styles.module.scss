@@ -1,9 +1,27 @@
 @import 'static/styles/theme';
 
-.root {
+.container-tags-list {
+  padding-left: 48px;
+}
+
+.posts-list {
   margin-bottom: 40px;
+  padding: 48px 0 48px 48px;
 
   @include breakpoint-sm-down() {
+    padding: 0;
     margin-bottom: 20px;
   }
+}
+
+.posts-list-item {
+  margin: 0 8px 36px !important;
+
+  @include breakpoint-sm-down() {
+    margin: 0 !important;
+  }
+}
+
+.tags-list {
+  padding: 48px 48px 48px 24px;
 }

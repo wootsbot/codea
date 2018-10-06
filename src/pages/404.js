@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { navigate } from 'gatsby-link'
+import { navigate, Link } from 'gatsby-link'
 
 import { withStyles } from '@material-ui/core/styles'
 import Button from '@material-ui/core/Button'
@@ -42,12 +42,10 @@ class NotFoundPage extends React.PureComponent {
           </p>
 
           <Button
-            classes={{
-              root: classes.root,
-            }}
+            classes={{ root: classes.root }}
             variant="contained"
             color="secondary"
-            onClick={() => navigate('/')}>
+            onClick={() => navigate('../back-up')}>
             Regresar
           </Button>
         </div>
