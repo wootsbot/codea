@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import kebabCase from 'lodash/kebabCase'
 
 import Link from 'gatsby-link'
 import classNames from 'classnames'
@@ -17,7 +18,7 @@ class TagLink extends React.PureComponent {
   render() {
     const { children, to } = this.props
     const classNameCustom = classNames(styles.tag, {
-      [`tag-${children}`]: true,
+      [`tag-${kebabCase(children)}`]: true,
     })
 
     return (
