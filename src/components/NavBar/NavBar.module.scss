@@ -26,13 +26,6 @@ $transition: 0.2s ease;
       color: $secondary-main-color !important;
     }
   }
-
-  &-active {
-    border-bottom: 2.5px solid $secondary-main-color;
-    color: $color-white !important;
-    font-weight: 700 !important;
-    padding: 10px 0;
-  }
 }
 
 .item-link {
@@ -45,12 +38,6 @@ $transition: 0.2s ease;
   letter-spacing: 0.5px;
   font-weight: 400;
   padding: 24px 24px;
-}
-
-// styles avatar
-.avatar {
-  width: 35px !important;
-  height: 35px !important;
 }
 
 .logo {
@@ -78,5 +65,13 @@ $transition: 0.2s ease;
 
   &:hover {
     text-decoration: none;
+  }
+}
+
+.space {
+  flex-grow: 1;
+
+  @include breakpoint-sm-down() {
+    display: none;
   }
 }

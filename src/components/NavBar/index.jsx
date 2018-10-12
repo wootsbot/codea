@@ -15,10 +15,10 @@ const stylesUi = theme => ({
   root: {
     maxHeight: '64px',
     minHeight: '64px',
-    padding: '0 24px',
+    padding: '0 48px',
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-around',
+    justifyContent: 'center',
   },
   colorPrimary: {
     backgroundColor: theme.palette.primary.main,
@@ -41,6 +41,9 @@ class NavBar extends React.PureComponent {
         elevation={0}
         classes={{ root: classes.root, colorPrimary: classes.colorPrimary }}>
         <Brand />
+
+        <div className={styles.space} />
+
         <ul className={styles.navItemContainer}>
           {getPathsActives(getPaths).map(path => (
             <NavItem key={path.href} href={path.href}>
