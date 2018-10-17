@@ -45,7 +45,7 @@ class NotFoundPage extends React.PureComponent {
             classes={{ root: classes.root }}
             variant="contained"
             color="secondary"
-            onClick={() => navigate('../back-up')}>
+            onClick={() => navigate('/')}>
             Regresar
           </Button>
         </div>

@@ -3,7 +3,6 @@ public
 .cache
 node_modules
 coverage/
-flow-typed
 gatsby-browser.js
 gatsby-config.js
 gatsby-node.js

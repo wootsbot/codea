@@ -7,8 +7,6 @@ import { withStyles } from '@material-ui/core/styles'
 import Avatar from '@material-ui/core/Avatar'
 import Chip from '@material-ui/core/Chip'
 
-import avatarImage from 'static/img/codea.png'
-
 const styles = theme => ({
   root: {
     backgroundColor: theme.palette.secondary.light,

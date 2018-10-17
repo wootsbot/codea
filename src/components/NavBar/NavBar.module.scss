@@ -21,7 +21,6 @@ $transition: 0.2s ease;
 
     > .item-link {
       transition: $transition;
-      font-weight: 700 !important;
       text-decoration: none;
       color: $secondary-main-color !important;
     }
@@ -47,8 +46,8 @@ $transition: 0.2s ease;
 }
 
 .logo-image {
-  height: 50px;
-  margin-right: 4px;
+  height: 40px;
+  margin-right: 8px;
   width: auto;
 
   @include breakpoint-sm-down() {

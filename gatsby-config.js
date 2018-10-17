@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Codea`,
     siteUrl: `https://www.codea.com.mx`,
-    description: `Un sitio de código abierto, siéntete libre de aportar con codea.`,
+    description: 'Codea un proyecto de código abierto y disponible para todos',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -39,15 +39,22 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/static/`,
-        name: 'img',
+        path: `${__dirname}/docs/`,
+        name: 'docs',
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/docs/`,
-        name: 'markdown-pages',
+        path: `${__dirname}/community/`,
+        name: 'community',
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/static/`,
+        name: 'static',
       },
     },
     {
@@ -72,12 +79,13 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#404040`,
         display: `minimal-ui`,
-        icon: `src/static/img/codea.png`,
+        icon: `src/static/images/favicon.png`,
       },
     },
   ],
   mapping: {
     'MarkdownRemark.frontmatter.author': `AuthorYaml`,
     TagsYaml: `TagsYaml`,
+    DevelopersYaml: `DevelopersYaml`,
   },
 }
