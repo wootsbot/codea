@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { navigate } from 'gatsby-link'
 import kebabCase from 'lodash/kebabCase'
+import { navigate } from 'gatsby-link'
 
 import Button from '@material-ui/core/Button'
 import Menu from '@material-ui/core/Menu'

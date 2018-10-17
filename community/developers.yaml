@@ -1,0 +1,32 @@
+- codeaId: woostbot
+  firstName: Jorge Luis
+  lastName: Calleja
+  avatar: avatars/jorge-luis-calleja.jpg
+  location: CD DE MÉXICO
+  codeRole: Founder @ Codea.
+  bio: Me apaciona desarrollar software
+  twitter: https://twitter.com/wootsbot
+  github: https://github.com/wootsbot
+  gitLab: https://gitlab.com/wootsbot
+
+- codeaId: slackmart
+  firstName: Martín
+  lastName: Rodríguez
+  avatar: avatars/martin-rodriguez.jpg
+  location: CD DE MT.
+  codeRole: Contributor
+  bio: Backend Developer
+  twitter: https://twitter.com/slackmart
+  github: https://github.com/slackmart
+  gitLab: https://gitlab.com/slackmart
+
+- codeaId: maturanomx
+  firstName: Alberto
+  lastName: Maturano
+  avatar: avatars/alberto-maturano.png
+  location: CD DE MÉXICO
+  codeRole: Contributor
+  bio: FullStack Developer
+  twitter: https://twitter.com/maturanomx
+  github: https://github.com/maturanomx
+  gitLab: https://gitlab.com/maturanomx

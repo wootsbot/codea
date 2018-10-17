@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://codea.com.mx">
-    <img alt="Gatsby" src="src/static/img/favicon.png" width="80" />
+    <img alt="Gatsby" src="src/static/images/favicon.png" width="80" />
   </a>
 </p>
 <h1 align="center">

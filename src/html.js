@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import { muiTheme } from 'utils/muiTheme'
-import favicon from '../src/static/img/favicon.png'
 
 export default class HTML extends React.Component {
   render() {
@@ -34,7 +33,6 @@ export default class HTML extends React.Component {
             content={muiTheme.palette.primary.main}
           />
 
-          <link rel="shortcut icon" type="image/png" href={favicon} />
           <link
             href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Karla|Lato|Roboto"
             rel="stylesheet"

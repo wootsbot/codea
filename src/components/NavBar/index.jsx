@@ -1,8 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import AppBar from '@material-ui/core/AppBar'
-import Toolbar from '@material-ui/core/Toolbar'
-import Typography from '@material-ui/core/Typography'
 import { withStyles } from '@material-ui/core/styles'
 
 import { getPaths, getPathsActives } from 'utils/paths'
@@ -19,6 +17,7 @@ const stylesUi = theme => ({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
+    marginButton: '70px',
   },
   colorPrimary: {
     backgroundColor: theme.palette.primary.main,

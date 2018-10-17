@@ -1,0 +1,11 @@
+@import 'static/styles/theme';
+
+.developer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.avatar {
+  border-radius: 50px;
+}
