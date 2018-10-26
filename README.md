@@ -9,25 +9,34 @@
 
 <p align="center">
   <strong>This is the codea source code</strong><br>
-  The idea behind this initiative is to expose a wide variety of articles mainly in the Javascript world.
+  The idea behind this initiative is to expose a wide variety of articles and concepts, if you love sharing knowledge through open source projects, books etc. We have decided to create this project for anyone who wants to collaborate.
 </p>
 
 <p align="center">
   <a href="https://gitlab.com/codea_/codea">
     <img src="https://img.shields.io/badge/codea-v1.0.0-blue.svg?longCache=true&style=flat-square" alt="Codea Version" />
   </a>
+
   <a href="LICENSE">
     <img src="https://img.shields.io/badge/license-MIT-lightgrey.svg?longCache=true&style=flat-square" alt="Codea is released under the MIT license." />
   </a>
+
   <a href="https://github.com/codea-team/codea/pulls">
     <img src="https://img.shields.io/badge/prs-welcome-blue.svg?longCache=true&style=flat-square" alt="PRs welcome!" />
   </a>
+
+  <a href="https://github.com/codea-team/codea">
+    <img src="https://circleci.com/gh/codea-team/codea/tree/master.svg?style=svg" alt="alt="Circle Build Status" />
+  </a>
+
   <a href="(https://nodejs.org">
     <img src="https://img.shields.io/badge/node-%3E%3D9.x-brightgreen.svg?longCache=true&style=flat-square" alt="nodejs" />
   </a>
+
   <a href="https://yarnpkg.com/en/docs/install">
     <img src="https://img.shields.io/badge/yarn-%3E%3D%201.10.x-blue.svg?longCache=true&style=flat-square" alt="yarn install" />
   </a>
+
   <a href="https://docs.npmjs.com/getting-started/installing-node">
     <img src="https://img.shields.io/badge/npm-%3E%3D%206.x-red.svg?longCache=true&style=flat-square" alt="npm install" />
   </a>
