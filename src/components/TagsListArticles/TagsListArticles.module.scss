@@ -1,0 +1,17 @@
+.section-tags {
+  width: 100%;
+}
+
+.section-tags-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.section-tags-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.chip {
+  margin: 4px;
+}

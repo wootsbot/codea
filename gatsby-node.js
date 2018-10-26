@@ -22,14 +22,14 @@ exports.onCreateWebpackConfig = ({
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
 
-  const tagsTemplate = path.resolve(`src/templates/ArchiveTags/index.js`)
-
-  const articleTemplate = path.resolve(
-    `src/templates/BlogDetailsOverviewTemplate/index.js`
+  const templateTagsArchive = path.resolve(
+    `src/templates/TemplateTagsArchive/index.js`
   )
-
-  const listArticlesTemplate = path.resolve(
-    `src/templates/PostPaginationList/index.js`
+  const templateArticleDetail = path.resolve(
+    `src/templates/TemplateArticleDetail/index.js`
+  )
+  const templateArticlesList = path.resolve(
+    `src/templates/TemplateArticlesList/index.js`
   )
 
   return graphql(`
@@ -67,6 +67,7 @@ exports.createPages = ({ actions, graphql }) => {
           node {
             id
             description
+            web
           }
         }
       }
@@ -82,8 +83,8 @@ exports.createPages = ({ actions, graphql }) => {
     createPaginatedPages({
       edges: listArticles,
       createPage: createPage,
-      pageTemplate: listArticlesTemplate,
-      pageLength: 10,
+      pageTemplate: templateArticlesList,
+      pageLength: 9,
       pathPrefix: '/articles',
       buildPath: (index, pathPrefix) =>
         index > 1 ? `${pathPrefix}/${index}` : `/${pathPrefix}`,
@@ -94,15 +95,10 @@ exports.createPages = ({ actions, graphql }) => {
 
     // Make pages detail article
     listArticles.forEach(({ node }) => {
-      let tag = node.frontmatter.tags[0]
-
       createPage({
         path: node.frontmatter.path,
-        component: articleTemplate,
-        context: {
-          tag,
-          limitFilterTags: 4,
-        },
+        component: templateArticleDetail,
+        context: {},
       })
     })
 
@@ -110,9 +106,10 @@ exports.createPages = ({ actions, graphql }) => {
     listTags.forEach(tag => {
       createPage({
         path: `/archive-tags/${_.kebabCase(tag.node.id)}/`,
-        component: tagsTemplate,
+        component: templateTagsArchive,
         context: {
           tag: tag.node.id,
+          tagContend: tag.node,
         },
       })
     })

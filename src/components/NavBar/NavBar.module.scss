@@ -21,17 +21,9 @@ $transition: 0.2s ease;
 
     > .item-link {
       transition: $transition;
-      font-weight: 700 !important;
       text-decoration: none;
       color: $secondary-main-color !important;
     }
-  }
-
-  &-active {
-    border-bottom: 2.5px solid $secondary-main-color;
-    color: $color-white !important;
-    font-weight: 700 !important;
-    padding: 10px 0;
   }
 }
 
@@ -47,12 +39,6 @@ $transition: 0.2s ease;
   padding: 24px 24px;
 }
 
-// styles avatar
-.avatar {
-  width: 35px !important;
-  height: 35px !important;
-}
-
 .logo {
   position: relative;
   display: flex;
@@ -60,8 +46,8 @@ $transition: 0.2s ease;
 }
 
 .logo-image {
-  height: 50px;
-  margin-right: 4px;
+  height: 40px;
+  margin-right: 8px;
   width: auto;
 
   @include breakpoint-sm-down() {
@@ -78,5 +64,13 @@ $transition: 0.2s ease;
 
   &:hover {
     text-decoration: none;
+  }
+}
+
+.space {
+  flex-grow: 1;
+
+  @include breakpoint-sm-down() {
+    display: none;
   }
 }

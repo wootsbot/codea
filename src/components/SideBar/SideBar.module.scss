@@ -29,14 +29,9 @@
   &:hover {
     > .item-link {
       transition: 0.5s ease;
-      color: $color-yellow-1;
+      color: $secondary-dark-color;
       text-decoration: none;
     }
-  }
-
-  &-active {
-    color: $color-yellow-1 !important;
-    font-weight: 600 !important;
   }
 }
 

@@ -1,7 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+
 import { Link } from 'gatsby'
-import { withPrefix } from 'gatsby'
+
+import { muiTheme } from 'utils/muiTheme'
 
 import styles from './NavBar.module.scss'
 
@@ -11,6 +13,9 @@ export class NavItem extends React.PureComponent {
     href: PropTypes.string,
   }
 
+  assignActiveStyles = ({ isPartiallyCurrent }) =>
+    isPartiallyCurrent ? { style: stylesUI.navItem.active } : {}
+
   render() {
     const { href, children } = this.props
 
@@ -18,13 +23,22 @@ export class NavItem extends React.PureComponent {
       <li className={styles.item}>
         <Link
           to={href}
-          activeClassName={styles.itemActive}
+          getProps={this.assignActiveStyles}
           className={styles.itemLink}>
           {children}
         </Link>
       </li>
     )
   }
+}
+
+const stylesUI = {
+  navItem: {
+    active: {
+      borderBottom: `2.5px solid ${muiTheme.palette.secondary.main}`,
+      fontWeight: '700 !important',
+    },
+  },
 }
 
 export default NavItem

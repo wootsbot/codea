@@ -8,36 +8,21 @@ import NavBar from 'components/NavBar'
 import SideBar from 'components/SideBar'
 import Footer from 'components/Footer'
 
-import styles from './layout.module.scss'
-
-const sizes = {
-  DEFAULT: 'default',
-  SMALL: 'sm',
-  MEDIUM: 'md',
-  LARGE: 'lg',
-}
+import styles from './Layout.module.scss'
 
 class Layout extends React.PureComponent {
   static propTypes = {
     children: PropTypes.node.isRequired,
     title: PropTypes.string,
     meta: PropTypes.objectOf(PropTypes.string),
-    sizePadding: PropTypes.oneOf([
-      sizes.DEFAULT,
-      sizes.SMALL,
-      sizes.MEDIUM,
-      sizes.LARGE,
-    ]),
+    marginTop: PropTypes.bool,
   }
 
   render() {
-    const { children, title, meta, sizePadding } = this.props
+    const { children, title, meta, marginTop } = this.props
 
     const classMain = classNames({
-      [styles.mainDefault]: sizePadding === sizes.DEFAULT,
-      [styles.mainSmall]: sizePadding === sizes.SMALL,
-      [styles.mainMedium]: sizePadding === sizes.MEDIUM,
-      [styles.mainLarge]: sizePadding === sizes.LARGE,
+      [styles.main]: marginTop,
     })
 
     return (
@@ -51,7 +36,9 @@ class Layout extends React.PureComponent {
         />
         <NavBar />
         <main className={classMain}>{children}</main>
+
         <Footer />
+
         <SideBar />
       </React.Fragment>
     )
@@ -63,7 +50,7 @@ Layout.defaultProps = {
     description: 'codea blog',
     keywords: 'Programación, codea',
   },
-  sizePadding: 'default',
+  marginTop: false,
 }
 
 export default withRoot(Layout)

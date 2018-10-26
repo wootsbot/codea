@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://codea.com.mx">
-    <img alt="Gatsby" src="src/static/img/favicon.png" width="80" />
+    <img alt="Gatsby" src="src/static/images/favicon.png" width="80" />
   </a>
 </p>
 <h1 align="center">
@@ -19,10 +19,7 @@
   <a href="LICENSE">
     <img src="https://img.shields.io/badge/license-MIT-lightgrey.svg?longCache=true&style=flat-square" alt="Codea is released under the MIT license." />
   </a>
-  <a href="https://gitlab.com/codea_/codea/-/jobs">
-    <img src="https://gitlab.com/codea_/codea/badges/develop/build.svg" alt="Codea build" />
-  </a>
-  <a href="https://gitlab.com/codea_/codea/merge_requests">
+  <a href="https://github.com/codea-team/codea/pulls">
     <img src="https://img.shields.io/badge/prs-welcome-blue.svg?longCache=true&style=flat-square" alt="PRs welcome!" />
   </a>
   <a href="(https://nodejs.org">
