@@ -6,14 +6,22 @@ jobs:
       - image: circleci/node:9
     steps:
       - checkout
-      - run:
-          name: update npm
-          command: 'sudo npm install -g npm@latest'
+
       - restore_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
+          name: Restore Yarn Package Cache
+          keys:
+            - yarn-packages-{{ checksum "yarn.lock" }}
+
       - run:
-          name: install dependencys
-          command: npm install
+          name: Install Dependencies
+          command: yarn
+
+      - save_cache:
+          name: Save Yarn Package Cache
+          key: yarn-packages-{{ checksum "yarn.lock" }}
+          paths:
+            - ~/.cache/yarn
+
       - run:
           name: gatsby build
-          command: npm run build
+          command: yarn build
