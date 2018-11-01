@@ -4,7 +4,7 @@
   </a>
 </p>
 <h1 align="center">
-  Codea v1
+  Codea
 </h1>
 
 <p align="center">
