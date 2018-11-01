@@ -1,0 +1,98 @@
+@import 'static/styles/theme';
+
+.term {
+  border-radius: 2px;
+  margin-bottom: 10px;
+  text-align: left;
+  border: 2px solid $primary-light-color;
+  width: auto;
+}
+
+.chrome {
+  height: 34px;
+  padding-left: 4px;
+  border-bottom: 2px solid $primary-light-color;
+}
+
+.chrome:before {
+  content: ' ';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.btn {
+  display: inline-block;
+  vertical-align: middle;
+  width: 10px;
+  height: 10px;
+  border: 2px solid #a5d6a7;
+  border-radius: 100%;
+  margin: 0 4px;
+}
+
+.btn-mini {
+  display: inline-block;
+  vertical-align: middle;
+  width: 10px;
+  height: 10px;
+  border: 2px solid #fff59d;
+  border-radius: 100%;
+  margin: 0 4px;
+}
+
+.btn-close {
+  display: inline-block;
+  vertical-align: middle;
+  width: 10px;
+  height: 10px;
+  border: 2px solid #ef9a9a;
+  border-radius: 100%;
+  margin: 0 4px;
+}
+
+.shell {
+  min-height: 130px;
+  font-family: $font-code-family;
+  color: $humming-bird-color;
+  font-family: $font-code-family;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.term-code {
+  display: block;
+  margin: 12px 0;
+  padding: 4px 10px;
+  border-radius: 0;
+  background: none;
+}
+
+.term-code-root {
+  color: $secondary-main-color;
+}
+
+.command {
+  margin: 0;
+}
+
+.blink {
+  animation: blink-animation 1s steps(4, start) infinite;
+  display: block;
+  margin: 12px 10px;
+  padding: 6px 10px;
+  border-left: 4px solid $secondary-main-color;
+  border-radius: 0;
+  background: none;
+}
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}

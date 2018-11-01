@@ -1,6 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+
 import { Link } from 'gatsby'
+
+import { muiTheme } from 'utils/muiTheme'
 
 import styles from './SideBar.module.scss'
 
@@ -11,6 +14,9 @@ export class NavItem extends React.PureComponent {
     iconComponent: PropTypes.node,
   }
 
+  assignActiveStyles = ({ isPartiallyCurrent }) =>
+    isPartiallyCurrent ? { style: stylesUI.navItem.active } : {}
+
   render() {
     const { href, children, iconComponent } = this.props
 
@@ -18,7 +24,7 @@ export class NavItem extends React.PureComponent {
       <li className={styles.item}>
         <Link
           to={href}
-          activeClassName={styles.itemActive}
+          getProps={this.assignActiveStyles}
           className={styles.itemLink}>
           <span className={styles.iconComponent}>{iconComponent}</span>
           {children}
@@ -26,6 +32,15 @@ export class NavItem extends React.PureComponent {
       </li>
     )
   }
+}
+
+const stylesUI = {
+  navItem: {
+    active: {
+      color: `${muiTheme.palette.secondary.dark}`,
+      fontWeight: '600 !important',
+    },
+  },
 }
 
 export default NavItem

@@ -4,7 +4,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background-color: #f7f7f7 !important;
+  background-color: $azure-color !important;
 }
 
 a {
@@ -18,26 +18,26 @@ a {
 
 p {
   color: $primary-main-color;
-  font-family: $font-text-lg;
-  font-size: $font-size-regular;
+  font-family: $font-light-family;
+  font-size: $font-caption-size;
   line-height: 1.58;
   letter-spacing: -0.003em;
 
   @include breakpoint-sm-down() {
-    font-size: $font-size-lg;
+    font-size: $font-text-medium-size;
   }
 }
 
 ol {
   line-height: 1.5;
-  font-family: $font-text-md;
+  font-family: $font-medium-family;
   color: $primary-main-color;
   font-weight: 500;
 }
 
 ul {
   line-height: 1.5;
-  font-family: $font-text-md;
+  font-family: $font-medium-family;
   color: $primary-main-color;
   font-weight: 500;
 }
@@ -48,16 +48,16 @@ img {
 
 h2 {
   color: $primary-main-color;
-  font-size: $font-size-sub-title;
-  font-family: $font-title;
+  font-size: $font-subheading-size;
+  font-family: $font-bold-family;
 }
 
 h3,
 h4,
 h5 {
   color: $primary-main-color;
-  font-size: $font-size-xlg;
-  font-family: $font-title;
+  font-size: $font-text-medium-size;
+  font-family: $font-bold-family;
 }
 
 blockquote {
@@ -67,7 +67,7 @@ blockquote {
 
   & > p {
     color: $primary-dark-color !important;
-    font-family: $font-text-lg !important;
+    font-family: $font-medium-family !important;
   }
 }
 
@@ -79,8 +79,8 @@ table {
 
   & thead {
     text-align: left;
-    font-family: $font-title;
-    font-size: $font-size-regular;
+    font-family: $font-bold-family;
+    font-size: $font-caption-size;
   }
 
   & th {
@@ -92,7 +92,7 @@ table {
   & td {
     color: $primary-main-color;
     padding: 10px 10px;
-    font-family: $font-text-md;
-    font-size: $font-size-md;
+    font-family: $font-light-family;
+    font-size: $font-text-small-size;
   }
 }

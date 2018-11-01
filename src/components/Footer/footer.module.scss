@@ -1,8 +1,12 @@
 @import 'static/styles/theme';
 
 .root {
-  padding: 0 24px;
+  padding: 0 48px;
   bottom: 0;
+
+  @include breakpoint-sm-down() {
+    padding: 0 24px;
+  }
 }
 
 .footer {
@@ -10,13 +14,14 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 12px;
-  font-family: $font-code;
+  padding: 24px 0;
+  font-family: $font-code-family;
   border-top: solid 3px #000;
 
   @include breakpoint-sm-down() {
     flex-direction: column;
     margin-bottom: 60px;
+    padding: 24px 0;
   }
 }
 

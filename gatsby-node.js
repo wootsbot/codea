@@ -22,12 +22,14 @@ exports.onCreateWebpackConfig = ({
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
 
-  const blogPostTemplate = path.resolve(
-    `src/templates/BlogDetailsOverviewTemplate/index.js`
+  const templateTagsArchive = path.resolve(
+    `src/templates/TemplateTagsArchive/index.js`
   )
-  const tagTemplate = path.resolve('src/templates/ArchiveTags/index.js')
-  const PaginatedPageTemplate = path.resolve(
-    `src/templates/PostPaginationList/index.js`
+  const templateArticleDetail = path.resolve(
+    `src/templates/TemplateArticleDetail/index.js`
+  )
+  const templateArticlesList = path.resolve(
+    `src/templates/TemplateArticlesList/index.js`
   )
 
   return graphql(`
@@ -44,7 +46,17 @@ exports.createPages = ({ actions, graphql }) => {
               tags
               author {
                 id
-                avatar
+                avatar {
+                  childImageSharp {
+                    fixed(width: 40, height: 40) {
+                      tracedSVG
+                      width
+                      height
+                      src
+                      srcSet
+                    }
+                  }
+                }
               }
             }
           }
@@ -55,6 +67,7 @@ exports.createPages = ({ actions, graphql }) => {
           node {
             id
             description
+            web
           }
         }
       }
@@ -64,46 +77,39 @@ exports.createPages = ({ actions, graphql }) => {
       return Promise.reject(result.errors)
     }
 
-    const postsList = result.data.posts.edges.reverse()
-    const tagsList = result.data.tags.edges
+    const listArticles = result.data.posts.edges.reverse()
+    const listTags = result.data.tags.edges
 
     createPaginatedPages({
-      edges: postsList,
+      edges: listArticles,
       createPage: createPage,
-      pageTemplate: PaginatedPageTemplate,
-      pageLength: 10,
-      pathPrefix: '/blog',
+      pageTemplate: templateArticlesList,
+      pageLength: 9,
+      pathPrefix: '/articles',
       buildPath: (index, pathPrefix) =>
         index > 1 ? `${pathPrefix}/${index}` : `/${pathPrefix}`,
       context: {
-        tags: tagsList,
+        tags: listTags,
       },
     })
 
-    postsList.forEach(({ node }) => {
-      let tag = ''
-
-      if (node.frontmatter.tags && node.frontmatter.tags.length) {
-        tag = node.frontmatter.tags[0]
-      }
-
+    // Make pages detail article
+    listArticles.forEach(({ node }) => {
       createPage({
         path: node.frontmatter.path,
-        component: blogPostTemplate,
-        context: {
-          tag,
-          limitFilterTags: 4,
-        },
+        component: templateArticleDetail,
+        context: {},
       })
     })
 
     // Make tag pages
-    tagsList.forEach(tag => {
+    listTags.forEach(tag => {
       createPage({
         path: `/archive-tags/${_.kebabCase(tag.node.id)}/`,
-        component: tagTemplate,
+        component: templateTagsArchive,
         context: {
           tag: tag.node.id,
+          tagContend: tag.node,
         },
       })
     })

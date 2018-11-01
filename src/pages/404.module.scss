@@ -31,12 +31,11 @@
 
 .message {
   font: {
-    size: $font-size-sub-title;
-    family: $font-text-md;
+    size: $font-subheading-size;
+    family: $font-light-family;
   }
-  color: $color-coffee-1;
 
   @include breakpoint-sm-down() {
-    font-size: $font-size-lg;
+    font-size: $font-text-medium-size;
   }
 }

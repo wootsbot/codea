@@ -2,12 +2,15 @@ module.exports = {
   siteMetadata: {
     title: `Codea`,
     siteUrl: `https://www.codea.com.mx`,
-    description: `Codea un sitio de blog para JavaScript`,
+    description: 'Codea un proyecto de código abierto y disponible para todos',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-yaml`,
     `gatsby-plugin-catch-links`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -21,21 +24,37 @@ module.exports = {
               showLineNumbers: true,
             },
           },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 786,
+              backgroundColor: `#f7f7f7`,
+            },
+          },
+          `gatsby-remark-copy-linked-files`,
+          `gatsby-remark-smartypants`,
         ],
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/static/img/`,
-        name: 'img',
+        path: `${__dirname}/docs/`,
+        name: 'docs',
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/docs/markdown`,
-        name: 'markdown-pages',
+        path: `${__dirname}/community/`,
+        name: 'community',
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/static/`,
+        name: 'static',
       },
     },
     {
@@ -51,9 +70,22 @@ module.exports = {
         includePaths: ['node_modules', 'src'],
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Codea`,
+        short_name: `Codea`,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        theme_color: `#404040`,
+        display: `minimal-ui`,
+        icon: `src/static/images/favicon.png`,
+      },
+    },
   ],
   mapping: {
     'MarkdownRemark.frontmatter.author': `AuthorYaml`,
     TagsYaml: `TagsYaml`,
+    DevelopersYaml: `DevelopersYaml`,
   },
 }

@@ -29,14 +29,9 @@
   &:hover {
     > .item-link {
       transition: 0.5s ease;
-      color: $color-yellow-1;
+      color: $secondary-dark-color;
       text-decoration: none;
     }
-  }
-
-  &-active {
-    color: $color-yellow-1 !important;
-    font-weight: 600 !important;
   }
 }
 
@@ -50,7 +45,7 @@
   text-decoration: none;
   color: $primary-light-color;
   font-size: 10px;
-  font-family: $font-text-md;
+  font-family: $font-bold-family;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   font-weight: 400;

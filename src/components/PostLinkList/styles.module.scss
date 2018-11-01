@@ -1,9 +1,0 @@
-@import 'static/styles/theme';
-
-.root {
-  margin-bottom: 40px;
-
-  @include breakpoint-sm-down() {
-    margin-bottom: 20px;
-  }
-}

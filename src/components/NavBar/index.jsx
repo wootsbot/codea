@@ -1,8 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import AppBar from '@material-ui/core/AppBar'
-import Toolbar from '@material-ui/core/Toolbar'
-import Typography from '@material-ui/core/Typography'
 import { withStyles } from '@material-ui/core/styles'
 
 import { getPaths, getPathsActives } from 'utils/paths'
@@ -15,12 +13,14 @@ const stylesUi = theme => ({
   root: {
     maxHeight: '64px',
     minHeight: '64px',
-    padding: '0 24px',
+    padding: '0 48px',
     flexDirection: 'row',
     alignItems: 'center',
+    justifyContent: 'center',
+    marginButton: '70px',
   },
   colorPrimary: {
-    backgroundColor: '#fff',
+    backgroundColor: theme.palette.primary.main,
     [theme.breakpoints.down('sm')]: {
       backgroundColor: theme.palette.primary.main,
     },
@@ -40,6 +40,9 @@ class NavBar extends React.PureComponent {
         elevation={0}
         classes={{ root: classes.root, colorPrimary: classes.colorPrimary }}>
         <Brand />
+
+        <div className={styles.space} />
+
         <ul className={styles.navItemContainer}>
           {getPathsActives(getPaths).map(path => (
             <NavItem key={path.href} href={path.href}>
