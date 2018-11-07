@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import logoCodea from 'static/images/svg/logo_codea.svg'
+import logoCodea from 'images/svg/logo_codea.svg'
 import styles from './NavBar.module.scss'
 
 function Brand() {

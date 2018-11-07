@@ -45,7 +45,7 @@ class NavBar extends React.PureComponent {
 
         <ul className={styles.navItemContainer}>
           {getPathsActives(getPaths).map(path => (
-            <NavItem key={path.href} href={path.href}>
+            <NavItem key={path.patch} href={path.patch}>
               {path.label}
             </NavItem>
           ))}

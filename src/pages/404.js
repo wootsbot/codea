@@ -1,11 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { navigate, Link } from 'gatsby-link'
+import { navigate } from 'gatsby-link'
 
 import { withStyles } from '@material-ui/core/styles'
 import Button from '@material-ui/core/Button'
 
-import Image from 'static/404_no_page2.png'
+import Image from 'images/404_no_page2.png'
 
 import styles from './404.module.scss'
 

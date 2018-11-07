@@ -6,8 +6,8 @@ import CssBaseline from '@material-ui/core/CssBaseline'
 import getPageContext from './getPageContext'
 
 // styles code and styles global
-import 'static/styles/codea-syntax.scss'
-import 'static/styles/global-styles.scss'
+import 'styles/codea-syntax.scss'
+import 'styles/global-styles.scss'
 
 function withRoot(Component) {
   class WithRoot extends React.Component {
