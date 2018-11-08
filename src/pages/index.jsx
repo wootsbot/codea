@@ -10,7 +10,7 @@ import Layout from 'components/Layout'
 import Terminal from 'components/Terminal'
 import DevelopersList from 'components/DevelopersList'
 
-import codingImg from 'static/images/svg/coding_codea.svg'
+import codingImg from 'images/svg/coding_codea.svg'
 
 import styles from './index.module.scss'
 

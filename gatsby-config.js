@@ -25,6 +25,12 @@ module.exports = {
             },
           },
           {
+            resolve: `gatsby-remark-responsive-iframe`,
+            options: {
+              wrapperStyle: `margin-bottom: 10px`,
+            },
+          },
+          {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 786,
@@ -53,8 +59,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/static/`,
-        name: 'static',
+        path: `${__dirname}/src/images/`,
+        name: 'images',
       },
     },
     {
@@ -79,7 +85,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#404040`,
         display: `minimal-ui`,
-        icon: `src/static/images/favicon.png`,
+        icon: `src/images/favicon.png`,
       },
     },
   ],
