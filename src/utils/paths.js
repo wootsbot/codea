@@ -1,7 +1,8 @@
-const PATCH_ARTICLES = '/articles/'
-const PATCH_NEWS = '/news/'
-const PATCH_CONTRIBUTE = '/contribute/'
-const PATCH_TUTORIALS = '/tutorials/'
+export const PATCH_ARTICLES = '/articles/'
+export const PATCH_NEWS = '/news/'
+export const PATCH_CONTRIBUTE = '/contribute/'
+export const PATCH_TUTORIALS = '/tutorials/'
+export const PATCH_ARCHIVE_TAGS = '/archive-tags/'
 
 const LABEL_ARTICLES = 'Articulos'
 const LABEL_NEWS = 'Noticias'
@@ -24,4 +25,17 @@ export const getPaths = [
 
 export function getPathsActives(getPaths) {
   return getPaths.filter(path => path.active)
+}
+
+export function paginationPreviousPage(index, pathPrefix) {
+  const previousUrl =
+    index - 1 == 1 ? `${pathPrefix}` : `${pathPrefix}${(index - 1).toString()}`
+
+  return previousUrl
+}
+
+export function paginationNextPage(index, pathPrefix) {
+  const nextUrl = `${pathPrefix}${(index + 1).toString()}`
+
+  return nextUrl
 }

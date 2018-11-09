@@ -1,12 +1,15 @@
 @import 'styles/theme';
 
+.list-articles {
+  padding: 0 48px;
+}
+
 .container-tags-list {
   padding-left: 48px;
 }
 
 .posts-list {
   margin-bottom: 40px;
-  padding: 24px 0 48px 48px;
 
   @include breakpoint-sm-down() {
     padding: 0;
@@ -23,5 +26,4 @@
 }
 
 .tags-list {
-  padding: 24px 48px 48px 24px;
 }

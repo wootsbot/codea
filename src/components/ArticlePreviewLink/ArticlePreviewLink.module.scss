@@ -1,0 +1,43 @@
+@import 'styles/theme';
+
+.article-title {
+  font-size: $font-subheading-size;
+  margin: 15px 0;
+
+  & > a {
+    color: $primary-main-color !important;
+  }
+}
+
+.article-author {
+  display: flex;
+  align-items: center;
+}
+
+.article-author-avatar {
+  border-radius: 50px;
+  margin-right: 10px;
+}
+
+.article-author-info {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.3;
+  font-family: $font-medium-family;
+
+  &-date {
+    color: $primary-light-color;
+  }
+}
+
+.article-author-tags {
+  display: flex;
+}
+
+.article-author-summary {
+  font-family: $font-medium-family;
+  color: $primary-dark-color;
+  font-size: $font-caption-size;
+  line-height: 24px;
+  font-weight: 200;
+}
