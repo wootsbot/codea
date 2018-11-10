@@ -37,8 +37,8 @@
     <img alt="Language grade: JavaScript" src="https://img.shields.io/lgtm/grade/javascript/g/codea-team/codea.svg?logo=lgtm&logoWidth=18"/>
   </a>
 
-  <a href="(https://nodejs.org">
-    <img src="https://img.shields.io/badge/node-%3E%3D9.x-brightgreen.svg?longCache=true" alt="nodejs" />
+  <a href="https://nodejs.org/es/">
+    <img src="https://img.shields.io/badge/node-%3E%3D10.x-brightgreen.svg?longCache=true" alt="nodejs" />
   </a>
 
   <a href="https://yarnpkg.com/en/docs/install">

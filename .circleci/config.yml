@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/mern-starter
     docker:
-      - image: circleci/node:9
+      - image: circleci/node:10
     steps:
       - checkout
 
@@ -21,6 +21,13 @@ jobs:
           key: yarn-packages-{{ checksum "yarn.lock" }}
           paths:
             - ~/.cache/yarn
+      - run:
+          name: prettier
+          command: yarn prettier
+
+      - run:
+          name: lint:eslint
+          command: yarn lint:eslint
 
       - run:
           name: gatsby build
