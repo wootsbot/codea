@@ -28,7 +28,7 @@ class Layout extends React.PureComponent {
     return (
       <React.Fragment>
         <Helmet
-          title={title && title}
+          title={title}
           meta={[
             { name: 'description', content: meta.description },
             { name: 'keywords', content: meta.keywords },
