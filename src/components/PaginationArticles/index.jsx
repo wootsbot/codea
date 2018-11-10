@@ -23,7 +23,6 @@ class PaginationArticles extends React.PureComponent {
   }
 
   handleNavigate(url) {
-    const page = pages
     navigate(url)
   }
 
@@ -53,17 +52,20 @@ class PaginationArticles extends React.PureComponent {
         <div className={styles.paginationButtons}>
           <Button
             size="small"
+            variant="contained"
+            color="secondary"
             disabled={first}
-            onClick={() => this.handleNavigate(previousUrl, pageIndex)}>
+            onClick={() => this.handleNavigate(previousUrl)}>
             <IconNavigateBefore />
-            Artículos Nuevos
           </Button>
 
           <Button
+            className={styles.paginationButtonsNext}
             size="small"
+            variant="contained"
+            color="secondary"
             disabled={last}
-            onClick={() => this.handleNavigate(nextUrl, pageIndex)}>
-            Artículos Anteriores
+            onClick={() => this.handleNavigate(nextUrl)}>
             <IconNavigateNext />
           </Button>
         </div>
