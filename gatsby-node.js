@@ -38,7 +38,7 @@ exports.createPages = ({ actions, graphql }) => {
         edges {
           node {
             id
-            excerpt(pruneLength: 200)
+            excerpt(pruneLength: 500)
             frontmatter {
               date(formatString: "MMMM DD, YYYY")
               path
@@ -46,9 +46,11 @@ exports.createPages = ({ actions, graphql }) => {
               tags
               author {
                 id
+                firstName
+                lastName
                 avatar {
                   childImageSharp {
-                    fixed(width: 40, height: 40) {
+                    fixed(width: 50, height: 50) {
                       tracedSVG
                       width
                       height
@@ -85,9 +87,9 @@ exports.createPages = ({ actions, graphql }) => {
       createPage: createPage,
       pageTemplate: templateArticlesList,
       pageLength: 9,
-      pathPrefix: '/articles',
+      pathPrefix: '/articles/',
       buildPath: (index, pathPrefix) =>
-        index > 1 ? `${pathPrefix}/${index}` : `/${pathPrefix}`,
+        index > 1 ? `${pathPrefix}${index}` : `${pathPrefix}`,
       context: {
         tags: listTags,
       },

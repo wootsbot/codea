@@ -1,11 +1,11 @@
 import React from 'react'
 
-import logo from 'static/images/svg/logo.svg'
-import code from 'static/images/svg/code.svg'
-import heart from 'static/images/svg/heart.svg'
-import instagram from 'static/images/svg/instagram.svg'
-import twitter from 'static/images/svg/twitter.svg'
-import github from 'static/images/svg/github.svg'
+import logo from 'images/svg/logo.svg'
+import code from 'images/svg/code.svg'
+import heart from 'images/svg/heart.svg'
+import instagram from 'images/svg/instagram.svg'
+import twitter from 'images/svg/twitter.svg'
+import github from 'images/svg/github.svg'
 
 import styles from './footer.module.scss'
 

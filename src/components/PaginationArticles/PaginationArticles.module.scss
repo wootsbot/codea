@@ -1,9 +1,8 @@
-@import 'static/styles/theme';
+@import 'styles/theme';
 
 .root {
   display: flex;
-  background-color: #fff;
-  padding: 8px 24px;
+  margin: 24px 0;
   justify-content: space-between;
   align-items: center;
 }
@@ -12,11 +11,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 400px;
 
   @include breakpoint-sm-down() {
     width: 100%;
   }
+}
+
+.pagination-buttons-next {
+  margin: 0 15px !important;
 }
 
 .pagination-pages {

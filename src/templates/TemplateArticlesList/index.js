@@ -4,6 +4,8 @@ import PropTypes from 'prop-types'
 import Layout from 'components/Layout'
 import PaginationArticles from 'components/PaginationArticles'
 
+import { paginationPreviousPage, paginationNextPage } from 'utils/paths'
+
 import ArticlesList from './ArticlesList'
 
 class TemplateArticlesList extends React.PureComponent {
@@ -30,13 +32,7 @@ class TemplateArticlesList extends React.PureComponent {
       additionalContext,
     } = pageContext
 
-    const previousUrl =
-      index - 1 == 1 ? pathPrefix : `${pathPrefix}/${(index - 1).toString()}`
-
-    const nextUrl = `${pathPrefix}/${(index + 1).toString()}`
     const listTags = additionalContext.tags
-
-    const Posts = group.filter(edge => !!edge.node.frontmatter.date)
 
     const Pagination = (
       <PaginationArticles
@@ -45,8 +41,8 @@ class TemplateArticlesList extends React.PureComponent {
         baseUrl={pathPrefix}
         pageCount={pageCount}
         pageIndex={index}
-        previousUrl={previousUrl}
-        nextUrl={nextUrl}
+        previousUrl={paginationPreviousPage(index, pathPrefix)}
+        nextUrl={paginationNextPage(index, pathPrefix)}
       />
     )
 
@@ -59,7 +55,7 @@ class TemplateArticlesList extends React.PureComponent {
           keywords: 'javascript, blog',
         }}>
         <ArticlesList
-          posts={Posts}
+          posts={group}
           listTags={listTags}
           pagination={Pagination}
         />

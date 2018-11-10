@@ -1,4 +1,4 @@
-@import 'static/styles/theme';
+@import 'styles/theme';
 
 html,
 body {
@@ -95,4 +95,8 @@ table {
     font-family: $font-light-family;
     font-size: $font-text-small-size;
   }
+}
+
+small {
+  font-size: $font-text-small-size;
 }

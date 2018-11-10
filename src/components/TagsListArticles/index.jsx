@@ -7,6 +7,8 @@ import { navigate } from 'gatsby'
 import Chip from '@material-ui/core/Chip'
 import Typography from '@material-ui/core/Typography'
 
+import { PATCH_ARCHIVE_TAGS } from 'utils/paths'
+
 import styles from './TagsListArticles.module.scss'
 
 class TagsListArticles extends React.PureComponent {
@@ -21,7 +23,7 @@ class TagsListArticles extends React.PureComponent {
       <section className={styles.sectionTags}>
         <div className={styles.sectionTagsHeader}>
           <Typography variant="h6" gutterBottom>
-            Lista de etiquetas
+            Todas las etiquetas de los articulos
           </Typography>
         </div>
         <div className={styles.sectionTagsList}>
@@ -32,7 +34,7 @@ class TagsListArticles extends React.PureComponent {
               key={item.node.id}
               color="secondary"
               onClick={() =>
-                navigate(`/archive-tags/${kebabCase(item.node.id)}`)
+                navigate(`${PATCH_ARCHIVE_TAGS}${kebabCase(item.node.id)}`)
               }
               label={item.node.id}
             />
