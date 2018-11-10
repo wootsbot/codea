@@ -1,7 +1,7 @@
 {
   "name": "codea",
   "version": "1.0.0",
-  "description": "La idea detrás de esta iniciativa es exponer una amplia variedad de artículos y conceptos",
+  "description": "Te encanta compartir conocimiento a través de proyectos de código abierto, libros etc. Hemos decidido crear este proyecto para cualquier persona que quiera colaborar.",
   "main": "gatsby-browser.js",
   "author": "Jorge Luis Calleja Alvarado",
   "license": "MIT",
@@ -11,9 +11,12 @@
   "homepage": "https://github.com/codea-team/codea#readme",
   "keywords": [
     "codea",
+    "react",
+    "static-site",
     "gatsby",
     "blog",
-    "docs"
+    "docs",
+    "javaScript"
   ],
   "directories": {
     "doc": "docs"
@@ -26,13 +29,27 @@
     "start": "gatsby serve",
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --write '**/*.js'"
+    "lint": "npm run lint:eslint",
+    "lint:eslint": "eslint -- .",
+    "lint:staged": "lint-staged",
+    "prettier": "prettier --ignore-path \"./.prettierignore\" --config .prettierrc --write \"./src/**/*.js\""
+  },
+  "lint-staged": {
+    "*.js": "lint:eslint"
+  },
+  "pre-commit": [
+    "prettier",
+    "lint:staged"
+  ],
+  "peerDependencies": {
+    "react": "*",
+    "react-dom": "*"
   },
   "dependencies": {
     "@material-ui/core": "^3.4.0",
     "@material-ui/icons": "^3.0.1",
     "classnames": "^2.2.6",
-    "gatsby": "^2.0.40",
+    "gatsby": "^2.0.45",
     "gatsby-image": "^2.0.19",
     "gatsby-paginate": "^1.0.16",
     "gatsby-plugin-catch-links": "^2.0.6",
@@ -59,14 +76,16 @@
     "react-jss": "^8.6.1"
   },
   "devDependencies": {
-    "babel-eslint": "^8.2.6",
-    "eslint": "^4.19.1",
-    "eslint-config-prettier": "^2.9.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.9.0",
+    "eslint-config-prettier": "^3.1.0",
     "eslint-import-resolver-webpack": "^0.10.1",
-    "eslint-plugin-import": "^2.13.0",
-    "eslint-plugin-prettier": "^2.6.2",
-    "eslint-plugin-react": "^7.10.0",
-    "node-sass": "^4.9.3",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-plugin-react": "^7.11.1",
+    "lint-staged": "^8.0.4",
+    "node-sass": "^4.10.0",
+    "pre-commit": "^1.2.2",
     "prettier": "^1.14.0"
   }
 }
