@@ -6,11 +6,12 @@ import Button from '@material-ui/core/Button'
 
 import { graphql } from 'gatsby'
 
+import { UndrawBackInTheDay } from 'react-undraw-illustrations'
+
 import Layout from 'components/Layout'
 import Terminal from 'components/Terminal'
 import DevelopersList from 'components/DevelopersList'
-
-import codingImg from 'images/svg/coding_codea.svg'
+import HomePageSectionWelcome from 'components/HomePageSectionWelcome'
 
 import styles from './index.module.scss'
 
@@ -58,69 +59,41 @@ class IndexPage extends React.Component {
             </div>
           </div>
         </section>
-        <Grid
-          className={styles.sectionWelcome}
-          component="section"
-          container
-          direction="column"
-          justify="center"
-          alignItems="center">
-          <Grid item md={6} sm={12}>
-            <h2 className={styles.sectionWelcomeTitle}>
-              ¿Estas listo para comenzar?
-            </h2>
-          </Grid>
 
-          <Grid item md={6} sm={12}>
-            <p className={styles.sectionWelcomeMessage}>
-              Quizás ya tengas un artículo que quieras compartir, para eso
-              siéntete libre de ir al repositorio de codea donde podrás crear
-              tus pull requests y aportar con la comunidad.
-            </p>
-          </Grid>
-
-          <Grid item md={6} sm={12}>
-            <a
-              className={styles.sectionWelcomeLinkStart}
-              target="_blank"
-              rel="noopener noreferrer"
-              title="codea repository"
-              href="https://github.com/codea-team">
-              <Button
-                className={styles.sectionWelcomeBtnStart}
-                variant="extendedFab"
-                color="secondary">
-                Comenzar
-              </Button>
-            </a>
-          </Grid>
-        </Grid>
-
-        <DevelopersList developers={edgesDevelopers} />
+        <HomePageSectionWelcome />
 
         <Grid
           component="section"
           className={styles.sectionCoding}
           container
           direction="row"
-          justify="space-between"
+          justify="space-evenly"
           alignItems="center">
           <Grid item md={3} sm={12}>
-            <img className={styles.imageCoding} src={codingImg} />
+            <UndrawBackInTheDay primaryColor="#39d996" height="250px" />
           </Grid>
-          <Grid item md={8} sm={12}>
+          <Grid item md={4} sm={12} className={styles.sectionCodingText}>
             <h2 className={styles.sectionCodingRightTitle}>
-              CODEA UN SITO PARA LOS QUE AMAN COMPARTIR CONOCIMIENTO, SIÉNTETE
-              LIBRE DE APORTAR LO QUE QUIERAS.
+              Siéntete libre de aportar lo que quieras.
             </h2>
             <p className={styles.sectionCodingRightMessage}>
-              Codea está desarrollado con Gatsby, está pensado para cualquier
-              desarrollador que quiera compartir sus experiencias con código
-              desde como soluciono un problema hasta crear un artículo sobre
-              cualquier lenguaje de programación totalmente en español.
+              Codea unn sitio desarrollado con{' '}
+              <a
+                rel="noopener noreferrer"
+                alt="Gatsby"
+                target="_blank"
+                href="https://www.gatsbyjs.org/">
+                Gatsby
+              </a>{' '}
+              que está pensado para cualquier desarrollador que quiera compartir
+              sus experiencias con código, desde como soluciono un problema,
+              hasta crear un artículo sobre cualquier lenguaje de programación,
+              totalmente en español.
             </p>
           </Grid>
         </Grid>
+
+        <DevelopersList developers={edgesDevelopers} />
       </Layout>
     )
   }

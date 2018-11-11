@@ -74,65 +74,23 @@
 }
 
 .section-coding {
-  padding: 0 48px;
-  height: 100vh;
+  padding: 90px 0;
   background-color: #fff;
 }
 
-.image-coding {
-  width: 240px !important;
-  height: 240px !important;
+.section-coding-text {
 }
 
 .section-coding-right-title {
   font-family: $font-bold-family;
-  font-size: $font-heading-size;
+  font-size: $font-subheading-size;
+  text-align: center;
+  line-height: 1.58;
 }
 
 .section-coding-right-message {
   font-family: $font-light-family;
-  font-size: $font-text-medium-size;
-}
-
-.section-welcome {
-  padding: 80px 0;
-}
-
-.section-welcome-title {
-  font-size: 50px;
-  margin: 0;
-  margin-bottom: 30px;
-}
-
-.section-welcome-message {
+  font-size: $font-caption-size;
   text-align: center;
-  margin-bottom: 30px;
-}
-
-.section-welcome-link-start {
-  text-decoration: none;
-
-  &:hover {
-    text-decoration: none;
-  }
-}
-
-.section-welcome-btn-start {
-  color: $humming-bird-color !important;
-  text-decoration: none !important;
-  padding: 0 50px !important;
-  background: #134e5e; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #71b280,
-    #134e5e
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #71b280,
-    #134e5e
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  &:hover {
-    box-shadow: 0 3px 5px 2px #71b280;
-  }
+  line-height: 1.39;
 }
