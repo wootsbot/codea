@@ -57,10 +57,6 @@ class ArticlesList extends React.PureComponent {
             </Grid>
           </Grid>
         </Grid>
-
-        <Grid container item md={3} className={styles.tagsList}>
-          <TagsListArticles tags={listTags} />
-        </Grid>
       </Grid>
     )
   }
