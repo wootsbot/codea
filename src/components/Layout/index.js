@@ -16,10 +16,11 @@ class Layout extends React.PureComponent {
     title: PropTypes.string,
     meta: PropTypes.objectOf(PropTypes.string),
     marginTop: PropTypes.bool,
+    footer: PropTypes.bool,
   }
 
   render() {
-    const { children, title, meta, marginTop } = this.props
+    const { children, title, meta, marginTop, footer } = this.props
 
     const classMain = classNames({
       [styles.main]: marginTop,
@@ -37,7 +38,7 @@ class Layout extends React.PureComponent {
         <NavBar />
         <main className={classMain}>{children}</main>
 
-        <Footer />
+        {footer && <Footer />}
 
         <SideBar />
       </React.Fragment>
@@ -47,10 +48,11 @@ class Layout extends React.PureComponent {
 
 Layout.defaultProps = {
   meta: {
-    description: 'codea blog',
+    description: 'codea',
     keywords: 'Programación, codea',
   },
   marginTop: false,
+  footer: true,
 }
 
 export default withRoot(Layout)

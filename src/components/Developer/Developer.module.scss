@@ -1,3 +1,5 @@
+@import 'styles/theme';
+
 .developer {
   display: flex;
   flex-direction: column;
@@ -6,4 +8,43 @@
 
 .avatar {
   border-radius: 50px;
+  margin-bottom: 20px;
+}
+
+.developer-fullName {
+  font-size: $font-text-medium-size;
+  font-family: $font-medium-family;
+  color: $primary-dark-color;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.developer-icon-container {
+  display: flex;
+  align-items: center;
+  color: $secondary-dark-color;
+}
+
+.developer-role {
+  font-size: $font-caption-size;
+  font-family: $font-light-family;
+  color: $primary-light-color;
+  font-style: italic;
+  line-height: 2;
+  margin-left: 8px;
+}
+
+.developer-location {
+  font-size: $font-text-small-size;
+  font-family: $font-bold-family;
+  color: $primary-dark-color;
+  margin-left: 8px;
+}
+
+.developer-bio {
+  font-size: $font-caption-size;
+  font-family: $font-code-family;
+  color: $primary-dark-color;
+  margin: 16px 0;
+  text-align: center;
 }

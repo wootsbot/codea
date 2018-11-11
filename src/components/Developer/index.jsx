@@ -1,6 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import StarsTwoToneIcon from '@material-ui/icons/StarsTwoTone'
+import LocationOnTwoToneIcon from '@material-ui/icons/LocationOnTwoTone'
+
 import Img from 'gatsby-image'
 
 import styles from './Developer.module.scss'
@@ -20,10 +23,20 @@ class Developer extends React.PureComponent {
     return (
       <div className={styles.developer}>
         <Img alt="developer" fixed={avatar} className={styles.avatar} />
-        <span>{fulName}</span>
-        <span>{codeRole}</span>
-        <span>{location}</span>
-        <p>{bio}</p>
+
+        <span className={styles.developerFullName}>{fulName}</span>
+
+        <div className={styles.developerIconContainer}>
+          <StarsTwoToneIcon />
+          <span className={styles.developerRole}>{codeRole}</span>
+        </div>
+
+        <div className={styles.developerIconContainer}>
+          <LocationOnTwoToneIcon />
+          <span className={styles.developerLocation}>{location}</span>
+        </div>
+
+        <p className={styles.developerBio}>{bio}</p>
       </div>
     )
   }
