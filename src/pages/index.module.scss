@@ -91,3 +91,37 @@
   text-align: center;
   line-height: 1.39;
 }
+
+/* styles to Page 404 */
+.page-404 {
+  margin-top: 50px;
+}
+
+.page-404-content {
+  text-align: center;
+  line-height: 2;
+  margin-top: 50px !important;
+}
+
+.page-404-content-title {
+  font-family: $font-medium-family;
+  color: $primary-light-color;
+  font-size: 25px;
+  margin: 0;
+}
+
+.page-404-content-button-back {
+  color: $humming-bird-color !important;
+  text-decoration: none !important;
+  padding: 0 50px !important;
+
+  background: #00a668;
+  background: -webkit-linear-gradient(to right, #243e48, #00a668);
+  background: linear-gradient(to right, #243e48, #00a668);
+
+  &:hover {
+    box-shadow: 0 3px 5px 2px #00a668;
+  }
+}
+
+/* end styles to Page 404 */
