@@ -30,17 +30,14 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "lint": "npm run lint:eslint",
-    "lint:eslint": "eslint -- .",
+    "lint:eslint": "eslint --fix .",
     "lint:staged": "lint-staged",
     "prettier": "prettier --ignore-path \"./.prettierignore\" --config .prettierrc --write \"./src/**/*.js\""
   },
   "lint-staged": {
-    "*.js": "lint:eslint"
+    "*.js": "npm run lint:eslint && npm run prettier"
   },
-  "pre-commit": [
-    "prettier",
-    "lint:staged"
-  ],
+  "pre-commit": "lint:staged",
   "peerDependencies": {
     "react": "*",
     "react-dom": "*"
@@ -73,7 +70,8 @@
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
     "react-helmet": "^5.2.0",
-    "react-jss": "^8.6.1"
+    "react-jss": "^8.6.1",
+    "react-undraw-illustrations": "^2.0.3"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
