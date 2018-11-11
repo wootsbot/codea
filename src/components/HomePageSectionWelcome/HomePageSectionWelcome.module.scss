@@ -1,0 +1,38 @@
+@import 'styles/theme';
+
+.section-welcome {
+  padding: 80px 0;
+}
+
+.section-welcome-title {
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  margin: 0 0 15px 0;
+}
+
+.section-welcome-message {
+  font-size: $font-subheading-size;
+  text-align: center;
+  margin: 0 0 80px 0;
+}
+
+.section-welcome-link-start {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.section-welcome-btn-start {
+  color: $humming-bird-color !important;
+  text-decoration: none !important;
+  padding: 0 50px !important;
+  background: #134e5e;
+  background: -webkit-linear-gradient(to right, #71b280, #134e5e);
+  background: linear-gradient(to right, #71b280, #134e5e);
+  &:hover {
+    box-shadow: 0 3px 5px 2px #71b280;
+  }
+}

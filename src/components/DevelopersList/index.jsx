@@ -17,26 +17,30 @@ class DevelopersList extends React.PureComponent {
 
     return (
       <Grid
+        className={styles.developersSection}
         component="section"
         container
         direction="column"
         alignItems="center">
-        <h2>El equipo detras de codea</h2>
-        <p>
-          El equipo de codea es una gran comunidad que le apaciona desarrolladar
-          el futuro tambien estamos muy orgullosos de los autores de los
-          articulos de codea
-        </p>
+        <Grid item md={4} sm={12}>
+          <h2 className={styles.developersListTitle}>Desarrolladores</h2>
+        </Grid>
+
+        <Grid item md={8} sm={12}>
+          <p className={styles.developersListResume}>
+            El equipo de codea es una gran comunidad que le apaciona
+            desarrolladar el futuro de la web.
+          </p>
+        </Grid>
 
         <Grid
           item
           className={styles.developersList}
           container
           direction="row"
-          justify="space-between"
-          alignItems="flex-start">
+          justify="center">
           {developers.map(developer => (
-            <Grid key={developer.node.id} item md={4}>
+            <Grid key={developer.node.id} item md={4} sm={12}>
               <Developer
                 fulName={`${developer.node.firstName} ${
                   developer.node.lastName

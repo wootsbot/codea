@@ -14,6 +14,7 @@ const TemplateTagsArchive = ({ pageContext, data }) => {
 
   return (
     <Layout
+      footer={false}
       marginTop
       title="Archive | codea Tags"
       meta={{ description: 'Tags', keywords: 'javascript, blog' }}>
