@@ -1,9 +1,8 @@
 ---
-path: '/articles/2018-11-9-a-simple-guide-to-es6-iterators-in-javascript-with-examples'
 date: '2018-11-30'
 title: 'A Simple Guide to ES6 Iterators in JavaScript with Examples'
 author: woostbot
-tags: ['ReactJS', 'Web', 'JavaScript']
+tags: ['ReactJS', 'JavaScript']
 ---
 
 Any word wrapped with two tildes (like ~~this~~) will appear crossed out.+.

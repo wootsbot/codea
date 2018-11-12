@@ -1,5 +1,4 @@
 ---
-path: '/articles/codea-tes'
 date: '2018-11-17'
 title: 'Codea test'
 tags: ['VueJS']

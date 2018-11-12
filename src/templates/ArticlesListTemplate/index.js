@@ -8,7 +8,7 @@ import { paginationPreviousPage, paginationNextPage } from 'utils/paths'
 
 import ArticlesList from './ArticlesList'
 
-class TemplateArticlesList extends React.PureComponent {
+class ArticlesListTemplate extends React.PureComponent {
   static propTypes = {
     pageContext: PropTypes.shape({
       group: PropTypes.array,
@@ -64,4 +64,4 @@ class TemplateArticlesList extends React.PureComponent {
   }
 }
 
-export default TemplateArticlesList
+export default ArticlesListTemplate

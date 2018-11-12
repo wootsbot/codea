@@ -53,10 +53,11 @@ class TagOverview extends React.PureComponent {
         <div>
           <ul className={styles.tagsList}>
             {articles.map(({ node }) => {
-              const { path, title, date } = node.frontmatter
+              const { slug } = node.fields
+              const { title, date } = node.frontmatter
               return (
-                <li key={path} className={styles.tagsListItem}>
-                  <Link to={path}>{title}</Link>
+                <li key={slug} className={styles.tagsListItem}>
+                  <Link to={slug}>{title}</Link>
                   <time className={styles.tagsListTime}>{date}</time>
                 </li>
               )

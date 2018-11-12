@@ -8,7 +8,7 @@ import Grid from '@material-ui/core/Grid'
 import Layout from 'components/Layout'
 import TagOverview from 'components/TagOverview'
 
-const TemplateTagsArchive = ({ pageContext, data }) => {
+const TagsArchiveTemplate = ({ pageContext, data }) => {
   const { tag, tagContend } = pageContext
   const { edges, totalCount } = data.allMarkdownRemark
 
@@ -34,7 +34,7 @@ const TemplateTagsArchive = ({ pageContext, data }) => {
   )
 }
 
-TemplateTagsArchive.propTypes = {
+TagsArchiveTemplate.propTypes = {
   pageContext: PropTypes.shape({
     tag: PropTypes.string.isRequired,
   }),
@@ -46,7 +46,7 @@ TemplateTagsArchive.propTypes = {
   }),
 }
 
-export default TemplateTagsArchive
+export default TagsArchiveTemplate
 
 export const pageQuery = graphql`
   query TagPage($tag: String) {
@@ -58,9 +58,11 @@ export const pageQuery = graphql`
       totalCount
       edges {
         node {
+          fields {
+            slug
+          }
           frontmatter {
             title
-            path
             date(formatString: "MMMM DD, YYYY")
           }
         }

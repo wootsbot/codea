@@ -9,7 +9,7 @@ import PostDetailsOverview from 'components/PostDetailsOverview'
 
 import styles from './ArticleDetail.module.scss'
 
-function TemplateArticleDetail({ data }) {
+function ArticleDetailTemplate({ data }) {
   const { markdownRemark } = data
   const { frontmatter, html, excerpt } = markdownRemark
 
@@ -37,18 +37,17 @@ function TemplateArticleDetail({ data }) {
   )
 }
 
-TemplateArticleDetail.propTypes = {
+ArticleDetailTemplate.propTypes = {
   data: PropTypes.object,
 }
 
 export const pageQuery = graphql`
-  query($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
+  query($slug: String!) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       excerpt
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
-        path
         title
         author {
           id
@@ -67,4 +66,4 @@ export const pageQuery = graphql`
     }
   }
 `
-export default TemplateArticleDetail
+export default ArticleDetailTemplate

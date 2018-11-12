@@ -1,5 +1,4 @@
 ---
-path: '/articles/Google-Cloud-Pub-Sub-Qwik-Start-Linea-de-comandos'
 date: '2019-12-04'
 title: 'Google Cloud Pub/Sub: Qwik Start - Línea de comandos'
 tags: ['Google-Cloud']
