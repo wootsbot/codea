@@ -76,7 +76,7 @@ class IndexPage extends React.Component {
               Siéntete libre de aportar lo que quieras.
             </h2>
             <p className={styles.sectionCodingRightMessage}>
-              Codea unn sitio desarrollado con{' '}
+              Codea un sitio desarrollado con{' '}
               <a
                 rel="noopener noreferrer"
                 alt="Gatsby"

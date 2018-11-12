@@ -2,6 +2,10 @@
 
 .list-articles {
   padding: 0 48px;
+
+  @include breakpoint-sm-down() {
+    padding: 0 16px;
+  }
 }
 
 .container-tags-list {
@@ -21,9 +25,12 @@
   margin: 0 8px 36px !important;
 
   @include breakpoint-sm-down() {
-    margin: 0 !important;
+    margin-bottom: 35px !important;
   }
 }
 
 .tags-list {
+  @include breakpoint-sm-down() {
+    margin-bottom: 50px !important;
+  }
 }

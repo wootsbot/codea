@@ -9,11 +9,19 @@
 .header {
   margin-bottom: 100px;
 
+  @include breakpoint-sm-down() {
+    margin-bottom: 70px;
+  }
+
   &-title {
     color: $primary-main-color;
     font-family: $font-bold-family;
     font-size: $font-heading-size;
     margin: 0;
+
+    @include breakpoint-sm-down() {
+      text-align: center;
+    }
   }
 
   &-user-info {
@@ -36,6 +44,7 @@
 
     @include breakpoint-sm-down() {
       margin: 0;
+      text-align: center;
     }
   }
 
