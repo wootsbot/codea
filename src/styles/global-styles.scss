@@ -127,3 +127,15 @@ table {
 small {
   font-size: $font-text-small-size;
 }
+
+a.auto-link-headers:hover {
+  background: none;
+}
+
+a.auto-link-headers {
+  color: inherit;
+  fill: $secondary-main-color;
+  text-decoration: none;
+  border-bottom: none;
+  box-shadow: none;
+}
