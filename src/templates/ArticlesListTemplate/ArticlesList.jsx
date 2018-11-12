@@ -22,7 +22,7 @@ class ArticlesList extends React.PureComponent {
     const { childImageSharp } = author.avatar
     return (
       <ArticlePreviewLink
-        to={frontmatter.path}
+        to={node.fields.slug}
         title={frontmatter.title}
         fullName={`${author.firstName} ${author.lastName}`}
         avatar={childImageSharp.fixed}

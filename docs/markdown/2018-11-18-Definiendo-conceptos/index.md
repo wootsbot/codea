@@ -1,5 +1,4 @@
 ---
-path: '/articles/Definiendo-conceptos-Closure-y-Scope-en-JavaScript'
 date: '2018-07-07'
 title: 'Definiendo conceptos: Closure y Scope en JavaScript'
 tags: ['ReactJS', 'Web', 'Codea', 'UI', 'js', 'Lodash']
