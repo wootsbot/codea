@@ -23,7 +23,7 @@ class DevelopersList extends React.PureComponent {
         direction="column"
         alignItems="center">
         <Grid item md={4} sm={12}>
-          <h2 className={styles.developersListTitle}>Desarrolladores</h2>
+          <h2 className={styles.developersListTitle}>Conozca al equipo</h2>
         </Grid>
 
         <Grid item md={8} sm={12}>

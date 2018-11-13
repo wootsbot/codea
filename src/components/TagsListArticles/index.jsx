@@ -23,7 +23,7 @@ class TagsListArticles extends React.PureComponent {
       <section className={styles.sectionTags}>
         <div className={styles.sectionTagsHeader}>
           <Typography variant="h6" gutterBottom>
-            Todas las etiquetas de los articulos
+            Vea los artículos por etiquetas
           </Typography>
         </div>
         <div className={styles.sectionTagsList}>

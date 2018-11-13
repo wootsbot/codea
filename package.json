@@ -43,7 +43,7 @@
     "react-dom": "*"
   },
   "dependencies": {
-    "@material-ui/core": "^3.4.0",
+    "@material-ui/core": "^3.5.1",
     "@material-ui/icons": "^3.0.1",
     "classnames": "^2.2.6",
     "gatsby": "^2.0.45",
