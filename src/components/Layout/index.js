@@ -8,7 +8,7 @@ import NavBar from 'components/NavBar'
 import SideBar from 'components/SideBar'
 import Footer from 'components/Footer'
 
-import styles from './Layout.module.scss'
+import styles from './styles.module.scss'
 
 class Layout extends React.PureComponent {
   static propTypes = {
@@ -29,7 +29,7 @@ class Layout extends React.PureComponent {
     return (
       <React.Fragment>
         <Helmet
-          title={title}
+          title={`${title} | Codea`}
           meta={[
             { name: 'description', content: meta.description },
             { name: 'keywords', content: meta.keywords },
@@ -48,8 +48,8 @@ class Layout extends React.PureComponent {
 
 Layout.defaultProps = {
   meta: {
-    description: 'codea',
-    keywords: 'Programación, codea',
+    description: 'Un proyecto de código abierto y disponible para todos',
+    keywords: 'codea, react, gatsby, javaScript',
   },
   marginTop: false,
   footer: true,

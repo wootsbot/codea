@@ -6,7 +6,7 @@ import Grid from '@material-ui/core/Grid'
 import TagsListArticles from 'components/TagsListArticles'
 import ArticlePreviewLink from 'components/ArticlePreviewLink'
 
-import styles from './TemplateArticlesList.module.scss'
+import styles from './styles.module.scss'
 
 class ArticlesList extends React.PureComponent {
   static propTypes = {

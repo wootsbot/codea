@@ -4,12 +4,12 @@ import PropTypes from 'prop-types'
 import { navigate } from 'gatsby-link'
 
 import Button from '@material-ui/core/Button'
-import IconNavigateBefore from '@material-ui/icons/NavigateBeforeTwoTone'
-import IconNavigateNext from '@material-ui/icons/NavigateNextTwoTone'
-import MenuItem from '@material-ui/core/MenuItem'
 import Select from '@material-ui/core/Select'
+import MenuItem from '@material-ui/core/MenuItem'
+import IconNavigateNext from '@material-ui/icons/NavigateNextTwoTone'
+import IconNavigateBefore from '@material-ui/icons/NavigateBeforeTwoTone'
 
-import styles from './PaginationArticles.module.scss'
+import styles from './styles.module.scss'
 
 class PaginationArticles extends React.PureComponent {
   static propTypes = {

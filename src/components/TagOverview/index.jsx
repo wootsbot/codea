@@ -3,11 +3,11 @@ import PropTypes from 'prop-types'
 
 import Link from 'gatsby-link'
 
-import Paper from '@material-ui/core/Paper'
 import Chip from '@material-ui/core/Chip'
+import Paper from '@material-ui/core/Paper'
 import LinkTwoTone from '@material-ui/icons/LinkTwoTone'
 
-import styles from './TagOverview.module.scss'
+import styles from './styles.module.scss'
 
 class TagOverview extends React.PureComponent {
   static propTypes = {

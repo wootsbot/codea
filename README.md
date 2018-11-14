@@ -8,8 +8,8 @@
 </h1>
 
 <p align="center">
-  <strong>This is the codea source code</strong><br>
-  The idea behind this initiative is to expose a wide variety of articles and concepts, if you love sharing knowledge through open source projects, books etc. We have decided to create this project for anyone who wants to collaborate.
+  <strong>Este es el código fuente de codea</strong><br>
+  La idea detrás de esta iniciativa es exponer una amplia variedad de artículos y conceptos, si te encanta compartir conocimiento a través de proyectos de código abierto, libros etc. Hemos decidido crear este proyecto para cualquier persona que quiera colaborar.
 </p>
 
 <p align="center">
@@ -50,38 +50,39 @@
   </a>
 </p>
 
-Leélo también en [español](README.es.md)
+Read this in [English](README.en.md)
 
-## Getting started
+## Manos a la obra
 
-Make sure you have a recent version of [nodejs](https://nodejs.org), and the
-[yarn](https://yarnpkg.com) dependency management tool.
+Asegúrese de tener una versión reciente de [nodejs](https://nodejs.org) y la
+herramienta de administración de dependencias [yarn](https://yarnpkg.com).
 
 ```sh
 $ npm install --global yarn
 ```
 
-Once these requirements are met, let's proceed and install the project dependencies.
+Enseguida procedemos a instalar las dependencias del proyecto.
 
 ```sh
-$ cd codea-blog
+$ cd blog-codea/
 $ yarn install
 ```
 
-And finally, let's execute the development server:
+Y finalmente, ejecutemos el servidor en modo desarrollo:
 
 ```sh
 $ ./node_modules/.bin/gatsby develop
 ```
 
-or
+o
 
 ```sh
 $ yarn develop
 ```
 
-You can now view blog in the browser http://localhost:8000
+Ahora puede ver el blog en el navegador http://localhost:8000
 
-View GraphiQL, an in-browser IDE, to explore the blog's schema http://localhost:8000/___graphql
+Vea GraphiQL, un IDE en el navegador, para explorar los datos y el esquema del
+blog http://localhost:8000/___graphql
 
-Feel free to leave any comment and/or suggestion.
+Siéntase libre de dejar cualquier comentario y/o sugerencia.

@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import styles from './Terminal.module.scss'
+import styles from './styles.module.scss'
 
 class Code extends React.PureComponent {
   static propTypes = {

@@ -1,13 +1,13 @@
 import React from 'react'
 
-import logo from 'images/svg/logo.svg'
 import code from 'images/svg/code.svg'
+import logo from 'images/svg/logo.svg'
 import heart from 'images/svg/heart.svg'
-import instagram from 'images/svg/instagram.svg'
-import twitter from 'images/svg/twitter.svg'
 import github from 'images/svg/github.svg'
+import twitter from 'images/svg/twitter.svg'
+import instagram from 'images/svg/instagram.svg'
 
-import styles from './footer.module.scss'
+import styles from './styles.module.scss'
 
 function Footer() {
   return (

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import HeaderDetail from './HeaderDetail'
 import styles from './styles.module.scss'
 
-class PostDetailsOverview extends React.PureComponent {
+class ArticleDetailsOverview extends React.PureComponent {
   static propTypes = {
     title: PropTypes.string,
     date: PropTypes.string.isRequired,
@@ -17,10 +17,13 @@ class PostDetailsOverview extends React.PureComponent {
     return (
       <div className={styles.root}>
         <HeaderDetail title={title} date={date} author={author} />
-        <div dangerouslySetInnerHTML={html} />
+        <div
+          className="codea-article-details-markdown"
+          dangerouslySetInnerHTML={html}
+        />
       </div>
     )
   }
 }
 
-export default PostDetailsOverview
+export default ArticleDetailsOverview

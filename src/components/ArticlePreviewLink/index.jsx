@@ -2,13 +2,14 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import kebabCase from 'lodash/kebabCase'
-
 import { Link } from 'gatsby'
 import Img from 'gatsby-image'
 
+import Typography from '@material-ui/core/Typography'
+
 import { PATCH_ARCHIVE_TAGS } from 'utils/paths'
 
-import styles from './ArticlePreviewLink.module.scss'
+import styles from './styles.module.scss'
 
 class ArticlePreviewLink extends React.PureComponent {
   static propTypes = {
@@ -26,9 +27,14 @@ class ArticlePreviewLink extends React.PureComponent {
 
     return (
       <article>
-        <h3 className={styles.articleTitle}>
+        <Typography
+          className={styles.articleTitle}
+          color="primary"
+          component="h3"
+          variant="h5"
+          gutterBottom>
           <Link to={to}>{title}</Link>
-        </h3>
+        </Typography>
 
         <div className={styles.articleAuthor}>
           <Img
@@ -56,7 +62,13 @@ class ArticlePreviewLink extends React.PureComponent {
           </div>
         </div>
 
-        <p className={styles.articleAuthorSummary}>{excerpt}</p>
+        <Typography
+          className={styles.articleAuthorSummary}
+          color="primary"
+          variant="body2"
+          gutterBottom>
+          {excerpt}
+        </Typography>
       </article>
     )
   }
