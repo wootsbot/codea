@@ -52,7 +52,6 @@ class PaginationArticles extends React.PureComponent {
         <div className={styles.paginationButtons}>
           <Button
             size="small"
-            variant="contained"
             color="secondary"
             disabled={first}
             onClick={() => this.handleNavigate(previousUrl)}>
@@ -62,7 +61,6 @@ class PaginationArticles extends React.PureComponent {
           <Button
             className={styles.paginationButtonsNext}
             size="small"
-            variant="contained"
             color="secondary"
             disabled={last}
             onClick={() => this.handleNavigate(nextUrl)}>
@@ -71,7 +69,7 @@ class PaginationArticles extends React.PureComponent {
         </div>
 
         <div className={styles.paginationPages}>
-          <span>Monstrando Pagina</span>
+          <span className={styles.paginationPagesPage}>Página</span>
 
           <Select
             className={styles.paginationSelect}

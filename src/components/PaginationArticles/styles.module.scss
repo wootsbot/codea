@@ -29,6 +29,12 @@
   }
 }
 
+.pagination-pages-page {
+  font-family: $font-light-family;
+  color: rgba(0, 0, 0, 0.87);
+  font-weight: 500;
+}
+
 .pagination-select {
   margin: 0 8px;
   font-weight: bold;
