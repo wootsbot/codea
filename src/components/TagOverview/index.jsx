@@ -5,6 +5,8 @@ import Link from 'gatsby-link'
 
 import Chip from '@material-ui/core/Chip'
 import Paper from '@material-ui/core/Paper'
+import Typography from '@material-ui/core/Typography'
+
 import LinkTwoTone from '@material-ui/icons/LinkTwoTone'
 
 import styles from './styles.module.scss'
@@ -24,7 +26,14 @@ class TagOverview extends React.PureComponent {
       <Paper elevation={1} className={styles.containerTag}>
         <div className={styles.tagHeader}>
           <div className={styles.tagHeaderTitleContainer}>
-            <h1 className={styles.tagHeaderTitle}>{tag}</h1>
+            <Typography
+              color="primary"
+              component="h1"
+              variant="h4"
+              gutterBottom>
+              {tag}
+            </Typography>
+
             {tagContend.web && (
               <a
                 target="_blank"
@@ -36,13 +45,13 @@ class TagOverview extends React.PureComponent {
             )}
           </div>
 
-          <p className={styles.tagHeaderSummary}>{tagContend.description}</p>
+          <Typography variant="subtitle1" gutterBottom>
+            {tagContend.description}
+          </Typography>
         </div>
 
         <div className={styles.tagSubHeading}>
-          <h2 className={styles.tagSubHeadingTitle}>
-            Todos los articulos de {tag}
-          </h2>
+          <Typography variant="body2">Todos los articulos de {tag}</Typography>
           <Chip
             color="secondary"
             variant="outlined"
