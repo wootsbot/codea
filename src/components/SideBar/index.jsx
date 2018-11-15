@@ -8,7 +8,7 @@ import FiberNewTwoTone from '@material-ui/icons/FiberNewTwoTone'
 import { getPaths, getPathsActives, getKeyPath } from 'utils/paths'
 
 import NavItem from './SideItem'
-import styles from './SideBar.module.scss'
+import styles from './styles.module.scss'
 
 const iconsOfPath = {
   [getKeyPath.PATCH_ARTICLES]: <SubtitlesTwoTone />,

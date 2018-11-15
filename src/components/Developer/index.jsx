@@ -6,7 +6,7 @@ import LocationOnTwoToneIcon from '@material-ui/icons/LocationOnTwoTone'
 
 import Img from 'gatsby-image'
 
-import styles from './Developer.module.scss'
+import styles from './styles.module.scss'
 
 class Developer extends React.PureComponent {
   static propTypes = {

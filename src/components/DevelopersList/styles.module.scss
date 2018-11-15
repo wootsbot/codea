@@ -1,0 +1,29 @@
+@import 'styles/theme';
+
+.developers-section {
+  background: linear-gradient(
+    0deg,
+    rgb(255, 255, 255) 0%,
+    rgb(226, 235, 228) 100%
+  );
+  padding: 80px 0;
+
+  @include breakpoint-sm-down() {
+    padding: 80px 0 0 0;
+  }
+}
+
+.developers-list {
+  padding: 0 48px;
+}
+
+.developers-list-resume {
+  font-size: $font-text-medium-size !important;
+  margin: 0 0 80px 0 !important;
+}
+
+.developer-grid-item {
+  @include breakpoint-sm-down() {
+    margin-bottom: 36px !important;
+  }
+}

@@ -11,7 +11,7 @@ import Fade from '@material-ui/core/Fade'
 
 import TagLink from 'components/TagLink'
 
-import styles from './TagLinkList.module.scss'
+import styles from './styles.module.scss'
 
 class TagLinkList extends React.PureComponent {
   state = {

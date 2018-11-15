@@ -2,8 +2,9 @@ import React from 'react'
 
 import Grid from '@material-ui/core/Grid'
 import Button from '@material-ui/core/Button'
+import Typography from '@material-ui/core/Typography'
 
-import styles from './HomePageSectionWelcome.module.scss'
+import styles from './styles.module.scss'
 
 function HomePageSectionWelcome() {
   return (
@@ -15,20 +16,20 @@ function HomePageSectionWelcome() {
       justify="center"
       alignItems="center">
       <Grid item md={6} sm={12}>
-        <h2 className={styles.sectionWelcomeTitle}>
+        <Typography variant="h3" gutterBottom>
           ¿Estas listo para comenzar?
-        </h2>
+        </Typography>
       </Grid>
 
       <Grid item md={6} sm={12}>
-        <p className={styles.sectionWelcomeMessage}>
+        <Typography variant="subtitle1" gutterBottom>
           Quizás ya tengas un artículo que quieras compartir, para eso siéntete
           libre de ir al repositorio de codea donde podrás crear tus pull
           requests y aportar con la comunidad.
-        </p>
+        </Typography>
       </Grid>
 
-      <Grid item md={6} sm={12}>
+      <Grid item md={6} sm={12} className={styles.sectionWelcomeGridBtnStart}>
         <Button
           target="_blank"
           href="https://github.com/codea-team"

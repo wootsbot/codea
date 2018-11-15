@@ -3,6 +3,7 @@ import { navigate } from 'gatsby-link'
 
 import Grid from '@material-ui/core/Grid'
 import Button from '@material-ui/core/Button'
+import Typography from '@material-ui/core/Typography'
 import { UndrawRising } from 'react-undraw-illustrations'
 
 import styles from './index.module.scss'
@@ -20,18 +21,36 @@ class NotFoundPage extends React.PureComponent {
           <UndrawRising primaryColor="#243e48" height="250px" />
         </Grid>
 
-        <Grid item md={4} sm={12} className={styles.page404Content}>
-          <h1 className={styles.page404ContentTitle}>Página no disponible.</h1>
+        <Grid item md={5} sm={12} className={styles.page404Content}>
+          <Typography
+            className={styles.page404ContentTitle}
+            component="h1"
+            variant="h2"
+            gutterBottom>
+            Lo sentimos, pero no existe la página.
+          </Typography>
 
-          <p>La comunidad esta creando esta página o no existe</p>
+          <Typography
+            className={styles.page404ContentMessage}
+            variant="subtitle1"
+            gutterBottom>
+            La comunidad esta creando esta página o no existe
+          </Typography>
 
           <Button
             className={styles.page404ContentButtonBack}
-            variant="extendedFab"
+            variant="outlined"
             color="secondary"
             onClick={() => navigate('/')}>
             Vamos al inicio
           </Button>
+
+          <Typography
+            className={styles.page404ContentHello}
+            variant="subtitle1"
+            gutterBottom>
+            codea.com.mx
+          </Typography>
         </Grid>
       </Grid>
     )

@@ -1,31 +1,28 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import Grid from '@material-ui/core/Grid'
 import { graphql } from 'gatsby'
 
-import Layout from 'components/Layout'
-import PostDetailsOverview from 'components/PostDetailsOverview'
+import Grid from '@material-ui/core/Grid'
 
-import styles from './ArticleDetail.module.scss'
+import Layout from 'components/Layout'
+import ArticleDetailsOverview from 'components/ArticleDetailsOverview'
+
+import styles from './styles.module.scss'
 
 function ArticleDetailTemplate({ data }) {
   const { markdownRemark } = data
-  const { frontmatter, html, excerpt } = markdownRemark
+  const { frontmatter, html } = markdownRemark
 
   return (
-    <Layout
-      marginTop
-      title={frontmatter.title}
-      meta={{ description: excerpt, keywords: 'javascript, blog' }}>
+    <Layout marginTop title={frontmatter.title}>
       <Grid
         className={styles.detailContainer}
         container
         alignItems="center"
-        direction="column"
-        justify="center">
+        direction="column">
         <Grid item xl={5} lg={6} sm={12} xs={12}>
-          <PostDetailsOverview
+          <ArticleDetailsOverview
             title={frontmatter.title}
             date={frontmatter.date}
             author={frontmatter.author}
@@ -45,7 +42,6 @@ export const pageQuery = graphql`
   query($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
-      excerpt
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title

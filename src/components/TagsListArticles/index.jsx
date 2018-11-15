@@ -9,7 +9,7 @@ import Typography from '@material-ui/core/Typography'
 
 import { PATCH_ARCHIVE_TAGS } from 'utils/paths'
 
-import styles from './TagsListArticles.module.scss'
+import styles from './styles.module.scss'
 
 class TagsListArticles extends React.PureComponent {
   static propTypes = {

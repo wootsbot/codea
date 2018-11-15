@@ -14,10 +14,7 @@
   }
 
   &-title {
-    color: $primary-main-color;
-    font-family: $font-bold-family;
-    font-size: $font-heading-size;
-    margin: 0;
+    font-family: $font-bold-family !important;
 
     @include breakpoint-sm-down() {
       text-align: center;
@@ -37,22 +34,14 @@
   }
 
   &-author {
-    color: $primary-light-color;
-    font-weight: 300;
-    margin-left: 30px;
-    margin-right: 15px;
+    color: $primary-light-color !important;
+    margin-left: 16px !important;
+    margin-right: 15px !important;
 
     @include breakpoint-sm-down() {
-      margin: 0;
+      margin: 0 !important;
       text-align: center;
     }
-  }
-
-  &-date {
-    font-family: $font-light-family;
-    font-size: $font-text-small-size;
-    color: $primary-dark-color;
-    font-weight: 800;
   }
 }
 
@@ -61,4 +50,8 @@
   font-size: $font-text-small-size;
   color: $primary-dark-color;
   line-height: 1.5;
+}
+
+.avatar {
+  border-radius: 50px;
 }

@@ -1,9 +1,6 @@
 @import 'styles/theme';
 
 .article-title {
-  font-size: $font-subheading-size;
-  margin: 15px 0;
-
   & > a {
     color: $primary-main-color !important;
   }
@@ -12,6 +9,7 @@
 .article-author {
   display: flex;
   align-items: center;
+  margin-bottom: 12px;
 }
 
 .article-author-avatar {
@@ -35,9 +33,5 @@
 }
 
 .article-author-summary {
-  font-family: $font-medium-family;
-  color: $primary-dark-color;
-  font-size: $font-caption-size;
-  line-height: 24px;
-  font-weight: 200;
+  font-family: $font-medium-family !important;
 }
