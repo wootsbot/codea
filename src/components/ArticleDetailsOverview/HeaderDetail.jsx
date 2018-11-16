@@ -43,11 +43,11 @@ class HeaderDetail extends React.PureComponent {
             label={`${author.firstName} ${author.lastName}`}
           />
 
-          <Typography className={styles.headerAuthor} variant="subtitle1">
+          <Typography className={styles.headerAuthor} variant="subtitle2">
             {author.bio}
           </Typography>
 
-          <Typography variant="overline">
+          <Typography variant="subtitle2">
             <time>{date}</time>
           </Typography>
         </div>
