@@ -36,20 +36,13 @@
   &-author {
     color: $primary-light-color !important;
     margin-left: 16px !important;
-    margin-right: 15px !important;
+    margin-right: 16px !important;
 
     @include breakpoint-sm-down() {
       margin: 0 !important;
       text-align: center;
     }
   }
-}
-
-.date {
-  font-family: $font-medium-family;
-  font-size: $font-text-small-size;
-  color: $primary-dark-color;
-  line-height: 1.5;
 }
 
 .avatar {

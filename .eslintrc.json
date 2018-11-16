@@ -31,7 +31,8 @@
         "singleQuote": true,
         "trailingComma": "es5",
         "jsxBracketSameLine": true,
-        "parser": "flow"
+        "parser": "flow",
+        "endOfLine": "lf"
       }
     ],
     "no-unused-vars": [
