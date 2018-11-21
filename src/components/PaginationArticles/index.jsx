@@ -4,12 +4,12 @@ import PropTypes from 'prop-types'
 import { navigate } from 'gatsby-link'
 
 import Button from '@material-ui/core/Button'
-import IconNavigateBefore from '@material-ui/icons/NavigateBeforeTwoTone'
-import IconNavigateNext from '@material-ui/icons/NavigateNextTwoTone'
-import MenuItem from '@material-ui/core/MenuItem'
 import Select from '@material-ui/core/Select'
+import MenuItem from '@material-ui/core/MenuItem'
+import IconNavigateNext from '@material-ui/icons/NavigateNextTwoTone'
+import IconNavigateBefore from '@material-ui/icons/NavigateBeforeTwoTone'
 
-import styles from './PaginationArticles.module.scss'
+import styles from './styles.module.scss'
 
 class PaginationArticles extends React.PureComponent {
   static propTypes = {
@@ -52,7 +52,6 @@ class PaginationArticles extends React.PureComponent {
         <div className={styles.paginationButtons}>
           <Button
             size="small"
-            variant="contained"
             color="secondary"
             disabled={first}
             onClick={() => this.handleNavigate(previousUrl)}>
@@ -62,7 +61,6 @@ class PaginationArticles extends React.PureComponent {
           <Button
             className={styles.paginationButtonsNext}
             size="small"
-            variant="contained"
             color="secondary"
             disabled={last}
             onClick={() => this.handleNavigate(nextUrl)}>
@@ -71,7 +69,7 @@ class PaginationArticles extends React.PureComponent {
         </div>
 
         <div className={styles.paginationPages}>
-          <span>Monstrando Pagina</span>
+          <span className={styles.paginationPagesPage}>Página</span>
 
           <Select
             className={styles.paginationSelect}

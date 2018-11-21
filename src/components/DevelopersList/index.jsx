@@ -2,10 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import Grid from '@material-ui/core/Grid'
+import Typography from '@material-ui/core/Typography'
 
 import Developer from 'components/Developer'
 
-import styles from './DevelopersList.module.scss'
+import styles from './styles.module.scss'
 
 class DevelopersList extends React.PureComponent {
   static propTypes = {
@@ -23,14 +24,20 @@ class DevelopersList extends React.PureComponent {
         direction="column"
         alignItems="center">
         <Grid item md={4} sm={12}>
-          <h2 className={styles.developersListTitle}>Desarrolladores</h2>
+          <Typography align="center" variant="h3" gutterBottom>
+            Conozca al equipo
+          </Typography>
         </Grid>
 
-        <Grid item md={8} sm={12}>
-          <p className={styles.developersListResume}>
+        <Grid item md={6} sm={12}>
+          <Typography
+            className={styles.developersListResume}
+            align="center"
+            variant="body1"
+            gutterBottom>
             El equipo de codea es una gran comunidad que le apaciona
             desarrolladar el futuro de la web.
-          </p>
+          </Typography>
         </Grid>
 
         <Grid
@@ -40,7 +47,12 @@ class DevelopersList extends React.PureComponent {
           direction="row"
           justify="center">
           {developers.map(developer => (
-            <Grid key={developer.node.id} item md={4} sm={12}>
+            <Grid
+              className={styles.developerGridItem}
+              key={developer.node.id}
+              item
+              md={4}
+              sm={12}>
               <Developer
                 fulName={`${developer.node.firstName} ${
                   developer.node.lastName

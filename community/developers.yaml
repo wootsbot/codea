@@ -1,10 +1,10 @@
 - codeaId: woostbot
   firstName: Jorge Luis
   lastName: Calleja
-  avatar: avatars/jorge-luis-calleja.jpg
+  avatar: avatars/jorge-luis-calleja-alvarado.jpg
   location: CD DE MÉXICO
   codeRole: Founder @ Codea.
-  bio: Me apaciona desarrollar software
+  bio: Desarrollador de software Frontend, me apasiona crear cosas para la web y me gusta compartir con la comunidad las tecnologías que uso en mi trabajo.
   twitter: https://twitter.com/wootsbot
   github: https://github.com/wootsbot
   gitLab: https://gitlab.com/wootsbot
@@ -23,10 +23,21 @@
 - codeaId: maturanomx
   firstName: Alberto
   lastName: Maturano
-  avatar: avatars/alberto-maturano.png
+  avatar: avatars/alberto-maturano.jpg
   location: CD DE MÉXICO
   codeRole: Contributor
-  bio: FullStack Developer
+  bio: Maturano is a full stack software developer who has worked with several languages and technologies in his career, mainly in a web environment.
   twitter: https://twitter.com/maturanomx
   github: https://github.com/maturanomx
   gitLab: https://gitlab.com/maturanomx
+
+- codeaId: darcusfenix
+  firstName: Juan
+  lastName: Crisóstomo
+  avatar: avatars/juan-crisostomo.jpg
+  location: CD DE MÉXICO
+  codeRole: Contributor
+  bio: Desarrollador frontend/javaScript
+  twitter: https://twitter.com/darcusfenix
+  github: https://github.com/darcusfenix
+  gitLab:

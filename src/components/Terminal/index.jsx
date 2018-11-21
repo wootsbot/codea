@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import Code from './Code'
-import styles from './Terminal.module.scss'
+import styles from './styles.module.scss'
 
 class Terminal extends React.PureComponent {
   static propTypes = {

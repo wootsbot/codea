@@ -1,0 +1,22 @@
+@import 'styles/theme';
+
+.section-welcome {
+  padding: 80px 0;
+  text-align: center;
+}
+
+.section-welcome-grid-btn-start {
+  margin-top: 48px !important;
+}
+
+.section-welcome-btn-start {
+  color: $humming-bird-color !important;
+  text-decoration: none !important;
+  padding: 0 50px !important;
+  background: #134e5e;
+  background: -webkit-linear-gradient(to right, #71b280, #134e5e);
+  background: linear-gradient(to right, #71b280, #134e5e);
+  &:hover {
+    box-shadow: 0 3px 5px 2px #71b280;
+  }
+}

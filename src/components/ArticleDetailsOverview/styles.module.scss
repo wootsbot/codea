@@ -1,0 +1,50 @@
+@import 'styles/theme';
+
+.root {
+  @include breakpoint-sm-down() {
+    @include padding-main(sm);
+  }
+}
+
+.header {
+  margin-bottom: 100px;
+
+  @include breakpoint-sm-down() {
+    margin-bottom: 70px;
+  }
+
+  &-title {
+    font-family: $font-bold-family !important;
+
+    @include breakpoint-sm-down() {
+      text-align: center;
+    }
+  }
+
+  &-user-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 0;
+
+    @include breakpoint-sm-down() {
+      flex-direction: column;
+      margin-top: 20px;
+    }
+  }
+
+  &-author {
+    color: $primary-light-color !important;
+    margin-left: 16px !important;
+    margin-right: 16px !important;
+
+    @include breakpoint-sm-down() {
+      margin: 0 !important;
+      text-align: center;
+    }
+  }
+}
+
+.avatar {
+  border-radius: 50px;
+}

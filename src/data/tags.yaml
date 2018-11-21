@@ -1,11 +1,3 @@
-- id: ReactJS
-  description: A JavaScript library for building user interfaces. React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes.
-  web: https://reactjs.org/
-
-- id: VueJS
-  description: Vue (pronounced /vjuː/, like view) is a progressive framework for building user interfaces. Unlike other monolithic frameworks, Vue is designed from the ground up to be incrementally adoptable. The core library is focused on the view layer only, and is easy to pick up and integrate with other libraries or existing projects.
-  web: https://vuejs.org/
-
-- id: Google-Cloud
-  description: Google Cloud es una plataforma que ha reunido todas las aplicaciones de desarrollo web que Google estaba ofreciendo por separado; Google Cloud es utilizada para crear ciertos tipos de soluciones a través de la tecnología almacenada en la nube y permite, por ejemplo, destacar la rapidez y la escalabilidad de su infraestructura en las aplicaciones del buscador.
-  web: https://cloud.google.com/?hl=es
+- id: codea
+  description: Codea es un proyecto que nace para poder compartir libremente experiencias con desarrollo de software, desde como solucionaste un problema hasta crear artículos de cualquier lenguaje totalmente en español, si eres un desarrollador o UX etc. Y te gusta compartir lo que haces o ayudar a los demás bienvenid@ codea quiere que la comunidad crezca con gente como tú.
+  web: https://codea.com.mx

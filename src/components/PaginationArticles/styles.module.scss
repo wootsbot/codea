@@ -1,0 +1,41 @@
+@import 'styles/theme';
+
+.root {
+  display: flex;
+  margin: 24px 0;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pagination-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include breakpoint-sm-down() {
+    width: 100%;
+  }
+}
+
+.pagination-buttons-next {
+  margin: 0 15px !important;
+}
+
+.pagination-pages {
+  font-family: $font-light-family;
+
+  @include breakpoint-sm-down() {
+    display: none;
+  }
+}
+
+.pagination-pages-page {
+  font-family: $font-light-family;
+  color: rgba(0, 0, 0, 0.87);
+  font-weight: 500;
+}
+
+.pagination-select {
+  margin: 0 8px;
+  font-weight: bold;
+}

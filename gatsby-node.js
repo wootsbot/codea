@@ -1,5 +1,8 @@
 const path = require('path')
+const parseFilepath = require(`parse-filepath`)
+
 const _ = require('lodash')
+const trimStart = require('lodash/trimStart')
 const createPaginatedPages = require('gatsby-paginate')
 
 exports.onCreateWebpackConfig = ({
@@ -19,17 +22,43 @@ exports.onCreateWebpackConfig = ({
   })
 }
 
+exports.onCreateNode = ({ node, actions, getNode, reporter }) => {
+  const { createNodeField } = actions
+  const basePath = '/articles/'
+
+  if (
+      node.internal.type === `MarkdownRemark` &&
+      getNode(node.parent).internal.type === 'File'
+    ) {
+    const fileNode = getNode(node.parent)
+    const parsedFilePath = parseFilepath(fileNode.relativePath)
+    let slug;
+
+    if (fileNode.sourceInstanceName === 'docs') {
+      if (parsedFilePath.name !== 'index') {
+        slug = `${basePath}${parsedFilePath.name}`
+      } else {
+        slug = `${basePath}${trimStart(parsedFilePath.dir, 'markdown/')}`
+      }
+
+      if(slug) {
+        createNodeField({ node, name: `slug`, value: slug })
+      }
+    }
+  }
+}
+
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
 
-  const templateTagsArchive = path.resolve(
-    `src/templates/TemplateTagsArchive/index.js`
+  const tagsArchiveTemplate = path.resolve(
+    `src/templates/TagsArchiveTemplate/index.js`
   )
-  const templateArticleDetail = path.resolve(
-    `src/templates/TemplateArticleDetail/index.js`
+  const articleDetailTemplate = path.resolve(
+    `src/templates/ArticleDetailTemplate/index.js`
   )
-  const templateArticlesList = path.resolve(
-    `src/templates/TemplateArticlesList/index.js`
+  const articlesListTemplate = path.resolve(
+    `src/templates/ArticlesListTemplate/index.js`
   )
 
   return graphql(`
@@ -38,10 +67,12 @@ exports.createPages = ({ actions, graphql }) => {
         edges {
           node {
             id
-            excerpt(pruneLength: 500)
+            fields {
+              slug
+            }
+            excerpt(pruneLength: 455)
             frontmatter {
               date(formatString: "MMMM DD, YYYY")
-              path
               title
               tags
               author {
@@ -50,7 +81,7 @@ exports.createPages = ({ actions, graphql }) => {
                 lastName
                 avatar {
                   childImageSharp {
-                    fixed(width: 50, height: 50) {
+                    fixed(quality: 100, width: 50, height: 50) {
                       tracedSVG
                       width
                       height
@@ -85,7 +116,7 @@ exports.createPages = ({ actions, graphql }) => {
     createPaginatedPages({
       edges: listArticles,
       createPage: createPage,
-      pageTemplate: templateArticlesList,
+      pageTemplate: articlesListTemplate,
       pageLength: 9,
       pathPrefix: '/articles/',
       buildPath: (index, pathPrefix) =>
@@ -97,10 +128,14 @@ exports.createPages = ({ actions, graphql }) => {
 
     // Make pages detail article
     listArticles.forEach(({ node }) => {
+      let slug = _.get(node, 'fields.slug')
+
       createPage({
-        path: node.frontmatter.path,
-        component: templateArticleDetail,
-        context: {},
+        path: slug,
+        component: articleDetailTemplate,
+        context: {
+          slug,
+        },
       })
     })
 
@@ -108,7 +143,7 @@ exports.createPages = ({ actions, graphql }) => {
     listTags.forEach(tag => {
       createPage({
         path: `/archive-tags/${_.kebabCase(tag.node.id)}/`,
-        component: templateTagsArchive,
+        component: tagsArchiveTemplate,
         context: {
           tag: tag.node.id,
           tagContend: tag.node,

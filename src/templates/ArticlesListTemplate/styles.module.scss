@@ -1,0 +1,36 @@
+@import 'styles/theme';
+
+.list-articles {
+  padding: 0 48px;
+
+  @include breakpoint-sm-down() {
+    padding: 0 16px;
+  }
+}
+
+.container-tags-list {
+  padding-left: 48px;
+}
+
+.posts-list {
+  margin-bottom: 40px;
+
+  @include breakpoint-sm-down() {
+    padding: 0;
+    margin-bottom: 20px;
+  }
+}
+
+.posts-list-item {
+  margin: 0 8px 36px !important;
+
+  @include breakpoint-sm-down() {
+    margin-bottom: 35px !important;
+  }
+}
+
+.tags-list {
+  @include breakpoint-sm-down() {
+    margin-bottom: 50px !important;
+  }
+}

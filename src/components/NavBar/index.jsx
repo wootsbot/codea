@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+
 import AppBar from '@material-ui/core/AppBar'
 import { withStyles } from '@material-ui/core/styles'
 
@@ -7,7 +8,7 @@ import { getPaths, getPathsActives } from 'utils/paths'
 
 import Brand from './Brand'
 import NavItem from './NavItem'
-import styles from './NavBar.module.scss'
+import styles from './styles.module.scss'
 
 const stylesUi = theme => ({
   root: {

@@ -5,7 +5,7 @@ import { Link } from 'gatsby'
 
 import { muiTheme } from 'utils/muiTheme'
 
-import styles from './SideBar.module.scss'
+import styles from './styles.module.scss'
 
 export class NavItem extends React.PureComponent {
   static propTypes = {

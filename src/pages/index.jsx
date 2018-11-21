@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import Grid from '@material-ui/core/Grid'
+import Typography from '@material-ui/core/Typography'
 
 import { graphql } from 'gatsby'
 
@@ -38,15 +39,23 @@ class IndexPage extends React.Component {
           style={{ backgroundImage: `url(${imageBannerSrc})` }}
           className={styles.sectionHome}>
           <div className={styles.sectionHomeText}>
-            <h1 className={styles.sectionHomeTextTitle}>
+            <Typography
+              className={styles.sectionHomeTextTitle}
+              color="secondary"
+              component="h1"
+              variant="h3"
+              gutterBottom>
               Un proyecto de código abierto y disponible para todos
-            </h1>
+            </Typography>
 
-            <p className={styles.sectionHomeTextMessage}>
+            <Typography
+              className={styles.sectionHomeTextMessage}
+              variant="body1"
+              gutterBottom>
               Si te encanta compartir conocimiento a través de proyectos de
               código abierto, libros etc. Hemos decidido crear este proyecto
               para cualquier persona que quiera colaborar.
-            </p>
+            </Typography>
           </div>
 
           <div className={styles.sectionHomeCode}>
@@ -72,11 +81,12 @@ class IndexPage extends React.Component {
             <UndrawBackInTheDay primaryColor="#39d996" height="250px" />
           </Grid>
           <Grid item md={4} sm={12} className={styles.sectionCodingText}>
-            <h2 className={styles.sectionCodingRightTitle}>
+            <Typography variant="h5" gutterBottom>
               Siéntete libre de aportar lo que quieras.
-            </h2>
-            <p className={styles.sectionCodingRightMessage}>
-              Codea unn sitio desarrollado con{' '}
+            </Typography>
+
+            <Typography variant="body2" gutterBottom>
+              Codea un sitio desarrollado con{' '}
               <a
                 rel="noopener noreferrer"
                 alt="Gatsby"
@@ -88,7 +98,7 @@ class IndexPage extends React.Component {
               sus experiencias con código, desde como soluciono un problema,
               hasta crear un artículo sobre cualquier lenguaje de programación,
               totalmente en español.
-            </p>
+            </Typography>
           </Grid>
         </Grid>
 

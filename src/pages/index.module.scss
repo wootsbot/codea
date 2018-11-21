@@ -27,29 +27,18 @@
 }
 
 .section-home-text-title {
-  font-family: $font-code-family;
-  color: $secondary-main-color;
-  font-size: 46px;
-  margin: 0;
-
   @include breakpoint-sm-down() {
     text-align: center;
-    font-size: $font-heading-size;
-    margin-bottom: 24px;
+    margin-bottom: 24px !important;
   }
 }
 
 .section-home-text-message {
-  font-family: $font-medium-family;
-  font-size: $font-subheading-size;
-  color: $humming-bird-color;
-  font-weight: 300;
-  line-height: 1.5;
-  letter-spacing: 0.04em;
+  font-size: $font-text-medium-size !important;
+  color: $humming-bird-color !important;
 
   @include breakpoint-sm-down() {
     text-align: center;
-    font-size: $font-text-medium-size;
   }
 }
 
@@ -78,6 +67,10 @@
   background-color: #fff;
 }
 
+.section-coding-text {
+  text-align: center;
+}
+
 .section-coding-right-title {
   font-family: $font-bold-family;
   font-size: $font-subheading-size;
@@ -104,24 +97,29 @@
 }
 
 .page-404-content-title {
-  font-family: $font-medium-family;
-  color: $primary-light-color;
-  font-size: 25px;
-  margin: 0;
+  color: #5d6e85 !important;
+  font-size: $font-heading-size !important;
+}
+
+.page-404-content-message {
+  color: #5d6e85 !important;
+}
+
+.page404-content-hello {
+  color: #5d6e85 !important;
+  margin-top: 50px !important;
+  bottom: 0;
 }
 
 .page-404-content-button-back {
-  color: $humming-bird-color !important;
-  text-decoration: none !important;
-  padding: 0 50px !important;
-
-  background: #00a668;
-  background: -webkit-linear-gradient(to right, #243e48, #00a668);
-  background: linear-gradient(to right, #243e48, #00a668);
+  margin-top: 36px !important;
+  padding: 18px 30px !important;
+  border: 1px solid #5d6e85 !important;
+  border-radius: 50px !important;
+  color: #5d6e85 !important;
 
   &:hover {
-    box-shadow: 0 3px 5px 2px #00a668;
+    background-color: rgba(0, 0, 0, 0.08) !important;
   }
 }
-
 /* end styles to Page 404 */

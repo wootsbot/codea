@@ -9,7 +9,7 @@ import Typography from '@material-ui/core/Typography'
 
 import { PATCH_ARCHIVE_TAGS } from 'utils/paths'
 
-import styles from './TagsListArticles.module.scss'
+import styles from './styles.module.scss'
 
 class TagsListArticles extends React.PureComponent {
   static propTypes = {
@@ -22,8 +22,8 @@ class TagsListArticles extends React.PureComponent {
     return (
       <section className={styles.sectionTags}>
         <div className={styles.sectionTagsHeader}>
-          <Typography variant="h6" gutterBottom>
-            Todas las etiquetas de los articulos
+          <Typography variant="overline" gutterBottom>
+            Conoce más sobre las etiquetas que se usan en los artículos
           </Typography>
         </div>
         <div className={styles.sectionTagsList}>

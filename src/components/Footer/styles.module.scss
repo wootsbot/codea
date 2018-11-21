@@ -1,0 +1,75 @@
+@import 'styles/theme';
+
+.root {
+  padding: 0 48px;
+  bottom: 0;
+
+  @include breakpoint-sm-down() {
+    padding: 0 24px;
+  }
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 24px 0;
+  font-family: $font-code-family;
+  border-top: solid 3px #000;
+
+  @include breakpoint-sm-down() {
+    flex-direction: column;
+    margin-bottom: 60px;
+    padding: 24px 0;
+  }
+}
+
+.codea {
+  display: flex;
+  align-items: center;
+}
+
+.codea-social {
+  display: flex;
+  align-items: center;
+
+  @include breakpoint-sm-down() {
+    flex-direction: column;
+  }
+}
+
+.social {
+  display: flex;
+  align-items: center;
+
+  @include breakpoint-sm-down() {
+    margin: 20px 0;
+  }
+}
+
+.code {
+  width: 20px;
+  margin-right: 10px;
+}
+
+.heart {
+  width: 20px;
+  margin: 0 10px;
+}
+
+.red-social {
+  width: 20px;
+  display: flex;
+  align-items: center;
+  margin: 0 10px;
+
+  & > img {
+    height: 20px;
+  }
+}
+
+.logo {
+  width: 30px;
+  margin: 0 3px;
+}
