@@ -17,7 +17,7 @@ function HomePageSectionWelcome() {
       alignItems="center">
       <Grid item md={6} sm={12}>
         <Typography variant="h3" gutterBottom>
-          ¿Estas listo para comenzar?
+          ¿Estás listo para comenzar?
         </Typography>
       </Grid>
 
