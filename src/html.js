@@ -23,6 +23,10 @@ export default class HTML extends React.Component {
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
           />
+          <meta
+            name="google-site-verification"
+            content="HCrof5xrjCToc8d0GFs4XmBv2kWTdp5tXQcEDGIytBo"
+          />
           <meta name="theme-color" content={muiTheme.palette.primary.main} />
           <meta
             name="msapplication-navbutton-color"
