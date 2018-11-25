@@ -16,13 +16,13 @@ function HomePageSectionWelcome() {
       justify="center"
       alignItems="center">
       <Grid item md={6} sm={12}>
-        <Typography variant="h3" gutterBottom>
+        <Typography align="center" component="h2" variant="h3" gutterBottom>
           ¿Estás listo para comenzar?
         </Typography>
       </Grid>
 
       <Grid item md={6} sm={12}>
-        <Typography variant="subtitle1" gutterBottom>
+        <Typography align="center" variant="h5" gutterBottom>
           Quizás ya tengas un artículo que quieras compartir, para eso siéntete
           libre de ir al repositorio de codea donde podrás crear tus pull
           requests y aportar con la comunidad.
@@ -32,11 +32,12 @@ function HomePageSectionWelcome() {
       <Grid item md={6} sm={12} className={styles.sectionWelcomeGridBtnStart}>
         <Button
           target="_blank"
-          href="https://github.com/codea-team"
-          className={styles.sectionWelcomeBtnStart}
-          variant="extendedFab"
-          color="secondary">
-          Comenzar
+          href="https://github.com/codea-team/codea"
+          variant="outlined"
+          color="secondary"
+          size="large"
+          className={styles.sectionWelcomeBtnStart}>
+          Comenzar a hacer Pull requests
         </Button>
       </Grid>
     </Grid>

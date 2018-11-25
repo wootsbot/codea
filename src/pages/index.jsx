@@ -1,18 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import { graphql } from 'gatsby'
+
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
 
-import { graphql } from 'gatsby'
-
-import { UndrawBackInTheDay } from 'react-undraw-illustrations'
+import { UndrawOrganizingProjects } from 'react-undraw-illustrations'
 
 import Layout from 'components/Layout'
 import Terminal from 'components/Terminal'
 import DevelopersList from 'components/DevelopersList'
 import HomePageSectionWelcome from 'components/HomePageSectionWelcome'
 
+import BannerCodea from 'images/svg/banner_codea_fond_default.svg'
 import styles from './index.module.scss'
 
 class IndexPage extends React.Component {
@@ -22,9 +23,6 @@ class IndexPage extends React.Component {
 
   render() {
     const { data } = this.props
-    const edgesBannerImage = data.bannerImage.edges
-    const [srcBannerImg] = edgesBannerImage
-    const imageBannerSrc = srcBannerImg.node.fixed.src
     const edgesDevelopers = data.developers.edges
 
     return (
@@ -36,7 +34,7 @@ class IndexPage extends React.Component {
           keywords: 'codea',
         }}>
         <section
-          style={{ backgroundImage: `url(${imageBannerSrc})` }}
+          style={{ backgroundImage: `url(${BannerCodea})` }}
           className={styles.sectionHome}>
           <div className={styles.sectionHomeText}>
             <Typography
@@ -45,7 +43,7 @@ class IndexPage extends React.Component {
               component="h1"
               variant="h3"
               gutterBottom>
-              Un proyecto de código abierto y disponible para todos
+              Un proyecto de código abierto.
             </Typography>
 
             <Typography
@@ -78,14 +76,14 @@ class IndexPage extends React.Component {
           justify="space-evenly"
           alignItems="center">
           <Grid item md={3} sm={12}>
-            <UndrawBackInTheDay primaryColor="#39d996" height="250px" />
+            <UndrawOrganizingProjects primaryColor="#39d996" height="250px" />
           </Grid>
           <Grid item md={4} sm={12} className={styles.sectionCodingText}>
-            <Typography variant="h5" gutterBottom>
+            <Typography variant="h4" gutterBottom>
               Siéntete libre de aportar lo que quieras.
             </Typography>
 
-            <Typography variant="body2" gutterBottom>
+            <Typography variant="subtitle1" gutterBottom>
               Codea un sitio desarrollado con{' '}
               <a
                 rel="noopener noreferrer"
@@ -112,21 +110,6 @@ export default IndexPage
 
 export const pageQuery = graphql`
   query {
-    bannerImage: allImageSharp(
-      filter: {
-        fixed: { originalName: { eq: "banner_codea_fond_default.png" } }
-      }
-    ) {
-      edges {
-        node {
-          id
-          fixed(width: 1920, height: 414, quality: 100) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
-    }
-
     developers: allDevelopersYaml {
       edges {
         node {

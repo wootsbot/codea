@@ -38,9 +38,10 @@ export default class HTML extends React.Component {
           />
 
           <link
-            href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Karla|Lato|Roboto"
             rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500|Source+Code+Pro|Karla|Lato"
           />
+
           {headComponents}
         </head>
         <body {...bodyAttributes}>
