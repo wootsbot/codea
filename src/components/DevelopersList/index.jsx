@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import Grid from '@material-ui/core/Grid'
+import Button from '@material-ui/core/Button'
 import Typography from '@material-ui/core/Typography'
 
 import Developer from 'components/Developer'
@@ -25,7 +26,7 @@ class DevelopersList extends React.PureComponent {
         alignItems="center">
         <Grid item md={4} sm={12}>
           <Typography align="center" variant="h3" gutterBottom>
-            Conozca al equipo
+            Detrás de codea
           </Typography>
         </Grid>
 
@@ -38,6 +39,17 @@ class DevelopersList extends React.PureComponent {
             El equipo de codea es una gran comunidad que le apaciona
             desarrolladar el futuro de la web.
           </Typography>
+        </Grid>
+
+        <Grid item md={12}>
+          <Button
+            target="_blank"
+            href="https://github.com/codea-team/codea/graphs/contributors"
+            variant="outlined"
+            size="large"
+            className={styles.teamBtn}>
+            Conocer más de la comunidad
+          </Button>
         </Grid>
 
         <Grid

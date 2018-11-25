@@ -6,21 +6,3 @@
   twitter: https://twitter.com/wootsbot
   github: https://github.com/wootsbot
   gitLab: https://gitlab.com/wootsbot
-
-- id: slackmart
-  firstName: Martín
-  lastName: Rodríguez
-  bio: Backend Developer
-  avatar: avatars/martin-rodriguez.jpg
-  twitter: https://twitter.com/slackmart
-  github: https://github.com/slackmart
-  gitLab: https://gitlab.com/slackmart
-
-- id: maturanomx
-  firstName: Alberto
-  lastName: Maturano
-  bio: FullStack Developer
-  avatar: avatars/alberto-maturano.jpg
-  twitter: https://twitter.com/maturanomx
-  github: https://github.com/maturanomx
-  gitLab: https://gitlab.com/maturanomx

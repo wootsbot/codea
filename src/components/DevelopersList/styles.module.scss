@@ -1,11 +1,7 @@
 @import 'styles/theme';
 
 .developers-section {
-  background: linear-gradient(
-    0deg,
-    rgb(255, 255, 255) 0%,
-    rgb(226, 235, 228) 100%
-  );
+  background-color: $color-white;
   padding: 80px 0;
 
   @include breakpoint-sm-down() {
@@ -19,11 +15,17 @@
 
 .developers-list-resume {
   font-size: $font-text-medium-size !important;
-  margin: 0 0 80px 0 !important;
+  margin: 0 0 20px 0 !important;
 }
 
 .developer-grid-item {
   @include breakpoint-sm-down() {
     margin-bottom: 36px !important;
   }
+}
+
+.team-btn {
+  min-width: 350px !important;
+  min-height: 60px !important;
+  margin: 0 0 80px 0 !important;
 }
