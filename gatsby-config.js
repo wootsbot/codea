@@ -107,5 +107,62 @@ module.exports = {
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        feeds: [
+          {
+            query: `
+              {
+                allMarkdownRemark(sort: { fields: [frontmatter___date] }) {
+                  edges {
+                    node {
+                      id
+                      fields {
+                        slug
+                      }
+                      excerpt(pruneLength: 455)
+                      frontmatter {
+                        title
+                        date
+                        title
+                        author {
+                          id
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            `,
+            output: `/articles/rss.xml`,
+            setup: ({
+              query: {
+                site: { siteMetadata },
+              },
+            }) => {
+              return {
+                title: siteMetadata.title,
+                description: siteMetadata.description,
+                feed_url: siteMetadata.siteUrl + `/articles/rss.xml`,
+                site_url: siteMetadata.siteUrl,
+                generator: `GatsbyJS`,
+              }
+            },
+            serialize: ({ query: { site, allMarkdownRemark } }) =>
+              allMarkdownRemark.edges.map(({ node }) => {
+                return {
+                  title: node.frontmatter.title,
+                  description: node.frontmatter.excerpt,
+                  url: site.siteMetadata.siteUrl + node.fields.slug,
+                  guid: site.siteMetadata.siteUrl + node.fields.slug,
+                  custom_elements: [{ "content:encoded": node.html }],
+                  author: node.frontmatter.author.id,
+                }
+              }),
+          },
+        ],
+      },
+    },
   ],
 }
