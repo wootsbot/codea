@@ -146,7 +146,7 @@ module.exports = {
                 description: siteMetadata.description,
                 feed_url: siteMetadata.siteUrl + `/articles/rss.xml`,
                 site_url: siteMetadata.siteUrl,
-                generator: `GatsbyJS`,
+                generator: `Codea`,
               }
             },
             serialize: ({ query: { site, allMarkdownRemark } }) =>
@@ -164,5 +164,7 @@ module.exports = {
         ],
       },
     },
+    `gatsby-plugin-netlify`,
+    `gatsby-plugin-netlify-cache`,
   ],
 }
