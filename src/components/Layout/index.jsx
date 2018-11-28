@@ -17,10 +17,23 @@ class Layout extends React.PureComponent {
     meta: PropTypes.objectOf(PropTypes.string),
     marginTop: PropTypes.bool,
     footer: PropTypes.bool,
+    descriptionContent: PropTypes.string,
+    location: PropTypes.object,
+    metaTwitter: PropTypes.shape({
+      creator: PropTypes.string,
+    }),
   }
 
   render() {
-    const { children, title, meta, marginTop, footer } = this.props
+    const {
+      children,
+      title,
+      marginTop,
+      footer,
+      descriptionContent,
+      metaTwitter,
+      location,
+    } = this.props
 
     const classMain = classNames({
       [styles.main]: marginTop,
@@ -28,13 +41,21 @@ class Layout extends React.PureComponent {
 
     return (
       <React.Fragment>
-        <Helmet
-          title={`${title} | Codea`}
-          meta={[
-            { name: 'description', content: meta.description },
-            { name: 'keywords', content: meta.keywords },
-          ]}
-        />
+        <Helmet>
+          <title>{title ? `${title} | Codea` : `Codea`}</title>
+          <meta property="og:title" content={title} />
+          <meta name="twitter:card" content={descriptionContent} />
+          <meta name="twitter:site" content="@wootsbot" />
+          <meta name="twitter:creator" content={metaTwitter.creator} />
+          <meta
+            property="og:url"
+            content={`https://www.codea.com.mx${location && location.pathname}`}
+          />
+
+          <meta name="og:type" content="website" />
+          <meta property="og:description" content={descriptionContent} />
+        </Helmet>
+
         <NavBar />
         <main className={classMain}>{children}</main>
 
@@ -47,12 +68,11 @@ class Layout extends React.PureComponent {
 }
 
 Layout.defaultProps = {
-  meta: {
-    description: 'Un proyecto de código abierto y disponible para todos',
-    keywords: 'codea, react, gatsby, javaScript',
-  },
   marginTop: false,
   footer: true,
+  metaTwitter: {
+    creator: '@wootsbot',
+  },
 }
 
 export default withRoot(Layout)
