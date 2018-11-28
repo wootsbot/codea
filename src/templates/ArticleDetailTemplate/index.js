@@ -12,10 +12,10 @@ import styles from './styles.module.scss'
 
 function ArticleDetailTemplate({ data }) {
   const { markdownRemark } = data
-  const { frontmatter, html } = markdownRemark
+  const { frontmatter, html, excerpt } = markdownRemark
 
   return (
-    <Layout marginTop title={frontmatter.title}>
+    <Layout marginTop title={frontmatter.title} descriptionContent={excerpt}>
       <Grid
         className={styles.detailContainer}
         container
@@ -42,6 +42,7 @@ export const pageQuery = graphql`
   query($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
+      excerpt(pruneLength: 250)
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title

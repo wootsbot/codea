@@ -17,10 +17,17 @@ class Layout extends React.PureComponent {
     meta: PropTypes.objectOf(PropTypes.string),
     marginTop: PropTypes.bool,
     footer: PropTypes.bool,
+    descriptionContent: PropTypes.string,
   }
 
   render() {
-    const { children, title, meta, marginTop, footer } = this.props
+    const {
+      children,
+      title,
+      marginTop,
+      footer,
+      descriptionContent,
+    } = this.props
 
     const classMain = classNames({
       [styles.main]: marginTop,
@@ -28,13 +35,14 @@ class Layout extends React.PureComponent {
 
     return (
       <React.Fragment>
-        <Helmet
-          title={`${title} | Codea`}
-          meta={[
-            { name: 'description', content: meta.description },
-            { name: 'keywords', content: meta.keywords },
-          ]}
-        />
+        <Helmet>
+          <title>{title ? `${title} | Codea` : `Codea`}</title>
+          <meta name="twitter:site" content="@wootsbot" />
+          <meta name="og:type" content="website" />
+          <meta name="og:site_name" content="Codea" />
+          <meta name="Description" content={`${descriptionContent}`} />
+        </Helmet>
+
         <NavBar />
         <main className={classMain}>{children}</main>
 
@@ -47,10 +55,6 @@ class Layout extends React.PureComponent {
 }
 
 Layout.defaultProps = {
-  meta: {
-    description: 'Un proyecto de código abierto y disponible para todos',
-    keywords: 'codea, react, gatsby, javaScript',
-  },
   marginTop: false,
   footer: true,
 }

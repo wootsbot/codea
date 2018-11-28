@@ -47,13 +47,7 @@ class ArticlesListTemplate extends React.PureComponent {
     )
 
     return (
-      <Layout
-        marginTop
-        title="Lista de Articulos"
-        meta={{
-          description: 'Lista de articulos',
-          keywords: 'javascript, blog',
-        }}>
+      <Layout marginTop title="Lista de Articulos">
         <ArticlesList
           posts={group}
           listTags={listTags}
