@@ -11,13 +11,12 @@ import TagOverview from 'components/TagOverview'
 const TagsArchiveTemplate = ({ pageContext, data }) => {
   const { tag, tagContend } = pageContext
   const { edges, totalCount } = data.allMarkdownRemark
-
   return (
     <Layout
       footer={false}
       marginTop
-      title="Archive | codea Tags"
-      meta={{ description: 'Tags', keywords: 'javascript, blog' }}>
+      title={tag}
+      descriptionContent={tagContend.description}>
       <Grid container justify="center">
         <Grid container item md={6} justify="center">
           <Grid item md={12}>

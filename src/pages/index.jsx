@@ -24,15 +24,13 @@ class IndexPage extends React.Component {
   render() {
     const { data } = this.props
     const edgesDevelopers = data.developers.edges
+    const { siteMetadata } = data.site
 
     return (
       <Layout
         marginTop
-        title="Codea"
-        meta={{
-          description: 'Un proyecto de código abierto y disponible para todos',
-          keywords: 'codea',
-        }}>
+        title={`${siteMetadata.title}`}
+        descriptionContent={siteMetadata.description}>
         <section
           style={{ backgroundImage: `url(${BannerCodea})` }}
           className={styles.sectionHome}>
@@ -127,6 +125,14 @@ export const pageQuery = graphql`
             }
           }
         }
+      }
+    }
+    site {
+      siteMetadata {
+        title
+        siteUrl
+        description
+        twitter
       }
     }
   }

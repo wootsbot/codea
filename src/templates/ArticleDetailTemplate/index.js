@@ -10,12 +10,17 @@ import ArticleDetailsOverview from 'components/ArticleDetailsOverview'
 
 import styles from './styles.module.scss'
 
-function ArticleDetailTemplate({ data }) {
+function ArticleDetailTemplate({ data, location }) {
   const { markdownRemark } = data
-  const { frontmatter, html } = markdownRemark
+  const { frontmatter, html, excerpt } = markdownRemark
 
   return (
-    <Layout marginTop title={frontmatter.title}>
+    <Layout
+      marginTop
+      title={frontmatter.title}
+      location={location}
+      metaTwitter={{ creator: frontmatter.author.twitter }}
+      descriptionContent={excerpt}>
       <Grid
         className={styles.detailContainer}
         container
@@ -36,12 +41,14 @@ function ArticleDetailTemplate({ data }) {
 
 ArticleDetailTemplate.propTypes = {
   data: PropTypes.object,
+  location: PropTypes.object,
 }
 
 export const pageQuery = graphql`
   query($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
+      excerpt(pruneLength: 250)
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title
@@ -50,6 +57,7 @@ export const pageQuery = graphql`
           bio
           firstName
           lastName
+          twitter
           avatar {
             childImageSharp {
               fixed(width: 32, height: 32) {
