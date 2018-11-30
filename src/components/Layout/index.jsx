@@ -19,9 +19,6 @@ class Layout extends React.PureComponent {
     footer: PropTypes.bool,
     descriptionContent: PropTypes.string,
     location: PropTypes.object,
-    metaTwitter: PropTypes.shape({
-      creator: PropTypes.string,
-    }),
   }
 
   render() {
@@ -31,7 +28,6 @@ class Layout extends React.PureComponent {
       marginTop,
       footer,
       descriptionContent,
-      metaTwitter,
       location,
     } = this.props
 
@@ -44,9 +40,7 @@ class Layout extends React.PureComponent {
         <Helmet>
           <title>{title ? `${title} | Codea` : `Codea`}</title>
           <meta property="og:title" content={title} />
-          <meta name="twitter:card" content={descriptionContent} />
           <meta name="twitter:site" content="@wootsbot" />
-          <meta name="twitter:creator" content={metaTwitter.creator} />
           <meta
             property="og:url"
             content={`https://www.codea.com.mx${location && location.pathname}`}
@@ -70,9 +64,6 @@ class Layout extends React.PureComponent {
 Layout.defaultProps = {
   marginTop: false,
   footer: true,
-  metaTwitter: {
-    creator: '@wootsbot',
-  },
 }
 
 export default withRoot(Layout)
