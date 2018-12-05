@@ -12,8 +12,9 @@ import ArticleDetailsOverview from 'components/ArticleDetailsOverview'
 import styles from './styles.module.scss'
 
 function ArticleDetailTemplate({ data, location }) {
-  const { markdownRemark } = data
+  const { markdownRemark, logoCodea } = data
   const { frontmatter, html, excerpt, timeToRead } = markdownRemark
+  const imageDefault = logoCodea.edges[0].node.resize.src
 
   return (
     <Layout marginTop title={frontmatter.title} location={location}>
@@ -37,6 +38,14 @@ function ArticleDetailTemplate({ data, location }) {
         <meta name="twitter:label1" content="Reading time" />
         <meta name="twitter:data1" content={`${timeToRead} min read`} />
         <meta name="article:published_time" content={frontmatter.date} />
+        <meta
+          property="og:image"
+          content={`https://codea.com.mx${imageDefault}`}
+        />
+        <meta
+          name="twitter:image"
+          content={`https://codea.com.mx${imageDefault}`}
+        />
       </Helmet>
 
       <Grid
@@ -67,7 +76,7 @@ export const pageQuery = graphql`
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       timeToRead
-      excerpt(pruneLength: 250)
+      excerpt(pruneLength: 200)
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title
@@ -83,6 +92,17 @@ export const pageQuery = graphql`
                 ...GatsbyImageSharpFixed
               }
             }
+          }
+        }
+      }
+    }
+    logoCodea: allImageSharp(
+      filter: { fixed: { originalName: { eq: "codea.png" } } }
+    ) {
+      edges {
+        node {
+          resize {
+            src
           }
         }
       }
