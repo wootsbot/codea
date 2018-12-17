@@ -57,8 +57,9 @@ class IndexPage extends React.Component {
           <div className={styles.sectionHomeCode}>
             <div className={styles.termContainer}>
               <Terminal>
-                <Terminal.Code>yarn add codea</Terminal.Code>
-                <Terminal.Code>https://codea.com.mx</Terminal.Code>
+                <Terminal.Code>https://www.codea.com.mx</Terminal.Code>
+                <Terminal.Code>Open Source</Terminal.Code>
+                <Terminal.Code>Share with Community</Terminal.Code>
               </Terminal>
             </div>
           </div>
