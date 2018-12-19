@@ -75,7 +75,7 @@ module.exports = {
               classPrefix: 'language-',
               inlineCodeMarker: null,
               aliases: {},
-              showLineNumbers: true,
+              showLineNumbers: false,
             },
           },
           `gatsby-remark-copy-linked-files`,
