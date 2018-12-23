@@ -5,8 +5,13 @@ author: woostbot
 tags: ['codea']
 ---
 
-Unos ejemplos para mostrar tus snippets de código más bonitos en codea.
-se ha agregado soporte de colores para javaScript, muy pronto daremos más colores para cada lenguaje.
+Dejo una guiá para poder insertar snippets de código en tus artículos, no olvides que puedes subir tus artículos de cualquier tecnología que quieras compartir información.
+
+no olvides seguirnos en twitter.
+
+<blockquote class="twitter-tweet" data-lang="es"><p lang="und" dir="ltr"><a href="https://t.co/pbaaQph9xq">https://t.co/pbaaQph9xq</a></p>&mdash; codea (•} (@wootsbot) <a href="https://twitter.com/wootsbot/status/1070200020391981056?ref_src=twsrc%5Etfw">5 de diciembre de 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 
 ##style por defecto
 
