@@ -1,7 +1,7 @@
 // variables
 $font-code: 'Source Code Pro', monospace;
-$background: #fff;
-$font-size: 12px;
+$background: #f8f8f8;
+$font-size: 0.9rem;
 
 // main
 .gatsby-highlight-code-line {
@@ -10,7 +10,8 @@ $font-size: 12px;
   margin-left: -1em;
   padding-right: 1em;
   padding-left: 0.75em;
-  background-color: #39d996;
+  background-color: #ebe8e8;
+  border-left: solid 1.5px #e96900;
 }
 
 .gatsby-highlight {
@@ -46,7 +47,7 @@ pre[class*='language-'] {
   -ms-hyphens: none;
   hyphens: none;
   background: $background;
-  color: #000;
+  color: #2973b7;
 }
 
 code[class*='language-text'] {
@@ -85,7 +86,7 @@ pre[class*='language-'] {
 }
 
 .token.class-name {
-  color: #6f42c1;
+  color: #ae81ff;
 }
 
 .token.comment,
@@ -106,7 +107,7 @@ pre[class*='language-'] {
 .token.operator,
 .token.boolean,
 .token.number {
-  color: #d73a49;
+  color: #000;
 }
 
 .token.property {
@@ -118,7 +119,11 @@ pre[class*='language-'] {
 }
 
 .token.string {
-  color: #000;
+  color: #42b983;
+}
+
+.token.interpolation {
+  color: #e96900;
 }
 
 .token.selector {
@@ -141,7 +146,7 @@ pre[class*='language-'] {
 .token.control,
 .token.directive,
 .token.unit {
-  color: #d73a49;
+  color: #e96900;
 }
 
 .token.statement,

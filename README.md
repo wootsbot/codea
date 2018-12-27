@@ -37,6 +37,10 @@
     <img alt="Language grade: JavaScript" src="https://img.shields.io/lgtm/grade/javascript/g/codea-team/codea.svg?logo=lgtm&logoWidth=18"/>
   </a>
 
+  <a href="https://github.com/prettier/prettier">
+    <img alt="Language grade: JavaScript" src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg"/>
+  </a>
+
   <a href="https://nodejs.org/es/">
     <img src="https://img.shields.io/badge/node-%3E%3D10.x-brightgreen.svg?longCache=true" alt="nodejs" />
   </a>
