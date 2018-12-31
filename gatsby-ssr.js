@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { renderToString } from 'react-dom/server'
-import { JssProvider } from 'react-jss'
+import JssProvider from 'react-jss/lib/JssProvider';
 import getPageContext from './src/utils/getPageContext'
 
 export const replaceRenderer = ({
@@ -15,12 +15,7 @@ export const replaceRenderer = ({
 
   const bodyHTML = renderToString(
     <JssProvider
-      registry={pageContext.sheetsRegistry}
-      generateClassName={pageContext.generateClassName}>
-      {React.cloneElement(bodyComponent, {
-        pageContext,
-      })}
-    </JssProvider>
+      registry={pageContext.sheetsRegistry}>{bodyComponent}</JssProvider>
   )
 
   replaceBodyHTMLString(bodyHTML)
