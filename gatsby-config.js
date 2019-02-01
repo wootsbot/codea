@@ -2,7 +2,8 @@ module.exports = {
   siteMetadata: {
     title: `Codea`,
     siteUrl: `https://www.codea.com.mx`,
-    description: 'Codea un proyecto de código abierto y disponible para todos',
+    description: `Codea un proyecto de código abierto y disponible para todos`,
+    author: `@wootsbot`,
     twitter: `@wootsbot`,
   },
   mapping: {
@@ -104,7 +105,6 @@ module.exports = {
         icon: `src/images/svg/codea_color_v_01.svg`,
       },
     },
-    `gatsby-plugin-offline`,
     `gatsby-plugin-twitter`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
@@ -147,7 +147,7 @@ module.exports = {
                 description: siteMetadata.description,
                 feed_url: siteMetadata.siteUrl + `/articles/rss.xml`,
                 site_url: siteMetadata.siteUrl,
-                generator: `Codea`,
+                generator: `GatsbyJS`,
               }
             },
             serialize: ({ query: { site, allMarkdownRemark } }) =>
@@ -165,7 +165,8 @@ module.exports = {
         ],
       },
     },
-    `gatsby-plugin-netlify`,
-    `gatsby-plugin-netlify-cache`,
+    // this (optional) plugin enables Progressive Web App + Offline functionality
+    // To learn more, visit: https://gatsby.app/offline
+    // 'gatsby-plugin-offline',
   ],
 }
