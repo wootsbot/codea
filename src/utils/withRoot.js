@@ -3,6 +3,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { MuiThemeProvider } from '@material-ui/core/styles'
 import CssBaseline from '@material-ui/core/CssBaseline'
+import JssProvider from 'react-jss/lib/JssProvider'
+
 import getPageContext from './getPageContext'
 
 // styles code and styles global
@@ -11,14 +13,10 @@ import 'styles/global-styles.scss'
 
 function withRoot(Component) {
   class WithRoot extends React.Component {
-    pagePropsContext = null
-
     constructor(props) {
       super(props)
 
-      const { pageContext } = this.props
-
-      this.pagePropsContext = pageContext || getPageContext()
+      this.pagePropsContext = getPageContext()
     }
 
     componentDidMount() {
@@ -30,12 +28,15 @@ function withRoot(Component) {
 
     render() {
       return (
-        <MuiThemeProvider
-          theme={getPageContext().theme}
-          sheetsManager={this.pagePropsContext.sheetsManager}>
-          <CssBaseline />
-          <Component {...this.props} />
-        </MuiThemeProvider>
+        <JssProvider
+          generateClassName={this.pagePropsContext.generateClassName}>
+          <MuiThemeProvider
+            theme={getPageContext().theme}
+            sheetsManager={this.pagePropsContext.sheetsManager}>
+            <CssBaseline />
+            <Component {...this.props} />
+          </MuiThemeProvider>
+        </JssProvider>
       )
     }
   }
