@@ -12,7 +12,6 @@ no olvides seguirnos en twitter.
 <blockquote class="twitter-tweet" data-lang="es"><p lang="und" dir="ltr"><a href="https://t.co/pbaaQph9xq">https://t.co/pbaaQph9xq</a></p>&mdash; codea (•} (@wootsbot) <a href="https://twitter.com/wootsbot/status/1070200020391981056?ref_src=twsrc%5Etfw">5 de diciembre de 2018</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-
 ##style por defecto
 
 ```js
@@ -116,12 +115,9 @@ export default ArticleLink
 ##style syntax de resaltado de líneas
 
 ###Ejemplo:
-    ```javascript{1-2,13}{numberLines: true}
-      ...
-    ```
+`javascript{1-2,13}{numberLines: true} ...`
 
 ```javascript{1-2,13}{numberLines: true}
-
 import React from 'react'
 import PropTypes from 'prop-types'
 
@@ -181,5 +177,4 @@ class NavBar extends React.PureComponent {
 }
 
 export default withStyles(stylesUi)(NavBar)
-
 ```

@@ -49,7 +49,7 @@ function Footer() {
               <img src={github} alt="github" />
             </a>
           </div>
-          <div>
+          <div className={styles.rights}>
             © 2019
             <strong> Codea</strong>, all rights reserved
           </div>
