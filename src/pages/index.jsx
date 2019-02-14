@@ -30,28 +30,24 @@ class IndexPage extends React.Component {
       <Layout
         marginTop
         title={`${siteMetadata.title}`}
-        descriptionContent={siteMetadata.description}
-      >
+        descriptionContent={siteMetadata.description}>
         <section
           style={{ backgroundImage: `url(${BannerCodea})` }}
-          className={styles.sectionHome}
-        >
+          className={styles.sectionHome}>
           <div className={styles.sectionHomeText}>
             <Typography
               className={styles.sectionHomeTextTitle}
               color="secondary"
               component="h1"
               variant="h3"
-              gutterBottom
-            >
+              gutterBottom>
               Un proyecto de código abierto.
             </Typography>
 
             <Typography
               className={styles.sectionHomeTextMessage}
               variant="body1"
-              gutterBottom
-            >
+              gutterBottom>
               Si te encanta compartir conocimiento a través de proyectos de
               código abierto, libros etc. Hemos decidido crear este proyecto
               para cualquier persona que quiera colaborar.
@@ -77,8 +73,7 @@ class IndexPage extends React.Component {
           container
           direction="row"
           justify="space-evenly"
-          alignItems="center"
-        >
+          alignItems="center">
           <Grid item md={3} sm={12}>
             <UndrawOrganizingProjects primaryColor="#39d996" height="250px" />
           </Grid>
@@ -93,8 +88,7 @@ class IndexPage extends React.Component {
                 rel="noopener noreferrer"
                 alt="Gatsby"
                 target="_blank"
-                href="https://www.gatsbyjs.org/"
-              >
+                href="https://www.gatsbyjs.org/">
                 Gatsby
               </a>{' '}
               que está pensado para cualquier desarrollador que quiera compartir
