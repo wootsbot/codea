@@ -1,7 +1,19 @@
 @import 'styles/theme';
 
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500|Source+Code+Pro|Karla|Lato');
+
+@font-face {
+  font-family: 'Arvo';
+  font-display: auto;
+  src: local('Arvo'),
+    url(https://fonts.gstatic.com/s/arvo/v9/rC7kKhY-eUDY-ucISTIf5PesZW2xOQ-xsNqO47m55DA.woff2)
+      format('woff2');
+}
+
 html,
 body {
+  font-size: 10px;
+  font-family: Arvo-auto;
   margin: 0;
   padding: 0;
   background-color: $azure-color !important;

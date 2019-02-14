@@ -58,8 +58,8 @@ class IndexPage extends React.Component {
             <div className={styles.termContainer}>
               <Terminal>
                 <Terminal.Code>https://www.codea.com.mx</Terminal.Code>
-                <Terminal.Code>Open Source</Terminal.Code>
-                <Terminal.Code>Share with Community</Terminal.Code>
+                <Terminal.Code>Código fuente</Terminal.Code>
+                <Terminal.Code>Compartir con la comunidad</Terminal.Code>
               </Terminal>
             </div>
           </div>

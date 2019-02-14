@@ -31,10 +31,10 @@ $transition: 0.2s ease;
   height: 64px;
   text-decoration: none;
   color: $color-white;
-  font-size: $font-text-small-size;
+  font-size: $font-caption-size;
   font-family: $font-light-family;
   font-weight: 400;
-  padding: 24px 24px;
+  padding: 2.4rem 2.4rem;
 }
 
 .logo {
@@ -44,8 +44,8 @@ $transition: 0.2s ease;
 }
 
 .logo-image {
-  height: 40px;
-  margin-right: 8px;
+  height: 4rem;
+  margin-right: 0.8rem;
   width: auto;
 
   @include breakpoint-sm-down() {
