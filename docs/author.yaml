@@ -6,3 +6,10 @@
   twitter: '@wootsbot'
   github: https://github.com/wootsbot
   gitLab: https://gitlab.com/wootsbot
+
+- id: slackmart
+  firstName: Martín
+  lastName: Rodríguez
+  bio: Software Engineer
+  avatar: avatars/martin-rodriguez.jpg
+  gitLab: https://gitlab.com/slackmart
