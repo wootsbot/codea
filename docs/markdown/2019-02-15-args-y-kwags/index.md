@@ -1,5 +1,5 @@
 ---
-date: '2018-11-20'
+date: '2019-02-15'
 title: 'Uso de args y kwargs en python'
 author: slackmart
 tags: ['python', 'kwargs', 'args']

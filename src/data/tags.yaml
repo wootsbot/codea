@@ -1,3 +1,15 @@
 - id: codea
   description: Codea es un proyecto que nace para poder compartir libremente experiencias con desarrollo de software, desde como solucionaste un problema hasta crear artículos de cualquier lenguaje totalmente en español, si eres un desarrollador o UX etc. Y te gusta compartir lo que haces o ayudar a los demás bienvenid@ codea quiere que la comunidad crezca con gente como tú.
   web: https://codea.com.mx
+
+- id: python
+  description: Python is powerful... and fast; plays well with others; runs everywhere; is friendly & easy to learn; is Open.
+  web: https://www.python.org/
+
+- id: args
+  description: Un parámetro es una variable utilizada para recibir valores de entrada en una función.
+  web: https://es.wikipedia.org/wiki/Argumento_(informática)
+
+- id: kwargs
+  description: Un parámetro nombrado (kwarg) son soportados por ciertos lenguajes de programación, y su característica distintiva es que al momento de invocar la función se específica claramente a qué variable (parámetro) se asignará el valor indicado, ejem. `get_product(order=298)`.
+  web: https://en.wikipedia.org/wiki/Named_parameter
