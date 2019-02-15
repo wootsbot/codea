@@ -15,7 +15,7 @@ REST de stackoverflow.
 
 ## Extraer las URLs de las últimas 5 preguntas
 
-```python
+```python{7}{numberLines: true}
 import requests
 
 
@@ -31,10 +31,8 @@ def get_latest_questions():
 Como pueden observar la lógica es bastante sencilla, ya que el paquete `requests`
 nos permite conectar a stackoverflow y extraer la la información que necesitamos.
 
-A destacar que para este requerimento en específico necesitamos tres _query arguments_
-además de la URL:
-
-> 'https://api.stackexchange.com/2.2/questions?`pagesize=5`&`page=1`&`site=stackoverflow`'
+A destacar que para este requerimento en específico necesitamos tres _query strings_
+además de la URL (línea 7).
 
 ## Cambiar los parámetros dinamicamente
 
@@ -45,7 +43,7 @@ Aquí es donde los parámetros posicionales se vuelven útiles, e inmediatamente
 damos cuenta que ocupamos pasar el `pagesize` y el `site` cuando la función es
 ejecutada (e.j. `get_lastest_questions(10, 'serverfault')`).
 
-```python
+```python{4}{numberLines: true}
 def get_latest_questions_only_args(pagesize, site):
     """Fetch and return latest stackoverflow questions links."""
     response = requests.get(
@@ -55,18 +53,16 @@ def get_latest_questions_only_args(pagesize, site):
 
 ```
 
-El valor de los parámetros son usados como se muestra en la siguiente línea:
+Los parámetros se usan como se muestra en la línea número 4.
 
-> f'https://api.stackexchange.com/2.2/questions?`pagesize={pagesize}`&page=1&`site={site}`'
+## ¿Qué hacemos si queremos seguir agregando más _query strings_ a la petición web?
 
-## ¿Qué hacemos si queremos seguir agregando más _query arguments_ a la petición web?
-
-Yep, más parámetros. Eso está bien... a no ser que el número de parámetros sea
+R: Yep, más parámetros. Eso está bien... a no ser que el número de parámetros sea
 mayor que cinco (¡qué es otra convención para mantener el código lo más limpio posible!).
-Y si además de eso nos preocupa mantener la compatibilidad de nuestro código... ¡kwargs al rescate!
+Y si... además de eso nos preocupa mantener la compatibilidad de nuestro código: ¡kwargs al rescate!
 
 
-```python
+```python{16-19,21-24,31}{numberLines: true}
 from datetime import datetime, timezone, timedelta
 
 
@@ -94,30 +90,36 @@ def get_latest_questions_with_kwargs_1(pagesize, site, **kwargs):
     if response.ok:
         return [q['link'] for q in response.json().get('items')]
     print(response.text)
+
+
+if __name__ == '__main__':
+    print(get_latest_questions_2(1, 'serverfault', page=3))
 ```
 
 ¡Qué no les asusten los `**` que preceden a la variable kwargs! No son punteros
-(como en lenguage c :P). Básicamente es la sintaxis que python require para saber
-que lo que viene dentro de los kwargs es un diccionario y por tanto, no importa
-en órden en que se específique al momento de ejecutar la función.
+(como en lenguage c :P). Básicamente es la sintaxis que python utiliza para saber
+que lo que viene dentro de los kwargs es un diccionario y por tanto, puede ser
+tratado como tal, y además no importa en órden en que se pasen los argumentos al
+momento de ejecutar la función.
 
-Wait a moment!
+La línea 31 muestra un ejemplo en el cuál se específica que deseamos obtener la
+información de la página 3 (notar que el API trae paginación).
 
-Ejemplo pasando un argumento como kwargs:
+---
 
-> print(get_latest_questions_2(1, 'serverfault', page=3))
+¡Espera un momento!
 
 ¿Cuáles parámetros se pasan como posicionales y cuáles cómo kwargs?
 
-R: Cualquiera que tenga la sintaxis `var_name='value'` va a poder ser empleado
+R: Cualquiera que tenga la sintaxis: `var_name='value'` va a poder ser empleado
 dentro de la función usando `kwargs.get('var_name')`.
 
 
-... y qué hay de los `*args` que se mencionan en el título del artículo?
+... y ¿qué hay de los `*args` que se mencionan en el título del artículo?
 
 R: Eso ya está cubierto, ¡pero veamos cómo podríamos reescribir la función!
 
-```python
+```python{1,8}{numberLines: true}
 def get_latest_questions_with_kwargs_2(*args, **kwargs):
     """
     Fetch and return latest stackoverflow questions links.
@@ -147,10 +149,11 @@ def get_latest_questions_with_kwargs_2(*args, **kwargs):
 
 Al final del día, los parámetros que no sean `key=value`, se envían en `args`,
 y el tipo de dato de `args` es una tupla (de manera que podemos expandir el
-contenido usando la sintaxis `p, s = args`).
+contenido usando la sintaxis `eyes, hands = args`).
 
-Como última nota: el número de argumentos en args debe corresponder al número de
-variables.
+---
+
+Nota: el número de argumentos en args debe corresponder al número de variables.
 
 Ejemplo:
 
@@ -164,11 +167,28 @@ Ejemplo:
 
 ## Ejecutando cada una de las funciones con sus respectivos parámetros
 
-```python
+```python{numberLines: true}
 if __name__ == '__main__':
-    print(get_latest_questions())
-    print(get_latest_questions_only_args(1, 'serverfault'))
-    print(get_latest_questions_with_kwargs_1(1, 'english', page=1, order='asc'))
+    print(get_latest_questions())  # No arguments at all.
+    print(get_latest_questions_only_args(1, 'serverfault'))  # Only positional arguments (aka. args)
+    print(get_latest_questions_with_kwargs_1(1, 'english', page=1, order='asc'))  # With both: args & kwargs
     print(get_latest_questions_with_kwargs_1(1, 'ux', page=1, order='asc'))
     print(get_latest_questions_with_kwargs_2(1, 'serverfault', fromdate=1549497600, sort='votes'))
 ```
+
+Como última nota:
+
+> Los parámetros posicionales deben enviarse antes de los kwargs.
+
+```python{2}{numberLines: true}
+    print(get_latest_questions_only_args(1, 'serverfault', site="es.stackoverflow"))  # Good
+    print(get_latest_questions_only_args(1, pagesize=1, 'es.stackoverflow'))  # Bad
+```
+
+## Conoce más sobre el API de stackexchange
+
+* https://stackexchange.com/sites
+* https://api.stackexchange.com/docs/questions
+
+
+¡Gracias por leerme :P!
