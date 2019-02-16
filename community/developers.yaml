@@ -13,12 +13,12 @@
   firstName: Martín
   lastName: Rodríguez
   avatar: avatars/martin-rodriguez.jpg
-  location: CD DE MT.
+  location: Monterrey, Nuevo León
   codeRole: Contributor
-  bio: Backend Developer
-  twitter: https://twitter.com/slackmart
-  github: https://github.com/slackmart
+  bio: Ingeniero de Software | python + golang + devops
   gitLab: https://gitlab.com/slackmart
+  bitbucket: https://bitbucket.org/slackmart
+  stackoverflow: https://stackoverflow.com/users/977593/slackmart?tab=profile
 
 - codeaId: maturanomx
   firstName: Alberto
