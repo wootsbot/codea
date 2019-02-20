@@ -23,6 +23,7 @@
 
 .pagination-pages {
   font-family: $font-light-family;
+  font-size: 2rem;
 
   @include breakpoint-sm-down() {
     display: none;

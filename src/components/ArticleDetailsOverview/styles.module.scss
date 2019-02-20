@@ -1,6 +1,11 @@
 @import 'styles/theme';
 
 .root {
+  max-width: 65rem;
+  position: relative;
+  margin: 0px auto;
+  padding: 2.1rem 1.05rem 0px;
+
   @include breakpoint-sm-down() {
     @include padding-main(sm);
   }

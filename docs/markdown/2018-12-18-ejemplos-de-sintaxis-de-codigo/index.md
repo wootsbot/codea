@@ -115,6 +115,7 @@ export default ArticleLink
 ##style syntax de resaltado de líneas
 
 ###Ejemplo:
+
 `javascript{1-2,13}{numberLines: true} ...`
 
 ```javascript{1-2,13}{numberLines: true}
