@@ -1,20 +1,26 @@
 @import 'styles/theme';
 
 .root {
+  max-width: 80rem;
+  position: relative;
+  margin: 0px auto;
+  padding: 2.5rem 0.2rem 0;
+
   @include breakpoint-sm-down() {
     @include padding-main(sm);
   }
 }
 
 .header {
-  margin-bottom: 100px;
+  margin-bottom: 10rem;
 
   @include breakpoint-sm-down() {
-    margin-bottom: 70px;
+    margin-bottom: 7rem;
   }
 
   &-title {
     font-family: $font-bold-family !important;
+    font-weight: 800 !important;
 
     @include breakpoint-sm-down() {
       text-align: center;
@@ -29,14 +35,14 @@
 
     @include breakpoint-sm-down() {
       flex-direction: column;
-      margin-top: 20px;
+      margin-top: 2rem;
     }
   }
 
   &-author {
     color: $primary-light-color !important;
-    margin-left: 16px !important;
-    margin-right: 16px !important;
+    margin-left: 1.6rem !important;
+    margin-right: 1.6rem !important;
 
     @include breakpoint-sm-down() {
       margin: 0 !important;
@@ -46,5 +52,5 @@
 }
 
 .avatar {
-  border-radius: 50px;
+  border-radius: 5rem;
 }

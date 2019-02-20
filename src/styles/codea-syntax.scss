@@ -1,17 +1,17 @@
 // variables
 $font-code: 'Source Code Pro', monospace;
 $background: #f8f8f8;
-$font-size: 1.7rem;
+$font-size: 130%;
 
 // main
 .gatsby-highlight-code-line {
-  display: block;
-  margin-right: -1em;
-  margin-left: -1em;
-  padding-right: 1em;
-  padding-left: 0.75em;
+  margin-right: -2em;
+  margin-left: -2.9em;
+  padding-right: 1.7em;
+  padding-left: 3.2em;
   background-color: #ebe8e8;
-  border-left: solid 1.5px #e96900;
+  border-left: solid 0.2em #e96900;
+  display: block;
 }
 
 .gatsby-highlight {
@@ -21,12 +21,12 @@ $font-size: 1.7rem;
 
 .gatsby-highlight pre[class*='language-'] {
   margin: 0;
-  padding: 24px;
+  padding: 2.3em;
   overflow: auto;
   float: left; /* 1 */
   min-width: 100%; /* 2 */
   max-height: 85vh;
-  border-radius: 5px;
+  border-radius: 0.2em;
 }
 
 code[class*='language-'],
@@ -51,7 +51,7 @@ pre[class*='language-'] {
 }
 
 code[class*='language-text'] {
-  padding: 3px 6px !important;
+  white-space: inherit;
 }
 
 pre[class*='language-']::-moz-selection,
@@ -74,7 +74,7 @@ code[class*='language-'] ::selection {
 
 /* Code blocks */
 pre[class*='language-'] {
-  padding: 1em;
+  padding: 2em;
   margin: 0.5em 0;
   overflow: auto;
 }
@@ -237,7 +237,7 @@ pre[class*='language-'].line-numbers > code {
   position: absolute;
   pointer-events: none;
   top: 0;
-  padding: 10px;
+  padding: 1em;
   font-size: 100%;
   left: -3.8em;
   width: 3em;
@@ -260,4 +260,5 @@ pre[class*='language-'].line-numbers > code {
   display: block;
   padding-right: 0.8em;
   text-align: right;
+  font-size: $font-size;
 }
