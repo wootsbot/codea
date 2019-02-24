@@ -9,7 +9,8 @@ import ArticleDetailsOverview from 'components/ArticleDetailsOverview'
 
 function ArticleDetailTemplate({ data, location }) {
   const { markdownRemark, logoCodea } = data
-  const { frontmatter, html, excerpt, timeToRead } = markdownRemark
+  const { frontmatter, html, excerpt, timeToRead, fields } = markdownRemark
+  const { slug } = fields
   const imageDefault = logoCodea.edges[0].node.resize.src
 
   return (
@@ -48,6 +49,7 @@ function ArticleDetailTemplate({ data, location }) {
         title={frontmatter.title}
         date={frontmatter.date}
         author={frontmatter.author}
+        slug={slug}
         html={{ __html: html }}
       />
     </Layout>
@@ -64,6 +66,9 @@ export const pageQuery = graphql`
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       timeToRead
+      fields {
+        slug
+      }
       excerpt(pruneLength: 200)
       frontmatter {
         date(formatString: "MMMM DD, YYYY")

@@ -7,6 +7,7 @@ import styles from './styles.module.scss'
 
 class ArticleDetailsOverview extends React.PureComponent {
   static propTypes = {
+    slug: PropTypes.string,
     title: PropTypes.string,
     date: PropTypes.string.isRequired,
     html: PropTypes.object,
@@ -14,10 +15,11 @@ class ArticleDetailsOverview extends React.PureComponent {
   }
 
   render() {
-    const { title, date, author, html } = this.props
+    const { title, date, author, html, slug } = this.props
     const disqusShortname = 'codea-com-mx'
     const disqusConfig = {
-      identifier: 103938,
+      url: `https://codea.com.mx${slug}`,
+      identifier: slug,
       title: title,
     }
 
