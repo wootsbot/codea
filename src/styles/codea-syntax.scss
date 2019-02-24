@@ -3,30 +3,47 @@ $font-code: 'Source Code Pro', monospace;
 $background: #f8f8f8;
 $font-size: 130%;
 
-// main
 .gatsby-highlight-code-line {
-  margin-right: -2em;
-  margin-left: -2.9em;
-  padding-right: 1.7em;
-  padding-left: 3.2em;
-  background-color: #ebe8e8;
-  border-left: solid 0.2em #e96900;
+  background: #ebe8e8;
+  margin-right: -1.05rem;
+  margin-left: -5.8rem;
+  padding-right: 1.7rem;
+  padding-left: 5.5rem;
+  border-left: 0.21rem solid #e96900;
   display: block;
 }
 
-.gatsby-highlight {
-  margin: 0.5em 0;
-  overflow: auto;
+.gatsby-highlight pre code {
+  display: block;
+  font-size: 130%;
+  line-height: 1.5;
+  margin-bottom: 30px;
+  margin-top: 2.7rem;
+  padding: 0;
 }
 
-.gatsby-highlight pre[class*='language-'] {
-  margin: 0;
-  padding: 2.3em;
+.gatsby-highlight {
+  background: $background;
+  border-radius: 2px;
+  padding: 1.05rem;
+  margin-bottom: 1.05rem;
   overflow: auto;
-  float: left; /* 1 */
-  min-width: 100%; /* 2 */
-  max-height: 85vh;
-  border-radius: 0.2em;
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+}
+.gatsby-highlight pre[class*='language-'] {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  background-color: transparent;
+  border: 0;
+  float: left;
+  min-width: 100%;
+  overflow: initial;
+}
+
+p > .language-text {
+  font-size: 90% !important;
 }
 
 code[class*='language-'],
@@ -46,7 +63,6 @@ pre[class*='language-'] {
   -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
-  background: $background;
   color: #2973b7;
 }
 
