@@ -119,6 +119,12 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
     {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: `UA-135000051-1`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-feed`,
       options: {
         feeds: [
