@@ -135,6 +135,7 @@ module.exports = {
                   edges {
                     node {
                       id
+                      html
                       fields {
                         slug
                       }
@@ -152,7 +153,8 @@ module.exports = {
                 }
               }
             `,
-            output: `/articles/rss.xml`,
+            output: `/rss.xml`,
+            title: "Codea Blog RSS Feed",
             setup: ({
               query: {
                 site: { siteMetadata },
@@ -161,20 +163,31 @@ module.exports = {
               return {
                 title: siteMetadata.title,
                 description: siteMetadata.description,
-                feed_url: siteMetadata.siteUrl + `/articles/rss.xml`,
+                feed_url: siteMetadata.siteUrl + `/rss.xml`,
                 site_url: siteMetadata.siteUrl,
-                generator: `GatsbyJS`,
+                generator: `Codea`,
               }
             },
             serialize: ({ query: { site, allMarkdownRemark } }) =>
-              allMarkdownRemark.edges.map(({ node }) => {
+              allMarkdownRemark.edges.map(edge => {
+                const siteUrl = site.siteMetadata.siteUrl;
+                const postText = `<div style="margin-top=55px; font-style: italic;">(Este es un artículo publicado en codea.com.mx y Puedes leerlo accediendo al siguiente link <a href="${siteUrl + edge.node.fields.slug}">click aquí</a>.)</div>`;
+
+                let html = edge.node.html;
+                html = html
+                  .replace(/href="\//g, `href="${siteUrl}/`)
+                  .replace(/src="\//g, `src="${siteUrl}/`)
+                  .replace(/"\/static\//g, `"${siteUrl}/static/`)
+                  .replace(/,\s*\/static\//g, `,${siteUrl}/static/`);
+
                 return {
-                  title: node.frontmatter.title,
-                  description: node.frontmatter.excerpt,
-                  url: site.siteMetadata.siteUrl + node.fields.slug,
-                  guid: site.siteMetadata.siteUrl + node.fields.slug,
-                  custom_elements: [{ "content:encoded": node.html }],
-                  author: node.frontmatter.author.id,
+                  title: edge.node.frontmatter.title,
+                  description: edge.node.frontmatter.excerpt,
+                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  date: edge.node.frontmatter.date,
+                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  custom_elements: [{ 'content:encoded': html + postText }],
+                  author: edge.node.frontmatter.author.id,
                 }
               }),
           },
@@ -183,8 +196,5 @@ module.exports = {
     },
     `gatsby-plugin-netlify`,
     `gatsby-plugin-netlify-cache`,
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.app/offline
-    // 'gatsby-plugin-offline',
   ],
 }
