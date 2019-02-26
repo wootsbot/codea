@@ -37,6 +37,16 @@ a.auto-link-headers {
   box-shadow: none !important;
 }
 
+.tag-styles {
+  &-codea {
+    background-color: #a5d6a7 !important;
+  }
+
+  &-python {
+    background-color: #fff59d !important;
+  }
+}
+
 .codea-article-details-markdown {
   a {
     font-size: 145%;
