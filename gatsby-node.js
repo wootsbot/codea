@@ -70,7 +70,7 @@ exports.createPages = ({ actions, graphql }) => {
             fields {
               slug
             }
-            excerpt(pruneLength: 455)
+            excerpt(pruneLength: 200)
             frontmatter {
               date(formatString: "MMMM DD, YYYY")
               title
@@ -81,7 +81,7 @@ exports.createPages = ({ actions, graphql }) => {
                 lastName
                 avatar {
                   childImageSharp {
-                    fixed(quality: 100, width: 50, height: 50) {
+                    fixed(quality: 100, width: 55, height: 55) {
                       tracedSVG
                       width
                       height
