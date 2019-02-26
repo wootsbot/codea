@@ -1,6 +1,7 @@
 @import 'styles/theme';
 
 .article-title {
+  margin-bottom: 1.5rem !important;
   & > a {
     color: $primary-main-color !important;
   }
@@ -9,11 +10,11 @@
 .article-author {
   display: flex;
   align-items: center;
-  margin-bottom: 12px;
+  margin-bottom: 1.5rem;
 }
 
 .article-author-avatar {
-  border-radius: 50px;
+  border-radius: 55px;
   margin-right: 10px;
 }
 

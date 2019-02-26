@@ -31,7 +31,7 @@ class ArticlePreviewLink extends React.PureComponent {
           className={styles.articleTitle}
           color="primary"
           component="h3"
-          variant="h5"
+          variant="h6"
           gutterBottom>
           <Link to={to}>{title}</Link>
         </Typography>
@@ -65,7 +65,7 @@ class ArticlePreviewLink extends React.PureComponent {
         <Typography
           className={styles.articleAuthorSummary}
           color="primary"
-          variant="body2"
+          variant="body1"
           gutterBottom>
           {excerpt}
         </Typography>

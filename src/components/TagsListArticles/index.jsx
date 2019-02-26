@@ -1,11 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+
+import clsx from 'clsx'
 import kebabCase from 'lodash/kebabCase'
 
-import { navigate } from 'gatsby'
-
-import Chip from '@material-ui/core/Chip'
-import Typography from '@material-ui/core/Typography'
+import Button from '@material-ui/core/Button'
 
 import { PATCH_ARCHIVE_TAGS } from 'utils/paths'
 
@@ -21,23 +20,19 @@ class TagsListArticles extends React.PureComponent {
 
     return (
       <section className={styles.sectionTags}>
-        <div className={styles.sectionTagsHeader}>
-          <Typography variant="overline" gutterBottom>
-            Conoce más sobre las etiquetas que se usan en los artículos
-          </Typography>
-        </div>
         <div className={styles.sectionTagsList}>
           {tags.map(item => (
-            <Chip
-              className={styles.chip}
-              variant="outlined"
+            <Button
               key={item.node.id}
-              color="secondary"
-              onClick={() =>
-                navigate(`${PATCH_ARCHIVE_TAGS}${kebabCase(item.node.id)}`)
-              }
-              label={item.node.id}
-            />
+              className={clsx(
+                styles.tagItem,
+                `tag-styles-${kebabCase(item.node.id)}`
+              )}
+              size="small"
+              variant="contained"
+              href={`${PATCH_ARCHIVE_TAGS}${kebabCase(item.node.id)}`}>
+              {item.node.id}
+            </Button>
           ))}
         </div>
       </section>
