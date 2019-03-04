@@ -51,13 +51,9 @@ class TagOverview extends React.PureComponent {
         </div>
 
         <div className={styles.tagSubHeading}>
-          <Typography variant="body2">Todos los articulos de {tag}</Typography>
-          <Chip
-            color="secondary"
-            variant="outlined"
-            label={`Total de articulos ${totalCount}`}
-          />
+          <Typography variant="body2">{totalCount} artículos</Typography>
         </div>
+        <hr />
 
         <div>
           <ul className={styles.tagsList}>
