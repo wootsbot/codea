@@ -93,7 +93,7 @@ def get_latest_questions_with_kwargs_1(pagesize, site, **kwargs):
 
 
 if __name__ == '__main__':
-    print(get_latest_questions_2(1, 'serverfault', page=3))
+    print(get_latest_questions_with_kwargs_1(1, 'serverfault', page=3))
 ```
 
 ¡Qué no les asusten los `**` que preceden a la variable kwargs! No son punteros
