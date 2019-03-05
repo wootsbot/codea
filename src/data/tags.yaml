@@ -3,7 +3,7 @@
   web: https://codea.com.mx
 
 - id: python
-  description: Python is powerful... and fast; plays well with others; runs everywhere; is friendly & easy to learn; is Open.
+  description: Python es robusto... y rápido; se integra bastante bien con otras tecnologías; es multiplataforma; es amigable y fácil de aprender; es software libre.
   web: https://www.python.org/
 
 - id: args
@@ -11,5 +11,5 @@
   web: https://es.wikipedia.org/wiki/Argumento_(informática)
 
 - id: kwargs
-  description: Un parámetro nombrado (kwarg) son soportados por ciertos lenguajes de programación, y su característica distintiva es que al momento de invocar la función se específica claramente a qué variable (parámetro) se asignará el valor indicado, ejem. `get_product(order=298)`.
+  description: Los parámetros nombrados (kwargs) son soportados por algunos lenguajes de programación, y su característica distintiva es que al momento de invocar la función se específica claramente a qué variable se asignará el valor indicado.
   web: https://en.wikipedia.org/wiki/Named_parameter
