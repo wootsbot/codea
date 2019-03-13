@@ -47,6 +47,7 @@ module.exports = {
       options: {
         plugins: [
           `gatsby-remark-graphviz`,
+          `gatsby-remark-code-titles`,
           {
             resolve: `gatsby-remark-images`,
             options: {

@@ -25,18 +25,6 @@ small {
   font-size: $font-text-small-size;
 }
 
-a.auto-link-headers:hover {
-  background: none;
-}
-
-a.auto-link-headers {
-  color: inherit;
-  fill: $secondary-main-color;
-  text-decoration: none !important;
-  border: none !important;
-  box-shadow: none !important;
-}
-
 .tag-styles {
   &-codea {
     background-color: #a5d6a7 !important;

@@ -2,6 +2,32 @@
 $font-code: 'Source Code Pro', monospace;
 $background: #f8f8f8;
 $font-size: 130%;
+$secondary-main-color: #39d996;
+
+a.auto-link-headers:hover {
+  background: none;
+}
+
+a.auto-link-headers {
+  color: inherit;
+  fill: $secondary-main-color;
+  text-decoration: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  margin-top: -0.7rem;
+}
+
+.gatsby-code-title {
+  padding: 1.5rem 1.5rem;
+  font-size: 160%;
+  font-family: $font-code;
+  background: $background;
+  color: #e96900;
+  z-index: 0;
+  border-top-left-radius: 0.2rem;
+  border-top-right-radius: 0.2rem;
+  border-bottom: 0.3rem solid #faede5;
+}
 
 .gatsby-highlight-code-line {
   background: #ebe8e8;
@@ -24,7 +50,7 @@ $font-size: 130%;
 
 .gatsby-highlight {
   background: $background;
-  border-radius: 2px;
+  border-radius: 0.2rem;
   padding: 1.05rem;
   margin-bottom: 1.05rem;
   overflow: auto;

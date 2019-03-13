@@ -62,6 +62,7 @@
     "gatsby-plugin-sitemap": "^2.0.5",
     "gatsby-plugin-twitter": "^2.0.9",
     "gatsby-remark-autolink-headers": "^2.0.14",
+    "gatsby-remark-code-titles": "^1.1.0-rc.0",
     "gatsby-remark-copy-linked-files": "^2.0.9",
     "gatsby-remark-emoji": "^0.0.2",
     "gatsby-remark-emoji-unicode": "^0.1.0",
