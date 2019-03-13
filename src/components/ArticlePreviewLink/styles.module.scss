@@ -3,7 +3,9 @@
 .article-title {
   margin-bottom: 1.5rem !important;
   & > a {
-    color: $primary-main-color !important;
+    font-size: $font-heading-size;
+    font-weight: 800;
+    color: $secondary-text-color;
   }
 }
 
@@ -25,12 +27,37 @@
   font-family: $font-medium-family;
 
   &-date {
+    font-size: $font-caption-size;
     color: $primary-light-color;
+  }
+
+  & small > a {
+    font-size: $font-text-medium-size;
+    text-decoration: none;
+    color: $secondary-text-color;
+
+    &:hover {
+      color: $primary-light-color;
+    }
   }
 }
 
 .article-author-tags {
   display: flex;
+
+  & > a {
+    font-weight: 800;
+    text-decoration: underline;
+    color: $secondary-text-color;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    & > small {
+      font-size: $font-caption-size;
+    }
+  }
 }
 
 .article-author-summary {

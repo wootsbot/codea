@@ -25,16 +25,16 @@ class NotFoundPage extends React.PureComponent {
           <Typography
             className={styles.page404ContentTitle}
             component="h1"
-            variant="h2"
+            variant="h1"
             gutterBottom>
-            Lo sentimos, pero no existe la página.
+            Lo sentimos, no existe la página.
           </Typography>
 
           <Typography
             className={styles.page404ContentMessage}
-            variant="subtitle1"
+            variant="h4"
             gutterBottom>
-            La comunidad esta creando esta página o no existe
+            Estamos junto con la comunidad trabajando en la página.
           </Typography>
 
           <Button

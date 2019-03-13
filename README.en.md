@@ -1,11 +1,8 @@
 <p align="center">
   <a href="https://codea.com.mx">
-    <img alt="Codea" src="src/images/favicon.png" width="80" />
+    <img alt="Codea" src="src/images/svg/codea-preview.svg" width="150" />
   </a>
 </p>
-<h1 align="center">
-  Codea
-</h1>
 
 <p align="center">
   <strong>This is the codea source code</strong><br>
@@ -13,43 +10,43 @@
 </p>
 
 <p align="center">
-  <a href="https://gitlab.com/codea_/codea">
+  <a href="https://github.com/codea-team/codea" target="_blank">
     <img src="https://img.shields.io/badge/codea-v1.0.0-blue.svg?longCache=true" alt="Codea Version" />
   </a>
 
-  <a href="LICENSE">
+  <a href="LICENSE" target="_blank">
     <img src="https://img.shields.io/badge/license-MIT-lightgrey.svg?longCache=true" alt="Codea is released under the MIT license." />
   </a>
 
-  <a href="https://github.com/codea-team/codea/pulls">
+  <a href="https://github.com/codea-team/codea/pulls" target="_blank">
     <img src="https://img.shields.io/badge/prs-welcome-blue.svg?longCache=true" alt="PRs welcome!" />
   </a>
 
-  <a href="https://github.com/codea-team/codea">
+  <a href="https://github.com/codea-team/codea" target="_blank">
     <img src="https://circleci.com/gh/codea-team/codea/tree/master.svg?style=svg" alt="alt="Circle Build Status" />
   </a>
 
-  <a href="https://lgtm.com/projects/g/codea-team/codea/alerts/">
+  <a href="https://lgtm.com/projects/g/codea-team/codea/alerts/" target="_blank">
     <img alt="Total alerts" src="https://img.shields.io/lgtm/alerts/g/codea-team/codea.svg?logo=lgtm&logoWidth=18"/>
   </a>
 
-  <a href="https://lgtm.com/projects/g/codea-team/codea/context:javascript">
+  <a href="https://lgtm.com/projects/g/codea-team/codea/context:javascript" target="_blank">
     <img alt="Language grade: JavaScript" src="https://img.shields.io/lgtm/grade/javascript/g/codea-team/codea.svg?logo=lgtm&logoWidth=18"/>
   </a>
 
-  <a href="https://github.com/prettier/prettier">
+  <a href="https://github.com/prettier/prettier" target="_blank">
     <img alt="Language grade: JavaScript" src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg"/>
   </a>
 
-  <a href="https://nodejs.org/es/">
+  <a href="https://nodejs.org/es/" target="_blank">
     <img src="https://img.shields.io/badge/node-%3E%3D10.x-brightgreen.svg?longCache=true" alt="nodejs" />
   </a>
 
-  <a href="https://yarnpkg.com/en/docs/install">
+  <a href="https://yarnpkg.com/en/docs/install" target="_blank">
     <img src="https://img.shields.io/badge/yarn-%3E%3D%201.10.x-blue.svg?longCache=true" alt="yarn install" />
   </a>
 
-  <a href="https://docs.npmjs.com/getting-started/installing-node">
+  <a href="https://docs.npmjs.com/getting-started/installing-node" target="_blank">
     <img src="https://img.shields.io/badge/npm-%3E%3D%206.x-red.svg?longCache=true" alt="npm install" />
   </a>
 </p>

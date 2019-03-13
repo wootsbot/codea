@@ -22,7 +22,7 @@ $transition: 0.2s ease;
     > .item-link {
       transition: $transition;
       text-decoration: none;
-      color: $secondary-main-color !important;
+      color: $primary-light-color !important;
     }
   }
 }
@@ -30,10 +30,12 @@ $transition: 0.2s ease;
 .item-link {
   height: 64px;
   text-decoration: none;
-  color: $color-white;
+  color: $secondary-text-color;
   font-size: $font-caption-size;
   font-family: $font-light-family;
   font-weight: 400;
+  line-height: 1.5rem;
+  letter-spacing: 0.01562rem;
   padding: 2.4rem 2.4rem;
 }
 
@@ -44,13 +46,14 @@ $transition: 0.2s ease;
 }
 
 .logo-image {
-  height: 4rem;
+  height: 8rem;
   margin-right: 0.8rem;
   width: auto;
+}
 
-  @include breakpoint-sm-down() {
-    height: 45px;
-  }
+.logo-text {
+  display: flex;
+  align-items: center;
 }
 
 .logo-text {
