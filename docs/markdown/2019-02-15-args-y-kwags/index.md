@@ -7,8 +7,8 @@ tags: ['python', 'kwargs', 'args']
 
 Al inicio del desarrollo de un proyecto, es difícil saber con exactitud todos los
 posibles casos de uso de nuestro código, es aquí donde uno como programador debe
-aprovechar las facilidades que el lenguaje de programación y hacer código fácil
-de extender.
+aprovechar las facilidades que el lenguaje de programación nos ofrece y hacer código
+fácil de extender.
 
 > **El código se escribe una vez, pero se lee muchísimas más veces y... por diferentes personas.**
 
