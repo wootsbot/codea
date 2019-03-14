@@ -4,17 +4,13 @@ $background: #f8f8f8;
 $font-size: 130%;
 $secondary-main-color: #39d996;
 
-a.auto-link-headers:hover {
-  background: none;
-}
-
-a.auto-link-headers {
+.anchor {
   color: inherit;
-  fill: $secondary-main-color;
-  text-decoration: none !important;
+  fill: #e96900;
+  text-decoration: none;
   border: none !important;
   box-shadow: none !important;
-  margin-top: -0.7rem;
+  margin-top: -0.9rem;
 }
 
 .gatsby-code-title {
