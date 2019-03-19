@@ -16,7 +16,9 @@ class ArticleDetailsOverview extends React.PureComponent {
 
   render() {
     const { title, date, author, html, slug } = this.props
+
     const disqusShortname = 'codea-com-mx'
+
     const disqusConfig = {
       url: `https://codea.com.mx${slug}`,
       identifier: slug,
@@ -24,15 +26,18 @@ class ArticleDetailsOverview extends React.PureComponent {
     }
 
     return (
-      <div className={styles.root}>
+      <article className={styles.root}>
         <HeaderDetail title={title} date={date} author={author} />
+
         <div
           className="codea-article-details-markdown"
           dangerouslySetInnerHTML={html}
         />
-        <br />
-        <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
-      </div>
+
+        <footer className={styles.footer}>
+          <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
+        </footer>
+      </article>
     )
   }
 }

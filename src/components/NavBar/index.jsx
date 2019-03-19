@@ -10,7 +10,7 @@ import Brand from './Brand'
 import NavItem from './NavItem'
 import styles from './styles.module.scss'
 
-const stylesUi = theme => ({
+const stylesUi = {
   root: {
     maxHeight: '64px',
     minHeight: '64px',
@@ -21,12 +21,9 @@ const stylesUi = theme => ({
     marginButton: '70px',
   },
   colorPrimary: {
-    backgroundColor: theme.palette.primary.main,
-    [theme.breakpoints.down('sm')]: {
-      backgroundColor: theme.palette.primary.main,
-    },
+    backgroundColor: 'white',
   },
-})
+}
 
 class NavBar extends React.PureComponent {
   static propTypes = {

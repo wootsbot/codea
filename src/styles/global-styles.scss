@@ -5,16 +5,14 @@
 html,
 body {
   font-size: 10px;
-  font-family: Arvo-auto;
   margin: 0;
   padding: 0;
-  background-color: $azure-color !important;
+  background-color: $default-background !important;
 }
 
 a {
   text-decoration: none;
-  color: $color-link;
-  font-size: 140%;
+  color: $secondary-dark-color;
 
   &:hover {
     text-decoration: underline;
@@ -27,14 +25,22 @@ small {
 
 .tag-styles {
   &-codea {
-    background-color: #a5d6a7 !important;
+    background-color: #4caf50 !important;
+    color: #ffffff !important;
   }
 
   &-python {
-    background-color: #fff59d !important;
+    background-color: #ffd343 !important;
+    color: #000000 !important;
+  }
+
+  &-git {
+    background-color: #f14e32 !important;
+    color: #000000 !important;
   }
 }
 
+// styles for render of markdown
 .codea-article-details-markdown {
   a {
     font-size: 145%;

@@ -27,14 +27,15 @@ class ArticlePreviewLink extends React.PureComponent {
 
     return (
       <article>
-        <Typography
-          className={styles.articleTitle}
-          color="primary"
-          component="h3"
-          variant="h6"
-          gutterBottom>
-          <Link to={to}>{title}</Link>
-        </Typography>
+        <header>
+          <Typography
+            className={styles.articleTitle}
+            color="primary"
+            component="h3"
+            gutterBottom>
+            <Link to={to}>{title}</Link>
+          </Typography>
+        </header>
 
         <div className={styles.articleAuthor}>
           <Img

@@ -1,7 +1,15 @@
 export const muiTheme = {
   palette: {
-    primary: { light: '#4e6973', main: '#243e48', dark: '#001821' },
-    secondary: { light: '#77ffc7', main: '#39d996', dark: '#00a668' },
+    primary: {
+      light: '#484848',
+      main: '#212121',
+      dark: '#000000',
+    },
+    secondary: {
+      light: '#80e27e',
+      main: '#4caf50',
+      dark: '#087f23',
+    },
   },
   typography: {
     fontFamily: [

@@ -9,11 +9,10 @@ import Typography from '@material-ui/core/Typography'
 import { UndrawOrganizingProjects } from 'react-undraw-illustrations'
 
 import Layout from 'components/Layout'
-import Terminal from 'components/Terminal'
+import HeroHome from 'components/HeroHome'
 import DevelopersList from 'components/DevelopersList'
-import HomePageSectionWelcome from 'components/HomePageSectionWelcome'
+import WelcomePrHome from 'components/WelcomePrHome'
 
-import BannerCodea from 'images/svg/banner_codea_fond_default.svg'
 import styles from './index.module.scss'
 
 class IndexPage extends React.Component {
@@ -31,41 +30,9 @@ class IndexPage extends React.Component {
         marginTop
         title={`${siteMetadata.title}`}
         descriptionContent={siteMetadata.description}>
-        <section
-          style={{ backgroundImage: `url(${BannerCodea})` }}
-          className={styles.sectionHome}>
-          <div className={styles.sectionHomeText}>
-            <Typography
-              className={styles.sectionHomeTextTitle}
-              color="secondary"
-              component="h1"
-              variant="h3"
-              gutterBottom>
-              Un proyecto de código abierto.
-            </Typography>
+        <HeroHome />
 
-            <Typography
-              className={styles.sectionHomeTextMessage}
-              variant="body1"
-              gutterBottom>
-              Si te encanta compartir conocimiento a través de proyectos de
-              código abierto, libros etc. Hemos decidido crear este proyecto
-              para cualquier persona que quiera colaborar.
-            </Typography>
-          </div>
-
-          <div className={styles.sectionHomeCode}>
-            <div className={styles.termContainer}>
-              <Terminal>
-                <Terminal.Code>https://www.codea.com.mx</Terminal.Code>
-                <Terminal.Code>Código fuente</Terminal.Code>
-                <Terminal.Code>Compartir con la comunidad</Terminal.Code>
-              </Terminal>
-            </div>
-          </div>
-        </section>
-
-        <HomePageSectionWelcome />
+        <WelcomePrHome />
 
         <Grid
           component="section"
@@ -82,7 +49,7 @@ class IndexPage extends React.Component {
               Siéntete libre de aportar lo que quieras.
             </Typography>
 
-            <Typography variant="subtitle1" gutterBottom>
+            <Typography variant="body1" gutterBottom>
               Codea un sitio desarrollado con{' '}
               <a
                 rel="noopener noreferrer"
@@ -98,7 +65,6 @@ class IndexPage extends React.Component {
             </Typography>
           </Grid>
         </Grid>
-
         <DevelopersList developers={edgesDevelopers} />
       </Layout>
     )
