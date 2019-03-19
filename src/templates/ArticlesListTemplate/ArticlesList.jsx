@@ -37,23 +37,30 @@ class ArticlesList extends React.PureComponent {
     const { posts, listTags, pagination } = this.props
 
     return (
-      <Grid container className={styles.listArticles}>
-        <Grid container item md={3} className={styles.tagsList}>
-          <TagsListArticles tags={listTags} />
-        </Grid>
-
-        <Grid container item md={6} className={styles.postsList}>
-          <Grid container>
-            {posts.map(post => (
-              <Grid key={post.node.id} item className={styles.postsListItem}>
-                {this.renderArticleLink(post)}
-              </Grid>
-            ))}
+      <Grid container direction="row" justify="center" alignItems="center">
+        <Grid
+          container
+          item
+          md={10}
+          direction="row"
+          className={styles.listArticles}>
+          <Grid container item md={12} lg={3} className={styles.tagsList}>
+            <TagsListArticles tags={listTags} />
           </Grid>
 
-          <Grid container item md={12}>
-            <Grid item md={12} xs={12}>
-              {pagination}
+          <Grid container item md={12} lg={6} className={styles.postsList}>
+            <Grid container>
+              {posts.map(post => (
+                <Grid key={post.node.id} item className={styles.postsListItem}>
+                  {this.renderArticleLink(post)}
+                </Grid>
+              ))}
+            </Grid>
+
+            <Grid container item md={12}>
+              <Grid item md={12} xs={12}>
+                {pagination}
+              </Grid>
             </Grid>
           </Grid>
         </Grid>

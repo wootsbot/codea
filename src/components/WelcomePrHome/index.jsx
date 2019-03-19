@@ -6,9 +6,10 @@ import Typography from '@material-ui/core/Typography'
 
 import styles from './styles.module.scss'
 
-function HomePageSectionWelcome() {
+function WelcomePrHome() {
   return (
     <Grid
+      id="start-codea"
       className={styles.sectionWelcome}
       component="section"
       container
@@ -34,7 +35,6 @@ function HomePageSectionWelcome() {
           target="_blank"
           href="https://github.com/codea-team/codea"
           variant="outlined"
-          color="secondary"
           size="large"
           className={styles.sectionWelcomeBtnStart}>
           Comenzar a hacer Pull requests
@@ -44,4 +44,4 @@ function HomePageSectionWelcome() {
   )
 }
 
-export default HomePageSectionWelcome
+export default WelcomePrHome

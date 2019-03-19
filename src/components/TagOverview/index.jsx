@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 
 import Link from 'gatsby-link'
 
-import Chip from '@material-ui/core/Chip'
 import Paper from '@material-ui/core/Paper'
 import Typography from '@material-ui/core/Typography'
 
@@ -51,13 +50,9 @@ class TagOverview extends React.PureComponent {
         </div>
 
         <div className={styles.tagSubHeading}>
-          <Typography variant="body2">Todos los articulos de {tag}</Typography>
-          <Chip
-            color="secondary"
-            variant="outlined"
-            label={`Total de articulos ${totalCount}`}
-          />
+          <Typography variant="body2">{totalCount} artículos</Typography>
         </div>
+        <hr />
 
         <div>
           <ul className={styles.tagsList}>

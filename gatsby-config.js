@@ -47,6 +47,7 @@ module.exports = {
       options: {
         plugins: [
           `gatsby-remark-graphviz`,
+          `gatsby-remark-code-titles`,
           {
             resolve: `gatsby-remark-images`,
             options: {
@@ -62,15 +63,7 @@ module.exports = {
           },
           `gatsby-remark-emoji`,
           `gatsby-remark-emoji-unicode`,
-          {
-            resolve: `gatsby-remark-autolink-headers`,
-            options: {
-              offsetY: `100`,
-              icon: `<svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg>`,
-              className: `auto-link-headers`,
-              maintainCase: true,
-            },
-          },
+          `gatsby-remark-autolink-headers`,
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
@@ -110,7 +103,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#404040`,
         display: `minimal-ui`,
-        icon: `src/images/favicon.png`,
+        icon: `src/images/svg/favicon.svg`,
       },
     },
     `gatsby-plugin-offline`,
@@ -135,6 +128,7 @@ module.exports = {
                   edges {
                     node {
                       id
+                      html
                       fields {
                         slug
                       }
@@ -152,7 +146,8 @@ module.exports = {
                 }
               }
             `,
-            output: `/articles/rss.xml`,
+            output: `/rss.xml`,
+            title: "Codea Blog RSS Feed",
             setup: ({
               query: {
                 site: { siteMetadata },
@@ -161,20 +156,31 @@ module.exports = {
               return {
                 title: siteMetadata.title,
                 description: siteMetadata.description,
-                feed_url: siteMetadata.siteUrl + `/articles/rss.xml`,
+                feed_url: siteMetadata.siteUrl + `/rss.xml`,
                 site_url: siteMetadata.siteUrl,
-                generator: `GatsbyJS`,
+                generator: `Codea`,
               }
             },
             serialize: ({ query: { site, allMarkdownRemark } }) =>
-              allMarkdownRemark.edges.map(({ node }) => {
+              allMarkdownRemark.edges.map(edge => {
+                const siteUrl = site.siteMetadata.siteUrl;
+                const postText = `<div style="margin-top=55px; font-style: italic;">(Este es un artículo publicado en codea.com.mx y Puedes leerlo accediendo al siguiente link <a href="${siteUrl + edge.node.fields.slug}">click aquí</a>.)</div>`;
+
+                let html = edge.node.html;
+                html = html
+                  .replace(/href="\//g, `href="${siteUrl}/`)
+                  .replace(/src="\//g, `src="${siteUrl}/`)
+                  .replace(/"\/static\//g, `"${siteUrl}/static/`)
+                  .replace(/,\s*\/static\//g, `,${siteUrl}/static/`);
+
                 return {
-                  title: node.frontmatter.title,
-                  description: node.frontmatter.excerpt,
-                  url: site.siteMetadata.siteUrl + node.fields.slug,
-                  guid: site.siteMetadata.siteUrl + node.fields.slug,
-                  custom_elements: [{ "content:encoded": node.html }],
-                  author: node.frontmatter.author.id,
+                  title: edge.node.frontmatter.title,
+                  description: edge.node.frontmatter.excerpt,
+                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  date: edge.node.frontmatter.date,
+                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  custom_elements: [{ 'content:encoded': html + postText }],
+                  author: edge.node.frontmatter.author.id,
                 }
               }),
           },
@@ -183,8 +189,5 @@ module.exports = {
     },
     `gatsby-plugin-netlify`,
     `gatsby-plugin-netlify-cache`,
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.app/offline
-    // 'gatsby-plugin-offline',
   ],
 }

@@ -1,5 +1,6 @@
 ---
 date: '2018-12-18'
+updateDate: '2019-03-12'
 title: 'Ejemplos de sintaxis de código para codea'
 author: woostbot
 tags: ['codea']
@@ -50,7 +51,32 @@ function Footer() {
 export default Footer
 ```
 
-##style syntax con número de líneas
+##colocar título con el nombre del archivo
+
+###Ejemplo:
+
+    ```js:title=example-file.js
+
+      import React from 'react'
+
+      function Footer() {
+      return <footer>...</footer>
+      }
+
+      export default Footer
+    ```
+
+```js:title=example-file.js
+import React from 'react'
+
+function Footer() {
+  return <footer>...</footer>
+}
+
+export default Footer
+```
+
+##colocar syntax con número de líneas
 
 ###Ejemplo:
 
@@ -112,7 +138,7 @@ class ArticleLink extends React.PureComponent {
 export default ArticleLink
 ```
 
-##style syntax de resaltado de líneas
+##colocar syntax con resaltado de líneas
 
 ###Ejemplo:
 

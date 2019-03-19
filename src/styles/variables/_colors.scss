@@ -1,29 +1,26 @@
 // principals
-$tarawera-color: #243e48;
-$azure-color: #fafcfc;
-$shamrock-color: #39d996;
-$humming-bird-color: #d1ebe1;
 $heather-color: #bac0c3;
+$default-background: #f9fafb;
 
 // Primaries
-$primary-light-color: #4e6973;
-$primary-main-color: #243e48;
-$primary-dark-color: #001821;
+$primary-light-color: #484848;
+$primary-main-color: #212121;
+$primary-dark-color: #000000;
 
 // Secondaries
-$secondary-light-color: #77ffc7;
-$secondary-main-color: #39d996;
-$secondary-dark-color: #00a668;
+$secondary-light-color: #74ffb8;
+$secondary-main-color: #34da88;
+$secondary-dark-color: #2aaba2;
 
+// colors text
 $primary-text-color: #ffffff;
 $secondary-text-color: #000000;
 
 $background-default-color: #f5f5f6;
 
-// other color
+// Extends color
 $color-white: #ffffff;
-$color-link: $secondary-main-color;
+$color-link: $secondary-dark-color;
 $color-disable: $heather-color;
 $background-secondary: #efeae1;
-
-$color-yellow-1: #ffee58;
+$color-main-blue: #1a73e8;

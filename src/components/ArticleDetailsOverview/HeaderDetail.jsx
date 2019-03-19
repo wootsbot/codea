@@ -21,12 +21,12 @@ class HeaderDetail extends React.PureComponent {
     const avatar = author.avatar.childImageSharp.fixed
 
     return (
-      <div className={styles.header}>
+      <header className={styles.header}>
         <Typography
           className={styles.headerTitle}
           color="primary"
           component="h1"
-          variant="h4"
+          variant="h3"
           gutterBottom>
           {title}
         </Typography>
@@ -51,7 +51,7 @@ class HeaderDetail extends React.PureComponent {
             <time>{date}</time>
           </Typography>
         </div>
-      </div>
+      </header>
     )
   }
 }

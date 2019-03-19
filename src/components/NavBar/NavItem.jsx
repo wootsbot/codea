@@ -3,8 +3,6 @@ import PropTypes from 'prop-types'
 
 import { Link } from 'gatsby'
 
-import { muiTheme } from 'utils/muiTheme'
-
 import styles from './styles.module.scss'
 
 export class NavItem extends React.PureComponent {
@@ -35,7 +33,7 @@ export class NavItem extends React.PureComponent {
 const stylesUI = {
   navItem: {
     active: {
-      borderBottom: `2.5px solid ${muiTheme.palette.secondary.main}`,
+      borderBottom: `2.5px solid #000`,
       fontWeight: '700 !important',
     },
   },

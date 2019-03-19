@@ -1,15 +1,15 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import codeaSrc from 'images/svg/codea_color_v_01.svg'
+import codeaSrc from 'images/svg/codea-logo.svg'
 import styles from './styles.module.scss'
 
 function Brand() {
   return (
     <span className={styles.logo}>
-      <img src={codeaSrc} alt="" className={styles.logoImage} />
       <Link to="/" className={styles.logoText}>
-        Codea <small style={{ color: '#77ffc7' }}>(beta)</small>
+        <img src={codeaSrc} alt="" className={styles.logoImage} />
+        <small style={{ color: '#1a73e8' }}>(beta)</small>
       </Link>
     </span>
   )
