@@ -47,7 +47,7 @@ const HeroHome = () => (
       </Grid>
       <Grid item container direction="column" alignItems="center">
         <Typography component="h1" variant="h2" gutterBottom align="center">
-          Entre más compartas con la comunidad, más aprendes
+          Entre más compartas, más aprendes
         </Typography>
 
         <Typography
@@ -56,9 +56,10 @@ const HeroHome = () => (
           gutterBottom
           align="center"
           className={styles.textWelcome}>
-          Un proyecto de código abierto. Si te encanta compartir conocimiento a
-          través de proyectos, libros etc. Hemos decidido crear este proyecto
-          para cualquier persona que quiera colaborar.
+          Codea, un proyecto de código abierto. Si te encanta compartir
+          conocimiento y participar en proyectos con otros desarrolladores.
+          Hemos decidido crear este proyecto para cualquier persona que quiera
+          colaborar.
         </Typography>
 
         <Fab color="primary" aria-label="CODEA TO LINK" href="#start-codea">

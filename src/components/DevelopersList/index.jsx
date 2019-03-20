@@ -25,7 +25,7 @@ class DevelopersList extends React.PureComponent {
         direction="column"
         alignItems="center">
         <Grid item md={4} sm={12}>
-          <Typography align="center" variant="h3" gutterBottom>
+          <Typography align="center" component="h2" variant="h3" gutterBottom>
             Detrás de codea
           </Typography>
         </Grid>
@@ -34,6 +34,7 @@ class DevelopersList extends React.PureComponent {
           <Typography
             className={styles.developersListResume}
             align="center"
+            component="p"
             variant="body1"
             gutterBottom>
             El equipo de codea es una gran comunidad que le apaciona

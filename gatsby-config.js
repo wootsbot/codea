@@ -101,7 +101,7 @@ module.exports = {
         short_name: `Codea`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#404040`,
+        theme_color: `#212121`,
         display: `minimal-ui`,
         icon: `src/images/svg/favicon.svg`,
       },
