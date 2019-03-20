@@ -5,7 +5,7 @@ import { DiscussionEmbed } from 'disqus-react'
 import HeaderDetail from './HeaderDetail'
 import styles from './styles.module.scss'
 
-class ArticleDetailsOverview extends React.PureComponent {
+class ArticleOverview extends React.PureComponent {
   static propTypes = {
     slug: PropTypes.string,
     title: PropTypes.string,
@@ -42,4 +42,4 @@ class ArticleDetailsOverview extends React.PureComponent {
   }
 }
 
-export default ArticleDetailsOverview
+export default ArticleOverview

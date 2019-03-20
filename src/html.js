@@ -13,14 +13,14 @@ export default class HTML extends React.Component {
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
           />
           <meta name="google-site-verification" content="HCrof5xrjCToc8d0GFs4XmBv2kWTdp5tXQcEDGIytBo" />
-          <meta name="theme-color" content="#243e48" />
+          <meta name="theme-color" content="#212121" />
           <meta
             name="msapplication-navbutton-color"
-            content="#243e48"
+            content="#212121"
           />
           <meta
             name="apple-mobile-web-app-status-bar-style"
-            content="#243e48"
+            content="#212121"
           />
 
           {this.props.headComponents}

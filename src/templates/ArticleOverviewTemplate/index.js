@@ -5,9 +5,9 @@ import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 
 import Layout from 'components/Layout'
-import ArticleDetailsOverview from 'components/ArticleDetailsOverview'
+import ArticleOverview from 'components/ArticleOverview'
 
-function ArticleDetailTemplate({ data, location }) {
+function ArticleOverviewTemplate({ data, location }) {
   const { markdownRemark, logoCodea } = data
   const { frontmatter, html, excerpt, timeToRead, fields } = markdownRemark
   const { slug } = fields
@@ -45,7 +45,7 @@ function ArticleDetailTemplate({ data, location }) {
         />
       </Helmet>
 
-      <ArticleDetailsOverview
+      <ArticleOverview
         title={frontmatter.title}
         date={frontmatter.date}
         author={frontmatter.author}
@@ -56,7 +56,7 @@ function ArticleDetailTemplate({ data, location }) {
   )
 }
 
-ArticleDetailTemplate.propTypes = {
+ArticleOverviewTemplate.propTypes = {
   data: PropTypes.object,
   location: PropTypes.object,
 }
@@ -102,4 +102,4 @@ export const pageQuery = graphql`
     }
   }
 `
-export default ArticleDetailTemplate
+export default ArticleOverviewTemplate
