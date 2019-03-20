@@ -51,13 +51,13 @@ exports.onCreateNode = ({ node, actions, getNode, reporter }) => {
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
 
-  const tagsArchiveTemplate = path.resolve(
+  const TAGS_ARCHIVE_TEMPLATE = path.resolve(
     `src/templates/TagsArchiveTemplate/index.js`
   )
-  const articleDetailTemplate = path.resolve(
-    `src/templates/ArticleDetailTemplate/index.js`
+  const ARTICLE_OVERVIEW_TEMPLATE = path.resolve(
+    `src/templates/ArticleOverviewTemplate/index.js`
   )
-  const articlesListTemplate = path.resolve(
+  const ARTICLES_LIST_TEMPLATE = path.resolve(
     `src/templates/ArticlesListTemplate/index.js`
   )
 
@@ -116,7 +116,7 @@ exports.createPages = ({ actions, graphql }) => {
     createPaginatedPages({
       edges: listArticles,
       createPage: createPage,
-      pageTemplate: articlesListTemplate,
+      pageTemplate: ARTICLES_LIST_TEMPLATE,
       pageLength: 9,
       pathPrefix: '/articles/',
       buildPath: (index, pathPrefix) =>
@@ -132,7 +132,7 @@ exports.createPages = ({ actions, graphql }) => {
 
       createPage({
         path: slug,
-        component: articleDetailTemplate,
+        component: ARTICLE_OVERVIEW_TEMPLATE,
         context: {
           slug,
         },
@@ -143,7 +143,7 @@ exports.createPages = ({ actions, graphql }) => {
     listTags.forEach(tag => {
       createPage({
         path: `/archive-tags/${_.kebabCase(tag.node.id)}/`,
-        component: tagsArchiveTemplate,
+        component: TAGS_ARCHIVE_TEMPLATE,
         context: {
           tag: tag.node.id,
           tagContend: tag.node,

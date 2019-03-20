@@ -45,23 +45,15 @@ class IndexPage extends React.Component {
             <UndrawOrganizingProjects primaryColor="#39d996" height="250px" />
           </Grid>
           <Grid item md={4} sm={12} className={styles.sectionCodingText}>
-            <Typography variant="h4" gutterBottom>
-              Siéntete libre de aportar lo que quieras.
+            <Typography component="h2" variant="h3" gutterBottom>
+              ¿Qué es codea ?
             </Typography>
 
-            <Typography variant="body1" gutterBottom>
-              Codea un sitio desarrollado con{' '}
-              <a
-                rel="noopener noreferrer"
-                alt="Gatsby"
-                target="_blank"
-                href="https://www.gatsbyjs.org/">
-                Gatsby
-              </a>{' '}
-              que está pensado para cualquier desarrollador que quiera compartir
-              sus experiencias con código, desde como soluciono un problema,
-              hasta crear un artículo sobre cualquier lenguaje de programación,
-              totalmente en español.
+            <Typography component="p" variant="body1" gutterBottom align="left">
+              Codea es un proyecto que nace para poder compartir libremente
+              experiencias con desarrollo de software, desde cómo solucionaste
+              un problema hasta crear artículos de cualquier lenguaje totalmente
+              en español
             </Typography>
           </Grid>
         </Grid>
