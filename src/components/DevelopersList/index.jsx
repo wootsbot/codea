@@ -12,6 +12,7 @@ import styles from './styles.module.scss'
 class DevelopersList extends React.PureComponent {
   static propTypes = {
     developers: PropTypes.array,
+    width: PropTypes.string,
   }
 
   render() {
@@ -36,7 +37,8 @@ class DevelopersList extends React.PureComponent {
             align="center"
             component="p"
             variant="body1"
-            gutterBottom>
+            gutterBottom
+            color="textSecondary">
             El equipo de codea es una gran comunidad que le apaciona
             desarrolladar el futuro de la web.
           </Typography>
@@ -46,7 +48,7 @@ class DevelopersList extends React.PureComponent {
           <Button
             target="_blank"
             href="https://github.com/codea-team/codea/graphs/contributors"
-            variant="outlined"
+            color="secondary"
             size="large"
             className={styles.teamBtn}>
             Conocer más de la comunidad
@@ -64,16 +66,15 @@ class DevelopersList extends React.PureComponent {
               className={styles.developerGridItem}
               key={developer.node.id}
               item
+              lg={3}
               md={4}
-              sm={12}>
+              sm={6}>
               <Developer
                 fulName={`${developer.node.firstName} ${
                   developer.node.lastName
                 }`}
                 avatar={developer.node.avatar.childImageSharp.fixed}
-                location={developer.node.location}
                 bio={developer.node.bio}
-                codeRole={developer.node.codeRole}
               />
             </Grid>
           ))}

@@ -23,7 +23,12 @@ function WelcomePrHome() {
       </Grid>
 
       <Grid item md={6} sm={12}>
-        <Typography align="center" component="p" variant="body1" gutterBottom>
+        <Typography
+          align="center"
+          component="p"
+          variant="body1"
+          gutterBottom
+          color="textSecondary">
           Quizás ya tengas un artículo o quieras crearlo y compartir, para eso
           siéntete libre de ir al repositorio de codea donde podrás crear tus
           pull requests y aportar con la comunidad.

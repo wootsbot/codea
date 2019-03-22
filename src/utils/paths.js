@@ -17,10 +17,30 @@ export const getKeyPath = {
 }
 
 export const getPaths = [
-  { label: LABEL_ARTICLES, patch: PATCH_ARTICLES, active: true },
-  { label: LABEL_NEWS, patch: PATCH_NEWS, active: true },
-  { label: LABEL_CONTRIBUTE, patch: PATCH_CONTRIBUTE, active: true },
-  { label: LABEL_COURSES, patch: PATCH_TUTORIALS, active: true },
+  {
+    label: LABEL_ARTICLES,
+    patch: PATCH_ARTICLES,
+    active: true,
+    disable: false,
+  },
+  {
+    label: LABEL_NEWS,
+    patch: PATCH_NEWS,
+    active: true,
+    disable: true,
+  },
+  {
+    label: LABEL_CONTRIBUTE,
+    patch: PATCH_CONTRIBUTE,
+    active: true,
+    disable: true,
+  },
+  {
+    label: LABEL_COURSES,
+    patch: PATCH_TUTORIALS,
+    active: true,
+    disable: true,
+  },
 ]
 
 export function getPathsActives(getPaths) {

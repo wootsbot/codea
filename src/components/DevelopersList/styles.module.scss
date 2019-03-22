@@ -1,7 +1,6 @@
 @import 'styles/theme';
 
 .developers-section {
-  background-color: $color-white;
   padding: 80px 0;
 
   @include breakpoint-sm-down() {
@@ -21,10 +20,19 @@
   @include breakpoint-sm-down() {
     margin-bottom: 36px !important;
   }
+
+  &-xs {
+    width: 100%;
+  }
 }
 
 .team-btn {
+  background-color: rgba(37, 194, 157, 0.08) !important;
   min-width: 350px !important;
   min-height: 60px !important;
   margin: 0 0 80px 0 !important;
+
+  &:hover {
+    background-color: rgba(21, 194, 154, 0.219) !important;
+  }
 }

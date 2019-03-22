@@ -25,8 +25,13 @@ small {
 
 .tag-styles {
   &-codea {
-    background-color: #4caf50 !important;
-    color: #ffffff !important;
+    background-color: #80e27e !important;
+    color: #000000 !important;
+  }
+
+  &-reactjs {
+    background-color: #272c34 !important;
+    color: #5bcceb !important;
   }
 
   &-python {
@@ -43,12 +48,13 @@ small {
 // styles for render of markdown
 .codea-article-details-markdown {
   a {
-    font-size: 145%;
-    text-decoration: none;
-    transition: all 100ms cubic-bezier(0.4, 0, 0.2, 1);
-    border-bottom: 1px solid #98e6c5;
-    box-shadow: inset 0 -2px 0px 0px #98e6c5;
-    font-weight: bold;
+    font-weight: 800;
+    text-decoration: underline;
+    color: $secondary-text-color;
+
+    &:hover {
+      text-decoration: none;
+    }
   }
 
   ol {

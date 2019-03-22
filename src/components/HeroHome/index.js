@@ -55,14 +55,15 @@ const HeroHome = () => (
           variant="body1"
           gutterBottom
           align="center"
-          className={styles.textWelcome}>
+          className={styles.textWelcome}
+          color="textSecondary">
           Codea, un proyecto de código abierto. Si te encanta compartir
           conocimiento y participar en proyectos con otros desarrolladores.
           Hemos decidido crear este proyecto para cualquier persona que quiera
           colaborar.
         </Typography>
 
-        <Fab color="primary" aria-label="CODEA TO LINK" href="#start-codea">
+        <Fab color="primary" aria-label="CODEA TO LINK" href="#what-codea">
           <IconKeyboardArrowDown />
         </Fab>
       </Grid>
