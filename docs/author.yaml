@@ -13,3 +13,12 @@
   bio: Software Engineer
   avatar: avatars/martin-rodriguez.jpg
   gitLab: https://gitlab.com/slackmart
+
+- id: darcusfenix
+  firstName: Juan
+  lastName: Crisóstomo
+  bio: JavaScript Developer
+  avatar: avatars/juan-crisostomo.jpg
+  twitter: '@DARCUSFENIX'
+  github: https://github.com/DARCUSFENIX
+  gitLab: https://gitlab.com/DARCUSFENIX
