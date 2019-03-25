@@ -6,9 +6,9 @@ export const muiTheme = {
       dark: '#000000',
     },
     secondary: {
-      light: '#80e27e',
-      main: '#4caf50',
-      dark: '#087f23',
+      light: '#e7fff9',
+      main: '#25c29d',
+      dark: '#00916f',
     },
   },
   typography: {

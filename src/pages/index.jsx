@@ -2,11 +2,13 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import { graphql } from 'gatsby'
+import { Link } from 'gatsby'
 
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
+import TrendingFlatTwoTone from '@material-ui/icons/TrendingFlatTwoTone'
 
-import { UndrawOrganizingProjects } from 'react-undraw-illustrations'
+import SvgwhatCodea from 'images/svg/what_codea.svg'
 
 import Layout from 'components/Layout'
 import HeroHome from 'components/HeroHome'
@@ -32,32 +34,49 @@ class IndexPage extends React.Component {
         descriptionContent={siteMetadata.description}>
         <HeroHome />
 
-        <WelcomePrHome />
-
         <Grid
+          id="what-codea"
           component="section"
-          className={styles.sectionCoding}
+          className={styles.sectionWhatCodea}
           container
           direction="row"
-          justify="space-evenly"
+          justify="space-around"
           alignItems="center">
-          <Grid item md={3} sm={12}>
-            <UndrawOrganizingProjects primaryColor="#39d996" height="250px" />
+          <Grid item md={3} sm={4}>
+            <img
+              src={SvgwhatCodea}
+              alt="LOGO CODEA"
+              className={styles.sectionWhatCodeaCover}
+            />
           </Grid>
-          <Grid item md={4} sm={12} className={styles.sectionCodingText}>
+
+          <Grid item md={4} sm={12} className={styles.sectionWhatCodeaText}>
             <Typography component="h2" variant="h3" gutterBottom>
               ¿Qué es codea ?
             </Typography>
 
-            <Typography component="p" variant="body1" gutterBottom align="left">
+            <Typography
+              component="p"
+              variant="body1"
+              gutterBottom
+              color="textSecondary">
               Codea es un proyecto que nace para poder compartir libremente
               experiencias con desarrollo de software, desde cómo solucionaste
               un problema hasta crear artículos de cualquier lenguaje totalmente
               en español
             </Typography>
+
+            <Link
+              to="/articles/2018-11-16-que-es-codea"
+              className={styles.sectionWhatCodeaMore}>
+              Leer más de codea <TrendingFlatTwoTone />
+            </Link>
           </Grid>
         </Grid>
+
         <DevelopersList developers={edgesDevelopers} />
+
+        <WelcomePrHome />
       </Layout>
     )
   }
@@ -78,7 +97,7 @@ export const pageQuery = graphql`
           codeRole
           avatar {
             childImageSharp {
-              fixed(width: 70, height: 70, quality: 100) {
+              fixed(width: 55, height: 55, quality: 100) {
                 ...GatsbyImageSharpFixed
               }
             }

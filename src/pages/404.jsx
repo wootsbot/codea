@@ -32,7 +32,7 @@ class NotFoundPage extends React.PureComponent {
 
           <Typography
             className={styles.page404ContentMessage}
-            variant="h4"
+            variant="h5"
             gutterBottom>
             Estamos junto con la comunidad trabajando en la página.
           </Typography>
@@ -47,7 +47,7 @@ class NotFoundPage extends React.PureComponent {
 
           <Typography
             className={styles.page404ContentHello}
-            variant="subtitle1"
+            variant="subtitle2"
             gutterBottom>
             codea.com.mx
           </Typography>

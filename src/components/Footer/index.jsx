@@ -15,9 +15,9 @@ function Footer() {
       <div className={styles.footer}>
         <div className={styles.codea}>
           <img src={code} alt="code" className={styles.code} />
-          <span>With</span>
+          <span>Con</span>
           <img src={heart} alt="code" className={styles.heart} />
-          <span>By</span>
+          <span>=</span>
           <img src={logo} alt="Logo Codea" className={styles.logo} />
           <strong>Codea</strong>
         </div>
@@ -35,7 +35,7 @@ function Footer() {
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://twitter.com/wootsbot"
+              href="https://twitter.com/codea_oficial"
               title="Codea Twitter"
               className={styles.redSocial}>
               <img src={twitter} alt="twitter" />
@@ -43,7 +43,7 @@ function Footer() {
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://github.com/wootsbot"
+              href="https://github.com/codea-team"
               title="Codea github"
               className={styles.redSocial}>
               <img src={github} alt="github" />
@@ -51,7 +51,7 @@ function Footer() {
           </div>
           <div className={styles.rights}>
             © 2019
-            <strong> Codea</strong>, all rights reserved
+            <strong> Codea</strong>, Todos los derechos reservados
           </div>
         </div>
       </div>

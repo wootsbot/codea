@@ -1,8 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import StarsTwoToneIcon from '@material-ui/icons/StarsTwoTone'
-import LocationOnTwoToneIcon from '@material-ui/icons/LocationOnTwoTone'
+import clsx from 'clsx'
+
+import withWidth from '@material-ui/core/withWidth'
+import Typography from '@material-ui/core/Typography'
 
 import Img from 'gatsby-image'
 
@@ -11,35 +13,36 @@ import styles from './styles.module.scss'
 class Developer extends React.PureComponent {
   static propTypes = {
     bio: PropTypes.string,
+    width: PropTypes.string,
     fulName: PropTypes.string.isRequired,
-    codeRole: PropTypes.string,
-    location: PropTypes.string,
     avatar: PropTypes.object.isRequired,
   }
 
   render() {
-    const { avatar, fulName, codeRole, location, bio } = this.props
+    const { avatar, fulName, bio, width } = this.props
 
     return (
-      <div className={styles.developer}>
-        <Img alt="developer" fixed={avatar} className={styles.avatar} />
+      <div
+        className={clsx(styles.developer, {
+          [styles.developerColumn]: width != 'lg' && width != 'xl',
+        })}>
+        <Img alt="developer" fixed={avatar} className={styles.developerCover} />
 
-        <span className={styles.developerFullName}>{fulName}</span>
+        <div
+          className={clsx(styles.developerDetails, {
+            [styles.developerDetailsNotMargin]: width != 'lg' && width != 'xl',
+          })}>
+          <Typography component="h6" variant="subtitle1" color="textSecondary">
+            {fulName}
+          </Typography>
 
-        <div className={styles.developerIconContainer}>
-          <StarsTwoToneIcon />
-          <span className={styles.developerRole}>{codeRole}</span>
+          <Typography component="h6" variant="caption" color="textSecondary">
+            {bio}
+          </Typography>
         </div>
-
-        <div className={styles.developerIconContainer}>
-          <LocationOnTwoToneIcon />
-          <span className={styles.developerLocation}>{location}</span>
-        </div>
-
-        <p className={styles.developerBio}>{bio}</p>
       </div>
     )
   }
 }
 
-export default Developer
+export default withWidth()(Developer)
