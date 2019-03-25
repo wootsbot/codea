@@ -26,7 +26,8 @@ class SideBar extends React.PureComponent {
             <NavItem
               key={path.patch}
               href={path.patch}
-              iconComponent={iconsOfPath[path.patch]}>
+              iconComponent={iconsOfPath[path.patch]}
+              disable={path.disable}>
               {path.label}
             </NavItem>
           ))}

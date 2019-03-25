@@ -25,6 +25,10 @@ $transition: 0.2s ease;
       color: $primary-light-color !important;
     }
   }
+
+  &-disable {
+    pointer-events: none;
+  }
 }
 
 .item-link {
@@ -37,6 +41,11 @@ $transition: 0.2s ease;
   line-height: 1.5rem;
   letter-spacing: 0.01562rem;
   padding: 2.4rem 2.4rem;
+
+  &-disable {
+    pointer-events: none;
+    color: $color-disable;
+  }
 }
 
 .logo {
@@ -46,7 +55,7 @@ $transition: 0.2s ease;
 }
 
 .logo-image {
-  height: 8rem;
+  height: 6rem;
   margin-right: 0.8rem;
   width: auto;
 }

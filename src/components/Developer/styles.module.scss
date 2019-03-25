@@ -2,49 +2,26 @@
 
 .developer {
   display: flex;
-  flex-direction: column;
   align-items: center;
-}
+  padding: 1.6rem;
 
-.avatar {
-  border-radius: 50px;
-  margin-bottom: 20px;
-}
+  &--column {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
 
-.developer-fullName {
-  font-size: $font-text-medium-size;
-  font-family: $font-medium-family;
-  color: $primary-dark-color;
-  font-weight: bold;
-  text-transform: uppercase;
-}
+  &--details {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1.5rem;
 
-.developer-icon-container {
-  display: flex;
-  align-items: center;
-  color: $color-link;
-}
+    &-not-margin {
+      margin: 0;
+    }
+  }
 
-.developer-role {
-  font-size: $font-caption-size;
-  font-family: $font-light-family;
-  color: $primary-light-color;
-  font-style: italic;
-  line-height: 2;
-  margin-left: 8px;
-}
-
-.developer-location {
-  font-size: $font-text-small-size;
-  font-family: $font-bold-family;
-  color: $primary-dark-color;
-  margin-left: 8px;
-}
-
-.developer-bio {
-  font-size: $font-caption-size;
-  font-family: $font-code-family;
-  color: $primary-dark-color;
-  margin: 16px 0;
-  text-align: center;
+  &--cover {
+    border-radius: 50%;
+  }
 }

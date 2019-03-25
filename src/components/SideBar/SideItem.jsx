@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import { Link } from 'gatsby'
+import classnames from 'classnames'
 
 import { muiTheme } from 'utils/muiTheme'
 
@@ -12,20 +13,26 @@ export class NavItem extends React.PureComponent {
     children: PropTypes.node,
     href: PropTypes.string,
     iconComponent: PropTypes.node,
+    disable: PropTypes.bool,
   }
 
   assignActiveStyles = ({ isPartiallyCurrent }) =>
     isPartiallyCurrent ? { style: stylesUI.navItem.active } : {}
 
   render() {
-    const { href, children, iconComponent } = this.props
+    const { href, children, iconComponent, disable } = this.props
 
     return (
-      <li className={styles.item}>
+      <li
+        className={classnames(styles.item, {
+          [styles.itemDisable]: disable,
+        })}>
         <Link
           to={href}
           getProps={this.assignActiveStyles}
-          className={styles.itemLink}>
+          className={classnames(styles.itemLink, {
+            [styles.itemLinkDisable]: disable,
+          })}>
           <span className={styles.iconComponent}>{iconComponent}</span>
           {children}
         </Link>

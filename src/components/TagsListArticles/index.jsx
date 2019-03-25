@@ -23,6 +23,7 @@ class TagsListArticles extends React.PureComponent {
         <div className={styles.sectionTagsList}>
           {tags.map(item => (
             <Button
+              color="primary"
               key={item.node.id}
               className={clsx(
                 styles.tagItem,
