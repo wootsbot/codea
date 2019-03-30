@@ -23,28 +23,6 @@ small {
   font-size: $font-text-small-size;
 }
 
-.tag-styles {
-  &-codea {
-    background-color: #80e27e !important;
-    color: #000000 !important;
-  }
-
-  &-reactjs {
-    background-color: #272c34 !important;
-    color: #5bcceb !important;
-  }
-
-  &-python {
-    background-color: #ffd343 !important;
-    color: #000000 !important;
-  }
-
-  &-git {
-    background-color: #f14e32 !important;
-    color: #000000 !important;
-  }
-}
-
 // styles for render of markdown
 .codea-article-details-markdown {
   a {
