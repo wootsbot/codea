@@ -33,7 +33,7 @@ export const getPaths = [
     label: LABEL_CONTRIBUTE,
     path: PATH_CONTRIBUTE,
     active: true,
-    disable: true,
+    disable: false,
   },
   {
     label: LABEL_COURSES,
