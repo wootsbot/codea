@@ -1,8 +1,8 @@
-export const PATCH_ARTICLES = '/articles/'
-export const PATCH_NEWS = '/news/'
-export const PATCH_CONTRIBUTE = '/contribute/'
-export const PATCH_TUTORIALS = '/tutorials/'
-export const PATCH_ARCHIVE_TAGS = '/archive-tags/'
+export const PATH_ARTICLES = '/articles/'
+export const PATH_NEWS = '/news/'
+export const PATH_CONTRIBUTE = '/contribute/'
+export const PATH_TUTORIALS = '/tutorials/'
+export const PATH_ARCHIVE_TAGS = '/archive-tags/'
 
 const LABEL_ARTICLES = 'Articulos'
 const LABEL_NEWS = 'Noticias'
@@ -10,34 +10,34 @@ const LABEL_CONTRIBUTE = 'Contribuir'
 const LABEL_COURSES = 'Cursos'
 
 export const getKeyPath = {
-  PATCH_ARTICLES,
-  PATCH_NEWS,
-  PATCH_CONTRIBUTE,
-  PATCH_TUTORIALS,
+  PATH_ARTICLES,
+  PATH_NEWS,
+  PATH_CONTRIBUTE,
+  PATH_TUTORIALS,
 }
 
 export const getPaths = [
   {
     label: LABEL_ARTICLES,
-    patch: PATCH_ARTICLES,
+    path: PATH_ARTICLES,
     active: true,
     disable: false,
   },
   {
     label: LABEL_NEWS,
-    patch: PATCH_NEWS,
+    path: PATH_NEWS,
     active: true,
     disable: true,
   },
   {
     label: LABEL_CONTRIBUTE,
-    patch: PATCH_CONTRIBUTE,
+    path: PATH_CONTRIBUTE,
     active: true,
-    disable: true,
+    disable: false,
   },
   {
     label: LABEL_COURSES,
-    patch: PATCH_TUTORIALS,
+    path: PATH_TUTORIALS,
     active: true,
     disable: true,
   },

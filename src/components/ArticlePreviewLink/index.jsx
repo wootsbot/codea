@@ -7,7 +7,7 @@ import Img from 'gatsby-image'
 
 import Typography from '@material-ui/core/Typography'
 
-import { PATCH_ARCHIVE_TAGS } from 'utils/paths'
+import { PATH_ARCHIVE_TAGS } from 'utils/paths'
 
 import styles from './styles.module.scss'
 
@@ -55,7 +55,7 @@ class ArticlePreviewLink extends React.PureComponent {
 
             <div className={styles.articleAuthorTags}>
               {tags.map(tag => (
-                <Link to={`${PATCH_ARCHIVE_TAGS}${kebabCase(tag)}`} key={tag}>
+                <Link to={`${PATH_ARCHIVE_TAGS}${kebabCase(tag)}`} key={tag}>
                   <small style={{ marginRight: '5px' }}>{`${tag}`}</small>
                 </Link>
               ))}

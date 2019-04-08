@@ -7,7 +7,7 @@ import kebabCase from 'lodash/kebabCase'
 import Button from '@material-ui/core/Button'
 import { withStyles } from '@material-ui/styles'
 
-import { PATCH_ARCHIVE_TAGS } from 'utils/paths'
+import { PATH_ARCHIVE_TAGS } from 'utils/paths'
 
 import { VARIANT_BACKGROUND, VARIANT_COLOR } from './constants'
 
@@ -45,7 +45,7 @@ class TagButton extends React.PureComponent {
         size="small"
         variant="contained"
         variantColor={children}
-        href={`${PATCH_ARCHIVE_TAGS}${kebabCase(children)}`}>
+        href={`${PATH_ARCHIVE_TAGS}${kebabCase(children)}`}>
         {children}
       </StyledButton>
     )
