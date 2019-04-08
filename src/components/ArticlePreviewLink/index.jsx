@@ -1,14 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import kebabCase from 'lodash/kebabCase'
 import { Link } from 'gatsby'
 import Img from 'gatsby-image'
+import kebabCase from 'lodash/kebabCase'
 
 import Typography from '@material-ui/core/Typography'
 
 import { PATH_ARCHIVE_TAGS } from 'utils/paths'
 
+import DateFormat from 'components/DateFormat'
 import styles from './styles.module.scss'
 
 class ArticlePreviewLink extends React.PureComponent {
@@ -50,7 +51,9 @@ class ArticlePreviewLink extends React.PureComponent {
             </small>
 
             <small>
-              <time className={styles.articleAuthorInfoDate}>{date}</time>
+              <time className={styles.articleAuthorInfoDate}>
+                <DateFormat date={date} format="ll" />
+              </time>
             </small>
 
             <div className={styles.articleAuthorTags}>

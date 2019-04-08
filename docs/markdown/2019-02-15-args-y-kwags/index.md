@@ -1,5 +1,6 @@
 ---
 date: '2019-02-15'
+latestUpdateDate: '2019-02-15'
 title: 'Uso de args y kwargs en python'
 author: slackmart
 tags: ['python', 'kwargs', 'args']
@@ -15,7 +16,6 @@ fácil de extender.
 En esta ocasión les presento un ejemplo práctico donde exploraremos el uso de
 los argumentos llamados args, y kwargs (cabe mencionar que no son palabras
 reservadas del lenguaje, pero **se considera buena práctica nombrarlos como tal**).
-
 
 Empecemos con una función básica cuya tarea es hacer una petición al servicio
 REST de stackoverflow.
@@ -45,7 +45,6 @@ nos permite conectar a stackoverflow y extraer la información que necesitamos.
 
 A destacar que para este requerimento en específico necesitamos tres _términos de búsqueda_,
 además de la URL (líneas 6-10).
-
 
 ## Cambiar los parámetros dinámicamente
 
@@ -79,7 +78,6 @@ Los parámetros se usan como se muestra en las líneas 6 y 8.
 R: ¡Sí!, más parámetros. Eso está bien... a no ser que el número de parámetros sea
 mayor que cinco (¡qué es otra convención para mantener el código lo más limpio posible!).
 Y si... además de eso nos preocupa mantener la compatibilidad de nuestro código: **¡kwargs al rescate!**
-
 
 ```python{19-23,35-39}{numberLines: true}
 from datetime import datetime, timezone, timedelta
@@ -140,7 +138,6 @@ la información de la página 3 de un día antes (al momento de ejetutar el prog
 
 R: Cualquiera que tenga la sintaxis: `var_name='value'` va a poder ser empleado
 dentro de la función usando `kwargs.get('var_name')`.
-
 
 ... y ¿qué hay de los `*args` que se mencionan en el título del artículo?
 
@@ -240,8 +237,7 @@ Nota:
 
 ## Conoce más sobre el API de stackexchange
 
-* https://stackexchange.com/sites
-* https://api.stackexchange.com/docs/questions
-
+- https://stackexchange.com/sites
+- https://api.stackexchange.com/docs/questions
 
 ### ¡Hasta la próxima!

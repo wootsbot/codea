@@ -63,7 +63,7 @@ exports.createPages = ({ actions, graphql }) => {
 
   return graphql(`
     {
-      posts: allMarkdownRemark(sort: { fields: [frontmatter___date] }) {
+      posts: allMarkdownRemark(sort: { fields: [frontmatter___latestUpdateDate] }) {
         edges {
           node {
             id
@@ -72,7 +72,8 @@ exports.createPages = ({ actions, graphql }) => {
             }
             excerpt(pruneLength: 200)
             frontmatter {
-              date(formatString: "MMMM DD, YYYY")
+              date
+              latestUpdateDate
               title
               tags
               author {
