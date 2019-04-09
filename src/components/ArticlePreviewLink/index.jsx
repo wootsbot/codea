@@ -14,6 +14,7 @@ import styles from './styles.module.scss'
 
 class ArticlePreviewLink extends React.PureComponent {
   static propTypes = {
+    userId: PropTypes.string,
     fullName: PropTypes.string,
     to: PropTypes.string,
     title: PropTypes.string,
@@ -24,7 +25,16 @@ class ArticlePreviewLink extends React.PureComponent {
   }
 
   render() {
-    const { title, fullName, avatar, date, to, tags, excerpt } = this.props
+    const {
+      title,
+      userId,
+      fullName,
+      avatar,
+      date,
+      to,
+      tags,
+      excerpt,
+    } = this.props
 
     return (
       <article>
@@ -47,7 +57,7 @@ class ArticlePreviewLink extends React.PureComponent {
 
           <div className={styles.articleAuthorInfo}>
             <small>
-              <Link to="/">{fullName}</Link>
+              <Link to={`/contributors/${kebabCase(userId)}`}>{fullName}</Link>
             </small>
 
             <small>

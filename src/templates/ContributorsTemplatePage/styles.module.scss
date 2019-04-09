@@ -1,0 +1,66 @@
+@import 'styles/theme';
+
+.contributors {
+  max-width: 80rem;
+  position: relative;
+  margin: 0px auto;
+  padding: 2.5rem 0.2rem 5rem;
+
+  &--user {
+    display: flex;
+    align-items: center;
+
+    &-avatarContainer {
+      width: 23%;
+    }
+
+    &-avatar {
+      border-radius: 50%;
+    }
+
+    &-details {
+      width: 77%;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &--languages {
+    display: flex;
+    align-items: center;
+    margin-top: 3.6rem;
+
+    &-language {
+      display: flex;
+      align-items: center;
+      margin-right: 2rem;
+
+      &-icon {
+        width: 2rem;
+      }
+
+      &-text {
+        margin-left: 0.2rem !important;
+      }
+    }
+  }
+
+  &--tabs {
+    margin-top: 3.6rem;
+  }
+}
+
+.tab {
+  &--container {
+    margin-top: 2rem;
+    padding: 2rem;
+  }
+
+  &--article {
+    &-linkContainer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+}
