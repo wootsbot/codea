@@ -1,6 +1,6 @@
 ---
 date: '2018-12-18'
-updateDate: '2019-03-12'
+latestUpdateDate: '2019-03-12'
 title: 'Ejemplos de sintaxis de código para codea'
 author: woostbot
 tags: ['codea']

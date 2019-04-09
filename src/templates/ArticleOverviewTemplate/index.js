@@ -34,7 +34,10 @@ function ArticleOverviewTemplate({ data, location }) {
         <meta name="author" content={frontmatter.author.id} />
         <meta name="twitter:label1" content="Reading time" />
         <meta name="twitter:data1" content={`${timeToRead} min read`} />
-        <meta name="article:published_time" content={frontmatter.date} />
+        <meta
+          name="article:published_time"
+          content={frontmatter.latestUpdateDate}
+        />
         <meta
           property="og:image"
           content={`https://codea.com.mx${imageDefault}`}
@@ -47,7 +50,7 @@ function ArticleOverviewTemplate({ data, location }) {
 
       <ArticleOverview
         title={frontmatter.title}
-        date={frontmatter.date}
+        date={frontmatter.latestUpdateDate}
         author={frontmatter.author}
         slug={slug}
         html={{ __html: html }}
@@ -71,7 +74,8 @@ export const pageQuery = graphql`
       }
       excerpt(pruneLength: 200)
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
+        date
+        latestUpdateDate
         title
         author {
           id
@@ -81,7 +85,7 @@ export const pageQuery = graphql`
           twitter
           avatar {
             childImageSharp {
-              fixed(width: 32, height: 32) {
+              fixed(width: 55, height: 55) {
                 ...GatsbyImageSharpFixed
               }
             }

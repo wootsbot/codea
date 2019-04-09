@@ -79,6 +79,8 @@
     "gatsby-transformer-sharp": "^2.1.17",
     "gatsby-transformer-yaml": "^2.1.8",
     "jss": "^9.8.7",
+    "moment": "^2.24.0",
+    "moment-timezone": "^0.5.23",
     "parse-filepath": "^1.0.2",
     "prismjs": "^1.15.0",
     "prop-types": "^15.7.2",

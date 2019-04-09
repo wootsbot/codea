@@ -26,7 +26,7 @@ class ArticlesList extends React.PureComponent {
         title={frontmatter.title}
         fullName={`${author.firstName} ${author.lastName}`}
         avatar={childImageSharp.fixed}
-        date={frontmatter.date}
+        date={frontmatter.latestUpdateDate}
         excerpt={node.excerpt}
         tags={frontmatter.tags}
       />
