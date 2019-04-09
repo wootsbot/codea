@@ -10,6 +10,7 @@ module.exports = {
     'MarkdownRemark.frontmatter.author': `AuthorYaml`,
     TagsYaml: `TagsYaml`,
     DevelopersYaml: `DevelopersYaml`,
+    LanguagesYaml: `LanguagesYaml`,
   },
   plugins: [
     {
