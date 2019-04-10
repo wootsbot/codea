@@ -47,7 +47,7 @@ class HeaderDetail extends React.PureComponent {
                 {`${author.firstName} ${author.lastName}`}
               </Typography>
 
-              <Adjust className={clsx(styles.space, styles.authorMobile)} />
+              <span className={clsx(styles.space, styles.authorMobile)}>•</span>
 
               <Typography variant="subtitle2" className={styles.authorMobile}>
                 {author.bio}
@@ -61,7 +61,7 @@ class HeaderDetail extends React.PureComponent {
                     <DateFormat date={date} format="ll" />
                   </time>
 
-                  <Adjust className={styles.space} />
+                  <span className={styles.space}>•</span>
 
                   <time>
                     <DateFormat date={date} format="ll" fromNow />

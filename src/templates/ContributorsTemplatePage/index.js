@@ -1,31 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { graphql, Link } from 'gatsby'
+import { graphql } from 'gatsby'
 
-import Img from 'gatsby-image'
-import Typography from '@material-ui/core/Typography'
 import Tabs from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
-import Paper from '@material-ui/core/Paper'
-
-import List from '@material-ui/core/List'
-import ListItem from '@material-ui/core/ListItem'
-import ListItemText from '@material-ui/core/ListItemText'
-import ListItemIcon from '@material-ui/core/ListItemIcon'
-import Divider from '@material-ui/core/Divider'
-
-import IconNook from '@material-ui/icons/BookTwoTone'
 
 import Layout from 'components/Layout'
-import DateFormat from 'components/DateFormat'
+import Contributor from 'components/Contributor'
 
+import ArticlesList from './ArticlesList'
 import styles from './styles.module.scss'
-
-// temporals
-import nodejs from 'images/svg/languages/nodejs.svg'
-import jest from 'images/svg/languages/jest.svg'
-import reactjs from 'images/svg/languages/reactjs.svg'
 
 class ContributorsTemplatePage extends React.Component {
   static propTypes = {
@@ -44,79 +29,25 @@ class ContributorsTemplatePage extends React.Component {
     const { value } = this.state
     const { data } = this.props
 
-    const { authorYaml: contributor, allMarkdownRemark } = data
+    const {
+      authorYaml: contributor,
+      allMarkdownRemark,
+      allLanguagesYaml,
+    } = data
     const articles = allMarkdownRemark.edges
+    const languages = allLanguagesYaml.edges
 
     return (
       <Layout marginTop footer={false}>
         <div className={styles.contributors}>
-          <div className={styles.contributorsUser}>
-            <div className={styles.contributorsUserAvatarContainer}>
-              <Img
-                alt="avatar author"
-                className={styles.contributorsUserAvatar}
-                fixed={contributor.avatar.childImageSharp.fixed}
-              />
-            </div>
-
-            <div className={styles.contributorsUserDetails}>
-              <Typography component="h1" variant="h5" gutterBottom>
-                {`@${contributor.id}`}
-              </Typography>
-
-              <Typography variant="subtitle1" gutterBottom>
-                {`${contributor.firstName} ${contributor.lastName}`}
-              </Typography>
-
-              <Typography variant="caption" gutterBottom>
-                {contributor.bioFull}
-              </Typography>
-            </div>
-          </div>
-
-          <div className={styles.contributorsLanguages}>
-            <div className={styles.contributorsLanguagesLanguage}>
-              <img
-                src={nodejs}
-                alt=""
-                className={styles.contributorsLanguagesLanguageIcon}
-              />
-
-              <Typography
-                variant="h6"
-                className={styles.contributorsLanguagesLanguageText}>
-                nodejs
-              </Typography>
-            </div>
-
-            <div className={styles.contributorsLanguagesLanguage}>
-              <img
-                src={jest}
-                alt=""
-                className={styles.contributorsLanguagesLanguageIcon}
-              />
-
-              <Typography
-                variant="h6"
-                className={styles.contributorsLanguagesLanguageText}>
-                jest
-              </Typography>
-            </div>
-
-            <div className={styles.contributorsLanguagesLanguage}>
-              <img
-                src={reactjs}
-                alt=""
-                className={styles.contributorsLanguagesLanguageIcon}
-              />
-
-              <Typography
-                variant="h6"
-                className={styles.contributorsLanguagesLanguageText}>
-                reactjs
-              </Typography>
-            </div>
-          </div>
+          <Contributor
+            id={contributor.id}
+            avatar={contributor.avatar.childImageSharp.fixed}
+            fullName={`${contributor.firstName} ${contributor.lastName}`}
+            bioFull={contributor.bioFull}
+            bio={contributor.bio}
+            languages={languages}
+          />
 
           <Tabs
             value={value}
@@ -126,55 +57,12 @@ class ContributorsTemplatePage extends React.Component {
             variant="fullWidth"
             className={styles.contributorsTabs}>
             <Tab label="Articulos" />
-            <Tab label="Historias" />
-            <Tab label="Otros" />
+            <Tab label="Historias" disabled />
+            <Tab label="Otros" disabled />
           </Tabs>
 
           {value === 0 && (
-            <Paper elevation={2} className={styles.tabContainer}>
-              <List>
-                {articles.map(article => {
-                  if (article.node.frontmatter.author) {
-                    if (article.node.frontmatter.author.id === contributor.id) {
-                      return (
-                        <React.Fragment key={article.node.fields.slug}>
-                          <ListItem alignItems="flex-start">
-                            <ListItemIcon>
-                              <IconNook />
-                            </ListItemIcon>
-                            <ListItemText
-                              primary={
-                                <div className={styles.tabArticleLinkContainer}>
-                                  <Link to={article.node.fields.slug}>
-                                    {article.node.frontmatter.title}
-                                  </Link>
-
-                                  <Typography
-                                    component="time"
-                                    variant="caption"
-                                    color="textSecondary">
-                                    <DateFormat
-                                      date={
-                                        article.node.frontmatter
-                                          .latestUpdateDate
-                                      }
-                                      format="ll"
-                                    />
-                                  </Typography>
-                                </div>
-                              }
-                              secondary={article.node.excerpt}
-                            />
-                          </ListItem>
-                          <Divider />
-                        </React.Fragment>
-                      )
-                    }
-                  }
-                  return null
-                })}
-              </List>
-            </Paper>
+            <ArticlesList articles={articles} contributorId={contributor.id} />
           )}
         </div>
       </Layout>
@@ -189,14 +77,27 @@ export const pageQuery = graphql`
       firstName
       lastName
       bioFull
+      bio
       avatar {
         childImageSharp {
-          fixed(width: 150, height: 150, quality: 100) {
-            tracedSVG
-            width
-            height
-            src
-            srcSet
+          fixed(width: 230, height: 230, quality: 100) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+    }
+
+    allLanguagesYaml(filter: { writeAuthors: { eq: $slug } }) {
+      edges {
+        node {
+          id
+          name
+          image {
+            childImageSharp {
+              fixed(width: 20, height: 20, quality: 100) {
+                ...GatsbyImageSharpFixed
+              }
+            }
           }
         }
       }
