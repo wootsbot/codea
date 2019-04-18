@@ -1,7 +1,7 @@
 - id: language-codea
   name: codea
   image: images/codea.png
-  description: Codea es un proyecto que nace para poder compartir libremente experiencias con desarrollo de software, desde como solucionaste un problema hasta crear artículos de cualquier lenguaje totalmente en español, si eres un desarrollador o UX etc. Y te gusta compartir lo que haces o ayudar a los demás bienvenid@ codea quiere que la comunidad crezca con gente como tú.
+  description: description
   web: https://codea.com.mx
   writeAuthors:
     - wootsbot
@@ -33,7 +33,7 @@
     - slackmart
 
 - id: language-jest
-  nmae: jest
+  name: jest
   image: images/jest.png
   description: description
   web: https://jestjs.io/

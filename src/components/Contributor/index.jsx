@@ -2,67 +2,201 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import Img from 'gatsby-image'
+
 import Typography from '@material-ui/core/Typography'
+import Paper from '@material-ui/core/Paper'
+
+import DateFormat from 'components/DateFormat'
+
+import IconGitHub from 'images/svg/github.svg'
+import IconGitLab from 'images/svg/gitLab.svg'
+import IconStackoverflow from 'images/svg/stackoverflow.svg'
+import IconTwitter from 'images/svg/social_twitter.svg'
+import IconBitbucket from 'images/svg/bitbucket.svg'
 
 import styles from './styles.module.scss'
 
 class Contributor extends React.PureComponent {
   static propTypes = {
-    id: PropTypes.string,
-    avatar: PropTypes.object,
-    fullName: PropTypes.string,
-    bioFull: PropTypes.string,
-    bio: PropTypes.string,
-    languages: PropTypes.array,
+    contributor: PropTypes.shape({
+      id: PropTypes.string,
+      avatar: PropTypes.object,
+      fullName: PropTypes.string,
+      bioFull: PropTypes.string,
+      bio: PropTypes.string,
+      location: PropTypes.string,
+      work: PropTypes.string,
+      education: PropTypes.string,
+      date: PropTypes.string,
+      email: PropTypes.string,
+    }),
   }
 
   render() {
-    const { id, avatar, fullName, bioFull, bio, languages } = this.props
+    const { contributor } = this.props
+    const {
+      id,
+      avatar,
+      firstName,
+      lastName,
+      bio,
+      location,
+      work,
+      date,
+      email,
+      github,
+      gitLab,
+      bitbucket,
+      stackoverflow,
+      twitter,
+    } = contributor
 
     return (
-      <React.Fragment>
-        <div className={styles.contributorUser}>
-          <div className={styles.contributorUserAvatarContainer}>
-            <Img alt="avatar author" fixed={avatar} />
-
-            <div className={styles.contributorUserBio}>
-              <Typography variant="subtitle2">{bio}</Typography>
-            </div>
-          </div>
-
-          <div className={styles.contributorUserDetails}>
-            <Typography component="h1" variant="h4" gutterBottom>
-              {fullName}
-            </Typography>
-
-            <Typography variant="h6" color="textSecondary" gutterBottom>
-              {`@${id}`}
-            </Typography>
-
-            <Typography variant="subtitle2" gutterBottom>
-              {bioFull}
-            </Typography>
-          </div>
-        </div>
-
-        <div className={styles.contributorLanguages}>
-          {languages.map(({ node }) => (
-            <div key={node.id} className={styles.contributorLanguagesLanguage}>
+      <Paper className={styles.row}>
+        <div className={styles.rowItemUser}>
+          <div className={styles.contributor}>
+            <div>
               <Img
                 alt="avatar author"
-                className={styles.contributorLanguagesLanguageIcon}
-                fixed={node.image.childImageSharp.fixed}
+                fixed={avatar.childImageSharp.fixed}
+                className={styles.contributorImage}
               />
+            </div>
 
-              <Typography
-                variant="h6"
-                className={styles.contributorLanguagesLanguageText}>
-                {node.name}
+            <div>
+              <Typography component="h1" variant="h3" gutterBottom>
+                {`${firstName} ${lastName}`}
+              </Typography>
+
+              <Typography variant="h5" color="textSecondary" gutterBottom>
+                {`@${id}`}
+              </Typography>
+
+              <Typography variant="subtitle1">{bio}</Typography>
+
+              <ul className={styles.social}>
+                {github && (
+                  <li>
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href={github}
+                      title="gitHub">
+                      <img
+                        src={IconGitHub}
+                        alt="gitHub"
+                        className={styles.socialIcon}
+                      />
+                    </a>
+                  </li>
+                )}
+
+                {gitLab && (
+                  <li>
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href={gitLab}
+                      title="gitLab">
+                      <img
+                        src={IconGitLab}
+                        alt="gitLab"
+                        className={styles.socialIcon}
+                      />
+                    </a>
+                  </li>
+                )}
+
+                {bitbucket && (
+                  <li>
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href={bitbucket}
+                      title="bitbucket">
+                      <img
+                        src={IconBitbucket}
+                        alt="gitLab"
+                        className={styles.socialIcon}
+                      />
+                    </a>
+                  </li>
+                )}
+
+                {stackoverflow && (
+                  <li>
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href={stackoverflow}
+                      title="stackoverflow">
+                      <img
+                        src={IconStackoverflow}
+                        alt="gitLab"
+                        className={styles.socialIcon}
+                      />
+                    </a>
+                  </li>
+                )}
+
+                {twitter && (
+                  <li>
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href={twitter}
+                      title="stackoverflow">
+                      <img
+                        src={IconTwitter}
+                        alt="gitLab"
+                        className={styles.socialIcon}
+                      />
+                    </a>
+                  </li>
+                )}
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div className={styles.rowItemInformation}>
+          {email && (
+            <div>
+              <Typography variant="h6">correo</Typography>
+              <Typography variant="subtitle2" color="textSecondary">
+                {email}
               </Typography>
             </div>
-          ))}
+          )}
+
+          {location && (
+            <div>
+              <Typography variant="h6">ubicación</Typography>
+              <Typography variant="subtitle2" color="textSecondary">
+                {location}
+              </Typography>
+            </div>
+          )}
+
+          {work && (
+            <div>
+              <Typography variant="h6">perfil</Typography>
+              <Typography variant="subtitle2" color="textSecondary">
+                {work}
+              </Typography>
+            </div>
+          )}
+
+          {date && (
+            <div>
+              <Typography variant="h6">registro</Typography>
+              <Typography variant="subtitle2" color="textSecondary">
+                <DateFormat date={date} format="ll" />
+              </Typography>
+            </div>
+          )}
         </div>
-      </React.Fragment>
+      </Paper>
     )
   }
 }

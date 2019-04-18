@@ -44,6 +44,7 @@
 
 .article-author-tags {
   display: flex;
+  flex-wrap: wrap;
 
   & > a {
     font-weight: 800;

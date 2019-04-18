@@ -69,7 +69,7 @@ class ArticlePreviewLink extends React.PureComponent {
             <div className={styles.articleAuthorTags}>
               {tags.map(tag => (
                 <Link to={`${PATH_ARCHIVE_TAGS}${kebabCase(tag)}`} key={tag}>
-                  <small style={{ marginRight: '5px' }}>{`${tag}`}</small>
+                  <small style={{ marginRight: '8px' }}>{`#${tag}`}</small>
                 </Link>
               ))}
             </div>

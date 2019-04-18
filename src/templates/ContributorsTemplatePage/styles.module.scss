@@ -1,27 +1,49 @@
 @import 'styles/theme';
 
 .contributors {
-  max-width: 80rem;
+  max-width: 120rem;
   position: relative;
   margin: 0px auto;
   padding: 2.5rem 0.2rem 5rem;
+}
 
-  &--tabs {
+.articles {
+  &--row {
     margin-top: 3.6rem;
+    display: grid;
+    gap: 3.6rem;
+    grid-template-columns: repeat(12, 1fr);
+
+    &-skills {
+      grid-column: span 3;
+    }
+
+    &-articles {
+      grid-column: 4 / span 6;
+    }
+
+    &-histories {
+      grid-column: 10 / span 3;
+    }
   }
 }
 
-.tab {
-  &--container {
-    margin-top: 2rem;
-    padding: 2rem;
-  }
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1.6rem;
 
-  &--article {
-    &-linkContainer {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+  &--skill {
+    margin: 0.8rem;
+    display: flex;
+    align-items: center;
+
+    &-image {
+      margin-right: 0.8rem;
     }
   }
+}
+
+.tabs {
+  margin-bottom: 3.6rem;
 }

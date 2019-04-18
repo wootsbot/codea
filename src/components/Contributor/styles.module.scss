@@ -1,62 +1,72 @@
 @import 'styles/theme';
 
-.contributor {
-  max-width: 80rem;
-  position: relative;
-  margin: 0px auto;
-  padding: 2.5rem 0.2rem 5rem;
+.row {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  padding: 8rem 0;
 
-  &--user {
+  @include breakpoint-sm-down() {
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+  }
+
+  @include breakpoint-xs-down() {
     display: flex;
+    flex-direction: column;
     align-items: center;
+  }
+
+  &--item-user {
+    grid-column: 2 / span 7;
 
     @include breakpoint-sm-down() {
-      flex-direction: column;
-    }
-
-    &-avatarContainer {
-      width: 35%;
-
-      @include breakpoint-sm-down() {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-    }
-
-    &-details {
-      width: 70%;
-      display: flex;
-      flex-direction: column;
-
-      @include breakpoint-sm-down() {
-        align-items: center;
-      }
-    }
-
-    &--bio {
-      padding-right: 2rem;
+      grid-column: 1 / 2;
     }
   }
 
-  &--languages {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    margin-top: 3.6rem;
+  &--item-information {
+    grid-column: 10 / span 2;
+    padding: 0 2rem;
 
     @include breakpoint-sm-down() {
-      padding: 1.6rem;
+      grid-column: 2 / 3;
     }
 
-    &-language {
-      display: flex;
-      align-items: center;
-      margin-right: 2rem;
-
-      &-text {
-        margin-left: 0.4rem !important;
-      }
+    @include breakpoint-xs-down() {
+      margin-top: 2rem;
+      border-top: 0.3rem solid $heather-color;
+      border-left: none;
     }
+  }
+}
+
+.contributor {
+  display: flex;
+  justify-content: space-between;
+
+  @include breakpoint-sm-down() {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  &--image {
+    border-radius: 50%;
+  }
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+
+  @include breakpoint-sm-down() {
+    justify-content: center;
+  }
+
+  &--icon {
+    margin-right: 2rem;
+    width: 2rem;
   }
 }

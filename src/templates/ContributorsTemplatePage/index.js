@@ -2,9 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import { graphql } from 'gatsby'
+import Img from 'gatsby-image'
 
-import Tabs from '@material-ui/core/Tabs'
-import Tab from '@material-ui/core/Tab'
+import Typography from '@material-ui/core/Typography'
+import Paper from '@material-ui/core/Paper'
 
 import Layout from 'components/Layout'
 import Contributor from 'components/Contributor'
@@ -17,16 +18,7 @@ class ContributorsTemplatePage extends React.Component {
     data: PropTypes.object,
   }
 
-  state = {
-    value: 0,
-  }
-
-  handleChange = (event, value) => {
-    this.setState({ value })
-  }
-
   render() {
-    const { value } = this.state
     const { data } = this.props
 
     const {
@@ -40,30 +32,29 @@ class ContributorsTemplatePage extends React.Component {
     return (
       <Layout marginTop footer={false}>
         <div className={styles.contributors}>
-          <Contributor
-            id={contributor.id}
-            avatar={contributor.avatar.childImageSharp.fixed}
-            fullName={`${contributor.firstName} ${contributor.lastName}`}
-            bioFull={contributor.bioFull}
-            bio={contributor.bio}
-            languages={languages}
-          />
+          <Contributor contributor={contributor} />
 
-          <Tabs
-            value={value}
-            onChange={this.handleChange}
-            indicatorColor="secondary"
-            textColor="primary"
-            variant="fullWidth"
-            className={styles.contributorsTabs}>
-            <Tab label="Articulos" />
-            <Tab label="Historias" disabled />
-            <Tab label="Otros" disabled />
-          </Tabs>
+          <div className={styles.articlesRow}>
+            <div className={styles.articlesRowSkills}>
+              <Paper className={styles.skills}>
+                {languages.map(({ node }) => (
+                  <div key={node.id} className={styles.skillsSkill}>
+                    <Img
+                      alt="avatar author"
+                      fixed={node.image.childImageSharp.fixed}
+                      className={styles.skillsSkillImage}
+                    />
 
-          {value === 0 && (
+                    <Typography variant="h6" color="textSecondary" gutterBottom>
+                      {node.name}
+                    </Typography>
+                  </div>
+                ))}
+              </Paper>
+            </div>
+
             <ArticlesList articles={articles} contributorId={contributor.id} />
-          )}
+          </div>
         </div>
       </Layout>
     )
@@ -78,6 +69,17 @@ export const pageQuery = graphql`
       lastName
       bioFull
       bio
+      email
+      location
+      work
+      education
+      date
+      linkedin
+      twitter
+      github
+      gitLab
+      bitbucket
+      stackoverflow
       avatar {
         childImageSharp {
           fixed(width: 230, height: 230, quality: 100) {
@@ -110,13 +112,27 @@ export const pageQuery = graphql`
           fields {
             slug
           }
-          excerpt(pruneLength: 200)
+          excerpt(pruneLength: 150)
           frontmatter {
+            date
             latestUpdateDate
             title
             tags
             author {
               id
+              firstName
+              lastName
+              avatar {
+                childImageSharp {
+                  fixed(quality: 100, width: 55, height: 55) {
+                    tracedSVG
+                    width
+                    height
+                    src
+                    srcSet
+                  }
+                }
+              }
             }
           }
         }
