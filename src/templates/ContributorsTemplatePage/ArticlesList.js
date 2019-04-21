@@ -36,6 +36,7 @@ function ArticlesList({ articles, contributorId }) {
           if (article.node.frontmatter.author.id === contributorId) {
             return (
               <div
+                className={styles.article}
                 key={article.node.fields.slug}
                 style={{ marginBottom: '36px' }}>
                 <ArticlePreviewLink

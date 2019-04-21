@@ -20,6 +20,10 @@
 
     &-articles {
       grid-column: 4 / span 6;
+
+      @include breakpoint-sm-down() {
+        grid-column: span 12;
+      }
     }
 
     &-histories {
@@ -33,6 +37,10 @@
   flex-wrap: wrap;
   padding: 1.6rem;
 
+  @include breakpoint-sm-down() {
+    display: none;
+  }
+
   &--skill {
     margin: 0.8rem;
     display: flex;
@@ -42,6 +50,10 @@
       margin-right: 0.8rem;
     }
   }
+}
+
+.article {
+  padding: 2rem;
 }
 
 .tabs {
