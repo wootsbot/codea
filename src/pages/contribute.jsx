@@ -12,6 +12,10 @@ import styles from './contribute.module.scss'
 import ImageBanner from 'images/svg/banner-contribute.svg'
 import ImagePullRequests from 'images/svg/pull-requests.svg'
 import ImageBranch from 'images/svg/branch.svg'
+import imgIdea from 'images/svg/idea-codea.svg'
+import imgFileMd from 'images/svg/file-md-codea.svg'
+import imgFileCode from 'images/svg/file-codea-code.svg'
+import imgFork from 'images/svg/fork.svg'
 
 const ContributePage = ({
   data: {
@@ -230,6 +234,84 @@ const ContributePage = ({
 
         <div className={styles.rowItemPullRequestMedia}>
           <img src={ImageBranch} alt="" className={styles.imgFull} />
+        </div>
+      </div>
+
+      <div className={styles.summary}>
+        <div className={styles.summaryTitle}>
+          <Typography component="h1" variant="h3" gutterBottom>
+            Los simples pasos para crear tu articulo
+          </Typography>
+        </div>
+
+        <div className={styles.row}>
+          <div className={styles.summaryRow}>
+            <div className={styles.summaryContainer}>
+              <div className={styles.summaryItem}>
+                <img src={imgIdea} alt="" />
+
+                <Typography component="h3" variant="title" gutterBottom>
+                  Idea
+                </Typography>
+
+                <Typography component="h3" variant="body1" gutterBottom>
+                  Empesemos por tener una idea del articulo que deceas crear
+                </Typography>
+              </div>
+
+              <div className={styles.summaryItem}>
+                <img src={imgFork} alt="" />
+
+                <Typography component="h3" variant="title" gutterBottom>
+                  Fork
+                </Typography>
+
+                <Typography component="h3" variant="body1" gutterBottom>
+                  No olvides que tines que realizar un fork del repositorio de
+                  codea
+                </Typography>
+              </div>
+
+              <div className={styles.summaryItem}>
+                <img src={imgFileMd} alt="" />
+
+                <Typography component="h3" variant="title" gutterBottom>
+                  Plantilla
+                </Typography>
+
+                <Typography component="h3" variant="body1" gutterBottom>
+                  Puedes revisar la la plantilla que esta en{' '}
+                  <code>docs/markdown/plantilla</code>
+                </Typography>
+              </div>
+
+              <div className={styles.summaryItem}>
+                <img src={imgFileCode} alt="" />
+
+                <Typography component="h3" variant="title" gutterBottom>
+                  crear tu código
+                </Typography>
+
+                <Typography component="h3" variant="body1" gutterBottom>
+                  Finalmente tienes que esperar a que tu PR (Pull Request) sea
+                  aceptado
+                </Typography>
+              </div>
+
+              <div className={styles.summaryItem}>
+                <img src={imgFileCode} alt="" />
+
+                <Typography component="h3" variant="title" gutterBottom>
+                  crear tu código
+                </Typography>
+
+                <Typography component="h3" variant="body1" gutterBottom>
+                  es posible que te hagamos algunas sugerencias de estilo o
+                  cambios.
+                </Typography>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
