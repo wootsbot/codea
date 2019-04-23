@@ -13,6 +13,14 @@
   grid-gap: 27.136px;
 
   &--item {
+    &-header {
+      grid-column: 2 / span 12;
+    }
+
+    &-body {
+      grid-column: 2 / 12;
+    }
+
     &-contribution {
       &-header {
         grid-column: 2 / span 6;
@@ -25,7 +33,6 @@
     }
 
     &-repositories {
-      margin: 20rem 0;
       grid-column: 3 / span 8;
     }
 
@@ -81,7 +88,7 @@
 }
 
 .summary {
-  margin-top: 3.6rem;
+  margin: 20rem 0;
 
   &--row {
     grid-column: 2 / span 10;
@@ -111,4 +118,20 @@
       width: 5.6rem;
     }
   }
+
+  &--texExplication {
+    max-width: 90rem;
+    margin: 8rem auto;
+    text-align: center;
+  }
+}
+
+.single {
+  margin: 10rem 0;
+}
+
+.guide {
+  max-width: 90rem;
+  margin: 8rem auto;
+  text-align: center;
 }
