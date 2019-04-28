@@ -29,29 +29,29 @@ const ContributePage = ({
     descriptionContent={siteMetadata.description}>
     <div className={styles.container}>
       <div className={styles.row}>
-        <div className={styles.rowItemContributionHeader}>
+        <div className={styles.contributionHeader}>
           <Typography
             id="Cómo-contribuir"
-            component="h1"
+            component="h2"
             variant="h3"
             gutterBottom>
             ¿Cómo contribuir?
           </Typography>
 
-          <Typography component="p" variant="body1" gutterBottom>
+          <Typography component="p" variant="subtitle1" gutterBottom>
             Codea utiliza Gatsby, que es un generador de sitios estáticos con
             React y Markdown, un lenguaje que permite usar una notación más
             compacta que HTML.
           </Typography>
 
-          <Typography component="p" variant="body1" gutterBottom>
+          <Typography component="p" variant="subtitle1" gutterBottom>
             Todo el código del sitio está disponible en Github que es una
             plataforma para gestión de proyectos basada en Git, un sistema de
             control de archivos.
           </Typography>
         </div>
 
-        <div className={styles.rowItemContributionMedia}>
+        <div className={styles.contributionMedia}>
           <img src={ImageBanner} alt="" />
         </div>
       </div>
@@ -60,19 +60,18 @@ const ContributePage = ({
         <div className={styles.summaryTitle}>
           <Typography
             id="Crear-tu-primer-articulo"
-            component="h1"
+            component="h2"
             variant="h3"
             gutterBottom>
-            Crear tu primer articulo
+            Crea tu primer artículo
           </Typography>
 
           <div className={styles.summaryTexExplication}>
-            <Typography component="p" variant="body1" gutterBottom>
+            <Typography component="p" variant="subtitle1" gutterBottom>
               Si todo esto es nuevo para ti no te preocupes, en los artículos
               podrás encontrar información al respecto pero por el momento, aquí
               está una guía rápida para que puedas contribuir con nuevos
-              articulos o{' '}
-              <a href="#guia">quieres verlo un poco mas detallado.</a>
+              artículos. <a href="#guia">Aqui tines una guia más detallada.</a>
             </Typography>
           </div>
         </div>
@@ -83,11 +82,11 @@ const ContributePage = ({
               <div className={styles.summaryItem}>
                 <img src={imgIdea} alt="" />
 
-                <Typography component="h3" variant="title" gutterBottom>
+                <Typography component="h3" variant="h6" gutterBottom>
                   Idea
                 </Typography>
 
-                <Typography component="h3" variant="body1" gutterBottom>
+                <Typography variant="body1" gutterBottom>
                   Empesemos por tener una idea del articulo que deceas crear
                 </Typography>
               </div>
@@ -95,11 +94,11 @@ const ContributePage = ({
               <div className={styles.summaryItem}>
                 <img src={imgFork} alt="" />
 
-                <Typography component="h3" variant="title" gutterBottom>
+                <Typography component="h3" variant="h6" gutterBottom>
                   Fork
                 </Typography>
 
-                <Typography component="h3" variant="body1" gutterBottom>
+                <Typography variant="body1" gutterBottom>
                   No olvides que tines que realizar un fork del repositorio de
                   codea
                 </Typography>
@@ -108,11 +107,11 @@ const ContributePage = ({
               <div className={styles.summaryItem}>
                 <img src={imgFileMd} alt="" />
 
-                <Typography component="h3" variant="title" gutterBottom>
+                <Typography component="h3" variant="h6" gutterBottom>
                   Plantilla
                 </Typography>
 
-                <Typography component="h3" variant="body1" gutterBottom>
+                <Typography variant="body1" gutterBottom>
                   Puedes revisar la la plantilla que esta en{' '}
                   <code>docs/markdown/plantilla</code>
                 </Typography>
@@ -121,11 +120,11 @@ const ContributePage = ({
               <div className={styles.summaryItem}>
                 <img src={imgFileMd} alt="" />
 
-                <Typography component="h3" variant="title" gutterBottom>
+                <Typography component="h3" variant="h6" gutterBottom>
                   Escribir articulo
                 </Typography>
 
-                <Typography component="h3" variant="body1" gutterBottom>
+                <Typography variant="body1" gutterBottom>
                   En un archivo llamado index.md dentro de{' '}
                   <code>docs/markdown/fecha-nombre-del-articulo/</code>
                 </Typography>
@@ -134,11 +133,11 @@ const ContributePage = ({
               <div className={styles.summaryItem}>
                 <img src={ImagePullRequestsIcon} alt="" />
 
-                <Typography component="h3" variant="title" gutterBottom>
+                <Typography component="h3" variant="h6" gutterBottom>
                   Pull Request
                 </Typography>
 
-                <Typography component="h3" variant="body1" gutterBottom>
+                <Typography variant="body1" gutterBottom>
                   Finalmente tienes que esperar a que tu PR (Pull Request) sea
                   aceptado
                 </Typography>
@@ -147,11 +146,11 @@ const ContributePage = ({
               <div className={styles.summaryItem}>
                 <img src={imgCommentsIcon} alt="" />
 
-                <Typography component="h3" variant="title" gutterBottom>
+                <Typography component="h3" variant="h6" gutterBottom>
                   comentarios
                 </Typography>
 
-                <Typography component="h3" variant="body1" gutterBottom>
+                <Typography variant="body1" gutterBottom>
                   es posible que te hagamos algunas sugerencias de estilo o
                   cambios.
                 </Typography>
@@ -167,22 +166,22 @@ const ContributePage = ({
           variant="overline"
           gutterBottom
           color="textSecondary">
-          Una guia detallada para escribir tu artículo
+          Una guía para escribir tu artículo
         </Typography>
       </div>
 
       <div className={styles.row}>
-        <div className={styles.rowItemRepositories}>
-          <Typography component="h1" variant="h3" gutterBottom>
+        <div className={styles.repository}>
+          <Typography component="h2" variant="h3" gutterBottom>
             ¿Qué es un repositorio?
           </Typography>
 
-          <Typography component="p" variant="body1" gutterBottom>
+          <Typography component="p" variant="subtitle1" gutterBottom>
             Git utiliza los repositorios para mantener el control de las
             versionesde de los archivos que son parte de un proyecto.
           </Typography>
 
-          <Typography component="p" variant="body1" gutterBottom>
+          <Typography component="p" variant="subtitle1" gutterBottom>
             está en nuestros planes escribir una guía más detallada del uso de
             Git, pero por el momento podemos decirte que es un tipo de índice
             que dice quién ha hecho cambios y qué cambios hizo. Es una forma de
@@ -190,7 +189,7 @@ const ContributePage = ({
             colisión y alteración simultánea de contenido.
           </Typography>
 
-          <Typography component="p" variant="body1" gutterBottom>
+          <Typography component="p" variant="subtitle1" gutterBottom>
             Creemos que los siguientes{' '}
             <a
               href="https://git-scm.com/book/es/v1/Fundamentos-de-Git-Trabajando-con-repositorios-remotos"
@@ -213,26 +212,25 @@ const ContributePage = ({
         </div>
       </div>
 
-      <div
-        className={clsx(styles.row, styles.rowItemPullRequest, styles.single)}>
-        <div className={styles.rowItemPullRequestHeader}>
-          <Typography component="h1" variant="h3" gutterBottom>
+      <div className={clsx(styles.row, styles.pullRequest, styles.single)}>
+        <div className={styles.pullRequestHeader}>
+          <Typography component="h2" variant="h3" gutterBottom>
             ¿Qué es un Pull Request?
           </Typography>
 
-          <Typography component="p" variant="body1" gutterBottom>
+          <Typography component="p" variant="subtitle1" gutterBottom>
             En Git se parte de que el repositorio existe en local, tu
             computadora, y en remoto, un servidor.
           </Typography>
 
-          <Typography component="p" variant="body1" gutterBottom>
+          <Typography component="p" variant="subtitle1" gutterBottom>
             Y se usa una terminología común para referirse a la transferencia
             entre los dos entornos.
           </Typography>
         </div>
 
-        <div className={styles.rowItemPullRequestBody}>
-          <Typography component="p" variant="body1" gutterBottom>
+        <div className={styles.pullRequestBody}>
+          <Typography component="p" variant="subtitle1" gutterBottom>
             Hacer pull es obtener una versión remota, y hacer push es enviar la
             versión local, el repositorio que se encuentra en github es manejado
             por nosotros y está ligado a la versión en línea del sitio, aunque
@@ -242,12 +240,12 @@ const ContributePage = ({
           </Typography>
         </div>
 
-        <div className={styles.rowItemPullRequestMedia}>
+        <div className={styles.pullRequestMedia}>
           <img src={ImagePullRequests} alt="" className={styles.imgFull} />
         </div>
 
-        <div className={styles.rowItemPullRequestFooter}>
-          <Typography component="p" variant="body1" gutterBottom>
+        <div className={styles.pullRequestFooter}>
+          <Typography component="p" variant="subtitle1" gutterBottom>
             Para poder modificar el contenido necesitas hacer un fork, es decir,
             copiar el repositorio a tu cuenta de Github, para trabajar en él y
             una vez listo tienes que abrir un Pull Request en el repositorio de
@@ -259,38 +257,37 @@ const ContributePage = ({
         </div>
       </div>
 
-      <div
-        className={clsx(styles.row, styles.rowItemPullRequest, styles.single)}>
-        <div className={styles.rowItemPullRequestHeader}>
-          <Typography component="h1" variant="h3" gutterBottom>
+      <div className={clsx(styles.row, styles.branch, styles.single)}>
+        <div className={styles.branchHeader}>
+          <Typography component="h2" variant="h3" gutterBottom>
             ¿Qué es una branch?
           </Typography>
         </div>
 
-        <div className={styles.rowItemPullRequestBody}>
-          <Typography component="p" variant="body1" gutterBottom>
-            Mucha gente puede trabajar en distintas partes del código al mismo
-            tiempo, las branches son versiones diferentes del código pero que
-            están interconectadas al pensar que temporalmente pertenecen todas
-            aun árbol y se van dividiendo como las ramas que parten de un único
-            tronco, de ahí su nombre.
-          </Typography>
+        <div className={styles.branchMedia}>
+          <img src={ImageBranch} alt="" className={styles.imgFull} />
         </div>
 
-        <div className={styles.rowItemPullRequestMedia}>
-          <img src={ImageBranch} alt="" className={styles.imgFull} />
+        <div className={styles.branchBody}>
+          <Typography component="p" variant="subtitle1" gutterBottom>
+            Muchos desarrolladores pueden trabajar en distintas partes del
+            código al mismo tiempo, las branches son versiones diferentes del
+            código pero que están interconectadas al pensar que temporalmente
+            pertenecen todas aun árbol y se van dividiendo como las ramas que
+            parten de un único tronco, de ahí su nombre.
+          </Typography>
         </div>
       </div>
 
       <div className={clsx(styles.row, styles.single)}>
-        <div className={styles.rowItemHeader}>
-          <Typography component="h1" variant="h3" gutterBottom>
+        <div className={styles.itemHeader}>
+          <Typography component="h2" variant="h3" gutterBottom>
             ¿Cómo escribir un artículo?
           </Typography>
         </div>
 
-        <div className={styles.rowItemBody}>
-          <Typography component="p" variant="body1" gutterBottom>
+        <div className={styles.itemBody}>
+          <Typography component="p" variant="subtitle1" gutterBottom>
             Eres libre de elegir el tema que quieras, aquí sólo hablaremos
             respecto a la parte técnica. Los artículos se encuentran en el
             directorio <code>/docs/markdown</code> a partir de la raíz de
@@ -306,14 +303,14 @@ const ContributePage = ({
       </div>
 
       <div className={clsx(styles.row, styles.single)}>
-        <div className={styles.rowItemHeader}>
-          <Typography component="h1" variant="h3" gutterBottom>
+        <div className={styles.itemHeader}>
+          <Typography component="h2" variant="h3" gutterBottom>
             ¿Qué otros detalles son importantes?
           </Typography>
         </div>
 
-        <div className={styles.rowItemBody}>
-          <Typography component="p" variant="body1" gutterBottom>
+        <div className={styles.itemBody}>
+          <Typography component="p" variant="subtitle1" gutterBottom>
             En author.yaml tienes que agregar tu información si es la primera
             vez que escribes, en avatars puedes subir una imagen para que
             aparezca en tu perfil y en <code>src/data/tags.yaml</code> es
