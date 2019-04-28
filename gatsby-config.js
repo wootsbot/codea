@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Codea.dev`,
-    siteUrl: `https://www.codea.dev/`,
-    description: `Codea un proyecto de código abierto y disponible para todos`,
+    title: `Codea`,
+    siteUrl: `https://www.codea.com.mx/`,
+    description: `Codea, un proyecto de código abierto. Si te encanta compartir conocimiento y participar en proyectos con otros desarrolladores.`,
     author: `Jorge Luis Calleja Alvarado`,
     twitter: `@wootsbot`,
   },
@@ -98,8 +98,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Codea.dev`,
-        short_name: `Codea.dev`,
+        name: `Codea`,
+        short_name: `Codea`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#212121`,
@@ -165,7 +165,7 @@ module.exports = {
             serialize: ({ query: { site, allMarkdownRemark } }) =>
               allMarkdownRemark.edges.map(edge => {
                 const siteUrl = site.siteMetadata.siteUrl;
-                const postText = `<div style="margin-top=55px; font-style: italic;">(Este es un artículo publicado en codea.dev y Puedes leerlo accediendo al siguiente link <a href="${siteUrl + edge.node.fields.slug}">click aquí</a>.)</div>`;
+                const postText = `<div style="margin-top=55px; font-style: italic;">(Este es un artículo publicado en codea.com.mx y Puedes leerlo<a href="${siteUrl + edge.node.fields.slug}"> aquí </a>.)</div>`;
 
                 let html = edge.node.html;
                 html = html
