@@ -27,8 +27,7 @@ class Contributor extends React.PureComponent {
       location: PropTypes.string,
       work: PropTypes.string,
       education: PropTypes.string,
-      date: PropTypes.string,
-      email: PropTypes.string,
+      registry: PropTypes.string,
     }),
   }
 
@@ -42,8 +41,7 @@ class Contributor extends React.PureComponent {
       bio,
       location,
       work,
-      date,
-      email,
+      registry,
       github,
       gitLab,
       bitbucket,
@@ -160,15 +158,6 @@ class Contributor extends React.PureComponent {
         </div>
 
         <div className={styles.rowItemInformation}>
-          {email && (
-            <div>
-              <Typography variant="h6">correo</Typography>
-              <Typography variant="subtitle2" color="textSecondary">
-                {email}
-              </Typography>
-            </div>
-          )}
-
           {location && (
             <div>
               <Typography variant="h6">ubicación</Typography>
@@ -187,11 +176,11 @@ class Contributor extends React.PureComponent {
             </div>
           )}
 
-          {date && (
+          {registry && (
             <div>
               <Typography variant="h6">registro</Typography>
               <Typography variant="subtitle2" color="textSecondary">
-                <DateFormat date={date} format="ll" />
+                <DateFormat date={registry} format="ll" />
               </Typography>
             </div>
           )}

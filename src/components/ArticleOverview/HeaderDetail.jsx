@@ -5,7 +5,6 @@ import clsx from 'clsx'
 import Img from 'gatsby-image'
 
 import Typography from '@material-ui/core/Typography'
-import Adjust from '@material-ui/icons/AdjustTwoTone'
 
 import styles from './styles.module.scss'
 
