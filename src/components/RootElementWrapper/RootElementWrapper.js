@@ -13,3 +13,5 @@ const RootElementWrapper = ({ element }) => {
 RootElementWrapper.propTypes = {
   element: PropTypes.node.isRequired,
 }
+
+export default RootElementWrapper
