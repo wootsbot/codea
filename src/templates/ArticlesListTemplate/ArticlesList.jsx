@@ -20,10 +20,12 @@ class ArticlesList extends React.PureComponent {
     const { frontmatter } = node
     const { author } = frontmatter
     const { childImageSharp } = author.avatar
+
     return (
       <ArticlePreviewLink
         to={node.fields.slug}
         title={frontmatter.title}
+        userId={author.id}
         fullName={`${author.firstName} ${author.lastName}`}
         avatar={childImageSharp.fixed}
         date={frontmatter.latestUpdateDate}

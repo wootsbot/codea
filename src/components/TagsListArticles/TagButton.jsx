@@ -46,7 +46,7 @@ class TagButton extends React.PureComponent {
         variant="contained"
         variantColor={children}
         href={`${PATH_ARCHIVE_TAGS}${kebabCase(children)}`}>
-        {children}
+        {`#${children}`}
       </StyledButton>
     )
   }

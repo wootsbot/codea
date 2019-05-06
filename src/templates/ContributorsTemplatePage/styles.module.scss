@@ -1,0 +1,61 @@
+@import 'styles/theme';
+
+.contributors {
+  max-width: 120rem;
+  position: relative;
+  margin: 0px auto;
+  padding: 2.5rem 0.2rem 5rem;
+}
+
+.articles {
+  &--row {
+    margin-top: 3.6rem;
+    display: grid;
+    gap: 3.6rem;
+    grid-template-columns: repeat(12, 1fr);
+
+    &-skills {
+      grid-column: span 3;
+    }
+
+    &-articles {
+      grid-column: 4 / span 6;
+
+      @include breakpoint-sm-down() {
+        grid-column: span 12;
+      }
+    }
+
+    &-histories {
+      grid-column: 10 / span 3;
+    }
+  }
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1.6rem;
+
+  @include breakpoint-sm-down() {
+    display: none;
+  }
+
+  &--skill {
+    margin: 0.8rem;
+    display: flex;
+    align-items: center;
+
+    &-image {
+      margin-right: 0.8rem;
+    }
+  }
+}
+
+.article {
+  padding: 2rem;
+}
+
+.tabs {
+  margin-bottom: 3.6rem;
+}

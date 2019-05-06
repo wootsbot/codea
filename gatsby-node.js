@@ -60,6 +60,9 @@ exports.createPages = ({ actions, graphql }) => {
   const ARTICLES_LIST_TEMPLATE = path.resolve(
     `src/templates/ArticlesListTemplate/index.js`
   )
+  const AUTHORS_LIST_TEMPLATE = path.resolve(
+    `src/templates/ContributorsTemplatePage/index.js`
+  )
 
   return graphql(`
     {
@@ -105,6 +108,28 @@ exports.createPages = ({ actions, graphql }) => {
           }
         }
       }
+
+      authors: allAuthorYaml {
+        edges {
+          node {
+            id
+            firstName
+            lastName
+            bioFull
+            avatar {
+              childImageSharp {
+                fixed(quality: 100, width: 55, height: 55) {
+                  tracedSVG
+                  width
+                  height
+                  src
+                  srcSet
+                }
+              }
+            }
+          }
+        }
+      }
     }
   `).then(result => {
     if (result.errors) {
@@ -113,6 +138,7 @@ exports.createPages = ({ actions, graphql }) => {
 
     const listArticles = result.data.posts.edges.reverse()
     const listTags = result.data.tags.edges
+    const listAuthors = result.data.authors.edges
 
     createPaginatedPages({
       edges: listArticles,
@@ -148,6 +174,17 @@ exports.createPages = ({ actions, graphql }) => {
         context: {
           tag: tag.node.id,
           tagContend: tag.node,
+        },
+      })
+    })
+
+    // Make authors pages
+    listAuthors.forEach(author => {
+      createPage({
+        path: `/contributors/${_.kebabCase(author.node.id)}/`,
+        component: AUTHORS_LIST_TEMPLATE,
+        context: {
+          slug: author.node.id
         },
       })
     })
