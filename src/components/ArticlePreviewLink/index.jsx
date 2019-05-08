@@ -1,18 +1,20 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import kebabCase from 'lodash/kebabCase'
 import { Link } from 'gatsby'
 import Img from 'gatsby-image'
+import kebabCase from 'lodash/kebabCase'
 
 import Typography from '@material-ui/core/Typography'
 
-import { PATCH_ARCHIVE_TAGS } from 'utils/paths'
+import { PATH_ARCHIVE_TAGS } from 'utils/paths'
 
+import DateFormat from 'components/DateFormat'
 import styles from './styles.module.scss'
 
 class ArticlePreviewLink extends React.PureComponent {
   static propTypes = {
+    userId: PropTypes.string,
     fullName: PropTypes.string,
     to: PropTypes.string,
     title: PropTypes.string,
@@ -23,7 +25,16 @@ class ArticlePreviewLink extends React.PureComponent {
   }
 
   render() {
-    const { title, fullName, avatar, date, to, tags, excerpt } = this.props
+    const {
+      title,
+      userId,
+      fullName,
+      avatar,
+      date,
+      to,
+      tags,
+      excerpt,
+    } = this.props
 
     return (
       <article>
@@ -46,17 +57,19 @@ class ArticlePreviewLink extends React.PureComponent {
 
           <div className={styles.articleAuthorInfo}>
             <small>
-              <Link to="/">{fullName}</Link>
+              <Link to={`/contributors/${kebabCase(userId)}`}>{fullName}</Link>
             </small>
 
             <small>
-              <time className={styles.articleAuthorInfoDate}>{date}</time>
+              <time className={styles.articleAuthorInfoDate}>
+                <DateFormat date={date} format="ll" />
+              </time>
             </small>
 
             <div className={styles.articleAuthorTags}>
               {tags.map(tag => (
-                <Link to={`${PATCH_ARCHIVE_TAGS}${kebabCase(tag)}`} key={tag}>
-                  <small style={{ marginRight: '5px' }}>{`${tag}`}</small>
+                <Link to={`${PATH_ARCHIVE_TAGS}${kebabCase(tag)}`} key={tag}>
+                  <small style={{ marginRight: '8px' }}>{`#${tag}`}</small>
                 </Link>
               ))}
             </div>

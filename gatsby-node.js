@@ -60,10 +60,13 @@ exports.createPages = ({ actions, graphql }) => {
   const ARTICLES_LIST_TEMPLATE = path.resolve(
     `src/templates/ArticlesListTemplate/index.js`
   )
+  const AUTHORS_LIST_TEMPLATE = path.resolve(
+    `src/templates/ContributorsTemplatePage/index.js`
+  )
 
   return graphql(`
     {
-      posts: allMarkdownRemark(sort: { fields: [frontmatter___date] }) {
+      posts: allMarkdownRemark(sort: { fields: [frontmatter___latestUpdateDate] }) {
         edges {
           node {
             id
@@ -72,7 +75,8 @@ exports.createPages = ({ actions, graphql }) => {
             }
             excerpt(pruneLength: 200)
             frontmatter {
-              date(formatString: "MMMM DD, YYYY")
+              date
+              latestUpdateDate
               title
               tags
               author {
@@ -104,6 +108,28 @@ exports.createPages = ({ actions, graphql }) => {
           }
         }
       }
+
+      authors: allAuthorYaml {
+        edges {
+          node {
+            id
+            firstName
+            lastName
+            bioFull
+            avatar {
+              childImageSharp {
+                fixed(quality: 100, width: 55, height: 55) {
+                  tracedSVG
+                  width
+                  height
+                  src
+                  srcSet
+                }
+              }
+            }
+          }
+        }
+      }
     }
   `).then(result => {
     if (result.errors) {
@@ -112,6 +138,7 @@ exports.createPages = ({ actions, graphql }) => {
 
     const listArticles = result.data.posts.edges.reverse()
     const listTags = result.data.tags.edges
+    const listAuthors = result.data.authors.edges
 
     createPaginatedPages({
       edges: listArticles,
@@ -150,12 +177,16 @@ exports.createPages = ({ actions, graphql }) => {
         },
       })
     })
+
+    // Make authors pages
+    listAuthors.forEach(author => {
+      createPage({
+        path: `/contributors/${_.kebabCase(author.node.id)}/`,
+        component: AUTHORS_LIST_TEMPLATE,
+        context: {
+          slug: author.node.id
+        },
+      })
+    })
   })
 }
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
-
-// You can delete this file if you're not using it

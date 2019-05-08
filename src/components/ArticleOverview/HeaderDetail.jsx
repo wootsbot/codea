@@ -1,12 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import clsx from 'clsx'
 import Img from 'gatsby-image'
 
-import Chip from '@material-ui/core/Chip'
 import Typography from '@material-ui/core/Typography'
 
 import styles from './styles.module.scss'
+
+import DateFormat from 'components/DateFormat'
 
 class HeaderDetail extends React.PureComponent {
   static propTypes = {
@@ -31,25 +33,42 @@ class HeaderDetail extends React.PureComponent {
           {title}
         </Typography>
 
-        <div className={styles.headerUserInfo}>
-          <Chip
-            avatar={
-              <Img
-                className={styles.avatar}
-                alt="avatar author"
-                fixed={avatar}
-              />
-            }
-            label={`${author.firstName} ${author.lastName}`}
+        <div className={styles.author}>
+          <Img
+            className={styles.authorAvatar}
+            alt="avatar author"
+            fixed={avatar}
           />
 
-          <Typography className={styles.headerAuthor} variant="subtitle2">
-            {author.bio}
-          </Typography>
+          <div className={styles.authorDetails}>
+            <div className={styles.authorBio}>
+              <Typography variant="body2">
+                {`${author.firstName} ${author.lastName}`}
+              </Typography>
 
-          <Typography variant="subtitle2">
-            <time>{date}</time>
-          </Typography>
+              <span className={clsx(styles.space, styles.authorMobile)}>•</span>
+
+              <Typography variant="subtitle2" className={styles.authorMobile}>
+                {author.bio}
+              </Typography>
+            </div>
+
+            <div className={styles.authorDate}>
+              <Typography variant="subtitle1">
+                <div className={styles.authorDateContainer}>
+                  <time>
+                    <DateFormat date={date} format="ll" />
+                  </time>
+
+                  <span className={styles.space}>•</span>
+
+                  <time>
+                    <DateFormat date={date} format="ll" fromNow />
+                  </time>
+                </div>
+              </Typography>
+            </div>
+          </div>
         </div>
       </header>
     )

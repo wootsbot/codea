@@ -11,10 +11,10 @@ import NavItem from './SideItem'
 import styles from './styles.module.scss'
 
 const iconsOfPath = {
-  [getKeyPath.PATCH_ARTICLES]: <SubtitlesTwoTone />,
-  [getKeyPath.PATCH_NEWS]: <FiberNewTwoTone />,
-  [getKeyPath.PATCH_CONTRIBUTE]: <CodeTwoToneIcon />,
-  [getKeyPath.PATCH_TUTORIALS]: <LaptopTwoTone />,
+  [getKeyPath.PATH_ARTICLES]: <SubtitlesTwoTone />,
+  [getKeyPath.PATH_NEWS]: <FiberNewTwoTone />,
+  [getKeyPath.PATH_CONTRIBUTE]: <CodeTwoToneIcon />,
+  [getKeyPath.PATH_TUTORIALS]: <LaptopTwoTone />,
 }
 
 class SideBar extends React.PureComponent {
@@ -24,9 +24,9 @@ class SideBar extends React.PureComponent {
         <ul className={styles.navItemContainer}>
           {getPathsActives(getPaths).map(path => (
             <NavItem
-              key={path.patch}
-              href={path.patch}
-              iconComponent={iconsOfPath[path.patch]}
+              key={path.path}
+              href={path.path}
+              iconComponent={iconsOfPath[path.path]}
               disable={path.disable}>
               {path.label}
             </NavItem>

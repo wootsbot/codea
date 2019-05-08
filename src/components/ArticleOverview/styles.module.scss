@@ -26,35 +26,54 @@
       text-align: center;
     }
   }
+}
 
-  &-user-info {
+.space {
+  margin: 0 0.8rem;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+
+  @include breakpoint-sm-down() {
+    flex-direction: column;
+  }
+
+  &-details {
+    margin-left: 1rem;
+
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+
+    @include breakpoint-sm-down() {
+      align-items: center;
+    }
+  }
+
+  &-bio {
+    display: flex;
     align-items: center;
-    margin-top: 0;
 
     @include breakpoint-sm-down() {
       flex-direction: column;
-      margin-top: 2rem;
     }
   }
 
-  &-author {
-    color: $primary-light-color !important;
-    margin-left: 1.6rem !important;
-    margin-right: 1.6rem !important;
+  &-date {
+    &-container {
+      display: flex;
+      align-items: center;
+    }
+  }
 
+  &-avatar {
+    border-radius: 5rem;
+  }
+
+  &-mobile {
     @include breakpoint-sm-down() {
-      margin: 0 !important;
-      text-align: center;
+      display: none !important;
     }
   }
-}
-
-.avatar {
-  border-radius: 5rem;
-}
-
-.footer {
-  margin-top: 10rem;
 }

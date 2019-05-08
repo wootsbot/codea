@@ -1,7 +1,8 @@
 ---
 date: '2018-11-20'
+latestUpdateDate: '2018-11-20'
 title: '¿Qué es codea ?'
-author: woostbot
+author: wootsbot
 tags: ['codea']
 ---
 

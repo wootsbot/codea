@@ -1,0 +1,28 @@
+- id: wootsbot
+  avatar: avatars/jorge-luis-calleja-alvarado.jpg
+  firstName: Jorge Luis
+  lastName: Calleja
+  location: CD de México
+  work: Sr. Front-End (Reactjs)
+  education: Ingeniero de Software
+  registry: '2018-11-20'
+  bio: Ingeniero de Software • Co-creador de Codea
+  bioFull: Desarrollador de software Frontend, me apasiona crear cosas para la web y me gusta compartir con la comunidad las tecnologías que uso en mi trabajo.
+  linkedin: https://www.linkedin.com/in/wootsbot/
+  twitter: https://twitter.com/wootsbot
+  github: https://github.com/wootsbot
+  gitLab: https://gitlab.com/wootsbot
+  bitbucket: https://bitbucket.org/codea_jorge/
+  stackoverflow: https://es.stackoverflow.com/users/3976/wootsbot?tab=profile
+
+- id: slackmart
+  avatar: avatars/martin-rodriguez.jpg
+  firstName: Martín
+  lastName: Rodríguez
+  bio: Ingeniero de Software | python + golang + devops
+  bioFull: Ingeniero de Software | python + golang + devops
+  twitter: ''
+  github: ''
+  gitLab: https://gitlab.com/slackmart
+  bitbucket: https://bitbucket.org/slackmart
+  stackoverflow: https://stackoverflow.com/users/977593/slackmart?tab=profile

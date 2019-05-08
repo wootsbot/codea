@@ -1,15 +1,16 @@
 module.exports = {
   siteMetadata: {
     title: `Codea`,
-    siteUrl: `https://www.codea.com.mx`,
-    description: `Codea un proyecto de código abierto y disponible para todos`,
-    author: `@wootsbot`,
+    siteUrl: `https://www.codea.com.mx/`,
+    description: `Codea, un proyecto de código abierto. Si te encanta compartir conocimiento y participar en proyectos con otros desarrolladores.`,
+    author: `Jorge Luis Calleja Alvarado`,
     twitter: `@wootsbot`,
   },
   mapping: {
     'MarkdownRemark.frontmatter.author': `AuthorYaml`,
     TagsYaml: `TagsYaml`,
     DevelopersYaml: `DevelopersYaml`,
+    LanguagesYaml: `LanguagesYaml`,
   },
   plugins: [
     {
@@ -164,7 +165,7 @@ module.exports = {
             serialize: ({ query: { site, allMarkdownRemark } }) =>
               allMarkdownRemark.edges.map(edge => {
                 const siteUrl = site.siteMetadata.siteUrl;
-                const postText = `<div style="margin-top=55px; font-style: italic;">(Este es un artículo publicado en codea.com.mx y Puedes leerlo accediendo al siguiente link <a href="${siteUrl + edge.node.fields.slug}">click aquí</a>.)</div>`;
+                const postText = `<div style="margin-top=55px; font-style: italic;">(Este es un artículo publicado en codea.com.mx y Puedes leerlo<a href="${siteUrl + edge.node.fields.slug}"> aquí </a>.)</div>`;
 
                 let html = edge.node.html;
                 html = html

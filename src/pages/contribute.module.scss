@@ -1,0 +1,191 @@
+@import 'styles/theme';
+
+.container {
+  max-width: 120rem;
+  position: relative;
+  margin: 0px auto;
+  padding: 9.5rem 0.2rem 5rem;
+
+  @include breakpoint-sm-down() {
+    padding: 0 1.6rem 5rem;
+  }
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 27.136px;
+}
+
+.item {
+  &-header {
+    grid-column: 2 / span 12;
+
+    @include breakpoint-sm-down() {
+      grid-column: span 12;
+      text-align: center;
+    }
+  }
+
+  &-body {
+    grid-column: 2 / 12;
+
+    @include breakpoint-sm-down() {
+      grid-column: span 12;
+      text-align: center;
+    }
+  }
+}
+
+.contribution {
+  &--header {
+    grid-column: 2 / span 6;
+
+    @include breakpoint-sm-down() {
+      text-align: center;
+      grid-column: span 12;
+      grid-row: 2;
+    }
+  }
+
+  &-media {
+    grid-column: 9 / span 3;
+    align-self: center;
+
+    @include breakpoint-sm-down() {
+      margin-bottom: 3.6rem;
+      grid-column: 3 / span 8;
+      grid-row: 1;
+    }
+  }
+}
+
+.pullRequest {
+  @include breakpoint-sm-down() {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-header {
+    grid-column: 2 / span 8;
+  }
+
+  &-body {
+    grid-column: 2 / span 4;
+  }
+
+  &-media {
+    grid-column: 6 / span 6;
+  }
+
+  &-footer {
+    grid-column: 2 / span 10;
+  }
+}
+
+.branch {
+  @include breakpoint-sm-down() {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-header {
+    grid-column: 2 / span 8;
+  }
+
+  &-media {
+    grid-column: 2 / span 6;
+  }
+
+  &-body {
+    grid-column: 8 / span 4;
+  }
+}
+
+.repository {
+  grid-column: 3 / span 8;
+
+  @include breakpoint-sm-down() {
+    grid-column: span 12;
+  }
+}
+
+.listGitFundamentals {
+  list-style: disc outside;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 3.6rem;
+  padding: 0 24px;
+
+  & > li {
+    font-size: 1.6rem;
+    font-family: $font-light-family;
+    list-style: none;
+    width: calc(50% - 32px);
+    position: relative;
+    margin: 8px 0;
+    padding: 0;
+  }
+
+  & > li::before {
+    content: '▰';
+    color: $secondary-dark-color;
+    display: inline-block;
+    position: absolute;
+    left: -24px;
+  }
+}
+
+.img-full {
+  width: 100%;
+}
+
+.summary {
+  margin: 20rem 0;
+
+  &--row {
+    grid-column: 2 / span 10;
+  }
+
+  &--title {
+    text-align: center;
+    margin-bottom: 10rem;
+  }
+
+  &-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+
+  &--item {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    text-align: center;
+    margin-bottom: 72px;
+
+    & > img {
+      align-self: center;
+      margin-bottom: 3px;
+      width: 5.6rem;
+    }
+  }
+
+  &--texExplication {
+    max-width: 90rem;
+    margin: 8rem auto;
+    text-align: center;
+  }
+}
+
+.single {
+  margin: 10rem 0;
+}
+
+.guide {
+  max-width: 90rem;
+  margin: 8rem auto;
+  text-align: center;
+}

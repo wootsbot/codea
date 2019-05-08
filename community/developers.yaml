@@ -1,10 +1,10 @@
-- codeaId: woostbot
+- codeaId: wootsbot
   firstName: Jorge Luis
   lastName: Calleja
   avatar: avatars/jorge-luis-calleja-alvarado.jpg
   location: CD DE MÉXICO
   codeRole: Founder @ Codea.
-  bio: Ingeniero Front-End (Reactjs)
+  bio: Software engineer • co-creator of Codea
   bioFull: Desarrollador de software Frontend, me apasiona crear cosas para la web y me gusta compartir con la comunidad las tecnologías que uso en mi trabajo.
   twitter: https://twitter.com/wootsbot
   github: https://github.com/wootsbot
@@ -37,7 +37,7 @@
 - codeaId: darcusfenix
   firstName: Juan
   lastName: Crisóstomo
-  avatar: avatars/juan-crisostomo.jpg
+  avatar: avatars/juan-crisostomo.jpeg
   location: CD DE MÉXICO
   codeRole: Contributor
   bio: Desarrollador frontend/javaScript
