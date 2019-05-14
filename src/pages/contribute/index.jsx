@@ -7,16 +7,16 @@ import clsx from 'clsx'
 
 import Layout from 'components/Layout'
 
-import styles from './contribute.module.scss'
-
-import ImageBanner from 'images/svg/banner-contribute.svg'
-import ImagePullRequests from 'images/svg/pull-requests.svg'
-import ImagePullRequestsIcon from 'images/svg/pull-requests-icon.svg'
+import imgFork from 'images/svg/fork.svg'
 import ImageBranch from 'images/svg/branch.svg'
 import imgIdea from 'images/svg/idea-codea.svg'
 import imgFileMd from 'images/svg/file-md-codea.svg'
-import imgFork from 'images/svg/fork.svg'
 import imgCommentsIcon from 'images/svg/comments-icon.svg'
+import ImageBanner from 'images/svg/banner-contribute.svg'
+import ImagePullRequests from 'images/svg/pull-requests.svg'
+import ImagePullRequestsIcon from 'images/svg/pull-requests-icon.svg'
+
+import styles from './styles.module.scss'
 
 const ContributePage = ({
   data: {
@@ -260,7 +260,7 @@ const ContributePage = ({
       <div className={clsx(styles.row, styles.branch, styles.single)}>
         <div className={styles.branchHeader}>
           <Typography component="h2" variant="h3" gutterBottom>
-            ¿Qué es una branch?
+            ¿Qué es un branch?
           </Typography>
         </div>
 
