@@ -7,16 +7,16 @@ import clsx from 'clsx'
 
 import Layout from 'components/Layout'
 
-import styles from './contribute.module.scss'
-
-import ImageBanner from 'images/svg/banner-contribute.svg'
-import ImagePullRequests from 'images/svg/pull-requests.svg'
-import ImagePullRequestsIcon from 'images/svg/pull-requests-icon.svg'
+import imgFork from 'images/svg/fork.svg'
 import ImageBranch from 'images/svg/branch.svg'
 import imgIdea from 'images/svg/idea-codea.svg'
 import imgFileMd from 'images/svg/file-md-codea.svg'
-import imgFork from 'images/svg/fork.svg'
 import imgCommentsIcon from 'images/svg/comments-icon.svg'
+import ImageBanner from 'images/svg/banner-contribute.svg'
+import ImagePullRequests from 'images/svg/pull-requests.svg'
+import ImagePullRequestsIcon from 'images/svg/pull-requests-icon.svg'
+
+import styles from './styles.module.scss'
 
 const ContributePage = ({
   data: {
@@ -68,7 +68,7 @@ const ContributePage = ({
 
           <div className={styles.summaryTexExplication}>
             <Typography component="p" variant="subtitle1" gutterBottom>
-              Si todo esto es nuevo para ti no te preocupes, en los artículos
+              Si todo esto es nuevo para ti, no te preocupes, en los artículos
               podrás encontrar información al respecto pero por el momento, aquí
               está una guía rápida para que puedas contribuir con nuevos
               artículos. <a href="#guia">Aqui tines una guia más detallada.</a>
@@ -87,7 +87,7 @@ const ContributePage = ({
                 </Typography>
 
                 <Typography variant="body1" gutterBottom>
-                  Empesemos por tener una idea del articulo que deceas crear
+                  Lo primero es tener una idea del artículo que deseas crear
                 </Typography>
               </div>
 
@@ -99,7 +99,7 @@ const ContributePage = ({
                 </Typography>
 
                 <Typography variant="body1" gutterBottom>
-                  No olvides que tines que realizar un fork del repositorio de
+                  No olvides que tienes que realizar un fork del repositorio de
                   codea
                 </Typography>
               </div>
@@ -112,7 +112,7 @@ const ContributePage = ({
                 </Typography>
 
                 <Typography variant="body1" gutterBottom>
-                  Puedes revisar la la plantilla que esta en{' '}
+                  Puedes revisar la la plantilla que está en{' '}
                   <code>docs/markdown/plantilla</code>
                 </Typography>
               </div>
@@ -121,7 +121,7 @@ const ContributePage = ({
                 <img src={imgFileMd} alt="" />
 
                 <Typography component="h3" variant="h6" gutterBottom>
-                  Escribir articulo
+                  Escribir artículo
                 </Typography>
 
                 <Typography variant="body1" gutterBottom>
@@ -147,11 +147,11 @@ const ContributePage = ({
                 <img src={imgCommentsIcon} alt="" />
 
                 <Typography component="h3" variant="h6" gutterBottom>
-                  comentarios
+                  Comentarios
                 </Typography>
 
                 <Typography variant="body1" gutterBottom>
-                  es posible que te hagamos algunas sugerencias de estilo o
+                  Es posible que te hagamos algunas sugerencias de estilo o
                   cambios.
                 </Typography>
               </div>
@@ -178,11 +178,11 @@ const ContributePage = ({
 
           <Typography component="p" variant="subtitle1" gutterBottom>
             Git utiliza los repositorios para mantener el control de las
-            versionesde de los archivos que son parte de un proyecto.
+            versiones de de los archivos que son parte de un proyecto.
           </Typography>
 
           <Typography component="p" variant="subtitle1" gutterBottom>
-            está en nuestros planes escribir una guía más detallada del uso de
+            Está en nuestros planes escribir una guía más detallada del uso de
             Git, pero por el momento podemos decirte que es un tipo de índice
             que dice quién ha hecho cambios y qué cambios hizo. Es una forma de
             permitir proyectos colaborativos y evitar, o reducir, problemas de
@@ -198,7 +198,7 @@ const ContributePage = ({
               title="Temas git">
               temas
             </a>{' '}
-            son basicos para empezar a colovorar.
+            son básicos para empezar a colaborar.
           </Typography>
 
           <ul className={styles.listGitFundamentals}>
@@ -260,7 +260,7 @@ const ContributePage = ({
       <div className={clsx(styles.row, styles.branch, styles.single)}>
         <div className={styles.branchHeader}>
           <Typography component="h2" variant="h3" gutterBottom>
-            ¿Qué es una branch?
+            ¿Qué es un branch?
           </Typography>
         </div>
 
