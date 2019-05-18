@@ -46,7 +46,7 @@ function ArticlesList({ articles, contributorId }) {
 
   const articlesContent =
     contributorArticles.length > 0 ? (
-      articles.map(displayArticles)
+      contributorArticles.map(displayArticles)
     ) : (
       <Typography
         className={styles.noArticles}
