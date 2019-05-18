@@ -32,6 +32,10 @@
   }
 }
 
+.noArticles {
+  font-family: $font-medium-family !important;
+}
+
 .skills {
   display: flex;
   flex-wrap: wrap;
