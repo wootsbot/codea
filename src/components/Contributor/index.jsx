@@ -60,8 +60,7 @@ class Contributor extends React.PureComponent {
                 className={styles.contributorImage}
               />
             </div>
-
-            <div>
+            <div className={styles.contributorHeader}>
               <Typography component="h1" variant="h3" gutterBottom>
                 {`${firstName} ${lastName}`}
               </Typography>
@@ -160,7 +159,7 @@ class Contributor extends React.PureComponent {
         <div className={styles.rowItemInformation}>
           {location && (
             <div>
-              <Typography variant="h6">ubicación</Typography>
+              <Typography variant="h6">Ubicación</Typography>
               <Typography variant="subtitle2" color="textSecondary">
                 {location}
               </Typography>
@@ -169,7 +168,7 @@ class Contributor extends React.PureComponent {
 
           {work && (
             <div>
-              <Typography variant="h6">perfil</Typography>
+              <Typography variant="h6">Perfil</Typography>
               <Typography variant="subtitle2" color="textSecondary">
                 {work}
               </Typography>
@@ -178,7 +177,7 @@ class Contributor extends React.PureComponent {
 
           {registry && (
             <div>
-              <Typography variant="h6">registro</Typography>
+              <Typography variant="h6">Registro</Typography>
               <Typography variant="subtitle2" color="textSecondary">
                 <DateFormat date={registry} format="ll" />
               </Typography>
