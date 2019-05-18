@@ -1,7 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import TagButton from './TagButton'
+import { Link } from 'gatsby'
+import kebabCase from 'lodash/kebabCase'
+
+import { PATH_ARCHIVE_TAGS } from 'utils/paths'
+
 import styles from './styles.module.scss'
 
 class TagsListArticles extends React.PureComponent {
@@ -16,7 +20,15 @@ class TagsListArticles extends React.PureComponent {
       <section className={styles.sectionTags}>
         <div className={styles.sectionTagsList}>
           {tags.map(item => (
-            <TagButton key={item.node.id}>{item.node.id}</TagButton>
+            <Link
+              key={item.node.id}
+              className={styles.tag}
+              color="primary"
+              size="small"
+              variant="contained"
+              to={`${PATH_ARCHIVE_TAGS}${kebabCase(item.node.id)}`}>
+              {`#${item.node.id}`}
+            </Link>
           ))}
         </div>
       </section>
