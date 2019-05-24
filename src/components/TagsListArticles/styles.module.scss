@@ -12,3 +12,25 @@
   display: flex;
   flex-wrap: wrap;
 }
+
+.tag {
+  margin: 0.4rem;
+  text-decoration: none !important;
+  color: $color-white;
+  background-color: $primary-main-color;
+  padding: 0.4rem 0.8rem;
+  min-width: 6.4rem;
+  font-size: 1.3rem;
+  box-sizing: border-box;
+  line-height: 1.75;
+  font-family: $font-light-family, $font-bold-family, sans-serif;
+  font-weight: 500;
+  border-radius: 0.4rem;
+  letter-spacing: 0.02857em;
+  text-transform: uppercase;
+
+  &:hover {
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2),
+      0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
+  }
+}

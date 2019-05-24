@@ -4,7 +4,7 @@ export const PATH_CONTRIBUTE = '/contribute/'
 export const PATH_TUTORIALS = '/tutorials/'
 export const PATH_ARCHIVE_TAGS = '/archive-tags/'
 
-const LABEL_ARTICLES = 'Articulos'
+const LABEL_ARTICLES = 'Artículos'
 const LABEL_NEWS = 'Noticias'
 const LABEL_CONTRIBUTE = 'Contribuir'
 const LABEL_COURSES = 'Cursos'

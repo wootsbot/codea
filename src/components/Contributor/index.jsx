@@ -9,7 +9,7 @@ import Paper from '@material-ui/core/Paper'
 import DateFormat from 'components/DateFormat'
 
 import IconGitHub from 'images/svg/github.svg'
-import IconGitLab from 'images/svg/gitLab.svg'
+import IconGitlab from 'images/svg/gitlab.svg'
 import IconStackoverflow from 'images/svg/stackoverflow.svg'
 import IconTwitter from 'images/svg/social_twitter.svg'
 import IconBitbucket from 'images/svg/bitbucket.svg'
@@ -43,7 +43,7 @@ class Contributor extends React.PureComponent {
       work,
       registry,
       github,
-      gitLab,
+      gitlab,
       bitbucket,
       stackoverflow,
       twitter,
@@ -60,8 +60,7 @@ class Contributor extends React.PureComponent {
                 className={styles.contributorImage}
               />
             </div>
-
-            <div>
+            <div className={styles.contributorHeader}>
               <Typography component="h1" variant="h3" gutterBottom>
                 {`${firstName} ${lastName}`}
               </Typography>
@@ -89,16 +88,16 @@ class Contributor extends React.PureComponent {
                   </li>
                 )}
 
-                {gitLab && (
+                {gitlab && (
                   <li>
                     <a
                       target="_blank"
                       rel="noopener noreferrer"
-                      href={gitLab}
-                      title="gitLab">
+                      href={gitlab}
+                      title="gitlab">
                       <img
-                        src={IconGitLab}
-                        alt="gitLab"
+                        src={IconGitlab}
+                        alt="gitlab"
                         className={styles.socialIcon}
                       />
                     </a>
@@ -114,7 +113,7 @@ class Contributor extends React.PureComponent {
                       title="bitbucket">
                       <img
                         src={IconBitbucket}
-                        alt="gitLab"
+                        alt="bitbucket"
                         className={styles.socialIcon}
                       />
                     </a>
@@ -130,7 +129,7 @@ class Contributor extends React.PureComponent {
                       title="stackoverflow">
                       <img
                         src={IconStackoverflow}
-                        alt="gitLab"
+                        alt="stackoverflow"
                         className={styles.socialIcon}
                       />
                     </a>
@@ -143,10 +142,10 @@ class Contributor extends React.PureComponent {
                       target="_blank"
                       rel="noopener noreferrer"
                       href={twitter}
-                      title="stackoverflow">
+                      title="twitter">
                       <img
                         src={IconTwitter}
-                        alt="gitLab"
+                        alt="twitter"
                         className={styles.socialIcon}
                       />
                     </a>
@@ -160,7 +159,7 @@ class Contributor extends React.PureComponent {
         <div className={styles.rowItemInformation}>
           {location && (
             <div>
-              <Typography variant="h6">ubicación</Typography>
+              <Typography variant="h6">Ubicación</Typography>
               <Typography variant="subtitle2" color="textSecondary">
                 {location}
               </Typography>
@@ -169,7 +168,7 @@ class Contributor extends React.PureComponent {
 
           {work && (
             <div>
-              <Typography variant="h6">perfil</Typography>
+              <Typography variant="h6">Perfil</Typography>
               <Typography variant="subtitle2" color="textSecondary">
                 {work}
               </Typography>
@@ -178,7 +177,7 @@ class Contributor extends React.PureComponent {
 
           {registry && (
             <div>
-              <Typography variant="h6">registro</Typography>
+              <Typography variant="h6">Registro</Typography>
               <Typography variant="subtitle2" color="textSecondary">
                 <DateFormat date={registry} format="ll" />
               </Typography>
