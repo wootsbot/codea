@@ -305,10 +305,11 @@ const ContributePage = ({
         <div className={styles.itemBody}>
           <Typography component="p" variant="subtitle1">
             En <code>author.yaml</code> tienes que agregar tu información si es
-            la primera vez que escribes, en <code>docs/authors/avatars/</code>{' '}
-            puedes subir una imagen para que aparezca en tu perfil y en{' '}
-            <code>src/data/tags.yaml</code> es necesario agregar los tags si es
-            la primera vez que los usas y no aún existen.
+            la primera vez que escribes, en
+            <code>docs/authors/avatars/</code> puedes subir una imagen para que
+            aparezca en tu perfil y en <code>src/data/tags.yaml</code> es
+            necesario agregar los tags si es la primera vez que los usas y no
+            aún existen.
           </Typography>
         </div>
       </div>
