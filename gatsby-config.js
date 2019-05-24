@@ -41,7 +41,6 @@ module.exports = {
         name: 'data',
       },
     },
-    `gatsby-transformer-documentationjs`,
     `gatsby-transformer-yaml`,
     {
       resolve: `gatsby-transformer-remark`,
@@ -67,12 +66,6 @@ module.exports = {
           `gatsby-remark-autolink-headers`,
           {
             resolve: `gatsby-remark-prismjs`,
-            options: {
-              classPrefix: 'language-',
-              inlineCodeMarker: null,
-              aliases: {},
-              showLineNumbers: false,
-            },
           },
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,

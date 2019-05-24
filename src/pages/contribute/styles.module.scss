@@ -129,7 +129,7 @@
   }
 
   & > li::before {
-    content: '▰';
+    content: '\2714'; // check heavy character
     color: $secondary-dark-color;
     display: inline-block;
     position: absolute;
@@ -142,7 +142,7 @@
 }
 
 .summary {
-  margin: 20rem 0;
+  margin: 15rem 0;
 
   &--row {
     grid-column: 2 / span 10;
