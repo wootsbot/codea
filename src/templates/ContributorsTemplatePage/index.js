@@ -48,7 +48,7 @@ export const pageQuery = graphql`
       linkedin
       twitter
       github
-      gitLab
+      gitlab
       bitbucket
       stackoverflow
       avatar {

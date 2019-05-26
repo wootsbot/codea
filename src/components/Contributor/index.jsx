@@ -9,7 +9,7 @@ import Paper from '@material-ui/core/Paper'
 import DateFormat from 'components/DateFormat'
 
 import IconGitHub from 'images/svg/github.svg'
-import IconGitLab from 'images/svg/gitLab.svg'
+import IconGitlab from 'images/svg/gitlab.svg'
 import IconStackoverflow from 'images/svg/stackoverflow.svg'
 import IconTwitter from 'images/svg/social_twitter.svg'
 import IconBitbucket from 'images/svg/bitbucket.svg'
@@ -43,7 +43,7 @@ class Contributor extends React.PureComponent {
       work,
       registry,
       github,
-      gitLab,
+      gitlab,
       bitbucket,
       stackoverflow,
       twitter,
@@ -88,16 +88,16 @@ class Contributor extends React.PureComponent {
                   </li>
                 )}
 
-                {gitLab && (
+                {gitlab && (
                   <li>
                     <a
                       target="_blank"
                       rel="noopener noreferrer"
-                      href={gitLab}
-                      title="gitLab">
+                      href={gitlab}
+                      title="gitlab">
                       <img
-                        src={IconGitLab}
-                        alt="gitLab"
+                        src={IconGitlab}
+                        alt="gitlab"
                         className={styles.socialIcon}
                       />
                     </a>
@@ -113,7 +113,7 @@ class Contributor extends React.PureComponent {
                       title="bitbucket">
                       <img
                         src={IconBitbucket}
-                        alt="gitLab"
+                        alt="bitbucket"
                         className={styles.socialIcon}
                       />
                     </a>
@@ -129,7 +129,7 @@ class Contributor extends React.PureComponent {
                       title="stackoverflow">
                       <img
                         src={IconStackoverflow}
-                        alt="gitLab"
+                        alt="stackoverflow"
                         className={styles.socialIcon}
                       />
                     </a>
@@ -142,10 +142,10 @@ class Contributor extends React.PureComponent {
                       target="_blank"
                       rel="noopener noreferrer"
                       href={twitter}
-                      title="stackoverflow">
+                      title="twitter">
                       <img
                         src={IconTwitter}
-                        alt="gitLab"
+                        alt="twitter"
                         className={styles.socialIcon}
                       />
                     </a>
