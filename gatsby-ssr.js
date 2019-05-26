@@ -1,9 +1,9 @@
 /* eslint-disable react/no-danger */
 
-import React from 'react'
-import { renderToString } from 'react-dom/server'
-import JssProvider from 'react-jss/lib/JssProvider'
-import getPageContext from './src/utils/getPageContext'
+import React from 'react';
+import { renderToString } from 'react-dom/server';
+import JssProvider from 'react-jss/lib/JssProvider';
+import getPageContext from './src/utils/getPageContext';
 
 export const replaceRenderer = ({
   bodyComponent,
@@ -30,3 +30,5 @@ export const replaceRenderer = ({
     />,
   ])
 }
+
+export { default as wrapRootElement } from './src/components/RootElementWrapper/RootElementWrapper';
