@@ -41,6 +41,11 @@ module.exports = {
         name: 'data',
       },
     },
+    'gatsby-plugin-layout',
+    {
+      resolve: 'gatsby-plugin-material-ui',
+      options: {},
+    },
     `gatsby-transformer-yaml`,
     {
       resolve: `gatsby-transformer-remark`,

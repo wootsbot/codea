@@ -1,38 +1,28 @@
 @import 'styles/theme';
 
-.developers-section {
-  padding: 80px 0;
+.developers {
+  padding: 5.6rem 1.6rem;
 
-  @include breakpoint-sm-down() {
-    padding: 80px 0 0 0;
-  }
-}
-
-.developers-list {
-  padding: 0 48px;
-}
-
-.developers-list-resume {
-  margin: 0 0 20px 0 !important;
-}
-
-.developer-grid-item {
-  @include breakpoint-sm-down() {
-    margin-bottom: 36px !important;
+  &--header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
-  &-xs {
-    width: 100%;
+  &--button {
+    margin: 3.6rem 0 !important;
   }
-}
 
-.team-btn {
-  background-color: rgba(37, 194, 157, 0.08) !important;
-  min-width: 350px !important;
-  min-height: 60px !important;
-  margin: 0 0 80px 0 !important;
+  &--list {
+    overflow: hidden;
+    margin: 2.4rem 0;
+  }
 
-  &:hover {
-    background-color: rgba(21, 194, 154, 0.219) !important;
+  &--scrollable {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    overflow: auto;
+    padding-bottom: 40px;
   }
 }

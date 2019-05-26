@@ -14,6 +14,10 @@
     gap: 3.6rem;
     grid-template-columns: repeat(12, 1fr);
 
+    @include breakpoint-sm-down() {
+      gap: 0;
+    }
+
     &-skills {
       grid-column: span 3;
     }
