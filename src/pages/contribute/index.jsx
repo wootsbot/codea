@@ -118,7 +118,7 @@ const ContributePage = ({
                 </Typography>
 
                 <Typography variant="body1">
-                  En un archivo llamado <code>index.md</code> dentro de{' '}
+                  En un archivo llamado <code>index.md</code> dentro de
                   <code>docs/markdown/[fecha]-[nombre-del-articulo]/</code>
                 </Typography>
               </div>
