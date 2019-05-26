@@ -47,7 +47,7 @@ class DevelopersList extends React.PureComponent {
         <Grid item md={12}>
           <Button
             target="_blank"
-            href="https://github.com/codea-team/codea/graphs/contributors"
+            href="https://gitlab.com/codea_/codea/graphs/master"
             color="secondary"
             size="large"
             className={styles.teamBtn}>

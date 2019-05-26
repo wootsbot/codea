@@ -60,7 +60,7 @@
   }
 }
 
-.pullRequest {
+.mergeRequest {
   @include breakpoint-sm-down() {
     display: flex;
     flex-direction: column;
