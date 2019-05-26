@@ -9,8 +9,6 @@ import Layout from 'components/Layout'
 
 import imageFork from 'images/svg/fork.svg'
 import imageBranch from 'images/svg/branch.svg'
-import imageGit from 'images/svg/git.svg'
-import imageGitlab from 'images/svg/gitlab.svg'
 import imageIdea from 'images/svg/idea-codea.svg'
 import imageFileMd from 'images/svg/file-md-codea.svg'
 import imageCommentsIcon from 'images/svg/comments-icon.svg'
@@ -107,7 +105,7 @@ const ContributePage = ({
                 </Typography>
 
                 <Typography variant="body1">
-                  Puedes revisar la la plantilla que está en{' '}
+                  Puedes revisar la plantilla que está en
                   <code>docs/markdown/plantilla/</code>
                 </Typography>
               </div>
@@ -120,7 +118,7 @@ const ContributePage = ({
                 </Typography>
 
                 <Typography variant="body1">
-                  En un archivo llamado <code>index.md</code> dentro de{' '}
+                  En un archivo llamado <code>index.md</code> dentro de
                   <code>docs/markdown/[fecha]-[nombre-del-articulo]/</code>
                 </Typography>
               </div>
@@ -151,7 +149,10 @@ const ContributePage = ({
               </div>
             </div>
             <Typography align="center" variant="h5">
-              <a target="_blank" href="https://gitlab.com/snippets/1859624">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://gitlab.com/snippets/1859624">
                 :)
               </a>
             </Typography>
@@ -222,7 +223,7 @@ const ContributePage = ({
         <div className={styles.pullRequestBody}>
           <Typography component="p" variant="subtitle1">
             Hacer pull es obtener una versión remota, y hacer push es enviar la
-            versión local, el repositorio que se encuentra en gitlab es manejado
+            versión local, el repositorio que se encuentra en Github es manejado
             por nosotros y está ligado a la versión en línea del sitio, aunque
             confiemos en la gente, es peligroso que cualquiera pueda actualizar
             el contenido y modificar el sitio sin una validación por parte del
@@ -304,8 +305,8 @@ const ContributePage = ({
         <div className={styles.itemBody}>
           <Typography component="p" variant="subtitle1">
             En <code>author.yaml</code> tienes que agregar tu información si es
-            la primera vez que escribes, en <code>docs/authors/avatars/</code>{' '}
-            puedes subir una imagen para que aparezca en tu perfil y en{' '}
+            la primera vez que escribes, en <code>docs/authors/avatars/</code>
+            puedes subir una imagen para que aparezca en tu perfil y en
             <code>src/data/tags.yaml</code> es necesario agregar los tags si es
             la primera vez que los usas y no aún existen.
           </Typography>
