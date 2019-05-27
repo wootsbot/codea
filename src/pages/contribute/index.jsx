@@ -105,7 +105,7 @@ const ContributePage = ({
                 </Typography>
 
                 <Typography variant="body1">
-                  Puedes revisar la la plantilla que está en{' '}
+                  Puedes revisar la plantilla que está en{' '}
                   <code>docs/markdown/plantilla/</code>
                 </Typography>
               </div>
@@ -149,7 +149,10 @@ const ContributePage = ({
               </div>
             </div>
             <Typography align="center" variant="h5">
-              <a target="_blank" href="https://gitlab.com/snippets/1859624">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://gitlab.com/snippets/1859624">
                 :)
               </a>
             </Typography>
@@ -216,7 +219,7 @@ const ContributePage = ({
             entre los dos entornos.
           </Typography>
         </div>
-
+        
         <div className={styles.mergeRequestBody}>
           <Typography component="p" variant="subtitle1">
             Hacer pull es obtener una versión remota, y hacer push es enviar la
