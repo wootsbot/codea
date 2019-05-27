@@ -38,12 +38,12 @@ function WelcomePrHome() {
       <Grid item md={6} sm={12} className={styles.sectionWelcomeGridBtnStart}>
         <Fab
           target="_blank"
-          href="https://github.com/codea-team/codea"
+          href="https://gitlab.com/codea_/codea"
           size="large"
           variant="extended"
           color="primary"
           aria-label="Add">
-          Hacer un Pull Request
+          ¡Empieza a contribuir!
         </Fab>
       </Grid>
     </Grid>

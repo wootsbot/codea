@@ -8,15 +8,13 @@ import clsx from 'clsx'
 import Layout from 'components/Layout'
 
 import imageFork from 'images/svg/fork.svg'
-import imageBranch from 'images/svg/branch.svg'
-import imageGit from 'images/svg/git.svg'
-import imageGitlab from 'images/svg/gitlab.svg'
+import imageBranch from 'images/svg/branches-page.png'
 import imageIdea from 'images/svg/idea-codea.svg'
 import imageFileMd from 'images/svg/file-md-codea.svg'
 import imageCommentsIcon from 'images/svg/comments-icon.svg'
 import imageBanner from 'images/svg/banner-contribute.svg'
-import imagePullRequests from 'images/svg/pull-requests.svg'
-import imagePullRequestsIcon from 'images/svg/pull-requests-icon.svg'
+import imageMergeRequests from 'images/svg/merge-requests-page.png'
+import imageMergeRequestsIcon from 'images/svg/merge-requests-icon.svg'
 
 import styles from './styles.module.scss'
 
@@ -126,14 +124,14 @@ const ContributePage = ({
               </div>
 
               <div className={styles.summaryItem}>
-                <img src={imagePullRequestsIcon} />
+                <img src={imageMergeRequestsIcon} />
 
                 <Typography component="h3" variant="h6" gutterBottom>
-                  Pull Request
+                  Merge Request
                 </Typography>
 
                 <Typography variant="body1">
-                  Crea un PR (Pull Request) en github y espera a que sea
+                  Crea un MR (Merge Request) en gitlab y espera a que sea
                   aceptado
                 </Typography>
               </div>
@@ -202,10 +200,10 @@ const ContributePage = ({
         </div>
       </div>
 
-      <div className={clsx(styles.row, styles.pullRequest, styles.single)}>
-        <div className={styles.pullRequestHeader}>
+      <div className={clsx(styles.row, styles.mergeRequest, styles.single)}>
+        <div className={styles.mergeRequestHeader}>
           <Typography component="h2" variant="h3" gutterBottom>
-            ¿Qué es un Pull Request?
+            ¿Qué es un Merge Request?
           </Typography>
 
           <Typography component="p" variant="subtitle1">
@@ -219,28 +217,28 @@ const ContributePage = ({
           </Typography>
         </div>
 
-        <div className={styles.pullRequestBody}>
+        <div className={styles.mergeRequestBody}>
           <Typography component="p" variant="subtitle1">
             Hacer pull es obtener una versión remota, y hacer push es enviar la
             versión local, el repositorio que se encuentra en gitlab es manejado
-            por nosotros y está ligado a la versión en línea del sitio, aunque
+            por nosotros y está ligado a la versión en línea del sitio. Aunque
             confiemos en la gente, es peligroso que cualquiera pueda actualizar
             el contenido y modificar el sitio sin una validación por parte del
             equipo.
           </Typography>
         </div>
 
-        <div className={styles.pullRequestMedia}>
-          <img src={imagePullRequests} className={styles.imageFull} />
+        <div className={styles.mergeRequestMedia}>
+          <img src={imageMergeRequests} className={styles.imageFull} />
         </div>
 
-        <div className={styles.pullRequestFooter}>
+        <div className={styles.mergeRequestFooter}>
           <Typography component="p" variant="subtitle1">
             Para poder modificar el contenido necesitas hacer un fork, es decir,
-            copiar el repositorio a tu cuenta de Github, para trabajar en él y
-            una vez listo tienes que abrir un Pull Request en el repositorio de
+            copiar el repositorio a tu cuenta de Gitlab, para trabajar en él y
+            una vez listo tienes que abrir un Merge Request en el repositorio de
             codea para que podamos aceptar tu contenido en nuestro repositorio
-            (en este caso tu contenido es nuestro remoto, al aceptar el Pull
+            (en este caso tu contenido es nuestro remoto, al aceptar el Merge
             Request iremos a tu repositorio por el código para integrarlo en el
             nuestro).
           </Typography>
