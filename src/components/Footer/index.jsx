@@ -3,7 +3,7 @@ import React from 'react'
 import code from 'images/svg/code.svg'
 import logo from 'images/svg/logo.svg'
 import heart from 'images/svg/heart.svg'
-import github from 'images/svg/github.svg'
+import gitlab from 'images/svg/gitlab.svg'
 import twitter from 'images/svg/twitter.svg'
 import instagram from 'images/svg/instagram.svg'
 
@@ -43,10 +43,10 @@ function Footer() {
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://github.com/codea-team"
-              title="Codea github"
+              href="https://gitlab.com/codea_/codea"
+              title="Codea gitlab"
               className={styles.redSocial}>
-              <img src={github} alt="github" />
+              <img src={gitlab} alt="gitlab" />
             </a>
           </div>
           <div className={styles.rights}>
