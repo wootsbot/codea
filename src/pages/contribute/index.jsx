@@ -219,7 +219,7 @@ const ContributePage = ({
             entre los dos entornos.
           </Typography>
         </div>
-        
+
         <div className={styles.mergeRequestBody}>
           <Typography component="p" variant="subtitle1">
             Hacer pull es obtener una versión remota, y hacer push es enviar la
