@@ -4070,6 +4070,13 @@ css-declaration-sorter@^4.0.1:
     postcss "^7.0.1"
     timsort "^0.3.0"
 
+css-in-js-utils@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/css-in-js-utils/-/css-in-js-utils-3.0.0.tgz#4379185f5cc79f9eba39b4e795c317f253ffaa40"
+  integrity sha512-FSdC7hZIeSmEPANOZB/VHHeaYh+MiNvqLRP7MWVck6MQs2B5KHH3XmMU9Asb/6BdwDp+JTt1q+cGgSBCuFU1GQ==
+  dependencies:
+    hyphenate-style-name "^1.0.2"
+
 css-loader@0.28.7:
   version "0.28.7"
   resolved "https://registry.yarnpkg.com/css-loader/-/css-loader-0.28.7.tgz#5f2ee989dd32edd907717f953317656160999c1b"
@@ -4357,6 +4364,11 @@ csstype@^2.0.0, csstype@^2.2.0, csstype@^2.5.2:
   version "2.6.2"
   resolved "https://registry.yarnpkg.com/csstype/-/csstype-2.6.2.tgz#3043d5e065454579afc7478a18de41909c8a2f01"
   integrity sha512-Rl7PvTae0pflc1YtxtKbiSqq20Ts6vpIYOD5WBafl4y123DyHUeLrRdQP66sQW8/6gmX8jrYJLXwNeMqYVJcow==
+
+csstype@^2.5.5:
+  version "2.6.4"
+  resolved "https://registry.yarnpkg.com/csstype/-/csstype-2.6.4.tgz#d585a6062096e324e7187f80e04f92bd0f00e37f"
+  integrity sha512-lAJUJP3M6HxFXbqtGRc0iZrdyeN+WzOWeY0q/VnFzI+kqVrYIzC7bWlKqCW7oCIdzoPkvfp82EVvrTlQ8zsWQg==
 
 csvtojson@^1.1:
   version "1.1.12"
@@ -6010,6 +6022,11 @@ fast-levenshtein@^2.0.6, fast-levenshtein@~2.0.4:
   resolved "https://registry.yarnpkg.com/fast-levenshtein/-/fast-levenshtein-2.0.6.tgz#3d8a5c66883a16a30ca8643e851f19baa7797917"
   integrity sha1-PYpcZog6FqMMqGQ+hR8Zuqd5eRc=
 
+fast-loops@^1.0.0, fast-loops@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/fast-loops/-/fast-loops-1.0.1.tgz#a3d33e71654a7e6e67d7c2de0fee4ea11c6f2526"
+  integrity sha512-1MA7cT6Q/o1JnhyNCcxuBqZHeIHf784ZjyjayZwwj7X7nRDkCS2qoj6vUh961yxEJP1aldrYrY7+DC/xOdv05A==
+
 fastparse@^1.1.1:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/fastparse/-/fastparse-1.1.2.tgz#91728c5a5942eced8531283c79441ee4122c35a9"
@@ -6048,7 +6065,7 @@ fbjs-css-vars@^1.0.0:
   resolved "https://registry.yarnpkg.com/fbjs-css-vars/-/fbjs-css-vars-1.0.2.tgz#216551136ae02fe255932c3ec8775f18e2c078b8"
   integrity sha512-b2XGFAFdWZWg0phtAWLHCk836A1Xann+I+Dgd3Gk64MHKZO44FfoD1KxyvbSh0qZsIoXQGGlVztIY+oitJPpRQ==
 
-fbjs@^0.8.0, fbjs@^0.8.1, fbjs@^0.8.9:
+fbjs@^0.8.0, fbjs@^0.8.1, fbjs@^0.8.4, fbjs@^0.8.9:
   version "0.8.17"
   resolved "https://registry.yarnpkg.com/fbjs/-/fbjs-0.8.17.tgz#c4d598ead6949112653d6588b01a5cdcd9f90fdd"
   integrity sha1-xNWY6taUkRJlPWWIsBpc3Nn5D90=
@@ -6081,6 +6098,55 @@ fd-slicer@~1.1.0:
   integrity sha1-JcfInLH5B3+IkbvmHY85Dq4lbx4=
   dependencies:
     pend "~1.2.0"
+
+fela-bindings@^10.2.4:
+  version "10.2.4"
+  resolved "https://registry.yarnpkg.com/fela-bindings/-/fela-bindings-10.2.4.tgz#14773e56862b60ad949dfae5d276b72e01cc9fef"
+  integrity sha512-d84T6uF+FMpB2RjzV0AtWxfj6bAnD9l4OLDctdwFqp+WYLqBl4119J6v9NRFw4nGnMhKizX8cwh6GCSPaT2hyw==
+  dependencies:
+    fast-loops "^1.0.0"
+    fela-dom "^10.2.4"
+    fela-tools "^10.2.4"
+    react-addons-shallow-compare "^15.6.2"
+    shallow-equal "^1.0.0"
+
+fela-dom@^10.2.4:
+  version "10.2.4"
+  resolved "https://registry.yarnpkg.com/fela-dom/-/fela-dom-10.2.4.tgz#45fccb41235d7c3ca4a96eaf6d413a0117abe673"
+  integrity sha512-OCImD6SVdzbOsqv6wcgeQz5eN3bb9OEPY9qL3xfjt08gRzLTtmC0h7hFRRNRkEfsJBVRVPzS7QTxw3PT0o2jxQ==
+  dependencies:
+    css-in-js-utils "^3.0.0"
+    fast-loops "^1.0.1"
+    fela-utils "^10.2.4"
+
+fela-tools@^10.2.4:
+  version "10.2.4"
+  resolved "https://registry.yarnpkg.com/fela-tools/-/fela-tools-10.2.4.tgz#0f2a20d44893e6abb09eea9f5a13cf781e10d591"
+  integrity sha512-IGyx75ukhkiNtTn2RVTnrjRkCKzb7gixA2FZFlI/sLi4/b9zTImlD/LvLQGFP8zlY0ohCvknvjXmhLaXTgZdwQ==
+  dependencies:
+    css-in-js-utils "^3.0.0"
+    fast-loops "^1.0.0"
+    fela "^10.2.4"
+    fela-utils "^10.2.4"
+
+fela-utils@^10.2.4:
+  version "10.2.4"
+  resolved "https://registry.yarnpkg.com/fela-utils/-/fela-utils-10.2.4.tgz#b530f827deeb52d3d60e4ee3cda6a60a3358a11b"
+  integrity sha512-kJmXhjOzJXzM9kPdBUxwL+O7th5aN9zLFD86NvrHXAC1bjyQeAv4IVvmTnWXaeHQybZemiVoBhjck84um5EsqA==
+  dependencies:
+    css-in-js-utils "^3.0.0"
+    fast-loops "^1.0.0"
+
+fela@^10.2.4:
+  version "10.2.4"
+  resolved "https://registry.yarnpkg.com/fela/-/fela-10.2.4.tgz#79e38a8f3a4085df1b473123acf14019a30d26c0"
+  integrity sha512-YuElB+jtJPZp+oKJ5UMe2/JOtb9byBod4sUtWAbPOD8orbcz+BEyVk5EHwl6mjGL9mPsawaOyuEBSqUs84VrgA==
+  dependencies:
+    css-in-js-utils "^3.0.0"
+    csstype "^2.5.5"
+    fast-loops "^1.0.0"
+    fela-utils "^10.2.4"
+    isobject "^3.0.1"
 
 figgy-pudding@^3.5.1:
   version "3.5.1"
@@ -12832,6 +12898,14 @@ rc@^1.0.1, rc@^1.1.6, rc@^1.2.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
+react-addons-shallow-compare@^15.6.2:
+  version "15.6.2"
+  resolved "https://registry.yarnpkg.com/react-addons-shallow-compare/-/react-addons-shallow-compare-15.6.2.tgz#198a00b91fc37623db64a28fd17b596ba362702f"
+  integrity sha1-GYoAuR/DdiPbZKKP0XtZa6NicC8=
+  dependencies:
+    fbjs "^0.8.4"
+    object-assign "^4.1.0"
+
 react-dev-utils@^4.2.1:
   version "4.2.3"
   resolved "https://registry.yarnpkg.com/react-dev-utils/-/react-dev-utils-4.2.3.tgz#5b42d9ea58d5e9e017a2f57a40a8af408a3a46fb"
@@ -12928,6 +13002,15 @@ react-event-listener@^0.6.2:
     "@babel/runtime" "^7.2.0"
     prop-types "^15.6.0"
     warning "^4.0.1"
+
+react-fela@^10.2.4:
+  version "10.2.4"
+  resolved "https://registry.yarnpkg.com/react-fela/-/react-fela-10.2.4.tgz#46cdbeda414d3fc2cfd21d06b5f4ee59eaaf4b7a"
+  integrity sha512-4JJEn8jzEr7b5ZsBZnExW6KICUZkXZIMncE5occWugkF/rZfPLeFPqmw7Ue8tJEJCfDt9bIFKsQQhz9vBMk6tw==
+  dependencies:
+    fela-bindings "^10.2.4"
+    fela-dom "^10.2.4"
+    prop-types "^15.5.8"
 
 react-helmet@^5.2.0:
   version "5.2.0"
@@ -14065,6 +14148,11 @@ shallow-compare@^1.2.2:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/shallow-compare/-/shallow-compare-1.2.2.tgz#fa4794627bf455a47c4f56881d8a6132d581ffdb"
   integrity sha512-LUMFi+RppPlrHzbqmFnINTrazo0lPNwhcgzuAXVVcfy/mqPDrQmHAyz5bvV0gDAuRFrk804V0HpQ6u9sZ0tBeg==
+
+shallow-equal@^1.0.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/shallow-equal/-/shallow-equal-1.1.0.tgz#cc022f030dcba0d1c198abf658a3c6c744e171ca"
+  integrity sha512-0SW1nWo1hnabO62SEeHsl8nmTVVEzguVWZCj5gaQrgWAxz/BaCja4OWdJBWLVPDxdtE/WU7c98uUCCXyPHSCvw==
 
 shallowequal@^1.0.1, shallowequal@^1.0.2:
   version "1.1.0"

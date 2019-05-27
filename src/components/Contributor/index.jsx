@@ -8,7 +8,7 @@ import Paper from '@material-ui/core/Paper'
 
 import DateFormat from 'components/DateFormat'
 
-import IconGitHub from 'images/svg/github.svg'
+import IconGithub from 'images/svg/github.svg'
 import IconGitlab from 'images/svg/gitlab.svg'
 import IconStackoverflow from 'images/svg/stackoverflow.svg'
 import IconTwitter from 'images/svg/social_twitter.svg'
@@ -78,10 +78,10 @@ class Contributor extends React.PureComponent {
                       target="_blank"
                       rel="noopener noreferrer"
                       href={github}
-                      title="gitHub">
+                      title="github">
                       <img
-                        src={IconGitHub}
-                        alt="gitHub"
+                        src={IconGithub}
+                        alt="github"
                         className={styles.socialIcon}
                       />
                     </a>
