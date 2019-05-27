@@ -1,3 +1,15 @@
+const dynamicPlugins = []
+
+if (process.env.NODE_ENV === 'production') {
+  dynamicPlugins.push({
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: `UA-135000051-1`,
+      },
+    },
+  )
+}
+
 module.exports = {
   siteMetadata: {
     title: `Codea`,
@@ -101,7 +113,7 @@ module.exports = {
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#212121`,
-        display: `minimal-ui`,
+        display: `standalone`,
         icon: `src/images/svg/favicon.svg`,
       },
     },
@@ -110,12 +122,6 @@ module.exports = {
     `gatsby-plugin-twitter`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: `UA-135000051-1`,
-      },
-    },
     {
       resolve: `gatsby-plugin-feed`,
       options: {
@@ -188,5 +194,5 @@ module.exports = {
     },
     `gatsby-plugin-netlify`,
     `gatsby-plugin-netlify-cache`,
-  ],
+  ].concat(dynamicPlugins),
 }
