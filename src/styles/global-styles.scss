@@ -23,108 +23,30 @@ small {
 
 // styles for render of markdown
 .codea-article-details-markdown {
-  a {
-    font-weight: 800;
-    text-decoration: underline;
-    color: $secondary-text-color;
-
-    &:hover {
-      text-decoration: none;
-    }
-  }
-
-  ol {
-    line-height: 1.5;
-    font-family: $font-medium-family;
-    color: $primary-main-color;
-    font-weight: 500;
-  }
-
-  ul {
-    line-height: 1.5;
-    font-family: $font-medium-family;
-    color: $primary-main-color;
-    font-weight: 500;
-    margin-left: 1.4rem;
-    margin-right: 0;
-    margin-top: 0;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
-    margin-bottom: 1.05rem;
-    list-style-position: outside;
-    list-style-image: none;
-  }
-
-  img {
-    width: 100%;
-  }
-
   h2 {
-    color: $primary-dark-color;
-    font-size: 2.6rem;
-    font-family: $font-light-family;
-    font-weight: 300;
-    line-height: 1;
-    letter-spacing: -0.00833em;
+    font-size: $font-heading-size;
   }
 
   h3 {
-    color: $primary-dark-color;
-    font-size: 2.4rem;
-    font-family: $font-light-family;
-    font-weight: 400;
-    line-height: 1.04;
-    letter-spacing: 0em;
+    font-size: $font-subheading-size;
+    line-height: 1.3;
   }
 
   h4 {
-    color: $primary-dark-color;
-    font-size: 2.2rem;
-    font-family: $font-light-family;
-    font-weight: 400;
-    line-height: 1.17;
-    letter-spacing: 0.00735em;
+    font-size: $font-text-medium-size;
   }
 
-  h5 {
-    color: $primary-dark-color;
-    font-size: 2rem;
-    font-family: $font-light-family;
-    font-weight: 400;
-    line-height: 1.33;
-    letter-spacing: 0em;
-  }
-
+  h5,
   h6 {
-    color: $primary-dark-color;
-    font-size: 1.8rem;
-    font-family: $font-light-family;
-    font-weight: 500;
-    line-height: 1.6;
-    letter-spacing: 0.0075em;
+    font-size: $font-caption-size;
   }
 
   p {
     color: $primary-main-color;
-    font-family: $font-light-family;
-    font-size: $font-text-medium-size;
-    line-height: 1.58;
-    letter-spacing: -0.003em;
-
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 0;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
-    margin-bottom: 1.05rem;
-  }
-
-  li *:last-child {
-    margin-bottom: 0;
+    margin-top: 30px;
+    font-size: $font-caption-size;
+    line-height: 1.7;
+    max-width: 80em;
   }
 
   blockquote {

@@ -1,7 +1,7 @@
 // variables
 $font-code: 'Source Code Pro', monospace;
 $background: #f8f8f8;
-$font-size: 90%;
+$font-size: 114%;
 $secondary-main-color: #39d996;
 
 .anchor {
@@ -10,12 +10,11 @@ $secondary-main-color: #39d996;
   text-decoration: none;
   border: none !important;
   box-shadow: none !important;
-  margin-top: -0.9rem;
 }
 
 .gatsby-code-title {
   padding: 1.5rem 1.5rem;
-  font-size: 100%;
+  font-size: $font-size !important;
   font-family: $font-code;
   background: $background;
   color: #e96900;
@@ -37,10 +36,9 @@ $secondary-main-color: #39d996;
 
 .gatsby-highlight pre code {
   display: block;
-  font-size: 130%;
   line-height: 1.5;
   margin-bottom: 30px;
-  margin-top: 2.7rem;
+  margin-top: 2.3rem;
   padding: 0;
 }
 
@@ -50,28 +48,25 @@ $secondary-main-color: #39d996;
   padding: 1.05rem;
   margin-bottom: 1.05rem;
   overflow: auto;
-  -webkit-overflow-scrolling: touch;
-  position: relative;
+  tab-size: 1.5em;
 }
+
 .gatsby-highlight pre[class*='language-'] {
   padding: 0;
   margin-top: 0;
   margin-bottom: 0;
   background-color: transparent;
   border: 0;
-  float: left;
-  min-width: 100%;
-  overflow: initial;
+  -webkit-overflow-scrolling: touch;
 }
 
-p > .language-text {
-  font-size: 90% !important;
-}
-
-code[class*='language-'],
-pre[class*='language-'] {
+code {
   font-family: $font-code;
   font-size: $font-size;
+}
+
+pre[class*='language-'],
+code[class*='language-'] {
   line-height: 1.5;
   direction: ltr;
   text-align: left;
@@ -271,12 +266,12 @@ pre[class*='language-'].line-numbers > code {
 }
 
 .line-numbers .line-numbers-rows {
-  margin-top: 15px;
+  margin-top: 0.8rem;
+  font-size: 114% !important;
   position: absolute;
   pointer-events: none;
   top: 0;
   padding: 1em;
-  font-size: 100%;
   left: -3.8em;
   width: 3em;
   letter-spacing: 0px;
@@ -298,5 +293,4 @@ pre[class*='language-'].line-numbers > code {
   display: block;
   padding-right: 0.8em;
   text-align: right;
-  font-size: $font-size;
 }

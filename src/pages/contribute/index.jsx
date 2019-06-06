@@ -2,19 +2,20 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import { graphql } from 'gatsby'
-import Typography from '@material-ui/core/Typography'
 import clsx from 'clsx'
+
+import Typography from '@material-ui/core/Typography'
 
 import Layout from 'components/Layout'
 
 import imageFork from 'images/svg/fork.svg'
-import imageBranch from 'images/svg/branches-page.png'
+import imageBranch from 'images/branches-page.jpg'
 import imageIdea from 'images/svg/idea-codea.svg'
 import imageFileMd from 'images/svg/file-md-codea.svg'
 import imageCommentsIcon from 'images/svg/comments-icon.svg'
 import imageBanner from 'images/svg/banner-contribute.svg'
-import imageMergeRequests from 'images/svg/merge-requests-page.png'
-import imageMergeRequestsIcon from 'images/svg/merge-requests-icon.svg'
+import imagePullRequests from 'images/pull-requests-page.jpg'
+import imagePullRequestIcon from 'images/svg/pull-requests-icon.svg'
 
 import styles from './styles.module.scss'
 
@@ -124,14 +125,14 @@ const ContributePage = ({
               </div>
 
               <div className={styles.summaryItem}>
-                <img src={imageMergeRequestsIcon} />
+                <img src={imagePullRequestIcon} />
 
                 <Typography component="h3" variant="h6" gutterBottom>
-                  Merge Request
+                  Pull requests
                 </Typography>
 
                 <Typography variant="body1">
-                  Crea un MR (Merge Request) en gitlab y espera a que sea
+                  Crea un PR (Pull requests) en GitHub y espera a que sea
                   aceptado
                 </Typography>
               </div>
@@ -148,11 +149,12 @@ const ContributePage = ({
                 </Typography>
               </div>
             </div>
+
             <Typography align="center" variant="h5">
               <a
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://gitlab.com/snippets/1859624">
+                href="https://gist.github.com/wootsbot/a64b4217d08502ee412fe56bcb19be19">
                 :)
               </a>
             </Typography>
@@ -203,10 +205,10 @@ const ContributePage = ({
         </div>
       </div>
 
-      <div className={clsx(styles.row, styles.mergeRequest, styles.single)}>
-        <div className={styles.mergeRequestHeader}>
+      <div className={clsx(styles.row, styles.pullRequest, styles.single)}>
+        <div className={styles.pullRequestHeader}>
           <Typography component="h2" variant="h3" gutterBottom>
-            ¿Qué es un Merge Request?
+            ¿Qué es un Pull Request?
           </Typography>
 
           <Typography component="p" variant="subtitle1">
@@ -220,10 +222,10 @@ const ContributePage = ({
           </Typography>
         </div>
 
-        <div className={styles.mergeRequestBody}>
+        <div className={styles.pullRequestBody}>
           <Typography component="p" variant="subtitle1">
             Hacer pull es obtener una versión remota, y hacer push es enviar la
-            versión local, el repositorio que se encuentra en gitlab es manejado
+            versión local, el repositorio que se encuentra en GitHub es manejado
             por nosotros y está ligado a la versión en línea del sitio. Aunque
             confiemos en la gente, es peligroso que cualquiera pueda actualizar
             el contenido y modificar el sitio sin una validación por parte del
@@ -231,17 +233,17 @@ const ContributePage = ({
           </Typography>
         </div>
 
-        <div className={styles.mergeRequestMedia}>
-          <img src={imageMergeRequests} className={styles.imageFull} />
+        <div className={styles.pullRequestMedia}>
+          <img src={imagePullRequests} className={styles.imageFull} />
         </div>
 
-        <div className={styles.mergeRequestFooter}>
+        <div className={styles.pullRequestFooter}>
           <Typography component="p" variant="subtitle1">
             Para poder modificar el contenido necesitas hacer un fork, es decir,
-            copiar el repositorio a tu cuenta de Gitlab, para trabajar en él y
-            una vez listo tienes que abrir un Merge Request en el repositorio de
+            copiar el repositorio a tu cuenta de GitHub, para trabajar en él y
+            una vez listo tienes que abrir un Pull Request en el repositorio de
             codea para que podamos aceptar tu contenido en nuestro repositorio
-            (en este caso tu contenido es nuestro remoto, al aceptar el Merge
+            (en este caso tu contenido es nuestro remoto, al aceptar el Pull
             Request iremos a tu repositorio por el código para integrarlo en el
             nuestro).
           </Typography>

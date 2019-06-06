@@ -10,18 +10,6 @@
   github: https://github.com/wootsbot
   gitlab: https://gitlab.com/wootsbot
 
-- codeaId: slackmart
-  firstName: Martín
-  lastName: Rodríguez
-  avatar: avatars/martin-rodriguez.jpg
-  location: Monterrey, Nuevo León
-  codeRole: Contributor
-  bio: Ingeniero de Software | python + golang + devops
-  bioFull: Ingeniero de Software | python + golang + devops
-  gitlab: https://gitlab.com/slackmart
-  bitbucket: https://bitbucket.org/slackmart
-  stackoverflow: https://stackoverflow.com/users/977593/slackmart?tab=profile
-
 - codeaId: migh
   firstName: Migsar
   lastName: Navarro

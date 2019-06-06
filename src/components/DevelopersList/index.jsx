@@ -38,7 +38,7 @@ class DevelopersList extends React.PureComponent {
           <div className={styles.developersButton}>
             <Button
               target="_blank"
-              href="https://gitlab.com/codea_/codea/graphs/master"
+              href="https://github.com/codea-team/codea/graphs/contributors"
               color="secondary"
               size="large">
               Conocer más de la comunidad
