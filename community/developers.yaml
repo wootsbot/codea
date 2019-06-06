@@ -37,19 +37,6 @@
   gitlab: https://gitlab.com/migh
   stackoverflow: ''
 
-- codeaId: azteca
-  firstName: Marcelo
-  lastName: Melendez
-  avatar: avatars/azteca.jpeg
-  location: Monterrey
-  codeRole: Lazy contributor
-  bio: Ingeniero de IT | javascript + security enthusiast
-  bioFull: Ingeniero de IT | javascript + security enthusiast
-  twitter: ''
-  github: https://github.com/emelendez89
-  gitlab: ''
-  stackoverflow: https://security.stackexchange.com/users/70301/azteca
-
 - codeaId: maturanomx
   firstName: Alberto
   lastName: Maturano
@@ -72,16 +59,4 @@
   bioFull: Desarrollador frontend/javaScript
   twitter: https://twitter.com/darcusfenix
   github: https://github.com/darcusfenix
-  gitlab:
-
-- codeaId: migh
-  firstName: Migsar
-  lastName: Navarro
-  avatar: avatars/migsar.jpg
-  location: Rumbo perdido
-  work: Web Developer y soñador profesional.
-  bio: Fotógrafo aficionado, porn connoisseur y programador accidental.
-  bioFull: Creo que el mundo se mueve por inercia, hace falta un buen choque para cambiar el rumbo.
-  twitter: https://twitter.com/migsarnavarro
-  github: https://github.com/migh
-  gitlab: https://gitlab.com/migh
+  gitlab: ''
