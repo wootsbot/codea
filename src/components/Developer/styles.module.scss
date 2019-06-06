@@ -3,22 +3,19 @@
 .developer {
   display: flex;
   align-items: center;
+  flex-shrink: 0;
   padding: 1.6rem;
+  margin: 0 1rem;
+  max-width: 24vw;
 
-  &--column {
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
+  @include breakpoint-sm-down() {
+    max-width: 62vw;
   }
 
   &--details {
     display: flex;
     flex-direction: column;
     margin-left: 1.5rem;
-
-    &-not-margin {
-      margin: 0;
-    }
   }
 
   &--cover {

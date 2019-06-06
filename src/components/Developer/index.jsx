@@ -2,11 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import clsx from 'clsx'
-
-import withWidth from '@material-ui/core/withWidth'
-import Typography from '@material-ui/core/Typography'
-
 import Img from 'gatsby-image'
+
+import Typography from '@material-ui/core/Typography'
 
 import styles from './styles.module.scss'
 
@@ -19,19 +17,19 @@ class Developer extends React.PureComponent {
   }
 
   render() {
-    const { avatar, fulName, bio, width } = this.props
+    const { avatar, fulName, bio } = this.props
 
     return (
-      <div
-        className={clsx(styles.developer, {
-          [styles.developerColumn]: width != 'lg' && width != 'xl',
-        })}>
-        <Img alt="developer" fixed={avatar} className={styles.developerCover} />
+      <blockquote className={clsx(styles.developer)}>
+        <div>
+          <Img
+            alt="developer"
+            fixed={avatar}
+            className={clsx(styles.developerCover)}
+          />
+        </div>
 
-        <div
-          className={clsx(styles.developerDetails, {
-            [styles.developerDetailsNotMargin]: width != 'lg' && width != 'xl',
-          })}>
+        <div className={clsx(styles.developerDetails)}>
           <Typography component="h6" variant="subtitle1" color="textSecondary">
             {fulName}
           </Typography>
@@ -40,9 +38,9 @@ class Developer extends React.PureComponent {
             {bio}
           </Typography>
         </div>
-      </div>
+      </blockquote>
     )
   }
 }
 
-export default withWidth()(Developer)
+export default Developer

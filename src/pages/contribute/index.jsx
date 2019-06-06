@@ -2,19 +2,20 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import { graphql } from 'gatsby'
-import Typography from '@material-ui/core/Typography'
 import clsx from 'clsx'
+
+import Typography from '@material-ui/core/Typography'
 
 import Layout from 'components/Layout'
 
 import imageFork from 'images/svg/fork.svg'
-import imageBranch from 'images/svg/branch.svg'
+import imageBranch from 'images/branches-page.jpg'
 import imageIdea from 'images/svg/idea-codea.svg'
 import imageFileMd from 'images/svg/file-md-codea.svg'
 import imageCommentsIcon from 'images/svg/comments-icon.svg'
 import imageBanner from 'images/svg/banner-contribute.svg'
-import imagePullRequests from 'images/svg/pull-requests.svg'
-import imagePullRequestsIcon from 'images/svg/pull-requests-icon.svg'
+import imagePullRequests from 'images/pull-requests-page.jpg'
+import imagePullRequestIcon from 'images/svg/pull-requests-icon.svg'
 
 import styles from './styles.module.scss'
 
@@ -105,7 +106,7 @@ const ContributePage = ({
                 </Typography>
 
                 <Typography variant="body1">
-                  Puedes revisar la plantilla que está en
+                  Puedes revisar la plantilla que está en{' '}
                   <code>docs/markdown/plantilla/</code>
                 </Typography>
               </div>
@@ -118,20 +119,20 @@ const ContributePage = ({
                 </Typography>
 
                 <Typography variant="body1">
-                  En un archivo llamado <code>index.md</code> dentro de
+                  En un archivo llamado <code>index.md</code> dentro de{' '}
                   <code>docs/markdown/[fecha]-[nombre-del-articulo]/</code>
                 </Typography>
               </div>
 
               <div className={styles.summaryItem}>
-                <img src={imagePullRequestsIcon} />
+                <img src={imagePullRequestIcon} />
 
                 <Typography component="h3" variant="h6" gutterBottom>
-                  Pull Request
+                  Pull requests
                 </Typography>
 
                 <Typography variant="body1">
-                  Crea un PR (Pull Request) en github y espera a que sea
+                  Crea un PR (Pull requests) en GitHub y espera a que sea
                   aceptado
                 </Typography>
               </div>
@@ -148,11 +149,12 @@ const ContributePage = ({
                 </Typography>
               </div>
             </div>
+
             <Typography align="center" variant="h5">
               <a
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://gitlab.com/snippets/1859624">
+                href="https://gist.github.com/wootsbot/a64b4217d08502ee412fe56bcb19be19">
                 :)
               </a>
             </Typography>
@@ -223,8 +225,8 @@ const ContributePage = ({
         <div className={styles.pullRequestBody}>
           <Typography component="p" variant="subtitle1">
             Hacer pull es obtener una versión remota, y hacer push es enviar la
-            versión local, el repositorio que se encuentra en Github es manejado
-            por nosotros y está ligado a la versión en línea del sitio, aunque
+            versión local, el repositorio que se encuentra en GitHub es manejado
+            por nosotros y está ligado a la versión en línea del sitio. Aunque
             confiemos en la gente, es peligroso que cualquiera pueda actualizar
             el contenido y modificar el sitio sin una validación por parte del
             equipo.
@@ -238,7 +240,7 @@ const ContributePage = ({
         <div className={styles.pullRequestFooter}>
           <Typography component="p" variant="subtitle1">
             Para poder modificar el contenido necesitas hacer un fork, es decir,
-            copiar el repositorio a tu cuenta de Github, para trabajar en él y
+            copiar el repositorio a tu cuenta de GitHub, para trabajar en él y
             una vez listo tienes que abrir un Pull Request en el repositorio de
             codea para que podamos aceptar tu contenido en nuestro repositorio
             (en este caso tu contenido es nuestro remoto, al aceptar el Pull
@@ -306,7 +308,7 @@ const ContributePage = ({
           <Typography component="p" variant="subtitle1">
             En <code>author.yaml</code> tienes que agregar tu información si es
             la primera vez que escribes, en <code>docs/authors/avatars/</code>
-            puedes subir una imagen para que aparezca en tu perfil y en
+            puedes subir una imagen para que aparezca en tu perfil y en{' '}
             <code>src/data/tags.yaml</code> es necesario agregar los tags si es
             la primera vez que los usas y no aún existen.
           </Typography>

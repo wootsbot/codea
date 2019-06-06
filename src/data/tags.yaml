@@ -13,3 +13,11 @@
 - id: kwargs
   description: Los parámetros nombrados (kwargs) son soportados por algunos lenguajes de programación, y su característica distintiva es que al momento de invocar la función se específica claramente a qué variable se asignará el valor indicado.
   web: https://en.wikipedia.org/wiki/Named_parameter
+
+- id: telegram
+  description: Mensajería pura e instantánea. Simple, rápida, segura y sincronizada a través de todos tus dispositivos. Más de 200 millones de usuarios activos en dos años y medio. Telegram es la aplicación de mensajería más rápida del mercado. Conecta a las personas a través de una red única de centros de datos, distribuida a través de todo el planeta.
+  web: https://telegram.org/
+
+- id: googlecloudfunctions
+  description: Google Cloud Functions es una solución de procesamiento ligero para que los desarrolladores creen funciones individuales y de un solo propósito que responda a eventos de Cloud sin necesidad de administrar un entorno de servidor o de ejecución.
+  web: https://cloud.google.com/functions/docs/

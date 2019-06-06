@@ -43,8 +43,8 @@ function Footer() {
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://github.com/codea-team"
-              title="Codea github"
+              href="https://github.com/codea-team/codea"
+              title="Codea gitlab"
               className={styles.redSocial}>
               <img src={github} alt="github" />
             </a>
