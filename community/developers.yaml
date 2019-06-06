@@ -10,17 +10,20 @@
   github: https://github.com/wootsbot
   gitlab: https://gitlab.com/wootsbot
 
-- codeaId: slackmart
-  firstName: Martín
-  lastName: Rodríguez
-  avatar: avatars/martin-rodriguez.jpg
-  location: Monterrey, Nuevo León
+- codeaId: migh
+  firstName: Migsar
+  lastName: Navarro
+  avatar: avatars/migsar.jpg
+  location: Rumbo perdido
   codeRole: Contributor
-  bio: Ingeniero de Software | python + golang + devops
-  bioFull: Ingeniero de Software | python + golang + devops
-  gitlab: https://gitlab.com/slackmart
-  bitbucket: https://bitbucket.org/slackmart
-  stackoverflow: https://stackoverflow.com/users/977593/slackmart?tab=profile
+  work: Web Developer y soñador profesional.
+  education: Ingeniero civil
+  bio: Fotógrafo aficionado, porn connoisseur y programador accidental.
+  bioFull: Creo que el mundo se mueve por inercia, hace falta un buen choque para cambiar el rumbo.
+  twitter: https://twitter.com/migsarnavarro
+  github: https://github.com/migh
+  gitlab: https://gitlab.com/migh
+  stackoverflow: ''
 
 - codeaId: maturanomx
   firstName: Alberto
@@ -44,16 +47,4 @@
   bioFull: Desarrollador frontend/javaScript
   twitter: https://twitter.com/darcusfenix
   github: https://github.com/darcusfenix
-  gitlab:
-
-- codeaId: migh
-  firstName: Migsar
-  lastName: Navarro
-  avatar: avatars/migsar.jpg
-  location: Rumbo perdido
-  work: Web Developer y soñador profesional.
-  bio: Fotógrafo aficionado, porn connoisseur y programador accidental.
-  bioFull: Creo que el mundo se mueve por inercia, hace falta un buen choque para cambiar el rumbo.
-  twitter: https://twitter.com/migsarnavarro
-  github: https://github.com/migh
-  gitlab: https://gitlab.com/migh
+  gitlab: ''

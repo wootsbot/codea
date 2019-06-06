@@ -60,7 +60,7 @@
   }
 }
 
-.mergeRequest {
+.pullRequest {
   @include breakpoint-sm-down() {
     display: flex;
     flex-direction: column;
@@ -129,7 +129,7 @@
   }
 
   & > li::before {
-    content: '\2714'; // check heavy character
+    content: '▱'; // check heavy character
     color: $secondary-dark-color;
     display: inline-block;
     position: absolute;
@@ -137,7 +137,7 @@
   }
 }
 
-.img-full {
+.image-full {
   width: 100%;
 }
 

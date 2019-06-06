@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
-import classNames from 'classnames'
 
-import withRoot from 'utils/withRoot'
+import Helmet from 'react-helmet'
+import clsx from 'clsx'
+
 import NavBar from 'components/NavBar'
 import SideBar from 'components/SideBar'
 import Footer from 'components/Footer'
@@ -31,7 +31,7 @@ class Layout extends React.PureComponent {
       location,
     } = this.props
 
-    const classMain = classNames({
+    const classMain = clsx({
       [styles.main]: marginTop,
     })
 
@@ -66,4 +66,4 @@ Layout.defaultProps = {
   footer: true,
 }
 
-export default withRoot(Layout)
+export default Layout

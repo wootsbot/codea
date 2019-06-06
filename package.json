@@ -40,9 +40,9 @@
     "javaScript"
   ],
   "dependencies": {
-    "@material-ui/core": "^3.9.2",
-    "@material-ui/icons": "^3.0.2",
-    "@material-ui/styles": "^3.0.0-alpha.10",
+    "@material-ui/core": "^4.0.0",
+    "@material-ui/icons": "^4.0.0",
+    "@material-ui/styles": "^4.0.0",
     "classnames": "^2.2.6",
     "clsx": "^1.0.3",
     "disqus-react": "^1.0.5",
@@ -54,6 +54,7 @@
     "gatsby-plugin-feed": "^2.0.13",
     "gatsby-plugin-google-analytics": "^2.0.14",
     "gatsby-plugin-manifest": "^2.0.17",
+    "gatsby-plugin-material-ui": "^2.0.1",
     "gatsby-plugin-netlify": "^2.0.10",
     "gatsby-plugin-netlify-cache": "^1.0.0",
     "gatsby-plugin-nprogress": "^2.0.8",

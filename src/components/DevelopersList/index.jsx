@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import Grid from '@material-ui/core/Grid'
 import Button from '@material-ui/core/Button'
 import Typography from '@material-ui/core/Typography'
 
@@ -19,19 +18,12 @@ class DevelopersList extends React.PureComponent {
     const { developers } = this.props
 
     return (
-      <Grid
-        className={styles.developersSection}
-        component="section"
-        container
-        direction="column"
-        alignItems="center">
-        <Grid item md={4} sm={12}>
+      <section className={styles.developers}>
+        <div className={styles.developersHeader}>
           <Typography align="center" component="h2" variant="h3" gutterBottom>
             Detrás de codea
           </Typography>
-        </Grid>
 
-        <Grid item md={6} sm={12}>
           <Typography
             className={styles.developersListResume}
             align="center"
@@ -42,44 +34,34 @@ class DevelopersList extends React.PureComponent {
             El equipo de codea es una gran comunidad que le apaciona
             desarrolladar el futuro de la web.
           </Typography>
-        </Grid>
 
-        <Grid item md={12}>
-          <Button
-            target="_blank"
-            href="https://gitlab.com/codea_/codea/graphs/master"
-            color="secondary"
-            size="large"
-            className={styles.teamBtn}>
-            Conocer más de la comunidad
-          </Button>
-        </Grid>
+          <div className={styles.developersButton}>
+            <Button
+              target="_blank"
+              href="https://github.com/codea-team/codea/graphs/contributors"
+              color="secondary"
+              size="large">
+              Conocer más de la comunidad
+            </Button>
+          </div>
+        </div>
 
-        <Grid
-          item
-          className={styles.developersList}
-          container
-          direction="row"
-          justify="center">
-          {developers.map(developer => (
-            <Grid
-              className={styles.developerGridItem}
-              key={developer.node.id}
-              item
-              lg={3}
-              md={4}
-              sm={6}>
+        <div className={styles.developersList}>
+          <div className={styles.developersScrollable}>
+            {developers.map(developer => (
               <Developer
+                key={developer.node.id}
+                userId={developer.node.codeaId}
                 fulName={`${developer.node.firstName} ${
                   developer.node.lastName
                 }`}
                 avatar={developer.node.avatar.childImageSharp.fixed}
                 bio={developer.node.bio}
               />
-            </Grid>
-          ))}
-        </Grid>
-      </Grid>
+            ))}
+          </div>
+        </div>
+      </section>
     )
   }
 }

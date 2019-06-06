@@ -90,7 +90,7 @@ export default Footer
     export default ArticleLink
     ```
 
-```js{numberLines: true}
+```javascript{numberLines: true}
 import React from 'react'
 import PropTypes from 'prop-types'
 
@@ -142,7 +142,7 @@ export default ArticleLink
 
 ###Ejemplo:
 
-`javascript{1-2,13}{numberLines: true} ...`
+    ``` javascript{1-2,13}{numberLines: true} ... ```
 
 ```javascript{1-2,13}{numberLines: true}
 import React from 'react'

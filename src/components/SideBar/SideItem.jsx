@@ -2,9 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import { Link } from 'gatsby'
-import classnames from 'classnames'
-
-import { muiTheme } from 'utils/muiTheme'
+import clsx from 'clsx'
 
 import styles from './styles.module.scss'
 
@@ -24,13 +22,13 @@ export class NavItem extends React.PureComponent {
 
     return (
       <li
-        className={classnames(styles.item, {
+        className={clsx(styles.item, {
           [styles.itemDisable]: disable,
         })}>
         <Link
           to={href}
           getProps={this.assignActiveStyles}
-          className={classnames(styles.itemLink, {
+          className={clsx(styles.itemLink, {
             [styles.itemLinkDisable]: disable,
           })}>
           <span className={styles.iconComponent}>{iconComponent}</span>
@@ -44,7 +42,7 @@ export class NavItem extends React.PureComponent {
 const stylesUI = {
   navItem: {
     active: {
-      color: `${muiTheme.palette.secondary.dark}`,
+      color: '#00916f',
       fontWeight: '600 !important',
     },
   },
