@@ -1,0 +1,71 @@
+{
+  "name": "codea",
+  "description": "Te encanta compartir conocimiento a través de proyectos de código abierto, libros etc. Hemos decidido crear este proyecto para cualquier persona que quiera colaborar.",
+  "version": "0.1.0",
+  "author": "Jorge Luis Calleja Alvarado",
+  "dependencies": {
+    "@material-ui/core": "^4.2.0",
+    "@material-ui/icons": "^4.2.1",
+    "@material-ui/styles": "^4.2.0",
+    "clsx": "^1.0.4",
+    "gatsby": "^2.13.15",
+    "gatsby-image": "^2.2.5",
+    "gatsby-plugin-manifest": "^2.2.2",
+    "gatsby-plugin-material-ui": "^2.1.4",
+    "gatsby-plugin-offline": "^2.2.2",
+    "gatsby-plugin-react-helmet": "^3.1.1",
+    "gatsby-plugin-sharp": "^2.2.4",
+    "gatsby-source-filesystem": "^2.1.4",
+    "gatsby-transformer-sharp": "^2.2.2",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-helmet": "^5.2.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.2",
+    "eslint": "^6.0.1",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-import-resolver-webpack": "^0.11.1",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.14.2",
+    "eslint-plugin-react-hooks": "^1.6.1",
+    "eslint-plugin-redux-saga": "^1.0.0",
+    "husky": "^3.0.0",
+    "prettier": "^1.18.2"
+  },
+  "keywords": [
+    "codea",
+    "react",
+    "static-site",
+    "gatsby",
+    "blog",
+    "docs",
+    "javaScript"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write src/**/*.{js,jsx}",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "prettier": "prettier --ignore-path \"./.prettierignore\" --config .prettierrc --write \"./src/**/*.js\" \"./src/**/*.jsx\"",
+    "lint": "npm run lint:eslint",
+    "lint:eslint": "eslint --fix .",
+    "lint:husky": "npm run prettier && npm run lint"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint:husky"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/codea-team/codea"
+  },
+  "bugs": {
+    "url": "https://github.com/codea-team/codea/issues"
+  }
+}

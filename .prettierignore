@@ -1,0 +1,13 @@
+# Don't check auto-generated stuff into git
+public
+.cache
+node_modules
+gatsby-browser.js
+gatsby-config.js
+gatsby-node.js
+gatsby-ssr.js
+
+src/html.js
+# Cruft
+.DS_Store
+npm-debug.log
