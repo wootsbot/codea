@@ -12,7 +12,7 @@
     "node": true,
     "es6": true
   },
-  "plugins": ["prettier", "react", "react-hooks"],
+  "plugins": ["prettier", "react"],
   "parserOptions": {
     "ecmaVersion": 6,
     "sourceType": "module",
@@ -27,7 +27,6 @@
         "singleQuote": true,
         "trailingComma": "es5",
         "jsxBracketSameLine": true,
-        "semi": true,
         "parser": "flow",
         "endOfLine": "lf"
       }
@@ -44,8 +43,7 @@
       "error",
       {
         "code": 120,
-        "ignoreUrls": true,
-        "ignoreComments": true
+        "ignoreUrls": true
       }
     ],
     "no-unexpected-multiline": "error",
@@ -58,7 +56,6 @@
       }
     ],
     "react/destructuring-assignment": ["error", "always"],
-    "react-hooks/rules-of-hooks": "error",
     "react/jsx-first-prop-new-line": [2, "multiline"]
   }
 }
